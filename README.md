@@ -1,16 +1,12 @@
 <div align="center">
-  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg?v=7" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
+  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/profile-banner.svg" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
 </div>
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/⌘_L_linkedin-7c3aed?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/andregraccia)
-[![E-mail](https://img.shields.io/badge/⌘_M_e--mail-7c3aed?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andregraccia2105@gmail.com)
-[![GitHub](https://img.shields.io/badge/⌘_G_github-18181b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AndreGraccia)
+[![E-mail](https://img.shields.io/badge/contato_por_e--mail-7c3aed?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andregraccia2105@gmail.com)
 
-</div>
-
-<br />
+</div><br />
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/intro.svg" alt="Backend pensado para evoluir com clareza." width="100%" />
@@ -44,22 +40,53 @@ localização      → São Paulo, Brasil
 
 ## <span style="color:#A78BFA"> Projetos</span>
 
+Dois projetos em que aplico engenharia de software a problemas concretos: consistência financeira, dados econômicos e experiência de uso.
+
 <div align="center">
 
 <a href="https://github.com/AndreGraccia/Carteira-Digital" title="Abrir Carteira Digital">
-  <img width="49%" src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/project-wallet.svg?v=1" alt="Carteira Digital — React, Spring Boot e PostgreSQL" />
-</a>
-<a href="https://github.com/AndreGraccia/calc-juros" title="Abrir Calculadora de Juros">
-  <img width="49%" src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/project-interest.svg?v=1" alt="Calculadora de Juros — dados econômicos e simulações" />
+  <img width="82%" src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/project-wallet.svg?v=2" alt="Carteira Digital — React, Spring Boot e PostgreSQL" />
 </a>
 
 </div>
 
-<p align="center"><sub>Selecione um card para abrir o repositório.</sub></p>
+<p align="center"><sub>Gestão de carteiras e transações, com autenticação, segurança e foco na consistência dos dados.</sub></p>
+
+<br />
+
+<div align="center">
+
+<a href="https://github.com/AndreGraccia/calc-juros" title="Abrir Calculadora de Juros">
+  <img width="82%" src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/project-interest.svg?v=2" alt="Calculadora de Juros — dados econômicos e simulações" />
+</a>
+
+</div>
+
+<p align="center"><sub>Consulta de indicadores do Banco Central e simulações para tornar dados financeiros mais compreensíveis.</sub></p>
 
 <br />
 
 ## <span style="color:#A78BFA"> Atividade</span>
+
+Um recorte objetivo do que construo e de como as contribuições evoluem ao longo do tempo.
+
+<div align="center">
+
+<img width="72%" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&hide_border=true&border_radius=20&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&ring_color=8B5CF6&include_all_commits=true&count_private=true&v=3" alt="Estatísticas do GitHub de André Graccia" />
+
+</div>
+
+<br />
+
+A curva abaixo mostra o ritmo de atividade no GitHub durante o ano.
+
+<div align="center">
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=AndreGraccia&bg_color=0D0719&color=E9D5FF&line=B794F4&point=FDE68A&area=true&area_color=6D28D9&hide_border=true&radius=20&custom_title=Ritmo%20de%20contribuições&v=6" alt="Gráfico anual de atividade no GitHub" />
+
+</div>
+
+<br />
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/metrics.svg" alt="Métricas em movimento." width="100%" />
