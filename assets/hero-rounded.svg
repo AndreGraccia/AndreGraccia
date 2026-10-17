@@ -14,7 +14,7 @@
     <g opacity="1">
       <animate attributeName="opacity" values="0;1" dur="0.8s" fill="freeze"/>
       <animateTransform attributeName="transform" type="translate" values="0 18;0 0" dur="0.8s" fill="freeze"/>
-      <text x="800" y="195" text-anchor="middle" fill="#FAFAFA" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="700" letter-spacing="-3">andré graccia</text>
+      <text x="800" y="195" text-anchor="middle" fill="#FAFAFA" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="700" letter-spacing="-3">André Graccia</text>
       <text x="800" y="268" text-anchor="middle" fill="#C9BEDA" font-family="Arial, Helvetica, sans-serif" font-size="27">Desenvolvedor Back-end Java · APIs claras, seguras e preparadas para evoluir.</text>
       <rect x="610" y="318" width="380" height="2" rx="1" fill="#7440C8"/>
       <text x="800" y="360" text-anchor="middle" fill="#B69EE3" font-family="Courier New, monospace" font-size="17">$ build with quality</text>
