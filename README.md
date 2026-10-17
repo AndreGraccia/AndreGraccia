@@ -85,16 +85,16 @@ localização      → São Paulo, Brasil
 
 <br /><br />
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&hide_border=true&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&ring_color=8B5CF6&include_all_commits=true&count_private=true" alt="Estatísticas detalhadas do GitHub" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&hide_border=true&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA" alt="Linguagens mais utilizadas" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&hide_border=true&border_radius=20&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&ring_color=8B5CF6&include_all_commits=true&count_private=true&v=2" alt="Estatísticas detalhadas do GitHub" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&hide_border=true&border_radius=20&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&v=2" alt="Linguagens mais utilizadas" />
 
 <br /><br />
 
-<img width="100%" src="https://streak-stats.demolab.com?user=AndreGraccia&background=100525&hide_border=true&stroke=3C225B&ring=8B5CF6&fire=C4B5FD&currStreakNum=F5F3FF&sideNums=C4B5FD&currStreakLabel=F5F3FF&sideLabels=A78BFA&dates=8B5CF6&locale=pt_BR" alt="Sequência de contribuições" />
+<img width="100%" src="https://streak-stats.demolab.com?user=AndreGraccia&background=100525&hide_border=true&border_radius=20&stroke=3C225B&ring=8B5CF6&fire=C4B5FD&currStreakNum=F5F3FF&sideNums=C4B5FD&currStreakLabel=F5F3FF&sideLabels=A78BFA&dates=8B5CF6&locale=pt_BR&v=2" alt="Sequência de contribuições" />
 
 <br /><br />
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=AndreGraccia&bg_color=0D0719&color=E9D5FF&line=B794F4&point=FDE68A&area=true&area_color=6D28D9&hide_border=true&custom_title=Ritmo%20de%20contribuições&v=4" alt="Gráfico anual de atividade no GitHub" />
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=AndreGraccia&bg_color=0D0719&color=E9D5FF&line=B794F4&point=FDE68A&area=true&area_color=6D28D9&hide_border=true&radius=20&custom_title=Ritmo%20de%20contribuições&v=5" alt="Gráfico anual de atividade no GitHub" />
 
 </div>
 
