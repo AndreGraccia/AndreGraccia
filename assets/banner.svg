@@ -1,19 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" role="img" aria-label="André Graccia — Desenvolvedor Back-end Java">
-  <rect width="1600" height="600" fill="#09070f"/>
-  <rect x="56" y="28" width="1488" height="544" rx="32" fill="#11051f" stroke="#5B347E" stroke-width="2"/>
-  <path d="M88 28H1512C1530 28 1544 42 1544 60V112H56V60C56 42 70 28 88 28Z" fill="#27163A"/>
-  <circle cx="102" cy="70" r="11" fill="#FF5F57"/>
-  <circle cx="138" cy="70" r="11" fill="#FEBC2E"/>
-  <circle cx="174" cy="70" r="11" fill="#28C840"/>
-  <rect x="606" y="48" width="388" height="43" rx="12" fill="#160A27" stroke="#4E3267"/>
-  <text x="800" y="76" text-anchor="middle" fill="#DDD6FE" font-family="Arial, Helvetica, sans-serif" font-size="18">andregraccia — README.md</text>
-  <rect x="58" y="114" width="1484" height="456" rx="0" fill="#120625"/>
-  <path d="M58 475C330 405 575 510 810 460C1080 402 1300 495 1542 430V570H58V475Z" fill="#2A0D50"/>
-  <text x="800" y="193" text-anchor="middle" fill="#BFA0FF" font-family="Courier New, monospace" font-size="20">$ open profile</text>
-  <text x="800" y="286" text-anchor="middle" fill="#FCFCFF" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700">andré graccia</text>
-  <rect x="1203" y="214" width="13" height="72" fill="#C4B5FD"/>
-  <text x="800" y="347" text-anchor="middle" fill="#DDD6FE" font-family="Arial, Helvetica, sans-serif" font-size="26">Desenvolvedor Back-end Java · APIs claras, seguras e preparadas para evoluir.</text>
-  <rect x="455" y="395" width="690" height="68" rx="18" fill="#7C3AED" stroke="#C4B5FD"/>
-  <text x="800" y="438" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700">LinkedIn  ·  linkedin.com/in/andregraccia  ↗</text>
-  <text x="800" y="520" text-anchor="middle" fill="#C4B5FD" font-family="Courier New, monospace" font-size="17">⌘ L  LinkedIn   ·   ⌘ M  E-mail   ·   ⌘ G  GitHub</text>
+  <rect width="1600" height="600" fill="#0B0B12"/>
+  <rect x="56" y="28" width="1488" height="544" rx="32" fill="#12051F" stroke="#553273" stroke-width="2"/>
+  <path d="M88 28H1512C1530 28 1544 42 1544 60V110H56V60C56 42 70 28 88 28Z" fill="#251538"/>
+  <circle cx="102" cy="69" r="10" fill="#FF5F57"/>
+  <circle cx="136" cy="69" r="10" fill="#FEBC2E"/>
+  <circle cx="170" cy="69" r="10" fill="#28C840"/>
+  <rect x="620" y="48" width="360" height="42" rx="12" fill="#160A27" stroke="#4D2F67"/>
+  <text x="800" y="75" text-anchor="middle" fill="#D8CCF8" font-family="Arial, Helvetica, sans-serif" font-size="17">andregraccia — profile</text>
+  <circle cx="1320" cy="262" r="176" fill="#32105E" opacity=".46"/>
+  <circle cx="1367" cy="300" r="108" fill="#5B21B6" opacity=".22"/>
+  <text x="152" y="172" fill="#BFA0FF" font-family="Courier New, monospace" font-size="19">$ whoami</text>
+  <text x="152" y="284" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="700">andré</text>
+  <text x="152" y="382" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="700">graccia</text>
+  <text x="158" y="434" fill="#D8CCF8" font-family="Arial, Helvetica, sans-serif" font-size="27">Desenvolvedor Back-end Java</text>
+  <text x="158" y="471" fill="#A897C8" font-family="Arial, Helvetica, sans-serif" font-size="20">APIs claras, seguras e preparadas para evoluir.</text>
+  <rect x="158" y="500" width="438" height="46" rx="14" fill="#7C3AED"/>
+  <text x="377" y="530" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">in  abrir linkedin.com/in/andregraccia</text>
+  <rect x="1040" y="422" width="350" height="64" rx="16" fill="#190A2B" stroke="#67458C"/>
+  <text x="1215" y="450" text-anchor="middle" fill="#A78BFA" font-family="Courier New, monospace" font-size="16">$ stack</text>
+  <text x="1215" y="475" text-anchor="middle" fill="#F4F0FF" font-family="Arial, Helvetica, sans-serif" font-size="18">Java · Spring · PostgreSQL</text>
 </svg>
