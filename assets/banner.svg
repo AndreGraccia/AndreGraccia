@@ -1,28 +1,27 @@
-<svg width="1600" height="560" viewBox="0 0 1600 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<svg width="1600" height="600" viewBox="0 0 1600 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
 <title id="title">André Graccia — Desenvolvedor Back-end Java</title>
-<desc id="desc">Janela em estilo macOS com atalhos para LinkedIn, e-mail e GitHub.</desc>
+<desc id="desc">Cartão de perfil inspirado em uma janela do macOS, com atalho para o LinkedIn.</desc>
 <defs>
-  <linearGradient id="bg" x1="90" y1="55" x2="1510" y2="505" gradientUnits="userSpaceOnUse"><stop stop-color="#1B0B38"/><stop offset=".55" stop-color="#100522"/><stop offset="1" stop-color="#0A0611"/></linearGradient>
-  <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(800 540) rotate(-90) scale(310 830)" gradientUnits="userSpaceOnUse"><stop stop-color="#6D28D9" stop-opacity=".65"/><stop offset="1" stop-color="#6D28D9" stop-opacity="0"/></radialGradient>
-  <filter id="shadow" x="20" y="0" width="1560" height="630" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000" flood-opacity=".55"/></filter>
-  <clipPath id="reveal"><rect x="420" y="127" width="0" height="110"><animate attributeName="width" values="0;770;770" keyTimes="0;.38;1" dur="5s" repeatCount="indefinite"/></rect></clipPath>
+  <linearGradient id="window" x1="80" y1="30" x2="1520" y2="570" gradientUnits="userSpaceOnUse"><stop stop-color="#20103D"/><stop offset=".55" stop-color="#120625"/><stop offset="1" stop-color="#0B0711"/></linearGradient>
+  <radialGradient id="halo" cx="0" cy="0" r="1" gradientTransform="translate(800 540) rotate(-90) scale(310 900)" gradientUnits="userSpaceOnUse"><stop stop-color="#7C3AED" stop-opacity=".58"/><stop offset=".68" stop-color="#4C1D95" stop-opacity=".15"/><stop offset="1" stop-color="#0B0711" stop-opacity="0"/></radialGradient>
+  <linearGradient id="button" x1="478" y1="0" x2="1122" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#6D28D9"/><stop offset=".5" stop-color="#8B5CF6"/><stop offset="1" stop-color="#6D28D9"/></linearGradient>
+  <filter id="shadow" x="6" y="0" width="1588" height="660" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#000" flood-opacity=".6"/></filter>
+  <clipPath id="reveal"><rect x="398" y="162" width="0" height="108"><animate attributeName="width" values="0;805;805" keyTimes="0;.34;1" dur="5.6s" repeatCount="indefinite"/></rect></clipPath>
 </defs>
 <g filter="url(#shadow)">
-  <rect x="72" y="28" width="1456" height="500" rx="28" fill="url(#bg)" stroke="#52307A"/>
-  <path d="M100 28H1500C1515.46 28 1528 40.536 1528 56V92H72V56C72 40.536 84.536 28 100 28Z" fill="#211332"/>
-  <circle cx="112" cy="60" r="9" fill="#FF5F57"/><circle cx="142" cy="60" r="9" fill="#FEBC2E"/><circle cx="172" cy="60" r="9" fill="#28C840"/>
-  <rect x="652" y="44" width="296" height="32" rx="10" fill="#12091E" stroke="#3A2056"/>
-  <text x="800" y="66" text-anchor="middle" fill="#C4B5FD" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16">andregraccia — profile</text>
-  <rect x="72" y="92" width="1456" height="436" rx="0 0 28 28" fill="url(#glow)"/>
+ <rect x="72" y="30" width="1456" height="540" rx="30" fill="url(#window)" stroke="#5B347E"/>
+ <path d="M102 30H1498C1515 30 1528 43 1528 60V108H72V60C72 43 85 30 102 30Z" fill="#2A1938"/>
+ <circle cx="116" cy="69" r="10" fill="#FF5F57"/><circle cx="148" cy="69" r="10" fill="#FEBC2E"/><circle cx="180" cy="69" r="10" fill="#28C840"/>
+ <rect x="610" y="50" width="380" height="38" rx="11" fill="#180B28" stroke="#493062"/>
+ <text x="800" y="75" text-anchor="middle" fill="#DDD6FE" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17">andregraccia — README.md</text>
+ <rect x="72" y="108" width="1456" height="462" rx="0 0 30 30" fill="url(#halo)"/>
 </g>
-<text x="800" y="190" text-anchor="middle" fill="#A78BFA" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18">$ whoami</text>
-<g clip-path="url(#reveal)"><text x="800" y="282" text-anchor="middle" fill="#FCFCFF" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="88" font-weight="750" letter-spacing="-4">andré graccia</text></g>
-<rect x="1188" y="207" width="13" height="75" fill="#A78BFA"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;.42;.43;.78;.79" dur="1.1s" repeatCount="indefinite"/></rect>
-<text x="800" y="337" text-anchor="middle" fill="#DDD6FE" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="25">APIs claras, seguras e preparadas para evoluir.</text>
-<g font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600">
-  <rect x="414" y="402" width="220" height="52" rx="16" fill="#261345" stroke="#6D38AB"/><text x="524" y="434" text-anchor="middle" fill="#F5F3FF">in&nbsp;&nbsp; LinkedIn</text>
-  <rect x="690" y="402" width="220" height="52" rx="16" fill="#261345" stroke="#6D38AB"/><text x="800" y="434" text-anchor="middle" fill="#F5F3FF">✉&nbsp;&nbsp; E-mail</text>
-  <rect x="966" y="402" width="220" height="52" rx="16" fill="#261345" stroke="#6D38AB"/><text x="1076" y="434" text-anchor="middle" fill="#F5F3FF">⌘&nbsp;&nbsp; GitHub</text>
-</g>
-<text x="800" y="493" text-anchor="middle" fill="#A78BFA" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15">⌘ + L  linkedin&nbsp;&nbsp;&nbsp; · &nbsp;&nbsp;&nbsp;⌘ + M  e-mail&nbsp;&nbsp;&nbsp; · &nbsp;&nbsp;&nbsp;⌘ + G  github</text>
+<text x="800" y="177" text-anchor="middle" fill="#BFA0FF" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="18">$ open profile</text>
+<g clip-path="url(#reveal)"><text x="800" y="269" text-anchor="middle" fill="#FCFCFF" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="90" font-weight="750" letter-spacing="-4">andré graccia</text></g>
+<rect x="1212" y="194" width="13" height="76" fill="#C4B5FD"><animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;.42;.43;.78;.79" dur="1.1s" repeatCount="indefinite"/></rect>
+<text x="800" y="327" text-anchor="middle" fill="#DDD6FE" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="25">Desenvolvedor Back-end Java · APIs claras, seguras e preparadas para evoluir.</text>
+<rect x="478" y="382" width="644" height="66" rx="18" fill="url(#button)"/><rect x="479" y="383" width="642" height="64" rx="17" stroke="#C4B5FD" stroke-opacity=".45"/>
+<text x="800" y="423" text-anchor="middle" fill="white" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700">in&nbsp;&nbsp; linkedin.com/in/andregraccia&nbsp;&nbsp; ↗</text>
+<text x="800" y="496" text-anchor="middle" fill="#BFA0FF" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16">⌘ L&nbsp;&nbsp; LinkedIn&nbsp;&nbsp;&nbsp; · &nbsp;&nbsp;⌘ M&nbsp;&nbsp; E-mail&nbsp;&nbsp;&nbsp; · &nbsp;&nbsp;⌘ G&nbsp;&nbsp; GitHub</text>
+<path d="M630 522H970" stroke="#6D28D9" stroke-width="2" stroke-linecap="round"/>
 </svg>
