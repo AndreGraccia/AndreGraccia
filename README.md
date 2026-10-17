@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg?v=5" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
+  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg?v=6" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
 </div>
 
 <div align="center">
