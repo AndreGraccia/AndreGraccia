@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg?v=4" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
+  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg?v=5" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
 </div>
 
 <div align="center">
@@ -37,7 +37,7 @@ localização      → São Paulo, Brasil
 <br />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg" alt="Qualidade é construída antes da produção." width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg?v=5" alt="Qualidade é construída antes da produção." width="100%" />
 </div>
 
 <br />
