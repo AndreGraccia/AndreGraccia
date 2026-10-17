@@ -1,14 +1,9 @@
 <svg width="1600" height="620" viewBox="0 0 1600 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Backend pensado para evoluir com clareza</title>
-  <desc id="desc">Card em estilo de terminal destacando as áreas de trabalho de André Graccia.</desc>
-  <rect width="1600" height="620" rx="28" fill="#100525"/>
-  <rect x="72" y="66" width="1456" height="1" fill="#5B21B6"/>
-  <text x="84" y="116" fill="#F8FAFC" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-1">andré graccia</text>
-  <text x="1460" y="116" text-anchor="end" fill="#A78BFA" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">01 / 03</text>
-  <text x="84" y="205" fill="#A78BFA" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="25">$ andre --help</text>
-  <text x="84" y="318" fill="#FCFCFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="86" font-weight="750" letter-spacing="-4">Backend pensado para</text>
-  <text x="84" y="410" fill="#FCFCFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="86" font-weight="750" letter-spacing="-4">evoluir com clareza.</text>
-  <rect x="84" y="468" width="1432" height="108" rx="12" fill="#050208" stroke="#3B1B57"/>
-  <text x="112" y="505" fill="#A78BFA" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">~/andre</text>
-  <text x="112" y="548" fill="#F5F3FF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">APIs bem estruturadas · testes que dão confiança · código fácil de evoluir</text>
+<title id="title">Backend pensado para evoluir com clareza</title><desc id="desc">Janela de terminal em estilo macOS que apresenta o foco profissional de André Graccia.</desc>
+<defs><linearGradient id="bg" x1="80" y1="40" x2="1510" y2="590" gradientUnits="userSpaceOnUse"><stop stop-color="#1B0B38"/><stop offset="1" stop-color="#0B0613"/></linearGradient><filter id="s" x="20" y="0" width="1560" height="670" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="22" stdDeviation="20" flood-opacity=".42"/></filter></defs>
+<g filter="url(#s)"><rect x="72" y="28" width="1456" height="562" rx="28" fill="url(#bg)" stroke="#4C2B70"/><path d="M100 28H1500C1515 28 1528 40 1528 56V92H72V56C72 40 85 28 100 28Z" fill="#211332"/><circle cx="112" cy="60" r="9" fill="#FF5F57"/><circle cx="142" cy="60" r="9" fill="#FEBC2E"/><circle cx="172" cy="60" r="9" fill="#28C840"/><text x="800" y="66" text-anchor="middle" fill="#C4B5FD" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16">~/andre — sobre</text></g>
+<text x="112" y="170" fill="#A78BFA" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="24">$ andre --help</text>
+<text x="112" y="285" fill="#FCFCFF" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="80" font-weight="750" letter-spacing="-4">Backend pensado para</text>
+<text x="112" y="372" fill="#FCFCFF" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="80" font-weight="750" letter-spacing="-4">evoluir com clareza.</text>
+<rect x="112" y="434" width="1376" height="108" rx="14" fill="#09040F" stroke="#3C225B"/><text x="142" y="473" fill="#A78BFA" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="17">foco</text><text x="142" y="514" fill="#F5F3FF" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="21">APIs bem estruturadas · testes que dão confiança · código fácil de evoluir</text>
 </svg>
