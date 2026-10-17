@@ -1,12 +1,14 @@
 <div align="center">
-  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/profile-banner.svg" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/profile-banner-v2.svg" alt="ANDRÉ GRACCIA — Desenvolvedor Back-end Java" width="100%" />
 </div>
 
 <div align="center">
 
-[![E-mail](https://img.shields.io/badge/contato_por_e--mail-7c3aed?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andregraccia2105@gmail.com)
+[✉ E-mail](mailto:andregraccia2105@gmail.com) &nbsp;·&nbsp; [in LinkedIn](https://br.linkedin.com/in/andregraccia)
 
-</div><br />
+</div>
+
+<br />
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/intro.svg" alt="Backend pensado para evoluir com clareza." width="100%" />
@@ -70,6 +72,6 @@ Minha experiência reúne desenvolvimento backend, integração de APIs, modelag
 
 ### construindo soluções com qualidade, uma linha de código por vez.
 
-[![E-mail](https://img.shields.io/badge/contato-7c3aed?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andregraccia2105@gmail.com)
+Disponível para conversar por e-mail ou LinkedIn.
 
 </div>
