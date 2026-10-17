@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-label="Carteira Digital — projeto com React, Spring Boot e PostgreSQL">
+  <rect width="800" height="520" fill="#0B0B12"/>
+  <rect x="18" y="18" width="764" height="484" rx="26" fill="#12051F" stroke="#553273" stroke-width="2"/>
+  <path d="M44 18H756C770 18 782 30 782 44V84H18V44C18 30 30 18 44 18Z" fill="#251538"/>
+  <circle cx="54" cy="51" r="7" fill="#FF5F57"/><circle cx="78" cy="51" r="7" fill="#FEBC2E"/><circle cx="102" cy="51" r="7" fill="#28C840"/>
+  <text x="400" y="57" text-anchor="middle" fill="#D8CCF8" font-family="Courier New, monospace" font-size="14">/projetos/carteira-digital</text>
+  <text x="60" y="149" fill="#A78BFA" font-family="Courier New, monospace" font-size="16">$ projeto --financeiro</text>
+  <text x="60" y="218" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="700">Carteira Digital</text>
+  <text x="60" y="271" fill="#CFC4E8" font-family="Arial, Helvetica, sans-serif" font-size="22">Gestão de carteiras, transações e</text>
+  <text x="60" y="303" fill="#CFC4E8" font-family="Arial, Helvetica, sans-serif" font-size="22">segurança em uma aplicação full-stack.</text>
+  <rect x="60" y="347" width="180" height="36" rx="11" fill="#201235"/><text x="150" y="371" text-anchor="middle" fill="#D8CCF8" font-family="Arial, Helvetica, sans-serif" font-size="16">React</text>
+  <rect x="252" y="347" width="190" height="36" rx="11" fill="#201235"/><text x="347" y="371" text-anchor="middle" fill="#D8CCF8" font-family="Arial, Helvetica, sans-serif" font-size="16">Spring Boot</text>
+  <rect x="454" y="347" width="174" height="36" rx="11" fill="#201235"/><text x="541" y="371" text-anchor="middle" fill="#D8CCF8" font-family="Arial, Helvetica, sans-serif" font-size="16">PostgreSQL</text>
+  <rect x="60" y="424" width="230" height="46" rx="14" fill="#7C3AED"/><text x="175" y="454" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">explorar projeto →</text>
+</svg>
