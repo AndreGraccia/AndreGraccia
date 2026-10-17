@@ -1,10 +1,12 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/profile-banner-v2.svg" alt="ANDRÉ GRACCIA — Desenvolvedor Back-end Java" width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero.svg" alt="andré graccia — Desenvolvedor Back-end Java" width="100%" />
 </div>
 
 <div align="center">
 
-[✉ E-mail](mailto:andregraccia2105@gmail.com) &nbsp;·&nbsp; [in LinkedIn](https://br.linkedin.com/in/andregraccia)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/andregraccia)
+[![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andregraccia2105@gmail.com)
+![Currículo em breve](https://img.shields.io/badge/Currículo-em%20breve-5B21B6?style=for-the-badge&logo=readme&logoColor=white)
 
 </div>
 
@@ -58,11 +60,12 @@ Ferramenta voltada à consulta de indicadores do Banco Central e a simulações 
 
 ## <span style="color:#A78BFA"> Perfil técnico</span>
 
-Minha experiência reúne desenvolvimento backend, integração de APIs, modelagem de dados e práticas de qualidade de software.
+Uma visão rápida das tecnologias mais presentes nos meus repositórios e da minha atividade no GitHub.
 
 <div align="center">
 
-<img width="68%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&hide_border=true&border_radius=20&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&langs_count=6&v=4" alt="Linguagens mais utilizadas por André Graccia" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&hide_border=true&border_radius=18&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&langs_count=6&v=5" alt="Linguagens mais utilizadas por André Graccia" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&hide_border=true&border_radius=18&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&ring_color=8B5CF6&include_all_commits=true&count_private=true&v=5" alt="Estatísticas do GitHub de André Graccia" />
 
 </div>
 
