@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg" alt="André Graccia — Desenvolvedor Back-end Java" width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg" alt="André Graccia — Desenvolvedor Back-end Java, APIs claras, seguras e preparadas para evoluir" width="100%" />
 </div>
 
 <div align="center">
@@ -13,7 +13,7 @@
 <br />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/intro.svg" alt="Backend, com mentalidade de teste." width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/intro.svg" alt="Backend pensado para evoluir com clareza." width="100%" />
 </div>
 
 <br />
@@ -37,7 +37,7 @@ localização      → São Paulo, Brasil
 <br />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg" alt="Confiabilidade não é um detalhe." width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg" alt="Qualidade é construída antes da produção." width="100%" />
 </div>
 
 <br />
@@ -75,12 +75,21 @@ localização      → São Paulo, Brasil
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&theme=midnight-purple&hide_border=true&include_all_commits=true&count_private=true" alt="Estatísticas do GitHub de André Graccia" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&theme=midnight-purple&hide_border=true" alt="Linguagens mais usadas por André Graccia" />
+<img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AndreGraccia&theme=tokyonight" alt="Resumo detalhado das contribuições de André Graccia" />
 
-<br />
+<br /><br />
 
-<img src="https://streak-stats.demolab.com?user=AndreGraccia&theme=midnight-purple&hide_border=true&locale=pt_BR" alt="Sequência de contribuições de André Graccia" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AndreGraccia&theme=tokyonight" alt="Repositórios por linguagem" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AndreGraccia&theme=tokyonight" alt="Linguagens com mais commits" />
+
+<br /><br />
+
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AndreGraccia&theme=tokyonight" alt="Estatísticas avançadas do GitHub" />
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AndreGraccia&theme=tokyonight&utcOffset=-3" alt="Horários de maior produtividade" />
+
+<br /><br />
+
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=AndreGraccia&bg_color=100525&color=C4B5FD&line=8B5CF6&point=F5F3FF&area=true&area_color=6D28D9&hide_border=true&custom_title=Atividade%20de%20contribuições" alt="Gráfico anual de atividade no GitHub" />
 
 </div>
 
