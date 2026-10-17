@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg?v=6" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
+  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg?v=7" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
 </div>
 
 <div align="center">
@@ -44,30 +44,18 @@ localização      → São Paulo, Brasil
 
 ## <span style="color:#A78BFA"> Projetos</span>
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>💳 Carteira Digital</h3>
-      <p>Aplicação full-stack para gestão de carteiras e movimentações financeiras, construída com foco em consistência de transações, autenticação e segurança.</p>
-      <p>
-        <img src="https://img.shields.io/badge/React-18181b?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
-        <img src="https://img.shields.io/badge/Spring_Boot-18181b?style=flat-square&logo=springboot&logoColor=6DB33F" alt="Spring Boot" />
-        <img src="https://img.shields.io/badge/PostgreSQL-18181b?style=flat-square&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
-      </p>
-      <a href="https://github.com/AndreGraccia/Carteira-Digital"><b>explorar projeto →</b></a>
-    </td>
-    <td width="50%" valign="top">
-      <h3>📈 Calculadora de Juros</h3>
-      <p>Ferramenta para consultar indicadores do Banco Central, analisar históricos e criar simulações de juros simples e compostos.</p>
-      <p>
-        <img src="https://img.shields.io/badge/API-18181b?style=flat-square&logo=fastapi&logoColor=A78BFA" alt="API" />
-        <img src="https://img.shields.io/badge/Dados-18181b?style=flat-square&logo=chartdotjs&logoColor=A78BFA" alt="Dados e gráficos" />
-        <img src="https://img.shields.io/badge/Finanças-18181b?style=flat-square&logo=moneygram&logoColor=A78BFA" alt="Finanças" />
-      </p>
-      <a href="https://github.com/AndreGraccia/calc-juros"><b>explorar projeto →</b></a>
-    </td>
-  </tr>
-</table>
+<div align="center">
+
+<a href="https://github.com/AndreGraccia/Carteira-Digital" title="Abrir Carteira Digital">
+  <img width="49%" src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/project-wallet.svg?v=1" alt="Carteira Digital — React, Spring Boot e PostgreSQL" />
+</a>
+<a href="https://github.com/AndreGraccia/calc-juros" title="Abrir Calculadora de Juros">
+  <img width="49%" src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/project-interest.svg?v=1" alt="Calculadora de Juros — dados econômicos e simulações" />
+</a>
+
+</div>
+
+<p align="center"><sub>Selecione um card para abrir o repositório.</sub></p>
 
 <br />
 
