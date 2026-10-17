@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-original.svg?v=2" alt="andré graccia — Desenvolvedor Back-end Java" width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-rounded.svg" alt="andré graccia — Desenvolvedor Back-end Java" width="100%" />
 </div>
 <br/>
 <div align="center">
