@@ -12,9 +12,15 @@
 
 <br />
 
-## <span style="color:#A78BFA">01.</span> Sobre mim
+<div align="center">
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/intro.svg" alt="Backend, com mentalidade de teste." width="100%" />
+</div>
 
-Estudante de **Ciência da Computação** na Universidade Anhembi Morumbi e profissional de **Engenharia de Software** na Cielo. Meu foco é desenvolver produtos backend confiáveis, seguros e bem testados — software que não pode falhar.
+<br />
+
+## <span style="color:#A78BFA">/ sobre</span>
+
+Sou estudante de **Ciência da Computação** na Universidade Anhembi Morumbi e atuo com **Engenharia de Software** na Cielo. Meu objetivo é desenvolver produtos backend que sejam seguros, previsíveis e fáceis de evoluir.
 
 ```text
 foco atual       → Java · Spring Boot · APIs · qualidade de software
@@ -30,7 +36,13 @@ localização      → São Paulo, Brasil
 
 <br />
 
-## <span style="color:#A78BFA">02.</span> Projetos em destaque
+<div align="center">
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg" alt="Confiabilidade não é um detalhe." width="100%" />
+</div>
+
+<br />
+
+## <span style="color:#A78BFA">/ projetos</span>
 
 <table>
   <tr>
@@ -59,7 +71,7 @@ localização      → São Paulo, Brasil
 
 <br />
 
-## <span style="color:#A78BFA">03.</span> GitHub em números
+## <span style="color:#A78BFA">/ atividade</span>
 
 <div align="center">
 
