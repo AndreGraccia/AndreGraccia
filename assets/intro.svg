@@ -1,14 +1,14 @@
 <svg width="1600" height="620" viewBox="0 0 1600 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Backend com mentalidade de teste</title>
+  <title id="title">Backend pensado para evoluir com clareza</title>
   <desc id="desc">Card em estilo de terminal destacando as áreas de trabalho de André Graccia.</desc>
   <rect width="1600" height="620" rx="28" fill="#100525"/>
   <rect x="72" y="66" width="1456" height="1" fill="#5B21B6"/>
   <text x="84" y="116" fill="#F8FAFC" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="-1">andré graccia</text>
   <text x="1460" y="116" text-anchor="end" fill="#A78BFA" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="20">01 / 03</text>
   <text x="84" y="205" fill="#A78BFA" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="25">$ andre --help</text>
-  <text x="84" y="318" fill="#FCFCFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="86" font-weight="750" letter-spacing="-4">Backend, com mentalidade</text>
-  <text x="84" y="410" fill="#FCFCFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="86" font-weight="750" letter-spacing="-4">de teste.</text>
+  <text x="84" y="318" fill="#FCFCFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="86" font-weight="750" letter-spacing="-4">Backend pensado para</text>
+  <text x="84" y="410" fill="#FCFCFF" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="86" font-weight="750" letter-spacing="-4">evoluir com clareza.</text>
   <rect x="84" y="468" width="1432" height="108" rx="12" fill="#050208" stroke="#3B1B57"/>
   <text x="112" y="505" fill="#A78BFA" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18">~/andre</text>
-  <text x="112" y="548" fill="#F5F3FF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">java · spring boot · testes · bancos de dados · cloud</text>
+  <text x="112" y="548" fill="#F5F3FF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="22">APIs bem estruturadas · testes que dão confiança · código fácil de evoluir</text>
 </svg>
