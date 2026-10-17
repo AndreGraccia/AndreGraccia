@@ -18,7 +18,7 @@
 
 <br />
 
-## <span style="color:#A78BFA">/ sobre</span>
+## <span style="color:#A78BFA"> Sobre</span>
 
 Sou estudante de **Ciência da Computação** na Universidade Anhembi Morumbi e atuo com **Engenharia de Software** na Cielo. Meu objetivo é desenvolver produtos backend que sejam seguros, previsíveis e fáceis de evoluir.
 
@@ -42,7 +42,7 @@ localização      → São Paulo, Brasil
 
 <br />
 
-## <span style="color:#A78BFA">/ projetos</span>
+## <span style="color:#A78BFA"> Projetos</span>
 
 <table>
   <tr>
@@ -71,7 +71,7 @@ localização      → São Paulo, Brasil
 
 <br />
 
-## <span style="color:#A78BFA">/ atividade</span>
+## <span style="color:#A78BFA"> Atividade</span>
 
 <div align="center">
 
