@@ -68,7 +68,7 @@ Uma visão rápida das tecnologias mais presentes nos meus repositórios e da mi
 
 <div align="center">
 
-### construindo soluções com qualidade, uma linha de código por vez.
+### construindo soluções com qualidade.
 
 Disponível para conversar por e-mail ou LinkedIn.
 
