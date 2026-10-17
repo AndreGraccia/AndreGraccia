@@ -4,9 +4,9 @@
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-7c3aed?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/andregraccia)
-[![GitHub](https://img.shields.io/badge/github-18181b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AndreGraccia)
-[![Cielo](https://img.shields.io/badge/atuação-cielo-4c1d95?style=for-the-badge)](https://www.cielo.com.br/)
+[![LinkedIn](https://img.shields.io/badge/⌘_L_linkedin-7c3aed?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/andregraccia)
+[![E-mail](https://img.shields.io/badge/⌘_M_e--mail-7c3aed?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andregraccia2105@gmail.com)
+[![GitHub](https://img.shields.io/badge/⌘_G_github-18181b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AndreGraccia)
 
 </div>
 
@@ -74,18 +74,23 @@ localização      → São Paulo, Brasil
 ## <span style="color:#A78BFA"> Atividade</span>
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/metrics.svg" alt="Métricas em movimento." width="100%" />
+</div>
+
+<br />
+
+<div align="center">
 
 <img width="100%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=AndreGraccia&theme=tokyonight" alt="Resumo detalhado das contribuições de André Graccia" />
 
 <br /><br />
 
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AndreGraccia&theme=tokyonight" alt="Repositórios por linguagem" />
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AndreGraccia&theme=tokyonight" alt="Linguagens com mais commits" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&hide_border=true&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&ring_color=8B5CF6&include_all_commits=true&count_private=true" alt="Estatísticas detalhadas do GitHub" />
+<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&hide_border=true&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA" alt="Linguagens mais utilizadas" />
 
 <br /><br />
 
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=AndreGraccia&theme=tokyonight" alt="Estatísticas avançadas do GitHub" />
-<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=AndreGraccia&theme=tokyonight&utcOffset=-3" alt="Horários de maior produtividade" />
+<img width="100%" src="https://streak-stats.demolab.com?user=AndreGraccia&background=100525&hide_border=true&stroke=3C225B&ring=8B5CF6&fire=C4B5FD&currStreakNum=F5F3FF&sideNums=C4B5FD&currStreakLabel=F5F3FF&sideLabels=A78BFA&dates=8B5CF6&locale=pt_BR" alt="Sequência de contribuições" />
 
 <br /><br />
 
