@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg" alt="André Graccia — Desenvolvedor Back-end Java, APIs claras, seguras e preparadas para evoluir" width="100%" />
+  <a href="https://br.linkedin.com/in/andregraccia" title="Abrir LinkedIn de André Graccia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/banner.svg?v=4" alt="André Graccia — Desenvolvedor Back-end Java. Abrir LinkedIn." width="100%" /></a>
 </div>
 
 <div align="center">
@@ -94,7 +94,7 @@ localização      → São Paulo, Brasil
 
 <br /><br />
 
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=AndreGraccia&bg_color=100525&color=C4B5FD&line=8B5CF6&point=F5F3FF&area=true&area_color=6D28D9&hide_border=true&custom_title=Atividade%20de%20contribuições" alt="Gráfico anual de atividade no GitHub" />
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=AndreGraccia&bg_color=0D0719&color=E9D5FF&line=B794F4&point=FDE68A&area=true&area_color=6D28D9&hide_border=true&custom_title=Ritmo%20de%20contribuições&v=4" alt="Gráfico anual de atividade no GitHub" />
 
 </div>
 
