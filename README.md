@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-original.svg" alt="andré graccia — Desenvolvedor Back-end Java" width="100%" />
 </div>
-
+<br/>
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/andregraccia)
