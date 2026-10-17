@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero.svg" alt="andré graccia — Desenvolvedor Back-end Java" width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-macos.svg" alt="andré graccia — Desenvolvedor Back-end Java" width="100%" />
 </div>
 
 <div align="center">
@@ -44,17 +44,12 @@ localização      → São Paulo, Brasil
 
 ## <span style="color:#A78BFA"> Projetos selecionados</span>
 
-### [Carteira Digital](https://github.com/AndreGraccia/Carteira-Digital)
+Projetos que demonstram meu interesse por backend, segurança, dados e regras de negócio.
 
-Aplicação full-stack para gestão de carteiras e movimentações financeiras. O projeto trabalha autenticação, histórico de operações e regras que exigem atenção a segurança e consistência de dados.
-
-**Tecnologias:** React · Java · Spring Boot · PostgreSQL · Docker · JWT
-
-### [Calculadora de Juros](https://github.com/AndreGraccia/calc-juros)
-
-Ferramenta voltada à consulta de indicadores do Banco Central e a simulações de juros simples e compostos. O foco é transformar dados econômicos em informações claras para consulta e comparação.
-
-**Temas:** APIs · dados econômicos · visualização de dados · finanças
+| Projeto | Descrição | Tecnologias |
+| --- | --- | --- |
+| [Carteira Digital](https://github.com/AndreGraccia/Carteira-Digital) | Aplicação full-stack para gestão de carteiras e movimentações financeiras, com autenticação, histórico de operações e foco em consistência de dados. | React · Java · Spring Boot · PostgreSQL · Docker · JWT |
+| [Calculadora de Juros](https://github.com/AndreGraccia/calc-juros) | Consulta indicadores do Banco Central e realiza simulações de juros simples e compostos para facilitar comparações financeiras. | APIs · dados econômicos · visualização de dados · finanças |
 
 <br />
 
