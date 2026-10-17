@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" role="img" aria-label="André Graccia — Desenvolvedor Back-end Java">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(800 492) rotate(-90) scale(235 860)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6D28D9" stop-opacity=".84"/>
+      <stop offset=".54" stop-color="#3B0764" stop-opacity=".46"/>
+      <stop offset="1" stop-color="#030303" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="480" fill="#030303"/>
+  <path d="M0 0H1600V62H0V0Z" fill="#241334"/>
+  <circle cx="42" cy="31" r="9" fill="#FF5F57"/>
+  <circle cx="72" cy="31" r="9" fill="#FEBC2E"/>
+  <circle cx="102" cy="31" r="9" fill="#28C840"/>
+  <rect x="624" y="12" width="352" height="38" rx="11" fill="#160A27" stroke="#493062"/>
+  <text x="800" y="37" text-anchor="middle" fill="#D8CCF8" font-family="Arial, Helvetica, sans-serif" font-size="16">andregraccia — README.md</text>
+  <rect y="62" width="1600" height="418" fill="url(#glow)"/>
+  <path d="M0 372C290 322 472 405 800 365C1113 328 1350 394 1600 342V480H0V372Z" fill="#130523" fill-opacity=".72"/>
+  <g opacity="1">
+    <animate attributeName="opacity" values="0;1" dur="0.7s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" values="0 16;0 0" dur="0.7s" fill="freeze"/>
+    <text x="800" y="214" text-anchor="middle" fill="#FAFAFA" font-family="Arial, Helvetica, sans-serif" font-size="84" font-weight="700" letter-spacing="-3">André Graccia</text>
+    <text x="800" y="283" text-anchor="middle" fill="#C9BEDA" font-family="Arial, Helvetica, sans-serif" font-size="26">Desenvolvedor Back-end Java · APIs claras, seguras e preparadas para evoluir.</text>
+    <rect x="610" y="330" width="380" height="2" rx="1" fill="#7440C8"/>
+    <text x="800" y="370" text-anchor="middle" fill="#B69EE3" font-family="Courier New, monospace" font-size="17">$ build with quality</text>
+  </g>
+</svg>
