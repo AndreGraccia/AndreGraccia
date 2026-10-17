@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-label="André Graccia — Desenvolvedor Back-end Java">
+  <defs>
+    <linearGradient id="bg" x1="72" y1="28" x2="1528" y2="532" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B0B38"/><stop offset=".62" stop-color="#120625"/><stop offset="1" stop-color="#0B0613"/>
+    </linearGradient>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(1250 495) rotate(-90) scale(230 400)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED" stop-opacity=".5"/><stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="560" fill="#0B0B12"/>
+  <rect x="72" y="28" width="1456" height="504" rx="28" fill="url(#bg)" stroke="#4C2B70"/>
+  <path d="M100 28H1500C1515 28 1528 40 1528 56V92H72V56C72 40 85 28 100 28Z" fill="#211332"/>
+  <circle cx="112" cy="60" r="9" fill="#FF5F57"/><circle cx="142" cy="60" r="9" fill="#FEBC2E"/><circle cx="172" cy="60" r="9" fill="#28C840"/>
+  <text x="800" y="66" text-anchor="middle" fill="#C4B5FD" font-family="Courier New, monospace" font-size="16">~/andre — profile</text>
+  <rect x="72" y="92" width="1456" height="440" rx="0 0 28 28" fill="url(#aura)"/>
+  <g opacity="1">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" values="-32 0;0 0" dur="0.8s" fill="freeze"/>
+    <text x="150" y="176" fill="#A78BFA" font-family="Courier New, monospace" font-size="19">$ whoami</text>
+    <text x="150" y="285" fill="#FCFCFF" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="700" letter-spacing="-3">André Graccia</text>
+    <text x="154" y="345" fill="#DDD6FE" font-family="Arial, Helvetica, sans-serif" font-size="27">Desenvolvedor Back-end Java</text>
+    <text x="154" y="385" fill="#BFAED6" font-family="Arial, Helvetica, sans-serif" font-size="20">APIs claras, seguras e preparadas para evoluir.</text>
+  </g>
+  <rect x="154" y="435" width="458" height="58" rx="15" fill="#160A27" stroke="#67458C"/>
+  <text x="183" y="471" fill="#A78BFA" font-family="Courier New, monospace" font-size="16">foco</text>
+  <text x="253" y="471" fill="#F5F3FF" font-family="Arial, Helvetica, sans-serif" font-size="18">Java · Spring · Qualidade</text>
+  <text x="1246" y="435" text-anchor="middle" fill="#BFA0FF" font-family="Courier New, monospace" font-size="17">status</text>
+  <text x="1246" y="472" text-anchor="middle" fill="#F5F3FF" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">building</text>
+</svg>
