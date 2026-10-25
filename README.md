@@ -48,7 +48,7 @@ Projetos que demonstram meu interesse por backend, segurança, dados e regras de
 
 | Projeto | Descrição | Tecnologias |
 | --- | --- | --- |
-| [Carteira Digital](https://github.com/AndreGraccia/Carteira-Digital) | Aplicação full-stack para gestão de carteiras e movimentações financeiras, com autenticação, histórico de operações e foco em consistência de dados. | React · Java · Spring Boot · PostgreSQL · Docker · JWT |
+| [wall.ia](https://github.com/AndreGraccia/Carteira-Digital) | Aplicação full-stack para gestão de carteiras e movimentações financeiras, com autenticação, histórico de operações e foco em consistência de dados. | React · Java · Spring Boot · PostgreSQL · Docker · JWT |
 | [Calculadora de Juros](https://github.com/AndreGraccia/calc-juros) | Consulta indicadores do Banco Central e realiza simulações de juros simples e compostos para facilitar comparações financeiras. | APIs · dados econômicos · visualização de dados · finanças |
 
 <br />
