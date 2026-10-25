@@ -6,8 +6,8 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/andregraccia)
 [![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andregraccia2105@gmail.com)
-[![Currículo](https://img.shields.io/badge/Currículo-5B21B6?style=for-the-badge&logo=readme&logoColor=white)]
-(curriculo.html)
+![Currículo](https://img.shields.io/badge/Currículo-5B21B6?style=for-the-badge&logo=readme&logoColor=white)
+
 
 </div>
 
