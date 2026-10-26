@@ -49,8 +49,8 @@ Projetos que demonstram meu interesse por backend, segurança, dados e regras de
 
 | Projeto | Descrição | Tecnologias |
 | :--- | :--- | :--- |
-| [Wall.ia](https://github.com/AndreGraccia) | Aplicação full-stack para gestão de carteiras e movimentações financeiras, com autenticação, histórico de operações e foco em consistência de dados. | React · Java · Spring Boot · PostgreSQL · Docker · JWT |
-| [Calculadora de Juros](https://github.com/AndreGraccia) | Consulta indicadores do Banco Central e realiza simulações de juros simples e compostos para facilitar comparações financeiras. | APIs · dados econômicos · visualização de dados · finanças |
+| [Wall.ia](https://github.com/Wall.ia) | Aplicação full-stack para gestão de carteiras e movimentações financeiras, com autenticação, histórico de operações e foco em consistência de dados. | React · Java · Spring Boot · PostgreSQL · Docker · JWT |
+| [Calculadora de Juros](https://github.com/calc-juros) | Consulta indicadores do Banco Central e realiza simulações de juros simples e compostos para facilitar comparações financeiras. | APIs · dados econômicos · visualização de dados · finanças |
 | [Orbit.ia](https://github.com/AndreGraccia/Orbit.IA) | Workspace local e orquestrador de agentes de IA para automação de tarefas, integração com Google Workspace, código e gestão contextual de conversas. | React · Vite · Tailwind CSS · Node.js · n8n · LangChain · OpenRouter · REST APIs |
 
 <br />
