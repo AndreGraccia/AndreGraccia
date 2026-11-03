@@ -60,14 +60,14 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 
 ## GitHub
 
-Meu GitHub reúne projetos próprios, experimentos e estudos práticos. Para acompanhar minha atividade, consultar os repositórios e visualizar minhas contribuições, acesse:
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" alt="Estatísticas do GitHub de André Graccia" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&langs_count=7&theme=tokyonight&hide_border=true" alt="Linguagens mais utilizadas nos repositórios de André Graccia" />
+</div>
 
 <div align="center">
-
-[![Ver perfil no GitHub](https://img.shields.io/badge/Explorar_meu_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AndreGraccia)
-[![Ver repositórios](https://img.shields.io/badge/Meus_repositórios-6C4AB6?style=for-the-badge&logo=git&logoColor=white)](https://github.com/AndreGraccia?tab=repositories)
-[![Ver contribuições](https://img.shields.io/badge/Minhas_contribuições-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AndreGraccia?tab=overview)
-
+  <a href="https://github.com/AndreGraccia?tab=repositories">Ver todos os repositórios</a> ·
+  <a href="https://github.com/AndreGraccia?tab=overview">Ver atividade e contribuições</a>
 </div>
 
 ## Vamos conversar?
