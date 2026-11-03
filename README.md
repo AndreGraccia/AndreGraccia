@@ -1,14 +1,11 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-rounded.svg?v=2" alt="andré graccia — Desenvolvedor Back-end Java" width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-rounded.svg?v=2" alt="André Graccia — Desenvolvedor Back-end Java" width="100%" />
 </div>
-<br/>
+
 <div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/andregraccia)
-[![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andregraccia2105@gmail.com)
-[![Currículo](https://img.shields.io/badge/Curr%C3%ADculo-5B21B6?style=for-the-badge&logo=readme&logoColor=white)](./Curriculo_Andre_Graccia.pdf)
-
-
+  <a href="https://br.linkedin.com/in/andregraccia"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:andregraccia2105@gmail.com"><img src="https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="E-mail" /></a>
+  <a href="./Curriculo_Andre_Graccia.pdf"><img src="https://img.shields.io/badge/Curr%C3%ADculo-5B21B6?style=for-the-badge&logo=readme&logoColor=white" alt="Currículo" /></a>
 </div>
 
 <br />
@@ -17,22 +14,22 @@
   <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/intro.svg" alt="Backend pensado para evoluir com clareza." width="100%" />
 </div>
 
-<br />
+## Sobre mim
 
-## <span style="color:#A78BFA"> Sobre</span>
+Sou estudante de **Ciência da Computação** na Universidade Anhembi Morumbi e atuo na área de **Engenharia de Software na Cielo**. Tenho direcionado meus estudos e projetos para o desenvolvimento de software, com foco em soluções backend, integração entre sistemas e qualidade de código.
 
-Sou estudante de **Ciência da Computação** na Universidade Anhembi Morumbi e atuo com **Engenharia de Software** na Cielo. Meu objetivo é desenvolver produtos backend que sejam seguros, previsíveis e fáceis de evoluir.
+Gosto de entender o problema antes de implementar a solução. Por isso, valorizo código legível, responsabilidades bem definidas, testes, documentação e decisões técnicas que facilitem a manutenção e a evolução dos projetos.
 
-```text
-foco atual       → Java · Spring Boot · APIs · qualidade de software
-em evolução      → cloud · automação · IA aplicada
-localização      → São Paulo, Brasil
-```
+| Área | Foco |
+| :--- | :--- |
+| Principal | Java · Spring Boot · APIs REST · SQL |
+| Em evolução | React · Docker · Cloud · IA aplicada |
+| Localização | São Paulo, Brasil |
+
+## Tecnologias
 
 <div align="center">
-
-<img src="https://skillicons.dev/icons?i=java,spring,react,js,ts,postgres,docker,git,github,maven,idea,vscode&theme=dark&perline=12" alt="Tecnologias: Java, Spring, React, JavaScript, TypeScript, PostgreSQL, Docker, Git, GitHub, Maven, IntelliJ IDEA e VS Code" />
-
+  <img src="https://skillicons.dev/icons?i=java,spring,react,js,ts,postgres,docker,git,github,maven,idea,vscode&theme=dark&perline=6" alt="Java, Spring, React, JavaScript, TypeScript, PostgreSQL, Docker, Git, GitHub, Maven, IntelliJ IDEA e VS Code" />
 </div>
 
 <br />
@@ -41,42 +38,38 @@ localização      → São Paulo, Brasil
   <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg?v=5" alt="Qualidade é construída antes da produção." width="100%" />
 </div>
 
-<br />
+## Projetos em destaque
 
-## <span style="color:#A78BFA"> Projetos selecionados</span>
+Abaixo estão alguns projetos que representam minha evolução prática em desenvolvimento backend, aplicações full-stack, integração de serviços e automação.
 
-Projetos que demonstram meu interesse por backend, segurança, dados e regras de negócio.
-
-| Projeto | Descrição | Tecnologias |
+| Projeto | Sobre | Tecnologias |
 | :--- | :--- | :--- |
-| [Wall.ia](https://github.com/AndreGraccia/Wall.ia) | Aplicação full-stack para gestão de carteiras e movimentações financeiras, com autenticação, histórico de operações e foco em consistência de dados. | React · Java · Spring Boot · PostgreSQL · Docker · JWT |
-| [Calculadora de Juros](https://github.com/AndreGraccia/calc-juros) | Consulta indicadores do Banco Central e realiza simulações de juros simples e compostos para facilitar comparações financeiras. | APIs · dados econômicos · visualização de dados · finanças |
-| [Orbit.ia](https://github.com/AndreGraccia/Orbit.IA) | Workspace local e orquestrador de agentes de IA para automação de tarefas, integração com Google Workspace, código e gestão contextual de conversas. | React · Vite · Tailwind CSS · Node.js · n8n · LangChain · OpenRouter · REST APIs |
+| [**Wall.ia**](https://github.com/AndreGraccia/Wall.ia) | Aplicação full-stack voltada à gestão de carteiras e movimentações financeiras. O projeto explora autenticação, histórico de operações e organização de regras de negócio. | Java · Spring Boot · React · PostgreSQL · Docker |
+| [**Calculadora de Juros**](https://github.com/AndreGraccia/calc-juros) | Projeto em desenvolvimento para simular juros simples e compostos e trabalhar com indicadores econômicos, incluindo dados do Banco Central. | Java 25 · Spring Boot · Maven · APIs REST |
+| [**Orbit.ia**](https://github.com/AndreGraccia/Orbit.IA) | Agente pessoal de IA com interface própria e workflows de automação. O projeto explora a integração entre frontend, n8n e serviços de IA. | React · Vite · n8n · Docker · PostgreSQL |
 
-<br />
+> Os projetos evoluem continuamente. Consulte cada repositório para ver o escopo atual, as funcionalidades implementadas, as decisões técnicas e os próximos passos.
 
-## <span style="color:#A78BFA"> Perfil técnico</span>
+## Atuação e interesses
 
-Uma visão rápida das tecnologias mais presentes nos meus repositórios e da minha atividade no GitHub.
+- Desenvolvimento backend com Java e Spring Boot.
+- Construção e integração de APIs REST.
+- Modelagem e persistência de dados relacionais.
+- Testes, depuração e qualidade de software.
+- Automação de processos e aplicações com IA.
+
+## GitHub
 
 <div align="center">
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&hide_border=true&border_radius=18&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&langs_count=6&v=5" alt="Linguagens mais utilizadas por André Graccia" />
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&hide_border=true&border_radius=18&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&ring_color=8B5CF6&include_all_commits=true&count_private=true&v=5" alt="Estatísticas do GitHub de André Graccia" />
-
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&hide_border=true&border_radius=18&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&ring_color=8B5CF6&include_all_commits=true&count_private=true&v=6" alt="Estatísticas do GitHub de André Graccia" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&hide_border=true&border_radius=18&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&langs_count=6&v=6" alt="Linguagens mais utilizadas nos repositórios públicos" />
 </div>
 
-<br />
+## Vamos conversar?
+
+Estou aberto a trocar experiências sobre desenvolvimento de software, projetos, tecnologia e oportunidades na área.
 
 <div align="center">
-
-### construindo soluções com qualidade e segurança.
-
-Disponível para conversar por e-mail ou LinkedIn.
-
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/andregraccia)
-[![E-mail](https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andregraccia2105@gmail.com)
-
-
+  <a href="https://br.linkedin.com/in/andregraccia"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:andregraccia2105@gmail.com"><img src="https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="E-mail" /></a>
 </div>
