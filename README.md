@@ -60,9 +60,14 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 
 ## GitHub
 
+Meu GitHub reúne projetos próprios, experimentos e estudos práticos. Para acompanhar minha atividade, consultar os repositórios e visualizar minhas contribuições, acesse:
+
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&hide_border=true&border_radius=18&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&ring_color=8B5CF6&include_all_commits=true&count_private=true&v=6" alt="Estatísticas do GitHub de André Graccia" />
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&hide_border=true&border_radius=18&bg_color=100525&title_color=F5F3FF&text_color=C4B5FD&icon_color=A78BFA&langs_count=6&v=6" alt="Linguagens mais utilizadas nos repositórios públicos" />
+
+[![Ver perfil no GitHub](https://img.shields.io/badge/Explorar_meu_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AndreGraccia)
+[![Ver repositórios](https://img.shields.io/badge/Meus_repositórios-6C4AB6?style=for-the-badge&logo=git&logoColor=white)](https://github.com/AndreGraccia?tab=repositories)
+[![Ver contribuições](https://img.shields.io/badge/Minhas_contribuições-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AndreGraccia?tab=overview)
+
 </div>
 
 ## Vamos conversar?
