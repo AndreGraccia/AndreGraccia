@@ -1,19 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-labelledby="title desc">
-<title id="title">André Graccia — Desenvolvedor Back-end Java</title>
-<desc id="desc">Banner developer-first com identidade de terminal, fundo preto, brilho violeta inferior, cursor branco e tipografia editorial.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="470" viewBox="0 0 1600 470" role="img" aria-labelledby="title desc">
+<title id="title">André Graccia — Backend Software Developer</title>
+<desc id="desc">Capa de portfólio com base preta, forma iridescente azul e violeta em vidro líquido, tipografia editorial e tecnologias principais.</desc>
 <defs>
- <radialGradient id="glow" cx="50%" cy="100%" r="58%"><stop offset="0" stop-color="#3B0099" stop-opacity=".72"/><stop offset=".42" stop-color="#1A0036" stop-opacity=".38"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient>
- <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#FFFFFF" stroke-opacity=".025"/></pattern>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#070811"/><stop offset=".58" stop-color="#080713"/><stop offset="1" stop-color="#050509"/></linearGradient>
+ <radialGradient id="ambient" cx="76%" cy="76%" r="62%"><stop stop-color="#4936D8" stop-opacity=".34"/><stop offset=".42" stop-color="#172E78" stop-opacity=".19"/><stop offset="1" stop-color="#050509" stop-opacity="0"/></radialGradient>
+ <linearGradient id="iridescent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#B8A8FF" stop-opacity=".9"/><stop offset=".25" stop-color="#6D8CFF" stop-opacity=".78"/><stop offset=".55" stop-color="#8D5BDF" stop-opacity=".8"/><stop offset=".8" stop-color="#5BCBFF" stop-opacity=".66"/><stop offset="1" stop-color="#D9C8FF" stop-opacity=".84"/></linearGradient>
+ <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF" stop-opacity=".7"/><stop offset=".45" stop-color="#A6B7FF" stop-opacity=".2"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".06"/></linearGradient>
+ <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".48" stop-color="#FFFFFF" stop-opacity=".34"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+ <pattern id="grid" width="54" height="54" patternUnits="userSpaceOnUse"><path d="M54 0H0V54" fill="none" stroke="#B9B8FF" stroke-opacity=".045"/></pattern>
+ <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="22"/></filter>
 </defs>
-<rect width="1600" height="500" fill="#050505"/><rect width="1600" height="500" fill="url(#grid)"/><rect width="1600" height="500" fill="url(#glow)"/>
-<text x="112" y="82" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="-.5">andré graccia</text><rect x="294" y="58" width="13" height="29" fill="#FFFFFF"/>
-<text x="1488" y="80" fill="#A0A0A0" font-family="JetBrains Mono,Consolas,monospace" font-size="15" text-anchor="end" letter-spacing="2">PORTFOLIO / SOFTWARE ENGINEERING</text>
-<text x="112" y="230" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="100" font-weight="750" letter-spacing="-5">Software com intenção.</text>
-<text x="118" y="292" fill="#C2B9D1" font-family="Inter,Arial,sans-serif" font-size="29">Desenvolvedor Back-end Java</text>
-<text x="118" y="347" fill="#A0A0A0" font-family="JetBrains Mono,Consolas,monospace" font-size="17">$ build reliable software_</text>
-<path d="M112 397H1488" stroke="#FFFFFF" stroke-opacity=".16"/>
-<g fill="#D1C9DD" font-family="JetBrains Mono,Consolas,monospace" font-size="15" letter-spacing="1">
- <text x="118" y="442">JAVA 25</text><text x="270" y="442">SPRING BOOT</text><text x="480" y="442">REST APIs</text><text x="640" y="442">MAVEN</text><text x="770" y="442">SOFTWARE QUALITY</text>
+<rect width="1600" height="470" rx="28" fill="url(#bg)"/><rect width="1600" height="470" rx="28" fill="url(#grid)"/><rect width="1600" height="470" rx="28" fill="url(#ambient)"/>
+<ellipse cx="1260" cy="250" rx="270" ry="170" fill="#6A58FF" opacity=".16" filter="url(#soft)"/>
+<g transform="translate(1000 42) rotate(-13 260 190)">
+ <path d="M93 215C58 106 147 20 262 30C362 38 412 119 493 91C587 58 649 113 625 207C603 293 511 307 462 365C407 430 305 413 257 351C213 294 128 324 93 215Z" fill="url(#iridescent)" fill-opacity=".3" stroke="url(#edge)" stroke-width="2"/>
+ <path d="M133 205C105 123 172 61 261 68C340 74 383 137 456 116C523 97 575 137 554 204C534 269 463 277 423 326C383 374 306 367 269 316C232 265 158 278 133 205Z" fill="url(#iridescent)" fill-opacity=".58" stroke="#FFFFFF" stroke-opacity=".22" stroke-width="1.5"/>
+ <path d="M155 179C205 100 303 92 376 148C430 190 476 182 530 163" fill="none" stroke="url(#sheen)" stroke-width="18" stroke-linecap="round" opacity=".72"/>
+ <path d="M177 244C241 296 316 305 377 259C427 221 461 215 506 223" fill="none" stroke="#DDE5FF" stroke-opacity=".42" stroke-width="2"/>
+ <path d="M245 75C318 53 393 88 430 139" fill="none" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="2" stroke-linecap="round"/>
 </g>
-<text x="1488" y="442" fill="#A78BFA" font-family="JetBrains Mono,Consolas,monospace" font-size="14" text-anchor="end">BACKEND / JAVA</text>
+<path d="M88 76H1512" stroke="#B9B8FF" stroke-opacity=".16"/>
+<text x="96" y="56" fill="#C9C5E8" font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="2.5">PORTFOLIO / SOFTWARE ENGINEERING</text>
+<text x="96" y="198" fill="#FFFFFF" font-family="Inter,Helvetica Neue,Arial,sans-serif" font-size="88" font-weight="750" letter-spacing="-4.5">André Graccia</text>
+<rect x="766" y="132" width="12" height="74" rx="2" fill="#FFFFFF"/>
+<text x="101" y="254" fill="#D2D0E4" font-family="Inter,Helvetica Neue,Arial,sans-serif" font-size="27" font-weight="500">Desenvolvedor Back-end Java</text>
+<text x="101" y="304" fill="#A6A5BD" font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="16">$ design  ·  build  ·  verify  ·  improve</text>
+<g transform="translate(96 378)">
+ <rect width="1408" height="1" fill="#D8D7FF" opacity=".2"/>
+ <g font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="14" letter-spacing="1.1" fill="#C9C6E0">
+  <text y="42">JAVA 25</text><text x="145" y="42">SPRING BOOT</text><text x="345" y="42">REST APIs</text><text x="505" y="42">MAVEN</text><text x="625" y="42">SOFTWARE QUALITY</text>
+ </g>
+ <text x="1408" y="42" text-anchor="end" fill="#A99BFF" font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="13">BR / 2026</text>
+</g>
 </svg>
