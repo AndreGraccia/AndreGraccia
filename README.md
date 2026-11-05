@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-rounded.svg?v=11" alt="André Graccia — Desenvolvedor Back-end Java, identidade visual iridescente azul e violeta" width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-rounded.svg?v=12" alt="André Graccia — Desenvolvedor Back-end Java, identidade visual iridescente azul e violeta" width="100%" />
 </div>
 
 <div align="center">
@@ -91,7 +91,7 @@ Os resultados ilustrados são execuções reais consultadas no GitHub Actions: *
 ### Contribution skyline
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/skyline.svg" alt="Cidade de contribuições do GitHub, atualizada diariamente" width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/skyline.svg?v=2" alt="Cidade de contribuições do GitHub, atualizada diariamente" width="100%" />
 </div>
 
 <div align="center">
