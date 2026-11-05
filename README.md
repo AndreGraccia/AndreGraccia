@@ -66,7 +66,7 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 
 <div align="center">
   <img
-    src="https://github-stats-extended.vercel.app/api?username=AndreGraccia&amp;show_icons=true&amp;include_all_commits=true&amp;show=all_time_contribs&amp;hide=contribs&amp;theme=tokyonight&amp;rank_icon=github&amp;number_format=long"
+    src="https://github-stats-extended.vercel.app/api?username=AndreGraccia&amp;show_icons=true&amp;include_all_commits=true&amp;show=all_time_contribs&amp;hide=contribs&amp;theme=default&amp;rank_icon=default&amp;hide_rank=false&amp;number_format=long"
     alt="Estatísticas do GitHub: total de stars, commits, pull requests, issues, repositórios contribuídos e classificação"
     width="100%"
   />
@@ -81,13 +81,12 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 ## GitHub Skyline
 
 <div align="center">
-  <a href="./assets/github-skyline.stl">
-    <img src="./assets/github-skyline-preview.svg" alt="GitHub Skyline 2026 — modelo 3D do histórico de contribuições de André Graccia. Clique para abrir o modelo STL." width="100%" />
+  <a href="https://github.com/AndreGraccia/AndreGraccia/blob/main/assets/github-skyline.stl">
+    <img src="https://img.shields.io/badge/OPEN_3D_SKYLINE-View_on_GitHub-238636?style=for-the-badge&logo=github&logoColor=white" alt="Abrir modelo 3D do GitHub Skyline no GitHub" />
   </a>
   <br />
-  <sub>Gerado com a extensão oficial <a href="https://github.com/github/gh-skyline">gh-skyline</a> · 2026 · Clique na imagem para visualizar o STL no GitHub.</sub>
+  <sub>Modelo 3D real do histórico de contribuições, gerado pela extensão oficial <a href="https://github.com/github/gh-skyline">gh-skyline</a>. Abra o arquivo STL para interagir com o visualizador 3D do GitHub.</sub>
 </div>
-
 ## Vamos conversar?
 
 Estou aberto a trocar experiências sobre desenvolvimento de software, projetos, tecnologia e oportunidades na área.
