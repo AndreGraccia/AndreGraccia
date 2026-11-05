@@ -1,23 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" role="img" aria-label="andré graccia — Desenvolvedor Back-end Java">
-  <defs>
-    <clipPath id="banner-shape"><rect x="1" y="1" width="1598" height="478" rx="24"/></clipPath>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(800 500) rotate(-90) scale(245 860)" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#3B0099" stop-opacity=".84"/>
-      <stop offset=".54" stop-color="#1A0036" stop-opacity=".45"/>
-      <stop offset="1" stop-color="#050505" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <g clip-path="url(#banner-shape)">
-    <rect width="1600" height="480" fill="#050505"/>
-    <rect width="1600" height="480" fill="url(#glow)"/>
-    <path d="M0 370C290 320 470 405 800 365C1110 327 1355 395 1600 342V480H0V370Z" fill="#1A0036" fill-opacity=".72"/>
-    <g opacity="1">
-      <animate attributeName="opacity" values="0;1" dur="0.8s" fill="freeze"/>
-      <animateTransform attributeName="transform" type="translate" values="0 18;0 0" dur="0.8s" fill="freeze"/>
-      <text x="800" y="195" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="86" font-weight="700" letter-spacing="-3">André Graccia</text>
-      <text x="800" y="268" text-anchor="middle" fill="#A0A0A0" font-family="Arial, Helvetica, sans-serif" font-size="27">Desenvolvedor Back-end Java · APIs claras, seguras e preparadas para evoluir.</text>
-      <rect x="610" y="318" width="380" height="2" rx="1" fill="#FFFFFF"/>
-      <text x="800" y="360" text-anchor="middle" fill="#A0A0A0" font-family="Courier New, monospace" font-size="17">$ build with quality</text>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="480" viewBox="0 0 1600 480" role="img" aria-labelledby="title desc">
+<title id="title">André Graccia — Backend Software Engineer</title><desc id="desc">Banner minimalista escuro com tipografia editorial, identidade de engenharia de software e brilho violeta concentrado na base.</desc>
+<defs>
+ <radialGradient id="baseGlow" cx="50%" cy="100%" r="58%"><stop offset="0" stop-color="#3B0099" stop-opacity=".68"/><stop offset=".42" stop-color="#1A0036" stop-opacity=".38"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient>
+ <linearGradient id="fade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111"/><stop offset="1" stop-color="#050505"/></linearGradient>
+ <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#FFF" stroke-opacity=".035" stroke-width="1"/></pattern>
+</defs>
+<rect width="1600" height="480" fill="#050505"/><rect width="1600" height="480" fill="url(#fade)" opacity=".55"/><rect width="1600" height="480" fill="url(#grid)"/><rect width="1600" height="480" fill="url(#baseGlow)"/>
+<path d="M96 82H1504" stroke="#A0A0A0" stroke-opacity=".18"/><text x="112" y="62" fill="#A0A0A0" font-family="SFMono-Regular,Consolas,monospace" font-size="16" letter-spacing="3">PORTFOLIO / SOFTWARE ENGINEERING</text><text x="1488" y="62" text-anchor="end" fill="#A0A0A0" font-family="SFMono-Regular,Consolas,monospace" font-size="16">BR · 2026</text>
+<text x="112" y="222" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="104" font-weight="750" letter-spacing="-6">André Graccia</text>
+<text x="118" y="278" fill="#A0A0A0" font-family="Inter,Arial,sans-serif" font-size="27" letter-spacing=".4">Desenvolvedor Back-end Java</text>
+<rect x="118" y="326" width="42" height="2" fill="#FFFFFF"/><text x="178" y="334" fill="#FFFFFF" font-family="SFMono-Regular,Consolas,monospace" font-size="18">Construindo APIs, integrações e software confiável.</text>
+<g transform="translate(118 390)"><rect width="1364" height="1" fill="#FFF" opacity=".14"/><text y="38" fill="#A0A0A0" font-family="SFMono-Regular,Consolas,monospace" font-size="14" letter-spacing="2">JAVA</text><text x="116" y="38" fill="#A0A0A0" font-family="SFMono-Regular,Consolas,monospace" font-size="14" letter-spacing="2">SPRING BOOT</text><text x="306" y="38" fill="#A0A0A0" font-family="SFMono-Regular,Consolas,monospace" font-size="14" letter-spacing="2">REST APIs</text><text x="454" y="38" fill="#A0A0A0" font-family="SFMono-Regular,Consolas,monospace" font-size="14" letter-spacing="2">SOFTWARE QUALITY</text><text x="1364" y="38" text-anchor="end" fill="#A0A0A0" font-family="SFMono-Regular,Consolas,monospace" font-size="14">BUILD / LEARN / IMPROVE</text></g>
 </svg>
