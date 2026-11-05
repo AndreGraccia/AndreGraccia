@@ -41,8 +41,8 @@ jobs:
       - name: Renderizar prévia PNG do modelo 3D
         run: |
           sudo apt-get update
-          sudo apt-get install -y blender
-          blender --background --python scripts/render_skyline.py -- assets/github-skyline.stl assets/github-skyline.png
+          sudo apt-get install -y blender libegl1 libgl1 libgles2 xvfb
+          xvfb-run -a blender --background --python scripts/render_skyline.py -- assets/github-skyline.stl assets/github-skyline.png
 
       - name: Gerar SVG incorporando a renderização do modelo 3D
         run: |
