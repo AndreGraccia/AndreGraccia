@@ -62,16 +62,30 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 - **Automação e IA:** construção de workflows com n8n e experimentação com agentes e modelos de IA.
 - **Engenharia de software:** organização de código, Git/GitHub, documentação técnica e evolução incremental de projetos.
 
-## GitHub Activity
+## GitHub Statistics
 
 <div align="center">
-  <img src="./assets/github-activity.svg" alt="Atividade pública no GitHub: commits, pull requests, issues, repositórios e nível de atividade" width="100%" />
+  <img
+    src="https://github-stats-extended.vercel.app/api?username=AndreGraccia&amp;show_icons=true&amp;include_all_commits=true&amp;show=all_time_contribs&amp;hide=contribs&amp;theme=tokyonight&amp;rank_icon=github&amp;number_format=long"
+    alt="Estatísticas do GitHub: total de stars, commits, pull requests, issues, repositórios contribuídos e classificação"
+    width="100%"
+  />
 </div>
 
 <div align="center">
   <a href="https://github.com/AndreGraccia?tab=repositories">Ver todos os repositórios</a> ·
   <a href="https://github.com/AndreGraccia?tab=overview">Ver atividade e contribuições</a> ·
   <a href="https://github.com/AndreGraccia">Abrir perfil no GitHub</a>
+</div>
+
+## GitHub Skyline
+
+<div align="center">
+  <a href="./assets/github-skyline.stl">
+    <img src="./assets/github-skyline-preview.svg" alt="GitHub Skyline 2026 — modelo 3D do histórico de contribuições de André Graccia. Clique para abrir o modelo STL." width="100%" />
+  </a>
+  <br />
+  <sub>Modelo 3D das contribuições de 2026 · Clique na imagem para visualizar o STL no GitHub.</sub>
 </div>
 
 ## Vamos conversar?
