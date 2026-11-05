@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-rounded.svg?v=2" alt="André Graccia — Desenvolvedor Back-end Java" width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-rounded.svg?v=3" alt="André Graccia — Desenvolvedor Back-end Java" width="100%" />
 </div>
 
 <div align="center">
@@ -11,7 +11,7 @@
 <br />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/intro.svg" alt="Backend pensado para evoluir com clareza." width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/intro.svg?v=2" alt="Perfil profissional de André Graccia — Desenvolvedor Back-end Java." width="100%" />
 </div>
 
 ## Sobre mim
@@ -40,7 +40,7 @@ Gosto de entender o problema antes de implementar a solução. Por isso, valoriz
 <br />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg?v=5" alt="Qualidade é construída antes da produção." width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg?v=6" alt="Qualidade é construída antes da produção." width="100%" />
 </div>
 
 ## Projetos em destaque
