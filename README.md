@@ -66,7 +66,7 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 
 <div align="center">
   <img
-    src="https://github-stats-extended.vercel.app/api?username=AndreGraccia&amp;show_icons=true&amp;include_all_commits=true&amp;show=all_time_contribs&amp;hide=contribs&amp;theme=transparent&amp;bg_color=050505&amp;title_color=FFFFFF&amp;text_color=A0A0A0&amp;icon_color=FFFFFF&amp;border_color=FFFFFF&amp;ring_color=3B0099&amp;rank_icon=default&amp;hide_rank=false&amp;number_format=long"
+    src="https://github-stats-extended.vercel.app/api?username=AndreGraccia&amp;show_icons=true&amp;include_all_commits=true&amp;show=all_time_contribs&amp;hide=contribs&amp;theme=transparent&amp;bg_color=050505&amp;title_color=FFFFFF&amp;text_color=A0A0A0&amp;icon_color=FFFFFF&amp;border_color=050505&amp;ring_color=3B0099&amp;rank_icon=default&amp;hide_rank=false&amp;number_format=long"
     alt="Estatísticas do GitHub: total de stars, commits, pull requests, issues, repositórios contribuídos e classificação"
     width="100%"
   />
@@ -82,7 +82,7 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 
 <div align="center">
   <a href="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/github-skyline.svg">
-    <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/github-skyline.svg?v=2" alt="Visualização SVG do GitHub Skyline de André Graccia, gerada a partir do modelo 3D oficial" width="100%" />
+    <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/github-skyline.svg?v=3" alt="Visualização SVG do GitHub Skyline de André Graccia, gerada a partir do modelo 3D oficial" width="100%" />
   </a>
   <br />
   <sub>Prévia SVG gerada automaticamente pelo GitHub Actions a partir do modelo 3D oficial · <a href="https://github.com/AndreGraccia/AndreGraccia/blob/main/assets/github-skyline.stl">Baixar o modelo STL original</a></sub>
