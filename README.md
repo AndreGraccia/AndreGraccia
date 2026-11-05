@@ -48,8 +48,10 @@ Gosto de entender o problema antes de implementar a solução. Por isso, valoriz
 Abaixo estão alguns projetos que representam minha evolução prática em desenvolvimento backend, aplicações full-stack, integração de serviços e automação.
 
 <div align="center">
-  <a href="https://github.com/AndreGraccia/Wall.ia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/projects.svg?v=1" alt="Projetos em destaque: Wall.ia, Calculadora de Juros e Orbit.ia" width="100%" /></a>
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/projects.svg?v=1" alt="Projetos em destaque: Wall.ia, Calculadora de Juros e Orbit.ia" width="100%" />
 </div>
+
+**Repositórios:** [Wall.ia](https://github.com/AndreGraccia/Wall.ia) · [Calculadora de Juros](https://github.com/AndreGraccia/calc-juros) · [Orbit.ia](https://github.com/AndreGraccia/Orbit.IA)
 
 > Os projetos evoluem continuamente. Consulte cada repositório para ver o escopo atual, as funcionalidades implementadas, as decisões técnicas e os próximos passos.
 
