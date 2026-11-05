@@ -66,7 +66,7 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 
 <div align="center">
   <img
-    src="https://github-stats-extended.vercel.app/api?username=AndreGraccia&amp;show_icons=true&amp;include_all_commits=true&amp;show=all_time_contribs&amp;hide=contribs&amp;theme=default&amp;rank_icon=default&amp;hide_rank=false&amp;number_format=long"
+    src="https://github-stats-extended.vercel.app/api?username=AndreGraccia&amp;show_icons=true&amp;include_all_commits=true&amp;show=all_time_contribs&amp;hide=contribs&amp;theme=transparent&amp;bg_color=030303&amp;title_color=F5F5F5&amp;text_color=C9C9C9&amp;icon_color=9CA3AF&amp;border_color=303030&amp;ring_color=E5E5E5&amp;rank_icon=default&amp;hide_rank=false&amp;number_format=long"
     alt="Estatísticas do GitHub: total de stars, commits, pull requests, issues, repositórios contribuídos e classificação"
     width="100%"
   />
@@ -82,11 +82,12 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 
 <div align="center">
   <a href="https://github.com/AndreGraccia/AndreGraccia/blob/main/assets/github-skyline.stl">
-    <img src="https://img.shields.io/badge/OPEN_3D_SKYLINE-View_on_GitHub-238636?style=for-the-badge&logo=github&logoColor=white" alt="Abrir modelo 3D do GitHub Skyline no GitHub" />
+    <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/github-skyline.png?v=1" alt="Modelo 3D real do GitHub Skyline de André Graccia" width="100%" />
   </a>
   <br />
-  <sub>Modelo 3D real do histórico de contribuições, gerado pela extensão oficial <a href="https://github.com/github/gh-skyline">gh-skyline</a>. Abra o arquivo STL para interagir com o visualizador 3D do GitHub.</sub>
+  <sub>Visualização renderizada do modelo 3D real · <a href="https://github.com/AndreGraccia/AndreGraccia/blob/main/assets/github-skyline.stl">Abrir STL interativo no GitHub</a></sub>
 </div>
+
 ## Vamos conversar?
 
 Estou aberto a trocar experiências sobre desenvolvimento de software, projetos, tecnologia e oportunidades na área.
