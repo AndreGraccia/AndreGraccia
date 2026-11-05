@@ -1,4 +1,4 @@
-name: Atualizar perfil do GitHub
+name: Atualizar gráficos do perfil
 
 on:
   schedule:
@@ -13,46 +13,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  update-profile:
-    name: Gerar gráficos e contribuições
+  generate-svg:
+    name: Gerar os dois gráficos SVG
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Gerar métricas do perfil
-        uses: lowlighter/metrics@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: AndreGraccia
-          filename: assets/github-metrics.svg
-          output_action: commit
-          committer_message: "chore: atualiza métricas do perfil [skip ci]"
-          template: classic
-          config_timezone: America/Sao_Paulo
-          config_display: large
-          base: header, activity, community, repositories, metadata
-          plugin_languages: yes
-          plugin_languages_sections: most-used
-          plugin_languages_details: bytes-size, percentage
-          plugin_languages_limit: 8
-          plugin_languages_colors: github
-          plugin_habits: yes
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
+          persist-credentials: true
 
-      - name: Gerar gráfico de contribuições (snake)
-        uses: Platane/snk@v3
-        with:
-          github_user_name: AndreGraccia
-          outputs: |
-            assets/github-contribution-snake.svg
-            assets/github-contribution-snake-dark.svg?palette=github-dark
+      - name: Gerar GitHub Stats e Top Languages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/generate_profile_svgs.py
 
-      - name: Salvar gráfico de contribuições
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: atualiza gráfico de contribuições [skip ci]"
-          file_pattern: assets/github-contribution-snake*.svg
+      - name: Publicar SVGs atualizados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats.svg assets/top-languages.svg
+          if git diff --cached --quiet; then
+            echo "Os gráficos já estão atualizados."
+            exit 0
+          fi
+          git commit -m "chore: atualiza gráficos SVG do perfil [skip ci]"
+          git push
