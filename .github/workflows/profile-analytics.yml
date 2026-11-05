@@ -1,4 +1,4 @@
-name: Atualizar gráfico de atividade do perfil
+name: Atualizar GitHub Skyline 3D
 
 on:
   push:
@@ -6,7 +6,8 @@ on:
       - main
     paths:
       - ".github/workflows/profile-analytics.yml"
-      - "scripts/generate_profile_svgs.py"
+      - "README.md"
+      - "assets/github-skyline-preview.svg"
   schedule:
     - cron: "17 3 * * *"
   workflow_dispatch:
@@ -15,12 +16,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-readme
+  group: github-skyline
   cancel-in-progress: false
 
 jobs:
-  generate-svg:
-    name: Gerar gráfico de atividade em SVG
+  generate-skyline:
+    name: Gerar modelo 3D das contribuições
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,28 +29,33 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Gerar estatísticas públicas
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/generate_profile_svgs.py
+      - name: Instalar extensão oficial GitHub Skyline
+        run: gh extension install github/gh-skyline
 
-      - name: Publicar SVG atualizado
+      - name: Gerar skyline do ano atual
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          YEAR="$(date -u +%Y)"
+          gh skyline --user AndreGraccia --year "$YEAR" --output assets/github-skyline.stl
+
+      - name: Publicar modelo 3D
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-activity.svg
+          git add assets/github-skyline.stl
           if git diff --cached --quiet; then
-            echo "O gráfico já está atualizado."
+            echo "A Skyline já está atualizada."
             exit 0
           fi
-          git commit -m "chore: atualiza gráfico de atividade SVG [skip ci]"
+          git commit -m "chore: atualiza GitHub Skyline 3D [skip ci]"
           for attempt in 1 2 3; do
             git fetch origin main
             git rebase origin/main
             if git push origin HEAD:main; then
               exit 0
             fi
-            echo "Push recusado; tentando sincronizar novamente (${attempt}/3)."
+            echo "Push recusado; sincronizando novamente (${attempt}/3)."
           done
-          echo "Não foi possível publicar o SVG após 3 tentativas."
+          echo "Não foi possível publicar a Skyline após 3 tentativas."
           exit 1
