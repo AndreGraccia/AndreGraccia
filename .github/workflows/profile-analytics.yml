@@ -37,6 +37,11 @@ jobs:
         run: |
           YEAR="$(date -u +%Y)"
           gh skyline --user AndreGraccia --year "$YEAR" --output assets/github-skyline.stl
+      - name: Renderizar prévia PNG do modelo 3D
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y blender
+          blender --background --python scripts/render_skyline.py -- assets/github-skyline.stl assets/github-skyline.png
 
       - name: Publicar modelo 3D
         run: |
@@ -45,7 +50,7 @@ jobs:
           git fetch origin main
           # Keep the latest README and workflow changes, replacing only the generated STL.
           git reset --mixed origin/main
-          git add assets/github-skyline.stl
+          git add assets/github-skyline.stl assets/github-skyline.png
           if git diff --cached --quiet; then
             echo "A Skyline já está atualizada."
             exit 0
