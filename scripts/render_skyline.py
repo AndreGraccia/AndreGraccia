@@ -35,7 +35,7 @@ for obj in mesh_objects:
     obj.data.materials.append(mat)
 
 scene = bpy.context.scene
-scene.render.engine = "BLENDER_EEVEE_NEXT"
+scene.render.engine = "BLENDER_EEVEE"
 scene.eevee.taa_render_samples = 96
 scene.render.resolution_x = 1600
 scene.render.resolution_y = 720
