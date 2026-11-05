@@ -58,6 +58,27 @@
   <circle cx="1082" cy="146" r="2"><animate attributeName="opacity" values=".25;.9;.25" dur="4s" repeatCount="indefinite"/></circle>
   <circle cx="1480" cy="362" r="2"><animate attributeName="opacity" values=".9;.25;.9" dur="3.6s" repeatCount="indefinite"/></circle>
 </g>
+
+<!-- Animated ambient details -->
+<g fill="none" stroke-linecap="round">
+  <path d="M760 145H980" stroke="url(#accent)" stroke-opacity=".18" stroke-dasharray="2 8">
+    <animate attributeName="stroke-dashoffset" values="0;-40" dur="8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M740 365H980" stroke="#78CFFF" stroke-opacity=".14" stroke-dasharray="1 7">
+    <animate attributeName="stroke-dashoffset" values="0;35" dur="10s" repeatCount="indefinite"/>
+  </path>
+</g>
+<g>
+  <circle cx="825" cy="185" r="2" fill="#78CFFF"><animate attributeName="cy" values="185;168;185" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".25;1;.25" dur="6s" repeatCount="indefinite"/></circle>
+  <circle cx="940" cy="300" r="2.5" fill="#8C78FF"><animate attributeName="cy" values="300;284;300" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values=".2;.9;.2" dur="7s" repeatCount="indefinite"/></circle>
+  <circle cx="1470" cy="210" r="1.8" fill="#78CFFF"><animate attributeName="cy" values="210;226;210" dur="5s" repeatCount="indefinite"/></circle>
+</g>
+<g transform="translate(1410 112)">
+  <rect width="82" height="28" rx="14" fill="#FFFFFF" fill-opacity=".045" stroke="url(#edge)" stroke-opacity=".4"/>
+  <circle cx="15" cy="14" r="3" fill="#78CFFF"><animate attributeName="opacity" values="1;.25;1" dur="2s" repeatCount="indefinite"/></circle>
+  <text x="27" y="18" fill="#C8D2EA" font-family="SFMono-Regular,Consolas,monospace" font-size="9" letter-spacing="1">BUILD</text>
+</g>
+
 <path d="M88 466H1512" stroke="#FFFFFF" stroke-opacity=".1"/>
 <text x="1504" y="454" text-anchor="end" fill="#78839F" font-family="SFMono-Regular,Consolas,monospace" font-size="10" letter-spacing="1.6">JAVA / BACK-END / ENGINEERING</text>
 <path d="M0 0H1600" stroke="url(#accent)" stroke-width="2" stroke-opacity=".65">
