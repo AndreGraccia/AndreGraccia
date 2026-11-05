@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="470" viewBox="0 0 1600 470" role="img" aria-labelledby="title desc">
+<title id="title">Qualidade e testes automatizados — André Graccia</title>
+<desc id="desc">Terminal com o comando andre testes e resultados reais das últimas execuções bem-sucedidas do GitHub Actions nos projetos Calculadora de Juros e Wall.ia.</desc>
+<defs><radialGradient id="glow" cx="50%" cy="100%" r="65%"><stop stop-color="#3B0099" stop-opacity=".24"/><stop offset=".5" stop-color="#1A0036" stop-opacity=".1"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient></defs>
+<rect width="1600" height="470" rx="24" fill="#050505"/><rect width="1600" height="470" rx="24" fill="url(#glow)"/>
+<rect x="2" y="2" width="1596" height="466" rx="22" fill="#090909" stroke="#29232F" stroke-width="2"/>
+<path d="M3 66H1597" stroke="#29232F"/><circle cx="36" cy="34" r="7" fill="#FF5F57"/><circle cx="60" cy="34" r="7" fill="#FEBC2E"/><circle cx="84" cy="34" r="7" fill="#28C840"/>
+<text x="800" y="40" fill="#A9A0B8" font-family="JetBrains Mono,Consolas,monospace" font-size="15" text-anchor="middle">~/andre/quality — CI snapshots</text>
+<text x="62" y="111" fill="#B9A8D8" font-family="JetBrains Mono,Consolas,monospace" font-size="17">$ andre testes</text>
+<text x="62" y="158" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="700" letter-spacing="-1">Qualidade não é promessa. É verificação.</text>
+<text x="62" y="190" fill="#8E879A" font-family="JetBrains Mono,Consolas,monospace" font-size="14">GITHUB ACTIONS / ÚLTIMAS EXECUÇÕES VERIFICADAS</text>
+<g font-family="JetBrains Mono,Consolas,monospace">
+ <rect x="62" y="216" width="710" height="166" rx="12" fill="#0E0D11" stroke="#29232F"/>
+ <text x="88" y="250" fill="#FFFFFF" font-size="17">calc-juros / Java CI</text>
+ <rect x="88" y="268" width="68" height="25" rx="5" fill="#183D2B"/><text x="122" y="286" fill="#75E0A2" font-size="13" text-anchor="middle">PASS</text>
+ <text x="174" y="286" fill="#C9C1D3" font-size="14">./mvnw --batch-mode verify</text>
+ <text x="88" y="326" fill="#A9A0B8" font-size="13">Java 25  ·  Build and test  ·  05 NOV 2026</text>
+ <text x="88" y="355" fill="#75E0A2" font-size="13">conclusion: success</text>
+ <rect x="800" y="216" width="738" height="166" rx="12" fill="#0E0D11" stroke="#29232F"/>
+ <text x="826" y="250" fill="#FFFFFF" font-size="17">Wall.ia / CI</text>
+ <rect x="826" y="268" width="68" height="25" rx="5" fill="#183D2B"/><text x="860" y="286" fill="#75E0A2" font-size="13" text-anchor="middle">PASS</text>
+ <text x="912" y="286" fill="#C9C1D3" font-size="14">backend tests + frontend checks</text>
+ <text x="826" y="326" fill="#A9A0B8" font-size="13">Java 25  ·  Node 20  ·  26 OUT 2026</text>
+ <text x="826" y="355" fill="#75E0A2" font-size="13">2 jobs concluídos com sucesso</text>
+</g>
+<text x="62" y="425" fill="#8E879A" font-family="JetBrains Mono,Consolas,monospace" font-size="13">STATUS DAS EXECUÇÕES REGISTRADAS — NÃO REPRESENTA UMA EXECUÇÃO EM TEMPO REAL</text>
+<text x="1538" y="425" fill="#A78BFA" font-family="JetBrains Mono,Consolas,monospace" font-size="14" text-anchor="end">04 / 05</text>
+</svg>
