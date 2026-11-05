@@ -88,6 +88,12 @@ Os resultados ilustrados são execuções reais consultadas no GitHub Actions: *
   />
 </div>
 
+### Contribution skyline
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/output/skyline.svg" alt="Cidade de contribuições do GitHub, atualizada diariamente" width="100%" />
+</div>
+
 <div align="center">
 
 [Repositórios](https://github.com/AndreGraccia?tab=repositories) &nbsp;·&nbsp; [Atividade](https://github.com/AndreGraccia?tab=overview) &nbsp;·&nbsp; [GitHub Actions](https://github.com/AndreGraccia/AndreGraccia/actions)
