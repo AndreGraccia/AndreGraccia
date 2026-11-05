@@ -35,8 +35,14 @@ for obj in mesh_objects:
     obj.data.materials.append(mat)
 
 scene = bpy.context.scene
-scene.render.engine = "BLENDER_EEVEE"
-scene.eevee.taa_render_samples = 96
+scene.render.engine = "BLENDER_WORKBENCH"
+shading = scene.display.shading
+shading.light = "STUDIO"
+shading.color_type = "MATERIAL"
+shading.background_type = "WORLD"
+shading.show_shadows = True
+shading.show_cavity = True
+shading.cavity_type = "BOTH"
 scene.render.resolution_x = 1600
 scene.render.resolution_y = 720
 scene.render.resolution_percentage = 100
