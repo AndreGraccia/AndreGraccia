@@ -1,36 +1,128 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090b13"><meta name="description" content="Currículo e portfólio profissional de André Graccia — Desenvolvedor de Software com foco em Backend Java.">
-<title>André Graccia — Currículo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b13">
+<meta name="description" content="Currículo, competências e projetos de André Graccia — Ciência da Computação, desenvolvimento backend e Java.">
+<meta property="og:title" content="André Graccia — Software Developer">
+<meta property="og:description" content="Currículo e projetos em engenharia de software.">
+<title>André Graccia — Software Developer</title>
 <style>
-:root{color-scheme:dark;--bg:#090b13;--panel:#111525;--line:#252b43;--text:#f5f6ff;--muted:#a0a6c0;--blue:#9cb5ff;--violet:#b29cff;--cyan:#78cfff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#25204b66,transparent 38%),radial-gradient(ellipse at 0% 35%,#142d4a55,transparent 34%),var(--bg);color:var(--text);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-a{color:inherit;text-decoration:none}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
-nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0;border-bottom:1px solid #ffffff12}.brand{font-weight:750;letter-spacing:.08em;font-size:12px;color:var(--blue)}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:13px}
-.hero{padding:94px 0 72px;max-width:850px}.eyebrow{color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(46px,8vw,82px);line-height:1.02;letter-spacing:-.065em;margin:20px 0 16px}.hero h1 span{background:linear-gradient(100deg,#fff 15%,var(--blue) 52%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}.role{font-size:clamp(18px,2.6vw,25px);color:#c4c9df;margin:0 0 18px}.intro{max-width:700px;color:var(--muted);font-size:16px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 17px;border-radius:12px;border:1px solid #ffffff22;background:#ffffff08;font-size:13px;font-weight:650;transition:.2s}.btn.primary{background:linear-gradient(110deg,#8baeff,#b29cff);color:#080b16;border:0}.btn:hover{transform:translateY(-2px);border-color:#9cb5ff88}
-.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}.chip{border:1px solid var(--line);background:#ffffff06;color:#c1c7dd;padding:7px 11px;border-radius:999px;font-size:12px}
-section{padding:42px 0;border-top:1px solid #ffffff12}.section-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}.num{font:12px ui-monospace,monospace;color:var(--violet)}h2{font-size:21px;letter-spacing:-.025em;margin:0}.lead{color:var(--muted);max-width:800px;margin:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:22px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(145deg,#171c2dce,#0f1320d9);box-shadow:inset 0 1px #ffffff08}.card h3{font-size:15px;margin:0 0 7px}.card p{font-size:13px;color:var(--muted);margin:0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.tag{font-size:11px;color:#c7d2f4;background:#8baeff12;border:1px solid #8baeff26;padding:5px 9px;border-radius:7px}
-.timeline{border-left:1px solid #343b5b;margin-left:7px;padding-left:23px}.entry{position:relative;padding:0 0 26px}.entry:before{content:"";position:absolute;left:-29px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--violet);box-shadow:0 0 18px #a99bff88}.entry .sub{color:var(--muted);font-size:12px;margin:2px 0 8px}.entry p{color:var(--muted);font-size:13px;margin:0}
-footer{padding:34px 0 48px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:650px){.navlinks{gap:12px;font-size:11px}.hero{padding:65px 0 48px}.grid{grid-template-columns:1fr}.wrap{width:min(100% - 30px,1080px)}}
+:root{color-scheme:dark;--bg:#080a12;--surface:#111625;--surface-2:#151b2d;--line:rgba(210,220,255,.13);--text:#f5f6ff;--muted:#a4abc2;--blue:#9cb5ff;--violet:#b29cff;--cyan:#79d4ee;--mx:50%;--my:50%}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;min-height:100vh;overflow-x:hidden;background:radial-gradient(ellipse at 76% 8%,rgba(113,83,194,.2),transparent 32%),radial-gradient(ellipse at 8% 34%,rgba(52,113,174,.16),transparent 32%),linear-gradient(180deg,#090b14 0%,#090c16 52%,#080a12 100%);color:var(--text);font:15px/1.7 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.012em}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E")}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,calc(100% - 44px));margin:auto}
+.glass{position:relative;isolation:isolate;background:linear-gradient(135deg,rgba(255,255,255,.105),rgba(255,255,255,.025) 42%,rgba(151,168,255,.055));border:1px solid rgba(224,231,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),inset 0 -1px 0 rgba(255,255,255,.035),0 18px 55px rgba(0,0,0,.25);backdrop-filter:blur(24px) saturate(155%);-webkit-backdrop-filter:blur(24px) saturate(155%)}
+.glass:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(125deg,rgba(255,255,255,.4),rgba(156,181,255,.12) 27%,transparent 52%,rgba(178,156,255,.22) 80%,rgba(255,255,255,.13));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.glass:after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(420px circle at var(--mx) var(--my),rgba(202,220,255,.13),transparent 48%);opacity:.75;pointer-events:none;z-index:-1}
+nav{position:sticky;top:14px;z-index:20;display:flex;justify-content:space-between;align-items:center;margin:14px auto 0;padding:10px 13px 10px 18px;border-radius:18px}
+.brand{font-size:11px;font-weight:800;letter-spacing:.16em;color:#dce5ff}.brand b{color:var(--violet)}
+.navlinks{display:flex;align-items:center;gap:5px}.navlinks a{font-size:12px;color:#c0c7dc;padding:8px 12px;border-radius:10px;transition:background .2s,color .2s}.navlinks a:hover{background:#ffffff12;color:#fff}
+.navlinks .nav-contact{background:linear-gradient(115deg,rgba(156,181,255,.2),rgba(178,156,255,.2));border:1px solid rgba(196,205,255,.22);color:#f1f3ff}
+.hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:42px;align-items:center;padding:112px 0 92px;min-height:610px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#b9c9ff;font-size:11px;font-weight:750;letter-spacing:.18em;text-transform:uppercase}
+.pulse{width:7px;height:7px;border-radius:50%;background:#80e0bd;box-shadow:0 0 14px #80e0bd}
+h1{font-size:clamp(54px,8vw,94px);line-height:.98;letter-spacing:-.075em;margin:23px 0 20px;font-weight:760}
+.gradient{background:linear-gradient(105deg,#fff 6%,#c7d5ff 42%,#b49cff 76%,#8edcf0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:clamp(18px,2.5vw,24px);color:#d0d5e7;margin:0 0 16px;font-weight:500;letter-spacing:-.035em}
+.intro{max-width:640px;color:var(--muted);font-size:15px;line-height:1.85;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 16px;border-radius:13px;font-size:12px;font-weight:700;border:1px solid rgba(220,229,255,.17);background:rgba(255,255,255,.045);color:#e7eaff;transition:transform .25s,border-color .25s,background .25s;box-shadow:inset 0 1px rgba(255,255,255,.07)}
+.btn:hover{transform:translateY(-3px);border-color:rgba(175,193,255,.5);background:rgba(156,181,255,.1)}
+.btn.primary{color:#0a0c17;border:1px solid rgba(255,255,255,.5);background:linear-gradient(115deg,#c1d1ff,#bbaaff 60%,#9ce0ef);box-shadow:0 8px 30px rgba(139,151,255,.2),inset 0 1px rgba(255,255,255,.8)}
+.btn svg{width:15px;height:15px;flex:none}
+.quick-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}.chip{font-size:11px;color:#bfc8e2;padding:6px 10px;border:1px solid rgba(190,204,255,.13);border-radius:999px;background:rgba(255,255,255,.025)}
+.hero-art{position:relative;min-height:365px;display:grid;place-items:center}
+.orbit{position:absolute;width:310px;height:310px;border:1px solid rgba(176,188,255,.17);border-radius:50%;box-shadow:0 0 80px rgba(135,122,255,.09),inset 0 0 50px rgba(115,169,255,.045);animation:float 8s ease-in-out infinite}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(165,196,255,.16);border-radius:50%;inset:25px;transform:rotateX(64deg) rotate(-25deg)}
+.orbit:after{inset:48px;transform:rotateX(64deg) rotate(35deg);border-color:rgba(194,156,255,.2)}
+.core{position:relative;width:210px;height:235px;border-radius:32px;display:flex;flex-direction:column;justify-content:space-between;padding:20px;overflow:hidden;transform:rotate(-5deg)}
+.core:before{content:"";position:absolute;inset:-30%;background:linear-gradient(120deg,transparent 25%,rgba(255,255,255,.18) 42%,transparent 54%);transform:translateX(-70%);animation:sheen 7s ease-in-out infinite}
+.core-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.12em;color:#cbd5f4}.monogram{font-size:72px;line-height:1;font-weight:780;letter-spacing:-.1em;background:linear-gradient(140deg,#fff,#b7c7ff 55%,#c1aaff);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 12px 38px #9b9bff22}.core-bottom{font-size:10px;color:#b5bfdc;letter-spacing:.12em;text-transform:uppercase}
+.float-tag{position:absolute;padding:10px 13px;border-radius:13px;font-size:10px;color:#dfe6ff;letter-spacing:.04em}.float-tag.one{top:47px;right:0}.float-tag.two{bottom:38px;left:0}
+section{padding:66px 0;border-top:1px solid rgba(210,220,255,.09)}
+.section-head{display:flex;align-items:center;gap:13px;margin-bottom:27px}.num{font:11px ui-monospace,SFMono-Regular,monospace;color:#b49dff;letter-spacing:.08em}.section-head h2{font-size:22px;letter-spacing:-.04em;margin:0}.section-intro{color:var(--muted);max-width:760px;margin:-10px 0 26px;font-size:14px}
+.profile-panel{padding:26px 28px;border-radius:20px;background:linear-gradient(135deg,rgba(20,27,44,.95),rgba(13,17,30,.92));border:1px solid rgba(196,208,255,.12);color:#bdc5dc;line-height:1.9}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{position:relative;padding:23px;border-radius:18px;background:linear-gradient(145deg,rgba(22,29,47,.9),rgba(13,17,29,.94));border:1px solid rgba(193,205,255,.12);transition:transform .25s,border-color .25s,box-shadow .25s;overflow:hidden}
+.card:hover{transform:translateY(-4px);border-color:rgba(173,188,255,.35);box-shadow:0 18px 42px rgba(0,0,0,.2)}
+.card h3{font-size:15px;letter-spacing:-.02em;margin:0 0 7px}.card p{font-size:13px;color:var(--muted);line-height:1.75;margin:0}
+.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.iconbox{width:35px;height:35px;display:grid;place-items:center;border-radius:11px;background:linear-gradient(145deg,rgba(156,181,255,.16),rgba(178,156,255,.08));border:1px solid rgba(184,198,255,.16);color:#c9d4ff}.iconbox svg{width:17px;height:17px}.micro{font-size:10px;color:#8993b1;letter-spacing:.12em;text-transform:uppercase}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.tag{font-size:10px;color:#c7d2f4;background:rgba(139,174,255,.07);border:1px solid rgba(139,174,255,.13);padding:5px 9px;border-radius:7px}
+.timeline{display:grid;gap:13px}.entry{padding:22px 24px;border-radius:17px;background:linear-gradient(145deg,rgba(20,27,44,.9),rgba(12,16,28,.92));border:1px solid rgba(193,205,255,.12)}.entry-head{display:flex;justify-content:space-between;gap:16px;align-items:baseline}.entry h3{font-size:15px;margin:0}.entry .sub{font-size:11px;color:#9da8c6;margin:4px 0 9px}.entry p{font-size:13px;color:var(--muted);margin:0}
+.project{display:block}.project .arrow{color:#aebdff;font-size:17px}.project:hover .arrow{transform:translate(3px,-3px)}.project .arrow{transition:transform .2s}
+.contact-panel{padding:28px;border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:24px}.contact-panel p{color:#b5bed6;font-size:13px;margin:6px 0 0}.contact-panel h3{font-size:19px;margin:0}
+footer{padding:30px 0 45px;color:#818ba7;font-size:11px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-12px) rotate(-3deg)}}
+@keyframes sheen{0%,58%,100%{transform:translateX(-75%)}75%{transform:translateX(75%)}}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:82px 0 65px;gap:10px}.hero-art{min-height:310px;grid-row:1}.hero-copy{grid-row:2}.orbit{width:260px;height:260px}.core{width:180px;height:205px}.float-tag.one{right:5%}.float-tag.two{left:5%}.contact-panel{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){.wrap{width:calc(100% - 30px)}nav{top:8px;padding:9px 10px}.brand{font-size:9px}.navlinks{gap:0}.navlinks a{font-size:10px;padding:7px 8px}.navlinks a:nth-child(2){display:none}.hero{padding-top:58px}.hero-art{min-height:270px}.orbit{width:225px;height:225px}.core{width:158px;height:182px;padding:16px}.monogram{font-size:59px}.float-tag{font-size:9px;padding:8px 10px}.grid{grid-template-columns:1fr}section{padding:48px 0}.profile-panel{padding:20px}.entry-head{display:block}.actions .btn{flex:1 1 calc(50% - 8px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+@media(prefers-reduced-transparency:reduce){.glass{backdrop-filter:none;-webkit-backdrop-filter:none;background:#171d30}}
 </style>
 </head>
-<body><div class="wrap">
-<nav><a class="brand" href="#">AG / CURRICULUM</a><div class="navlinks"><a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></div></nav>
+<body>
+<div class="wrap">
+<nav class="glass" aria-label="Navegação principal">
+<a class="brand" href="#" aria-label="André Graccia, início">AG <b>／</b> CURRICULUM</a>
+<div class="navlinks"><a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a class="nav-contact" href="#contato">Contato ↗</a></div>
+</nav>
 <header class="hero">
-<div class="eyebrow">Currículo · Portfólio profissional</div>
-<h1>André <span>Graccia.</span></h1>
-<p class="role">Desenvolvedor de Software · Backend Java</p>
-<p class="intro">Estudante de Ciência da Computação e profissional da Cielo, com foco em desenvolvimento backend, APIs e integração entre sistemas. Interesse em construir soluções confiáveis, bem estruturadas e sustentáveis.</p>
-<div class="actions"><a class="btn primary" href="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/Curriculo_Andre_Graccia.pdf" target="_blank" rel="noreferrer">↓ Baixar currículo PDF</a><a class="btn" href="https://github.com/AndreGraccia" target="_blank" rel="noreferrer">GitHub ↗</a><a class="btn" href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn" href="mailto:andregraccia2105@gmail.com">✉ E-mail</a></div>
-<div class="meta"><span class="chip">Java · Spring Boot</span><span class="chip">APIs REST</span><span class="chip">PostgreSQL</span><span class="chip">Git · Docker</span><span class="chip">Inglês B1</span></div>
+<div class="hero-copy">
+<div class="eyebrow"><span class="pulse"></span> Currículo · Portfólio profissional</div>
+<h1>André<br><span class="gradient">Graccia.</span></h1>
+<p class="role">Software Developer <span style="color:#777f9c">/</span> Backend Java</p>
+<p class="intro">Estudante de Ciência da Computação na Universidade Anhembi Morumbi e profissional da Cielo. Meu foco está em engenharia de software, desenvolvimento backend, APIs e integração entre sistemas — com atenção à clareza, qualidade e evolução contínua.</p>
+<div class="actions">
+<a class="btn primary" href="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/Curriculo_Andre_Graccia.pdf" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3"/></svg> Baixar currículo PDF</a>
+<a class="btn" href="https://github.com/AndreGraccia" target="_blank" rel="noreferrer">GitHub ↗</a>
+<a class="btn" href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+<a class="btn" href="mailto:andregraccia2105@gmail.com">E-mail ↗</a>
+</div>
+<div class="quick-meta"><span class="chip">Java 25</span><span class="chip">Spring Boot</span><span class="chip">APIs REST</span><span class="chip">PostgreSQL</span><span class="chip">Inglês B1</span></div>
+</div>
+<div class="hero-art" aria-label="Monograma AG em uma placa de vidro translúcido">
+<div class="orbit"></div>
+<div class="core glass"><div class="core-top"><span>AG / 01</span><span>✳</span></div><div class="monogram">AG</div><div class="core-bottom">Software · Engineering</div></div>
+<div class="float-tag one glass">✦ &nbsp; Building with purpose</div>
+<div class="float-tag two glass">Java · Backend · Systems</div>
+</div>
 </header>
-<section id="sobre"><div class="section-head"><span class="num">01 /</span><h2>Perfil</h2></div><p class="lead">Minha atuação e meus estudos estão direcionados à engenharia de software, especialmente backend com Java. Valorizo código legível, separação de responsabilidades, testes, documentação e evolução incremental. Gosto de compreender o problema antes de definir a solução e de transformar requisitos em funcionalidades claras e manuteníveis.</p></section>
-<section id="experiencia"><div class="section-head"><span class="num">02 /</span><h2>Experiência & formação</h2></div><div class="timeline"><div class="entry"><h3>Cielo</h3><div class="sub">Atuação profissional</div><p>Experiência em ambiente corporativo, contribuindo com rotinas e processos de tecnologia. Detalhes de cargo e responsabilidades permanecem no currículo PDF.</p></div><div class="entry"><h3>Universidade Anhembi Morumbi</h3><div class="sub">Ciência da Computação · Graduação em andamento</div><p>Formação acadêmica com estudos em fundamentos da computação, programação e desenvolvimento de software.</p></div></div></section>
-<section><div class="section-head"><span class="num">03 /</span><h2>Competências técnicas</h2></div><div class="grid"><article class="card"><h3>Backend & linguagens</h3><p>Desenvolvimento de aplicações e serviços, modelagem de regras de negócio e integração entre sistemas.</p><div class="tags"><span class="tag">Java 25</span><span class="tag">Spring Boot</span><span class="tag">Python</span><span class="tag">JavaScript</span></div></article><article class="card"><h3>Dados & infraestrutura</h3><p>Persistência, versionamento, conteinerização e fluxo de desenvolvimento.</p><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Maven</span></div></article><article class="card"><h3>Frontend & ferramentas</h3><p>Construção de interfaces e integração com serviços backend.</p><div class="tags"><span class="tag">React</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">n8n</span></div></article><article class="card"><h3>Idiomas</h3><p>Inglês — nível intermediário B1.</p></article></div></section>
-<section id="projetos"><div class="section-head"><span class="num">04 /</span><h2>Projetos selecionados</h2></div><div class="grid"><a class="card" href="https://github.com/AndreGraccia/calc-juros" target="_blank" rel="noreferrer"><h3>Calculadora de Juros ↗</h3><p>API para simulações de juros simples e compostos, com evolução planejada para integração com indicadores econômicos.</p><div class="tags"><span class="tag">Java 25</span><span class="tag">Spring Boot</span><span class="tag">Maven</span></div></a><a class="card" href="https://github.com/AndreGraccia/Wall.ia" target="_blank" rel="noreferrer"><h3>Wall.ia ↗</h3><p>Carteira digital que projeta compromissos financeiros e explica a origem dos valores.</p><div class="tags"><span class="tag">React</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span></div></a><a class="card" href="https://github.com/AndreGraccia/Orbit.ia" target="_blank" rel="noreferrer"><h3>Orbit.ia ↗</h3><p>Agente pessoal com interface própria e workflows de automação.</p><div class="tags"><span class="tag">React</span><span class="tag">n8n</span><span class="tag">Docker</span></div></a></div></section>
-<section id="contato"><div class="section-head"><span class="num">05 /</span><h2>Vamos conversar?</h2></div><p class="lead">Aberto a conversas sobre desenvolvimento backend, engenharia de software, colaboração em projetos e oportunidades profissionais.</p><div class="actions"><a class="btn primary" href="mailto:andregraccia2105@gmail.com">andregraccia2105@gmail.com</a><a class="btn" href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn" href="https://github.com/AndreGraccia" target="_blank" rel="noreferrer">GitHub ↗</a></div></section>
-<footer><span>© 2026 André Graccia</span><span>Design & desenvolvimento · São Paulo, Brasil</span></footer>
-</div></body></html>
+<section id="sobre"><div class="section-head"><span class="num">01 /</span><h2>Perfil profissional</h2></div><div class="profile-panel">Gosto de transformar requisitos em soluções claras: entender o domínio, separar responsabilidades, validar regras e deixar decisões técnicas fáceis de manter. Nos projetos, busco combinar implementação, testes, documentação e evolução incremental. Tenho interesse em arquitetura de software, integração de serviços e desenvolvimento de produtos úteis.</div></section>
+<section id="experiencia"><div class="section-head"><span class="num">02 /</span><h2>Experiência & formação</h2></div><div class="timeline">
+<article class="entry"><div class="entry-head"><h3>Cielo</h3><span class="micro">Experiência profissional</span></div><div class="sub">Atuação profissional em ambiente corporativo</div><p>Experiência profissional na Cielo. Para cargo, período e atribuições detalhadas, consulte o currículo em PDF, que permanece como fonte completa dessas informações.</p></article>
+<article class="entry"><div class="entry-head"><h3>Universidade Anhembi Morumbi</h3><span class="micro">Graduação</span></div><div class="sub">Ciência da Computação · Em andamento</div><p>Formação em computação com estudos em programação, fundamentos de software e desenvolvimento de sistemas.</p></article>
+</div></section>
+<section><div class="section-head"><span class="num">03 /</span><h2>Competências</h2></div><p class="section-intro">Tecnologias e ferramentas presentes no meu ambiente de estudos e projetos.</p><div class="grid">
+<article class="card"><div class="card-top"><span class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 5 3 12l5 7m8-14 5 7-5 7m-3-15-2 16"/></svg></span><span class="micro">01 / Development</span></div><h3>Backend & linguagens</h3><p>Construção de aplicações, regras de negócio e integração entre serviços.</p><div class="tags"><span class="tag">Java 25</span><span class="tag">Spring Boot</span><span class="tag">JavaScript</span><span class="tag">Python</span></div></article>
+<article class="card"><div class="card-top"><span class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5m-16 7v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"/></svg></span><span class="micro">02 / Data</span></div><h3>Dados & infraestrutura</h3><p>Persistência, versionamento e ambientes de desenvolvimento.</p><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">Maven</span></div></article>
+<article class="card"><div class="card-top"><span class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></span><span class="micro">03 / Interface</span></div><h3>Frontend & automação</h3><p>Interfaces web e automação de fluxos conectados a serviços.</p><div class="tags"><span class="tag">React</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">n8n</span></div></article>
+<article class="card"><div class="card-top"><span class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5h16M4 12h10M4 19h7"/><circle cx="18" cy="16" r="3"/></svg></span><span class="micro">04 / Communication</span></div><h3>Idiomas</h3><p>Inglês — nível intermediário B1.</p></article>
+</div></section>
+<section id="projetos"><div class="section-head"><span class="num">04 /</span><h2>Projetos em destaque</h2></div><p class="section-intro">Projetos pessoais e de portfólio publicados no GitHub.</p><div class="grid">
+<a class="card project" href="https://github.com/AndreGraccia/calc-juros" target="_blank" rel="noreferrer"><div class="card-top"><span class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19h14M7 15l3-4 3 2 5-7"/><path d="M15 6h3v3"/></svg></span><span class="arrow">↗</span></div><h3>Calculadora de Juros</h3><p>API para simulações de juros simples e compostos. Integração com séries e indicadores do Banco Central está no roadmap.</p><div class="tags"><span class="tag">Java 25</span><span class="tag">Spring Boot</span><span class="tag">Maven</span></div></a>
+<a class="card project" href="https://github.com/AndreGraccia/Wall.ia" target="_blank" rel="noreferrer"><div class="card-top"><span class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 18V6m0 12h16M8 15V9m4 6V5m4 10v-4"/></svg></span><span class="arrow">↗</span></div><h3>Wall.ia</h3><p>Carteira digital que projeta compromissos financeiros e explica a origem dos valores. Open Finance em sandbox; não movimenta dinheiro real.</p><div class="tags"><span class="tag">React</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span></div></a>
+<a class="card project" href="https://github.com/AndreGraccia/AndreGraccia" target="_blank" rel="noreferrer"><div class="card-top"><span class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M8 14c1 2 7 2 8 0M9 9h.01M15 9h.01"/></svg></span><span class="arrow">↗</span></div><h3>Orbit.ia & experiências</h3><p>Experimentos com agente pessoal, interface própria e workflows de automação. Veja a evolução dos projetos e repositórios no GitHub.</p><div class="tags"><span class="tag">React</span><span class="tag">n8n</span><span class="tag">Docker</span></div></a>
+</div></section>
+<section id="contato"><div class="section-head"><span class="num">05 /</span><h2>Vamos conversar?</h2></div><div class="contact-panel glass"><div><h3>Ideias boas começam com uma conversa.</h3><p>Aberto a conversas sobre backend, engenharia de software, projetos e oportunidades profissionais.</p></div><div class="actions" style="margin:0"><a class="btn primary" href="mailto:andregraccia2105@gmail.com">Enviar e-mail ↗</a><a class="btn" href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></section>
+<footer><span>© 2026 André Graccia</span><span>Designed with intention · São Paulo, Brasil</span></footer>
+</div>
+<script>
+const glassNodes=document.querySelectorAll('.glass');
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  glassNodes.forEach(node=>{
+    node.addEventListener('pointermove',event=>{
+      const r=node.getBoundingClientRect();
+      node.style.setProperty('--mx',((event.clientX-r.left)/r.width*100)+'%');
+      node.style.setProperty('--my',((event.clientY-r.top)/r.height*100)+'%');
+    },{passive:true});
+    node.addEventListener('pointerleave',()=>{node.style.setProperty('--mx','50%');node.style.setProperty('--my','50%')},{passive:true});
+  });
+}
+</script>
+</body>
+</html>
