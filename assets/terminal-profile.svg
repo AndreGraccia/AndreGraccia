@@ -1,28 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="430" viewBox="0 0 1600 430" role="img" aria-labelledby="title desc">
-<title id="title">Terminal de apresentação — André Graccia</title>
-<desc id="desc">Janela de terminal escura com o comando andre help e um resumo do perfil profissional, tecnologias e formas de contato.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="390" viewBox="0 0 1600 390" role="img" aria-labelledby="title desc">
+<title id="title">Perfil profissional em terminal — André Graccia</title>
+<desc id="desc">Janela de terminal inspirada no macOS com dados de formação, atuação e foco técnico, em uma interface de vidro escuro azul e violeta.</desc>
 <defs>
- <radialGradient id="glow" cx="50%" cy="100%" r="65%"><stop stop-color="#3B0099" stop-opacity=".28"/><stop offset=".48" stop-color="#1A0036" stop-opacity=".12"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient>
- <linearGradient id="window" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101010"/><stop offset="1" stop-color="#070707"/></linearGradient>
+ <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111522" stop-opacity=".96"/><stop offset=".55" stop-color="#0C0D18" stop-opacity=".94"/><stop offset="1" stop-color="#111022" stop-opacity=".97"/></linearGradient>
+ <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A8B7FF" stop-opacity=".58"/><stop offset=".5" stop-color="#765DFF" stop-opacity=".18"/><stop offset="1" stop-color="#75D9FF" stop-opacity=".28"/></linearGradient>
+ <radialGradient id="wash" cx="90%" cy="100%" r="70%"><stop stop-color="#604BFF" stop-opacity=".24"/><stop offset="1" stop-color="#070811" stop-opacity="0"/></radialGradient>
 </defs>
-<rect width="1600" height="430" rx="24" fill="#050505"/>
-<rect width="1600" height="430" rx="24" fill="url(#glow)"/>
-<rect x="2" y="2" width="1596" height="426" rx="22" fill="url(#window)" stroke="#29232F" stroke-width="2"/>
-<path d="M3 66H1597" stroke="#29232F"/>
-<circle cx="36" cy="34" r="7" fill="#FF5F57"/><circle cx="60" cy="34" r="7" fill="#FEBC2E"/><circle cx="84" cy="34" r="7" fill="#28C840"/>
-<text x="800" y="40" fill="#A9A0B8" font-family="JetBrains Mono,Consolas,monospace" font-size="15" text-anchor="middle">~/andre — zsh</text>
-<text x="62" y="111" fill="#B9A8D8" font-family="JetBrains Mono,Consolas,monospace" font-size="17">$ andre --help</text>
-<text x="62" y="162" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="-1">André Graccia</text>
-<text x="62" y="195" fill="#BDB4CA" font-family="JetBrains Mono,Consolas,monospace" font-size="16">Desenvolvedor Back-end Java · Ciência da Computação</text>
-<text x="62" y="245" fill="#8E879A" font-family="JetBrains Mono,Consolas,monospace" font-size="14">USAGE</text>
-<text x="62" y="275" fill="#FFFFFF" font-family="JetBrains Mono,Consolas,monospace" font-size="16">andre [command]</text>
-<g font-family="JetBrains Mono,Consolas,monospace" font-size="15">
- <rect x="62" y="302" width="250" height="38" rx="7" fill="#3B0099"/><text x="78" y="327" fill="#FFFFFF">about</text><text x="150" y="327" fill="#E7DDF7">perfil e experiência</text>
- <text x="340" y="327" fill="#FFFFFF">stack</text><text x="405" y="327" fill="#8E879A">tecnologias e ferramentas</text>
- <text x="690" y="327" fill="#FFFFFF">projects</text><text x="785" y="327" fill="#8E879A">projetos em construção</text>
- <text x="1065" y="327" fill="#FFFFFF">tests</text><text x="1135" y="327" fill="#8E879A">qualidade e CI</text>
- <text x="62" y="379" fill="#8E879A">Java 25  /  Spring Boot  /  REST APIs  /  Maven  /  Git</text>
- <text x="1535" y="379" fill="#A78BFA" text-anchor="end">01 / 05</text>
+<rect x="2" y="2" width="1596" height="386" rx="24" fill="url(#panel)" stroke="url(#rim)" stroke-width="2"/>
+<rect x="4" y="4" width="1592" height="382" rx="22" fill="url(#wash)"/>
+<path d="M3 62H1597" stroke="#AEBBFF" stroke-opacity=".17"/>
+<circle cx="36" cy="32" r="7" fill="#FF6B70"/><circle cx="60" cy="32" r="7" fill="#FFC65A"/><circle cx="84" cy="32" r="7" fill="#55D98A"/>
+<text x="800" y="38" fill="#A7A8C5" font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="14" text-anchor="middle">~/andre/profile — zsh</text>
+<text x="58" y="111" fill="#A99BFF" font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="17">$ cat profile.json</text>
+<g font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="16">
+ <text x="58" y="160" fill="#8D91B0">{</text>
+ <text x="90" y="197" fill="#A9B7FF">"education"</text><text x="224" y="197" fill="#E7E7F2">: "Ciência da Computação",</text>
+ <text x="90" y="234" fill="#A9B7FF">"professional"</text><text x="255" y="234" fill="#E7E7F2">: "Atuação na Cielo",</text>
+ <text x="90" y="271" fill="#A9B7FF">"focus"</text><text x="176" y="271" fill="#E7E7F2">: "Backend engineering · Java · APIs",</text>
+ <text x="90" y="308" fill="#A9B7FF">"principles"</text><text x="222" y="308" fill="#E7E7F2">: "Clareza · Testabilidade · Evolução"</text>
+ <text x="58" y="345" fill="#8D91B0">}</text>
 </g>
-<rect x="62" y="397" width="9" height="18" fill="#FFFFFF"/>
+<path d="M890 100V340" stroke="#AEBBFF" stroke-opacity=".16"/>
+<text x="940" y="120" fill="#898BAA" font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="1.4">WORKING PRINCIPLES</text>
+<g font-family="Inter,Helvetica Neue,Arial,sans-serif">
+ <rect x="940" y="148" width="570" height="48" rx="12" fill="#6577FF" fill-opacity=".13" stroke="#9AA9FF" stroke-opacity=".26"/><text x="964" y="178" fill="#E7E8FF" font-size="17" font-weight="600">01</text><text x="1010" y="178" fill="#E7E8FF" font-size="16">Entender o problema antes de codificar</text>
+ <rect x="940" y="210" width="570" height="48" rx="12" fill="#6577FF" fill-opacity=".09" stroke="#9AA9FF" stroke-opacity=".18"/><text x="964" y="240" fill="#C3B9FF" font-size="17" font-weight="600">02</text><text x="1010" y="240" fill="#D5D5E8" font-size="16">Separar responsabilidades e validar regras</text>
+ <rect x="940" y="272" width="570" height="48" rx="12" fill="#6577FF" fill-opacity=".09" stroke="#9AA9FF" stroke-opacity=".18"/><text x="964" y="302" fill="#A6D9FF" font-size="17" font-weight="600">03</text><text x="1010" y="302" fill="#D5D5E8" font-size="16">Documentar decisões para facilitar evolução</text>
+</g>
+<text x="1510" y="358" fill="#A99BFF" font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="13" text-anchor="end">SESSION / 01</text>
 </svg>
