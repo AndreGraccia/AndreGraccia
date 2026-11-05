@@ -25,10 +25,12 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: AndreGraccia
+          filename: assets/github-metrics.svg
+          output_action: commit
+          committer_message: "chore: atualiza métricas do perfil [skip ci]"
           template: classic
           config_timezone: America/Sao_Paulo
           config_display: large
-          config_output: assets/github-metrics.svg
           base: header, activity, community, repositories, metadata
           plugin_languages: yes
           plugin_languages_sections: most-used
@@ -49,8 +51,8 @@ jobs:
             assets/github-contribution-snake.svg
             assets/github-contribution-snake-dark.svg?palette=github-dark
 
-      - name: Salvar gráficos atualizados no repositório
+      - name: Salvar gráfico de contribuições
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: atualiza métricas do perfil"
-          file_pattern: assets/*.svg
+          commit_message: "chore: atualiza gráfico de contribuições [skip ci]"
+          file_pattern: assets/github-contribution-snake*.svg
