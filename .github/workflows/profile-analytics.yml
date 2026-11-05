@@ -7,6 +7,7 @@ on:
     paths:
       - ".github/workflows/profile-analytics.yml"
       - "README.md"
+      - "scripts/render_skyline.py"
   schedule:
     - cron: "17 3 * * *"
   workflow_dispatch:
@@ -48,7 +49,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
-          # Keep the latest README and workflow changes, replacing only the generated STL.
+          # Keep the latest source changes and publish only generated Skyline assets.
           git reset --mixed origin/main
           git add assets/github-skyline.stl assets/github-skyline.png
           if git diff --cached --quiet; then
