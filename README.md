@@ -67,8 +67,11 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 </div>
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" alt="Estatísticas do GitHub de André Graccia" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&langs_count=7&theme=tokyonight&hide_border=true" alt="Linguagens mais utilizadas nos repositórios de André Graccia" />
+  <img src="./assets/github-stats.svg" alt="Estatísticas do GitHub de André Graccia" width="100%" />
+</div>
+
+<div align="center">
+  <img src="./assets/top-languages.svg" alt="Distribuição das linguagens nos repositórios de André Graccia" width="100%" />
 </div>
 
 <div align="center">
