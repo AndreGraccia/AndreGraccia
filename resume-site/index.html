@@ -63,10 +63,40 @@ footer{padding:30px 0 45px;color:#818ba7;font-size:11px;display:flex;justify-con
 @media(max-width:560px){.wrap{width:calc(100% - 30px)}nav{top:8px;padding:9px 10px}.brand{font-size:9px}.navlinks{gap:0}.navlinks a{font-size:10px;padding:7px 8px}.navlinks a:nth-child(2){display:none}.hero{padding-top:58px}.hero-art{min-height:270px}.orbit{width:225px;height:225px}.core{width:158px;height:182px;padding:16px}.monogram{font-size:59px}.float-tag{font-size:9px;padding:8px 10px}.grid{grid-template-columns:1fr}section{padding:48px 0}.profile-panel{padding:20px}.entry-head{display:block}.actions .btn{flex:1 1 calc(50% - 8px)}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media(prefers-reduced-transparency:reduce){.glass{backdrop-filter:none;-webkit-backdrop-filter:none;background:#171d30}}
+
+/* Ambient liquid-glass environment */
+body{background:#070912}
+.ambient{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at 50% -15%,rgba(108,93,205,.18),transparent 48%),linear-gradient(180deg,#080a13,#090c17 54%,#070910)}
+.ambient:before{content:"";position:absolute;inset:-20%;background:conic-gradient(from 30deg at 50% 50%,transparent 0 20%,rgba(105,135,255,.09) 28%,transparent 38%,rgba(174,122,255,.09) 54%,transparent 67%,rgba(92,207,224,.06) 78%,transparent 90%);filter:blur(75px);animation:ambient-drift 32s linear infinite}
+.ambient:after{content:"";position:absolute;inset:0;opacity:.12;background-image:linear-gradient(rgba(178,194,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(178,194,255,.1) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,black,transparent 72%)}
+.aurora{position:absolute;width:42vw;height:42vw;min-width:340px;min-height:340px;border-radius:50%;filter:blur(90px);opacity:.16;will-change:transform;animation:aurora-drift 19s ease-in-out infinite alternate}
+.aurora.a{top:8%;left:-18%;background:#536de9}.aurora.b{top:38%;right:-20%;background:#8a55c9;animation-delay:-8s}.aurora.c{top:78%;left:24%;background:#287f9d;opacity:.1;animation-delay:-13s}
+.identity{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:27px 0 16px;border-bottom:1px solid rgba(210,220,255,.09)}
+.identity-name{font-size:clamp(20px,3vw,28px);font-weight:760;letter-spacing:-.055em;line-height:1.15}
+.identity-name span{color:#aebfff}
+.identity-caption{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:#858fab;margin-top:5px}
+.identity-contact{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+.identity-contact a{font-size:11px;color:#c7d0e8;padding:8px 11px;border-radius:11px;border:1px solid rgba(193,205,255,.14);background:rgba(255,255,255,.035);transition:.2s}
+.identity-contact a:hover{background:rgba(156,181,255,.12);border-color:rgba(184,198,255,.4);color:#fff}
+nav{margin-top:12px}
+.hero{padding-top:78px}
+footer{border-top:1px solid rgba(210,220,255,.1);padding:27px 0 42px;margin-top:18px;align-items:center}
+.footer-brand{font-weight:800;letter-spacing:.12em;color:#dce4ff}.footer-brand span{color:#a995ff}
+.footer-links{display:flex;gap:15px;flex-wrap:wrap}.footer-links a{color:#aeb8d2;transition:color .2s}.footer-links a:hover{color:#fff}
+.footer-note{width:100%;color:#68728e;font-size:10px;letter-spacing:.04em}
+@keyframes ambient-drift{to{transform:rotate(360deg)}}
+@keyframes aurora-drift{from{transform:translate3d(-3%,0,0) scale(.9)}to{transform:translate3d(9%,-8%,0) scale(1.12)}}
+@media(max-width:760px){.identity{align-items:flex-start;flex-direction:column;padding-top:22px}.identity-contact{justify-content:flex-start}.hero{padding-top:58px}}
+@media(max-width:560px){.identity-contact a{font-size:10px;padding:7px 9px}.identity{gap:12px}.footer-links{gap:11px}}
+@media(prefers-reduced-motion:reduce){.ambient:before,.aurora{animation:none!important}}
+@media(prefers-reduced-transparency:reduce){.identity-contact a{background:#171d30}}
+
 </style>
 </head>
 <body>
+<div class="ambient" aria-hidden="true"><span class="aurora a"></span><span class="aurora b"></span><span class="aurora c"></span></div>
 <div class="wrap">
+<header class="identity" aria-label="Identificação e contatos"><div><div class="identity-name">André <span>Graccia</span></div><div class="identity-caption">Software Developer · Backend Java</div></div><div class="identity-contact"><a href="mailto:andregraccia2105@gmail.com">✉ E-mail</a><a href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noreferrer">in LinkedIn ↗</a><a href="https://github.com/AndreGraccia" target="_blank" rel="noreferrer">⌘ GitHub ↗</a></div></header>
 <nav class="glass" aria-label="Navegação principal">
 <a class="brand" href="#" aria-label="André Graccia, início">AG <b>／</b> CURRICULUM</a>
 <div class="navlinks"><a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a class="nav-contact" href="#contato">Contato ↗</a></div>
@@ -109,7 +139,7 @@ footer{padding:30px 0 45px;color:#818ba7;font-size:11px;display:flex;justify-con
 <a class="card project" href="https://github.com/AndreGraccia/AndreGraccia" target="_blank" rel="noreferrer"><div class="card-top"><span class="iconbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M8 14c1 2 7 2 8 0M9 9h.01M15 9h.01"/></svg></span><span class="arrow">↗</span></div><h3>Orbit.ia & experiências</h3><p>Experimentos com agente pessoal, interface própria e workflows de automação. Veja a evolução dos projetos e repositórios no GitHub.</p><div class="tags"><span class="tag">React</span><span class="tag">n8n</span><span class="tag">Docker</span></div></a>
 </div></section>
 <section id="contato"><div class="section-head"><span class="num">05 /</span><h2>Vamos conversar?</h2></div><div class="contact-panel glass"><div><h3>Ideias boas começam com uma conversa.</h3><p>Aberto a conversas sobre backend, engenharia de software, projetos e oportunidades profissionais.</p></div><div class="actions" style="margin:0"><a class="btn primary" href="mailto:andregraccia2105@gmail.com">Enviar e-mail ↗</a><a class="btn" href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></section>
-<footer><span>© 2026 André Graccia</span><span>Designed with intention · São Paulo, Brasil</span></footer>
+<footer><div class="footer-brand">AG <span>／</span> ANDRÉ GRACCIA</div><div class="footer-links"><a href="#sobre">Sobre</a><a href="#experiencia">Experiência</a><a href="#projetos">Projetos</a><a href="mailto:andregraccia2105@gmail.com">Contato ↗</a><a href="https://github.com/AndreGraccia" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noreferrer">LinkedIn ↗</a></div><div class="footer-note">© 2026 André Graccia · Desenvolvido com intenção, clareza e atenção aos detalhes.</div></footer>
 </div>
 <script>
 const glassNodes=document.querySelectorAll('.glass');
