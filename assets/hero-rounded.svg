@@ -8,7 +8,7 @@
     </radialGradient>
   </defs>
   <g clip-path="url(#banner-shape)">
-    <rect width="1600" height="480" fill="#030303"/>
+    <rect width="1600" height="480" fill="#050505"/>
     <rect width="1600" height="480" fill="url(#glow)"/>
     <path d="M0 370C290 320 470 405 800 365C1110 327 1355 395 1600 342V480H0V370Z" fill="#1A0036" fill-opacity=".72"/>
     <g opacity="1">
@@ -20,5 +20,4 @@
       <text x="800" y="360" text-anchor="middle" fill="#A0A0A0" font-family="Courier New, monospace" font-size="17">$ build with quality</text>
     </g>
   </g>
-  <rect x="1" y="1" width="1598" height="478" rx="24" fill="none" stroke="#FFFFFF" stroke-width="2"/>
 </svg>
