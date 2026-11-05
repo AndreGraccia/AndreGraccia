@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="430" viewBox="0 0 1600 430" role="img" aria-labelledby="title desc">
+<title id="title">Terminal de apresentação — André Graccia</title>
+<desc id="desc">Janela de terminal escura com o comando andre help e um resumo do perfil profissional, tecnologias e formas de contato.</desc>
+<defs>
+ <radialGradient id="glow" cx="50%" cy="100%" r="65%"><stop stop-color="#3B0099" stop-opacity=".28"/><stop offset=".48" stop-color="#1A0036" stop-opacity=".12"/><stop offset="1" stop-color="#050505" stop-opacity="0"/></radialGradient>
+ <linearGradient id="window" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101010"/><stop offset="1" stop-color="#070707"/></linearGradient>
+</defs>
+<rect width="1600" height="430" rx="24" fill="#050505"/>
+<rect width="1600" height="430" rx="24" fill="url(#glow)"/>
+<rect x="2" y="2" width="1596" height="426" rx="22" fill="url(#window)" stroke="#29232F" stroke-width="2"/>
+<path d="M3 66H1597" stroke="#29232F"/>
+<circle cx="36" cy="34" r="7" fill="#FF5F57"/><circle cx="60" cy="34" r="7" fill="#FEBC2E"/><circle cx="84" cy="34" r="7" fill="#28C840"/>
+<text x="800" y="40" fill="#A9A0B8" font-family="JetBrains Mono,Consolas,monospace" font-size="15" text-anchor="middle">~/andre — zsh</text>
+<text x="62" y="111" fill="#B9A8D8" font-family="JetBrains Mono,Consolas,monospace" font-size="17">$ andre --help</text>
+<text x="62" y="162" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="-1">André Graccia</text>
+<text x="62" y="195" fill="#BDB4CA" font-family="JetBrains Mono,Consolas,monospace" font-size="16">Desenvolvedor Back-end Java · Ciência da Computação</text>
+<text x="62" y="245" fill="#8E879A" font-family="JetBrains Mono,Consolas,monospace" font-size="14">USAGE</text>
+<text x="62" y="275" fill="#FFFFFF" font-family="JetBrains Mono,Consolas,monospace" font-size="16">andre [command]</text>
+<g font-family="JetBrains Mono,Consolas,monospace" font-size="15">
+ <rect x="62" y="302" width="250" height="38" rx="7" fill="#3B0099"/><text x="78" y="327" fill="#FFFFFF">about</text><text x="150" y="327" fill="#E7DDF7">perfil e experiência</text>
+ <text x="340" y="327" fill="#FFFFFF">stack</text><text x="405" y="327" fill="#8E879A">tecnologias e ferramentas</text>
+ <text x="690" y="327" fill="#FFFFFF">projects</text><text x="785" y="327" fill="#8E879A">projetos em construção</text>
+ <text x="1065" y="327" fill="#FFFFFF">tests</text><text x="1135" y="327" fill="#8E879A">qualidade e CI</text>
+ <text x="62" y="379" fill="#8E879A">Java 25  /  Spring Boot  /  REST APIs  /  Maven  /  Git</text>
+ <text x="1535" y="379" fill="#A78BFA" text-anchor="end">01 / 05</text>
+</g>
+<rect x="62" y="397" width="9" height="18" fill="#FFFFFF"/>
+</svg>
