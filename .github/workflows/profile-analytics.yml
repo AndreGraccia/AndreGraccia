@@ -44,6 +44,21 @@ jobs:
           sudo apt-get install -y blender
           blender --background --python scripts/render_skyline.py -- assets/github-skyline.stl assets/github-skyline.png
 
+      - name: Gerar SVG incorporando a renderização do modelo 3D
+        run: |
+          python3 - <<'PY'
+          import base64
+          from pathlib import Path
+
+          png = base64.b64encode(Path("assets/github-skyline.png").read_bytes()).decode("ascii")
+          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="720" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+          <title id="title">GitHub Skyline de André Graccia</title>
+          <desc id="desc">Renderização do modelo STL oficial das contribuições GitHub, gerada automaticamente pelo GitHub Actions.</desc>
+          <image width="1600" height="720" xlink:href="data:image/png;base64,{png}" />
+          </svg>'''
+          Path("assets/github-skyline.svg").write_text(svg, encoding="utf-8")
+          PY
+
       - name: Publicar modelo 3D
         run: |
           git config user.name "github-actions[bot]"
@@ -51,7 +66,7 @@ jobs:
           git fetch origin main
           # Keep the latest source changes and publish only generated Skyline assets.
           git reset --mixed origin/main
-          git add assets/github-skyline.stl assets/github-skyline.png
+          git add assets/github-skyline.stl assets/github-skyline.png assets/github-skyline.svg
           if git diff --cached --quiet; then
             echo "A Skyline já está atualizada."
             exit 0
