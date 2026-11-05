@@ -43,19 +43,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          # Keep the latest README and workflow changes, replacing only the generated STL.
+          git reset --mixed origin/main
           git add assets/github-skyline.stl
           if git diff --cached --quiet; then
             echo "A Skyline já está atualizada."
             exit 0
           fi
           git commit -m "chore: atualiza GitHub Skyline 3D [skip ci]"
-          for attempt in 1 2 3; do
-            git fetch origin main
-            git rebase origin/main
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            echo "Push recusado; sincronizando novamente (${attempt}/3)."
-          done
-          echo "Não foi possível publicar a Skyline após 3 tentativas."
-          exit 1
+          git push origin HEAD:main
