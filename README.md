@@ -47,11 +47,9 @@ Gosto de entender o problema antes de implementar a solução. Por isso, valoriz
 
 Abaixo estão alguns projetos que representam minha evolução prática em desenvolvimento backend, aplicações full-stack, integração de serviços e automação.
 
-| Projeto | Sobre | Tecnologias |
-| :--- | :--- | :--- |
-| [**Wall.ia**](https://github.com/AndreGraccia/Wall.ia) | Aplicação full-stack voltada à gestão de carteiras e movimentações financeiras. O projeto explora autenticação, histórico de operações e organização de regras de negócio. | Java · Spring Boot · React · PostgreSQL · Docker |
-| [**Calculadora de Juros**](https://github.com/AndreGraccia/calc-juros) | Projeto em desenvolvimento para simular juros simples e compostos e trabalhar com indicadores econômicos, incluindo dados do Banco Central. | Java 25 · Spring Boot · Maven · APIs REST |
-| [**Orbit.ia**](https://github.com/AndreGraccia/Orbit.IA) | Agente pessoal de IA com interface própria e workflows de automação. O projeto explora a integração entre frontend, n8n e serviços de IA. | React · Vite · n8n · Docker |
+<div align="center">
+  <a href="https://github.com/AndreGraccia/Wall.ia"><img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/projects.svg?v=1" alt="Projetos em destaque: Wall.ia, Calculadora de Juros e Orbit.ia" width="100%" /></a>
+</div>
 
 > Os projetos evoluem continuamente. Consulte cada repositório para ver o escopo atual, as funcionalidades implementadas, as decisões técnicas e os próximos passos.
 
@@ -61,6 +59,10 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 - **Integração:** comunicação entre serviços, consumo de APIs e persistência em bancos relacionais.
 - **Automação e IA:** construção de workflows com n8n e experimentação com agentes e modelos de IA.
 - **Engenharia de software:** organização de código, Git/GitHub, documentação técnica e evolução incremental de projetos.
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/metrics.svg?v=2" alt="GitHub Status — atividade, contribuições e evolução" width="100%" />
+</div>
 
 ## GitHub Statistics
 
