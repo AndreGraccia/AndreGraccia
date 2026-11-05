@@ -1,7 +1,8 @@
-<svg width="1600" height="260" viewBox="0 0 1600 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-<title id="title">Métricas do GitHub</title><desc id="desc">Cabeçalho de janela macOS para os gráficos de atividade no GitHub.</desc>
-<defs><linearGradient id="bg" x1="72" y1="20" x2="1528" y2="245" gradientUnits="userSpaceOnUse"><stop stop-color="#1B0B38"/><stop offset="1" stop-color="#0B0613"/></linearGradient></defs>
-<rect x="72" y="18" width="1456" height="220" rx="26" fill="url(#bg)" stroke="#4C2B70"/><path d="M98 18H1502C1516 18 1528 30 1528 44V78H72V44C72 30 84 18 98 18Z" fill="#211332"/><circle cx="112" cy="48" r="8" fill="#FF5F57"/><circle cx="140" cy="48" r="8" fill="#FEBC2E"/><circle cx="168" cy="48" r="8" fill="#28C840"/><text x="800" y="54" text-anchor="middle" fill="#C4B5FD" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15">~/andre — atividade</text>
-<text x="112" y="142" fill="#A78BFA" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="19">$ git log --contribuições</text><text x="112" y="196" fill="#FCFCFF" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="42" font-weight="750" letter-spacing="-2">Métricas em movimento.</text>
-<rect x="1198" y="122" width="252" height="56" rx="16" fill="#261345" stroke="#6D38AB"/><text x="1324" y="157" text-anchor="middle" fill="#F5F3FF" font-family="system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="17" font-weight="600">atualizado ao vivo</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="230" viewBox="0 0 1600 230" role="img" aria-labelledby="t d">
+<title id="t">GitHub status e atividade</title><desc id="d">Cabeçalho minimalista para estatísticas e atividade do GitHub.</desc>
+<rect x="2" y="2" width="1596" height="226" rx="22" fill="#080808" stroke="#252525" stroke-width="2"/>
+<text x="62" y="64" fill="#A0A0A0" font-family="SFMono-Regular,Consolas,monospace" font-size="15" letter-spacing="2">03 / GITHUB STATUS</text>
+<text x="62" y="132" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="750" letter-spacing="-2">Atividade em código.</text>
+<text x="64" y="176" fill="#A0A0A0" font-family="Inter,Arial,sans-serif" font-size="19">Contribuições, projetos e evolução contínua.</text>
+<g transform="translate(1165 48)" fill="none" stroke="#A0A0A0" stroke-width="2" opacity=".72"><path d="M0 112V86H30V66H60V76H90V42H120V55H150V22H180V40H210V10H240V0"/><path d="M0 132H250" stroke-opacity=".3"/><circle cx="240" cy="0" r="5" fill="#FFFFFF" stroke="none"/></g>
 </svg>
