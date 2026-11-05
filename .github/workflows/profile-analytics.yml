@@ -1,6 +1,12 @@
 name: Atualizar gráficos do perfil
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/profile-analytics.yml"
+      - "scripts/generate_profile_svgs.py"
   schedule:
     - cron: "17 3 * * *"
   workflow_dispatch:
