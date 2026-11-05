@@ -1,4 +1,4 @@
-name: Atualizar gráficos do perfil
+name: Atualizar gráfico de atividade do perfil
 
 on:
   push:
@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   generate-svg:
-    name: Gerar os dois gráficos SVG
+    name: Gerar gráfico de atividade em SVG
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,19 +28,19 @@ jobs:
         with:
           persist-credentials: true
 
-      - name: Gerar GitHub Stats e Top Languages
+      - name: Gerar estatísticas públicas
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/generate_profile_svgs.py
 
-      - name: Publicar SVGs atualizados
+      - name: Publicar SVG atualizado
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-stats.svg assets/top-languages.svg
+          git add assets/github-activity.svg
           if git diff --cached --quiet; then
-            echo "Os gráficos já estão atualizados."
+            echo "O gráfico já está atualizado."
             exit 0
           fi
-          git commit -m "chore: atualiza gráficos SVG do perfil [skip ci]"
+          git commit -m "chore: atualiza gráfico de atividade SVG [skip ci]"
           git push
