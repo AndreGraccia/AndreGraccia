@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="560" viewBox="0 0 1500 560" role="img" aria-labelledby="title desc">
+<title id="title">André Graccia — Contribution Skyline</title>
+<desc id="desc">Prévia da cidade isométrica em violeta e azul. O GitHub Actions substituirá esta prévia pelos dados reais de contribuições após a primeira execução.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#090B13"/><stop offset="1" stop-color="#101326"/></linearGradient>
+  <linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8C78FF"/><stop offset="1" stop-color="#78CFFF"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#8C78FF" stop-opacity=".18"/><stop offset="1" stop-color="#8C78FF" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#AAB7E8" stroke-opacity=".045"/></pattern>
+</defs>
+<rect width="1500" height="560" rx="24" fill="url(#bg)"/>
+<rect width="1500" height="560" rx="24" fill="url(#grid)"/>
+<ellipse cx="760" cy="290" rx="640" ry="250" fill="url(#glow)"/>
+<text x="58" y="56" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="1.5">CONTRIBUTION SKYLINE</text>
+<text x="58" y="82" fill="#8994B0" font-family="monospace" font-size="11" letter-spacing="1.2">ISOMETRIC ACTIVITY MAP / CUSTOM PALETTE</text>
+<path d="M58 98H1442" stroke="url(#line)" stroke-opacity=".38"/>
+<g transform="translate(220 145)" stroke="#DDE7FF" stroke-opacity=".10" stroke-width=".5">
+  <g fill="#51418A"><path d="M0 110l24 12v54l-24-12z"/><path d="M24 122l22-12v54l-22 12z"/><path d="M0 110l22-12 24 12-22 12z" fill="#8C78FF"/></g>
+  <g transform="translate(100 -35)" fill="#30284E"><path d="M0 110l24 12v89l-24-12z"/><path d="M24 122l22-12v89l-22 12z"/><path d="M0 110l22-12 24 12-22 12z" fill="#8C78FF"/></g>
+  <g transform="translate(200 20)" fill="#51418A"><path d="M0 110l24 12v64l-24-12z"/><path d="M24 122l22-12v64l-22 12z"/><path d="M0 110l22-12 24 12-22 12z" fill="#78CFFF"/></g>
+  <g transform="translate(300 -75)" fill="#30284E"><path d="M0 110l24 12v104l-24-12z"/><path d="M24 122l22-12v104l-22 12z"/><path d="M0 110l22-12 24 12-22 12z" fill="#8C78FF"/></g>
+  <g transform="translate(400 10)" fill="#51418A"><path d="M0 110l24 12v72l-24-12z"/><path d="M24 122l22-12v72l-22 12z"/><path d="M0 110l22-12 24 12-22 12z" fill="#78CFFF"/></g>
+  <g transform="translate(500 -48)" fill="#30284E"><path d="M0 110l24 12v91l-24-12z"/><path d="M24 122l22-12v91l-22 12z"/><path d="M0 110l22-12 24 12-22 12z" fill="#8C78FF"/></g>
+  <g transform="translate(600 28)" fill="#51418A"><path d="M0 110l24 12v59l-24-12z"/><path d="M24 122l22-12v59l-22 12z"/><path d="M0 110l22-12 24 12-22 12z" fill="#78CFFF"/></g>
+  <g fill="#78CFFF" opacity=".75"><path d="M9 132v19M16 136v19M109 98v22M116 102v22M309 83v25M316 87v25M509 98v24M516 102v24M609 139v17M616 143v17" stroke="#78CFFF" stroke-width="2"/></g>
+</g>
+<text x="750" y="430" text-anchor="middle" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="600">CUSTOM SKYLINE / SYNC PENDING</text>
+<text x="750" y="456" text-anchor="middle" fill="#8994B0" font-family="monospace" font-size="11" letter-spacing="1">A primeira execução do GitHub Actions carregará suas contribuições reais</text>
+<path d="M58 488H1442" stroke="#FFFFFF" stroke-opacity=".10"/>
+<text x="58" y="520" fill="#A8B1CB" font-family="monospace" font-size="11">PALETTE</text>
+<g transform="translate(130 506)"><rect width="14" height="10" rx="2" fill="#090B13"/><rect x="20" width="14" height="10" rx="2" fill="#30284E"/><rect x="40" width="14" height="10" rx="2" fill="#51418A"/><rect x="60" width="14" height="10" rx="2" fill="#8C78FF"/><rect x="80" width="14" height="10" rx="2" fill="#78CFFF"/></g>
+<text x="1442" y="520" text-anchor="end" fill="#78839F" font-family="monospace" font-size="10">GITHUB GRAPHQL / AUTOMATED SVG</text>
+<path d="M58 540H1442" stroke="url(#line)" stroke-opacity=".25"/>
+</svg>
