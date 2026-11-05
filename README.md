@@ -29,10 +29,12 @@ Gosto de entender o problema antes de implementar a solução. Por isso, valoriz
 ## Tecnologias e ferramentas
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,react,js,ts,py,postgres,docker,aws,git,github,maven,idea,vscode&theme=dark&perline=7" alt="Java, Spring Boot, React, JavaScript, TypeScript, Python, PostgreSQL, Docker, AWS, Git, GitHub, Maven, IntelliJ IDEA e VS Code" />
+  <img src="https://skillicons.dev/icons?i=java,spring,react,js,ts,postgres,docker,git,github,maven,idea,vscode&theme=dark&perline=6" alt="Java, Spring Boot, React, JavaScript, TypeScript, PostgreSQL, Docker, Git, GitHub, Maven, IntelliJ IDEA e VS Code" />
   <br />
-  <img src="https://img.shields.io/badge/n8n-Automation-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n automação" />
-  <img src="https://img.shields.io/badge/IA-OpenAI%20%26%20LLMs-412991?style=for-the-badge&logo=openai&logoColor=white" alt="Inteligência artificial e modelos de linguagem" />
+  <img src="./assets/icons/python.svg" alt="Python" width="48" height="48" />
+  <img src="./assets/icons/aws.svg" alt="Amazon Web Services" width="48" height="48" />
+  <img src="./assets/icons/n8n.svg" alt="n8n" width="48" height="48" />
+  <img src="./assets/icons/openai.svg" alt="OpenAI e IA" width="48" height="48" />
 </div>
 
 <br />
