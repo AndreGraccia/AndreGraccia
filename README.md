@@ -85,7 +85,7 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
     <img src="./assets/github-skyline-preview.svg" alt="GitHub Skyline 2026 — modelo 3D do histórico de contribuições de André Graccia. Clique para abrir o modelo STL." width="100%" />
   </a>
   <br />
-  <sub>Modelo 3D das contribuições de 2026 · Clique na imagem para visualizar o STL no GitHub.</sub>
+  <sub>Gerado com a extensão oficial <a href="https://github.com/github/gh-skyline">gh-skyline</a> · 2026 · Clique na imagem para visualizar o STL no GitHub.</sub>
 </div>
 
 ## Vamos conversar?
