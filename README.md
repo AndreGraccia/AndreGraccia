@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-rounded.svg?v=9" alt="André Graccia — Desenvolvedor Back-end Java, identidade visual iridescente azul e violeta" width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-rounded.svg?v=10" alt="André Graccia — Desenvolvedor Back-end Java, identidade visual iridescente azul e violeta" width="100%" />
 </div>
 
 <div align="center">
