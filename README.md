@@ -81,11 +81,11 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 ## GitHub Skyline
 
 <div align="center">
-  <a href="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/github-skyline.svg">
+  <a href="https://github.com/AndreGraccia/AndreGraccia/blob/main/assets/github-skyline.stl">
     <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/github-skyline.svg?v=3" alt="Visualização SVG do GitHub Skyline de André Graccia, gerada a partir do modelo 3D oficial" width="100%" />
   </a>
   <br />
-  <sub>Prévia SVG gerada automaticamente pelo GitHub Actions a partir do modelo 3D oficial · <a href="https://github.com/AndreGraccia/AndreGraccia/blob/main/assets/github-skyline.stl">Baixar o modelo STL original</a></sub>
+  <sub>Modelo 3D oficial renderizado em grafite sobre fundo escuro · clique na prévia para abrir o STL interativo</sub>
 </div>
 
 ## Vamos conversar?
