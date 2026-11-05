@@ -3,9 +3,9 @@
 </div>
 
 <div align="center">
-  <a href="https://br.linkedin.com/in/andregraccia"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-101426?style=for-the-badge&logo=linkedin&logoColor=9CB5FF&labelColor=090B13" alt="Conectar no LinkedIn" /></a>
   <a href="mailto:andregraccia2105@gmail.com"><img src="https://img.shields.io/badge/EMAIL-CONTACT-A99BFF?style=for-the-badge&logo=gmail&logoColor=FFFFFF&labelColor=090B13" alt="Enviar e-mail" /></a>
-  <a href="./Curriculo_Andre_Graccia.pdf"><img src="https://img.shields.io/badge/RESUME-PDF-78CFFF?style=for-the-badge&logo=readme&logoColor=FFFFFF&labelColor=090B13" alt="Abrir currículo em PDF" /></a>
+  <a href="https://br.linkedin.com/in/andregraccia"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-101426?style=for-the-badge&logo=linkedin&logoColor=9CB5FF&labelColor=090B13" alt="Conectar no LinkedIn" /></a>
+  <a href="https://andre-graccia-curriculum-andre-de9d.vercel.app"><img src="https://img.shields.io/badge/CURRÍCULO-ONLINE-78CFFF?style=for-the-badge&logo=readme&logoColor=FFFFFF&labelColor=090B13" alt="Abrir currículo online" /></a>
 </div>
 
 <br />
