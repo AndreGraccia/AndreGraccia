@@ -20,4 +20,26 @@
   <text x="230" y="520" fill="#A8B1CB" font-family="monospace" font-size="11">MORE CONTRIBUTIONS</text>
   <text x="1442" y="520" text-anchor="end" fill="#78839F" font-family="monospace" font-size="10">163 CONTRIBUTIONS</text>
   <path d="M58 540H1442" stroke="url(#line)" stroke-opacity=".25"/>
-  </svg>
+  
+  <g opacity=".8">
+    <path d="M70 112H1430" stroke="#78CFFF" stroke-opacity=".12" stroke-dasharray="3 12">
+      <animate attributeName="stroke-dashoffset" values="0;-90" dur="12s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="112" cy="112" r="2" fill="#78CFFF"><animate attributeName="opacity" values=".2;1;.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="1385" cy="466" r="2.5" fill="#8C78FF"><animate attributeName="opacity" values="1;.2;1" dur="4s" repeatCount="indefinite"/></circle>
+  </g>
+  <g transform="translate(1270 30)">
+    <rect width="172" height="32" rx="16" fill="#FFFFFF" fill-opacity=".035" stroke="url(#line)" stroke-opacity=".42"/>
+    <circle cx="17" cy="16" r="3" fill="#78CFFF"><animate attributeName="opacity" values="1;.25;1" dur="2.2s" repeatCount="indefinite"/></circle>
+    <text x="31" y="20" fill="#C5CBE0" font-family="monospace" font-size="9" letter-spacing="1">CONTRIBUTION DATA</text>
+  </g>
+  <path d="M130 470L1360 130" stroke="#78CFFF" stroke-opacity="0" stroke-width="1.5">
+    <animate attributeName="stroke-opacity" values="0;.18;0" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="d" values="M130 470L1360 130;M220 470L1450 130;M130 470L1360 130" dur="8s" repeatCount="indefinite"/>
+  </path>
+  <g transform="translate(720 112)">
+    <circle cx="0" cy="0" r="3" fill="#78CFFF"><animate attributeName="r" values="2;5;2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="0" cy="0" r="12" fill="none" stroke="#78CFFF" stroke-opacity=".35"><animate attributeName="r" values="6;20;6" dur="3s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".4;0;.4" dur="3s" repeatCount="indefinite"/></circle>
+  </g>
+
+</svg>
