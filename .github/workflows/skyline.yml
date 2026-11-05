@@ -1,6 +1,9 @@
 name: Profile contribution skyline
 
 on:
+  push:
+    paths:
+      - ".github/workflows/skyline.yml"
   schedule:
     - cron: "17 3 * * *"
   workflow_dispatch:
