@@ -40,7 +40,7 @@ Gosto de entender o problema antes de implementar a solução. Por isso, valoriz
 <br />
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg?v=6" alt="Qualidade é construída antes da produção." width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/reliability.svg?v=7" alt="Qualidade é construída antes da produção." width="100%" />
 </div>
 
 ## Projetos em destaque
@@ -66,7 +66,7 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
   <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/metrics.svg?v=2" alt="GitHub Status — atividade, contribuições e evolução" width="100%" />
 </div>
 
-## GitHub Statistics
+## GitHub Status
 
 <div align="center">
   <img
