@@ -58,6 +58,19 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 - Testes, depuração e qualidade de software.
 - Automação de processos e aplicações com IA.
 
+## GitHub
+
+<div align="center">
+  <a href="https://github.com/AndreGraccia/AndreGraccia/actions/workflows/profile-analytics.yml">
+    <img src="https://github.com/AndreGraccia/AndreGraccia/actions/workflows/profile-analytics.yml/badge.svg" alt="Profile Analytics CI" />
+  </a>
+</div>
+
+<div align="center">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" alt="Estatísticas do GitHub de André Graccia" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&langs_count=7&theme=tokyonight&hide_border=true" alt="Linguagens mais utilizadas nos repositórios de André Graccia" />
+</div>
+
 ## GitHub Analytics
 
 <div align="center">
