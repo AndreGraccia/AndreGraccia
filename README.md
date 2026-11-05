@@ -58,16 +58,26 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 - Testes, depuração e qualidade de software.
 - Automação de processos e aplicações com IA.
 
-## GitHub
+## GitHub Analytics
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=AndreGraccia&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" alt="Estatísticas do GitHub de André Graccia" />
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&langs_count=7&theme=tokyonight&hide_border=true" alt="Linguagens mais utilizadas nos repositórios de André Graccia" />
+  <img src="./assets/github-metrics.svg" alt="Métricas do GitHub: atividade, comunidade, repositórios, linguagens e hábitos de contribuição" width="100%" />
+</div>
+
+## Histórico de contribuições
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-snake.svg" />
+    <img src="./assets/github-contribution-snake.svg" alt="Animação do histórico de contribuições do GitHub" width="100%" />
+  </picture>
 </div>
 
 <div align="center">
   <a href="https://github.com/AndreGraccia?tab=repositories">Ver todos os repositórios</a> ·
-  <a href="https://github.com/AndreGraccia?tab=overview">Ver atividade e contribuições</a>
+  <a href="https://github.com/AndreGraccia?tab=overview">Ver atividade e contribuições</a> ·
+  <a href="https://github.com/AndreGraccia">Abrir perfil no GitHub</a>
 </div>
 
 ## Vamos conversar?
