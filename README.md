@@ -71,22 +71,6 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreGraccia&layout=compact&langs_count=7&theme=tokyonight&hide_border=true" alt="Linguagens mais utilizadas nos repositórios de André Graccia" />
 </div>
 
-## GitHub Analytics
-
-<div align="center">
-  <img src="./assets/github-metrics.svg" alt="Métricas do GitHub: atividade, comunidade, repositórios, linguagens e hábitos de contribuição" width="100%" />
-</div>
-
-## Histórico de contribuições
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-snake.svg" />
-    <img src="./assets/github-contribution-snake.svg" alt="Animação do histórico de contribuições do GitHub" width="100%" />
-  </picture>
-</div>
-
 <div align="center">
   <a href="https://github.com/AndreGraccia?tab=repositories">Ver todos os repositórios</a> ·
   <a href="https://github.com/AndreGraccia?tab=overview">Ver atividade e contribuições</a> ·
