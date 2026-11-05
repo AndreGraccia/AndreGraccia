@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="230" viewBox="0 0 1600 230" role="img" aria-labelledby="t d">
-<title id="t">GitHub status e atividade</title><desc id="d">Cabeçalho minimalista para estatísticas e atividade do GitHub.</desc>
-<rect x="2" y="2" width="1596" height="226" rx="22" fill="#080808" stroke="#252525" stroke-width="2"/>
-<text x="62" y="64" fill="#A0A0A0" font-family="SFMono-Regular,Consolas,monospace" font-size="15" letter-spacing="2">03 / GITHUB STATUS</text>
-<text x="62" y="132" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="750" letter-spacing="-2">Atividade em código.</text>
-<text x="64" y="176" fill="#A0A0A0" font-family="Inter,Arial,sans-serif" font-size="19">Contribuições, projetos e evolução contínua.</text>
-<g transform="translate(1165 48)" fill="none" stroke="#A0A0A0" stroke-width="2" opacity=".72"><path d="M0 112V86H30V66H60V76H90V42H120V55H150V22H180V40H210V10H240V0"/><path d="M0 132H250" stroke-opacity=".3"/><circle cx="240" cy="0" r="5" fill="#FFFFFF" stroke="none"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="210" viewBox="0 0 1600 210" role="img" aria-labelledby="title desc">
+<title id="title">GitHub activity</title><desc id="desc">Cabeçalho em vidro escuro com acentos azul e violeta para a área de atividade do GitHub.</desc>
+<defs><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#141728"/><stop offset="1" stop-color="#090A13"/></linearGradient><linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#7F8FFF" stop-opacity=".15"/><stop offset=".5" stop-color="#A58BFF" stop-opacity=".8"/><stop offset="1" stop-color="#68D5FF" stop-opacity=".18"/></linearGradient></defs>
+<rect x="2" y="2" width="1596" height="206" rx="22" fill="url(#glass)" stroke="#7D8BFF" stroke-opacity=".32" stroke-width="2"/>
+<text x="58" y="54" fill="#A99BFF" font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="2">05 / GITHUB ACTIVITY</text>
+<text x="58" y="119" fill="#FFFFFF" font-family="Inter,Helvetica Neue,Arial,sans-serif" font-size="46" font-weight="720" letter-spacing="-1.8">Consistência em construção.</text>
+<text x="60" y="159" fill="#B4B6D0" font-family="Inter,Helvetica Neue,Arial,sans-serif" font-size="18">Contribuições, repositórios e evolução contínua.</text>
+<path d="M1120 148L1170 128L1215 137L1260 92L1304 112L1352 72L1394 86L1440 42L1495 58" fill="none" stroke="url(#line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1120 166H1500" stroke="#AEBBFF" stroke-opacity=".15"/>
+<circle cx="1495" cy="58" r="5" fill="#B5A5FF"/>
 </svg>
