@@ -23,13 +23,16 @@ Gosto de entender o problema antes de implementar a solução. Por isso, valoriz
 | Área | Foco |
 | :--- | :--- |
 | Principal | Java · Spring Boot · APIs REST · SQL |
-| Em evolução | React · Docker · Cloud · IA aplicada |
+| Em desenvolvimento | Python · AWS · IA aplicada · automação |
 | Localização | São Paulo, Brasil |
 
-## Tecnologias
+## Tecnologias e ferramentas
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,react,js,ts,postgres,docker,git,github,maven,idea,vscode&theme=dark&perline=6" alt="Java, Spring, React, JavaScript, TypeScript, PostgreSQL, Docker, Git, GitHub, Maven, IntelliJ IDEA e VS Code" />
+  <img src="https://skillicons.dev/icons?i=java,spring,react,js,ts,py,postgres,docker,aws,git,github,maven,idea,vscode&theme=dark&perline=7" alt="Java, Spring Boot, React, JavaScript, TypeScript, Python, PostgreSQL, Docker, AWS, Git, GitHub, Maven, IntelliJ IDEA e VS Code" />
+  <br />
+  <img src="https://img.shields.io/badge/n8n-Automation-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n automação" />
+  <img src="https://img.shields.io/badge/IA-OpenAI%20%26%20LLMs-412991?style=for-the-badge&logo=openai&logoColor=white" alt="Inteligência artificial e modelos de linguagem" />
 </div>
 
 <br />
@@ -46,32 +49,21 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 | :--- | :--- | :--- |
 | [**Wall.ia**](https://github.com/AndreGraccia/Wall.ia) | Aplicação full-stack voltada à gestão de carteiras e movimentações financeiras. O projeto explora autenticação, histórico de operações e organização de regras de negócio. | Java · Spring Boot · React · PostgreSQL · Docker |
 | [**Calculadora de Juros**](https://github.com/AndreGraccia/calc-juros) | Projeto em desenvolvimento para simular juros simples e compostos e trabalhar com indicadores econômicos, incluindo dados do Banco Central. | Java 25 · Spring Boot · Maven · APIs REST |
-| [**Orbit.ia**](https://github.com/AndreGraccia/Orbit.IA) | Agente pessoal de IA com interface própria e workflows de automação. O projeto explora a integração entre frontend, n8n e serviços de IA. | React · Vite · n8n · Docker · PostgreSQL |
+| [**Orbit.ia**](https://github.com/AndreGraccia/Orbit.IA) | Agente pessoal de IA com interface própria e workflows de automação. O projeto explora a integração entre frontend, n8n e serviços de IA. | React · Vite · n8n · Docker |
 
 > Os projetos evoluem continuamente. Consulte cada repositório para ver o escopo atual, as funcionalidades implementadas, as decisões técnicas e os próximos passos.
 
-## Atuação e interesses
+## Destaques profissionais
 
-- Desenvolvimento backend com Java e Spring Boot.
-- Construção e integração de APIs REST.
-- Modelagem e persistência de dados relacionais.
-- Testes, depuração e qualidade de software.
-- Automação de processos e aplicações com IA.
+- **Backend:** desenvolvimento de aplicações e APIs REST com Java e Spring Boot.
+- **Integração:** comunicação entre serviços, consumo de APIs e persistência em bancos relacionais.
+- **Automação e IA:** construção de workflows com n8n e experimentação com agentes e modelos de IA.
+- **Engenharia de software:** organização de código, Git/GitHub, documentação técnica e evolução incremental de projetos.
 
-## GitHub
-
-<div align="center">
-  <a href="https://github.com/AndreGraccia/AndreGraccia/actions/workflows/profile-analytics.yml">
-    <img src="https://github.com/AndreGraccia/AndreGraccia/actions/workflows/profile-analytics.yml/badge.svg" alt="Profile Analytics CI" />
-  </a>
-</div>
+## GitHub Activity
 
 <div align="center">
-  <img src="./assets/github-stats.svg" alt="Estatísticas do GitHub de André Graccia" width="100%" />
-</div>
-
-<div align="center">
-  <img src="./assets/top-languages.svg" alt="Distribuição das linguagens nos repositórios de André Graccia" width="100%" />
+  <img src="./assets/github-activity.svg" alt="Atividade pública no GitHub: commits, pull requests, issues, repositórios e nível de atividade" width="100%" />
 </div>
 
 <div align="center">
