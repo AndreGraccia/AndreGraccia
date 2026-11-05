@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="238" viewBox="0 0 760 238" role="img" aria-labelledby="title desc">
+<title id="title">GitHub Activity — AndreGraccia</title>
+<desc id="desc">Commits, pull requests, issues, repositórios públicos e nível estimado de atividade.</desc>
+<rect x="1" y="1" width="758" height="236" rx="14" fill="#1a1b27" stroke="#414868"/>
+<text x="28" y="36" fill="#c0caf5" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">GitHub Activity</text>
+<text x="28" y="57" fill="#a9b1d6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="11" font-weight="400">Contribuições públicas e participação em projetos</text>
+<rect x="638" y="18" width="92" height="66" rx="10" fill="#24283b" stroke="#414868"/>
+<text x="655" y="39" fill="#a9b1d6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="700">RANK</text>
+<text x="665" y="72" fill="#7aa2f7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="31" font-weight="700">B</text>
+<rect x="24" y="93" width="348" height="54" rx="9" fill="#24283b" stroke="#414868"/>
+<rect x="24" y="93" width="4" height="54" rx="2" fill="#7aa2f7"/>
+<text x="41" y="113" fill="#a9b1d6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">COMMITS</text>
+<text x="41" y="136" fill="#7aa2f7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700">124</text>
+<rect x="388" y="93" width="348" height="54" rx="9" fill="#24283b" stroke="#414868"/>
+<rect x="388" y="93" width="4" height="54" rx="2" fill="#bb9af7"/>
+<text x="405" y="113" fill="#a9b1d6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">PULL REQUESTS</text>
+<text x="405" y="136" fill="#bb9af7" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700">7</text>
+<rect x="24" y="158" width="348" height="54" rx="9" fill="#24283b" stroke="#414868"/>
+<rect x="24" y="158" width="4" height="54" rx="2" fill="#9ece6a"/>
+<text x="41" y="178" fill="#a9b1d6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">ISSUES</text>
+<text x="41" y="201" fill="#9ece6a" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700">6</text>
+<rect x="388" y="158" width="348" height="54" rx="9" fill="#24283b" stroke="#414868"/>
+<rect x="388" y="158" width="4" height="54" rx="2" fill="#7dcfff"/>
+<text x="405" y="178" fill="#a9b1d6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="10" font-weight="600">REPOSITÓRIOS PÚBLICOS</text>
+<text x="405" y="201" fill="#7dcfff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" font-weight="700">4</text>
+<text x="28" y="226" fill="#a9b1d6" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="9" font-weight="400">Rank de atividade estimado a partir dos dados públicos; não representa avaliação de qualidade.</text>
+</svg>
