@@ -91,6 +91,30 @@ footer{border-top:1px solid rgba(210,220,255,.1);padding:27px 0 42px;margin-top:
 @media(prefers-reduced-motion:reduce){.ambient:before,.aurora{animation:none!important}}
 @media(prefers-reduced-transparency:reduce){.identity-contact a{background:#171d30}}
 
+
+/* Astronaut identity — aligned with the GitHub profile */
+.hero{grid-template-columns:minmax(0,1.12fr) minmax(340px,.88fr);gap:26px;padding:72px 0 84px;min-height:650px}
+.hero-art{min-height:470px;isolation:isolate}
+.space-scene{position:relative;width:min(100%,470px);aspect-ratio:1/1;display:grid;place-items:center}
+.space-scene:before{content:"";position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,rgba(127,111,255,.19),rgba(78,147,221,.08) 42%,transparent 70%);filter:blur(12px)}
+.starfield{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 14% 22%,#dce8ff 98%,transparent),radial-gradient(1.5px 1.5px at 78% 18%,#b6c8ff 98%,transparent),radial-gradient(1px 1px at 87% 69%,#d9c8ff 98%,transparent),radial-gradient(1px 1px at 20% 77%,#9ce4f4 98%,transparent),radial-gradient(1px 1px at 48% 8%,#fff 98%,transparent),radial-gradient(1px 1px at 7% 53%,#b7c7ff 98%,transparent);opacity:.8}
+.scene-orbit{position:absolute;width:90%;height:42%;border:1px solid rgba(153,177,255,.3);border-radius:50%;transform:rotate(-27deg);box-shadow:0 0 28px rgba(126,121,255,.1);animation:orbit-spin 24s linear infinite}
+.scene-orbit:before{content:"";position:absolute;width:9px;height:9px;top:9%;left:17%;border-radius:50%;background:#a6e8ff;box-shadow:0 0 18px #79d4ee}
+.scene-orbit.second{width:76%;height:30%;transform:rotate(48deg);border-color:rgba(194,156,255,.25);animation:orbit-reverse 29s linear infinite}
+.astronaut{position:relative;width:76%;max-width:350px;z-index:2;filter:drop-shadow(0 28px 38px rgba(0,0,0,.48));animation:astronaut-float 7s ease-in-out infinite}
+.astronaut svg{display:block;width:100%;height:auto;overflow:visible}
+.astronaut .visor-glow{animation:visor-pulse 5s ease-in-out infinite;transform-origin:center}
+.scene-label{position:absolute;z-index:3;padding:10px 13px;border-radius:13px;font-size:10px;letter-spacing:.09em;color:#dce5ff}
+.scene-label.top{top:12%;right:0}.scene-label.bottom{bottom:12%;left:0}
+.scene-label strong{display:block;font-size:11px;color:#fff;margin-bottom:2px;letter-spacing:.04em}
+.scene-coordinates{position:absolute;right:4%;bottom:3%;font:9px ui-monospace,monospace;letter-spacing:.14em;color:#7f8bad}
+@keyframes astronaut-float{0%,100%{transform:translateY(2px) rotate(-2deg)}50%{transform:translateY(-12px) rotate(1.5deg)}}
+@keyframes orbit-spin{to{transform:rotate(333deg)}}@keyframes orbit-reverse{to{transform:rotate(-312deg)}}
+@keyframes visor-pulse{0%,100%{opacity:.65}50%{opacity:1}}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:50px 0 65px;gap:0}.hero-art{min-height:360px;grid-row:1}.hero-copy{grid-row:2}.space-scene{max-width:390px}.astronaut{width:72%}}
+@media(max-width:560px){.hero-art{min-height:300px}.scene-label{font-size:9px;padding:8px 10px}.scene-label.top{right:2%}.scene-label.bottom{left:1%}}
+@media(prefers-reduced-motion:reduce){.astronaut,.scene-orbit,.scene-orbit.second,.astronaut .visor-glow{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -115,11 +139,65 @@ footer{border-top:1px solid rgba(210,220,255,.1);padding:27px 0 42px;margin-top:
 </div>
 <div class="quick-meta"><span class="chip">Java 25</span><span class="chip">Spring Boot</span><span class="chip">APIs REST</span><span class="chip">PostgreSQL</span><span class="chip">Inglês B1</span></div>
 </div>
-<div class="hero-art" aria-label="Monograma AG em uma placa de vidro translúcido">
-<div class="orbit"></div>
-<div class="core glass"><div class="core-top"><span>AG / 01</span><span>✳</span></div><div class="monogram">AG</div><div class="core-bottom">Software · Engineering</div></div>
-<div class="float-tag one glass">✦ &nbsp; Building with purpose</div>
-<div class="float-tag two glass">Java · Backend · Systems</div>
+<div class="hero-art" aria-label="Astronauta futurista com visor inspirado no Octocat do GitHub">
+<div class="space-scene">
+<div class="starfield"></div><div class="scene-orbit"></div><div class="scene-orbit second"></div>
+<div class="astronaut">
+<svg viewBox="0 0 420 470" role="img" aria-label="Ilustração de astronauta em traje espacial violeta e azul">
+<defs>
+ <linearGradient id="suit" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f3ff"/><stop offset=".38" stop-color="#9ba9d1"/><stop offset=".72" stop-color="#465273"/><stop offset="1" stop-color="#222b45"/></linearGradient>
+ <linearGradient id="helmet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f4f6ff"/><stop offset=".35" stop-color="#aab9e8"/><stop offset=".72" stop-color="#59678e"/><stop offset="1" stop-color="#252d4a"/></linearGradient>
+ <linearGradient id="glassVisor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1c3154"/><stop offset=".48" stop-color="#111a35"/><stop offset="1" stop-color="#4d3d82"/></linearGradient>
+ <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#9deaff" stop-opacity="0"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="7"/></filter>
+</defs>
+<ellipse cx="210" cy="438" rx="118" ry="15" fill="#6477c9" opacity=".22" filter="url(#glow)"/>
+<!-- backpack -->
+<path d="M105 214Q76 218 74 258L81 342Q87 365 119 360L143 343 135 232Z" fill="#394664" stroke="#aebce5" stroke-opacity=".55" stroke-width="4"/>
+<path d="M96 245h31v74H91z" fill="#202b48" stroke="#91a5d8" stroke-opacity=".55" stroke-width="3"/>
+<path d="M104 258h16m-16 12h16m-16 12h16" stroke="#9ce4f4" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+<!-- body -->
+<path d="M145 245Q151 218 180 212H243Q276 220 286 249L313 368Q317 390 294 399L258 411H155L120 392Q108 381 117 355Z" fill="url(#suit)" stroke="#dce5ff" stroke-opacity=".65" stroke-width="5"/>
+<path d="M155 251Q210 272 273 248L290 354Q212 386 132 354Z" fill="#7382aa" opacity=".25"/>
+<!-- arms -->
+<path d="M145 251Q119 248 108 273L75 344Q65 367 86 380L104 390Q124 396 137 372L171 305Z" fill="url(#suit)" stroke="#c5d2f4" stroke-width="4"/>
+<path d="M275 251Q302 246 313 273L349 344Q360 367 339 381L321 391Q301 397 288 373L254 305Z" fill="url(#suit)" stroke="#c5d2f4" stroke-width="4"/>
+<path d="M74 347l42 20-12 25q-19 9-35-9-9-17 5-36Zm274 0-42 20 12 25q19 9 35-9 9-17-5-36Z" fill="#303c5b" stroke="#aebde8" stroke-width="3"/>
+<!-- chest panel -->
+<rect x="166" y="287" width="88" height="69" rx="13" fill="#293653" stroke="#d2dcff" stroke-opacity=".65" stroke-width="3"/>
+<rect x="178" y="299" width="64" height="34" rx="7" fill="#121d38" stroke="#8f9fd0" stroke-opacity=".55"/>
+<path d="M187 317h12l6-9 8 17 6-8h13" fill="none" stroke="#83dff2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="188" cy="344" r="3" fill="#a6edff"/><circle cx="200" cy="344" r="3" fill="#b8a2ff"/><circle cx="212" cy="344" r="3" fill="#a6edff"/>
+<!-- neck ring -->
+<path d="M161 211Q210 235 259 211L269 239Q210 267 151 239Z" fill="#d4dcf2" stroke="#fff" stroke-opacity=".65" stroke-width="3"/>
+<path d="M157 229Q210 251 263 229" fill="none" stroke="#7889b8" stroke-width="7"/>
+<!-- helmet shell -->
+<path d="M102 157Q102 54 210 40Q318 54 318 157L304 221Q290 255 210 258Q130 255 116 221Z" fill="url(#helmet)" stroke="#edf2ff" stroke-width="6"/>
+<path d="M111 153Q114 66 210 54Q306 66 309 153" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="5"/>
+<!-- visor -->
+<path d="M126 151Q126 82 210 72Q294 82 294 151Q294 218 210 231Q126 218 126 151Z" fill="url(#glassVisor)" stroke="#c5d5ff" stroke-width="5"/>
+<path d="M143 127Q161 91 211 87" fill="none" stroke="url(#shine)" stroke-width="11" stroke-linecap="round" opacity=".75"/>
+<path class="visor-glow" d="M140 166Q210 204 280 166" fill="none" stroke="#8b9dff" stroke-width="2" opacity=".75"/>
+<!-- Octocat-inspired silhouette, original simplified mark -->
+<g transform="translate(166 111) scale(.43)" fill="#f5f7ff" stroke="#f5f7ff" stroke-linejoin="round">
+<path d="M102 10 73 0 66 34Q42 42 32 65L8 52 0 79 31 94Q28 107 31 121L5 139 18 159 46 143Q64 155 102 155 140 155 158 143L186 159 199 139 173 121Q176 107 173 94L204 79 196 52 172 65Q162 42 138 34L131 0 102 10Z" stroke="none"/>
+<path d="M69 91h12m46 0h12" stroke="#202b4c" stroke-width="8" stroke-linecap="round" fill="none"/>
+<path d="M87 119q15 11 30 0" stroke="#202b4c" stroke-width="7" stroke-linecap="round" fill="none"/>
+<path d="M101 155v18q-28 8-28 28m30-46v27q29 3 33 22" fill="none" stroke="#f5f7ff" stroke-width="13" stroke-linecap="round"/>
+</g>
+<!-- helmet side details -->
+<circle cx="111" cy="173" r="8" fill="#a4e8f7" stroke="#effaff" stroke-width="3"/><circle cx="309" cy="173" r="8" fill="#b6a1ff" stroke="#f1eaff" stroke-width="3"/>
+<path d="M129 225q81 44 162 0" fill="none" stroke="#fff" stroke-opacity=".42" stroke-width="3"/>
+<!-- suit seams and badge -->
+<path d="M142 374q68 31 136 0" fill="none" stroke="#dce5ff" stroke-opacity=".55" stroke-width="3"/>
+<rect x="264" y="285" width="27" height="32" rx="6" fill="#202b48" stroke="#b9c9f4" stroke-width="2"/>
+<path d="M270 302q7-11 14 0-7 10-14 0Z" fill="#b9a8ff"/>
+</svg>
+</div>
+<div class="scene-label top glass"><strong>EXPLORING IDEAS</strong>Software · Systems · Java</div>
+<div class="scene-label bottom glass"><strong>AG / MISSION 01</strong>Building with purpose</div>
+<div class="scene-coordinates">01° · BACKEND ENGINEERING</div>
+</div>
 </div>
 </header>
 <section id="sobre"><div class="section-head"><span class="num">01 /</span><h2>Perfil profissional</h2></div><div class="profile-panel">Gosto de transformar requisitos em soluções claras: entender o domínio, separar responsabilidades, validar regras e deixar decisões técnicas fáceis de manter. Nos projetos, busco combinar implementação, testes, documentação e evolução incremental. Tenho interesse em arquitetura de software, integração de serviços e desenvolvimento de produtos úteis.</div></section>
