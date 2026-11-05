@@ -66,7 +66,7 @@ Abaixo estão alguns projetos que representam minha evolução prática em desen
 
 <div align="center">
   <img
-    src="https://github-stats-extended.vercel.app/api?username=AndreGraccia&amp;show_icons=true&amp;include_all_commits=true&amp;show=all_time_contribs&amp;hide=contribs&amp;theme=transparent&amp;bg_color=030303&amp;title_color=F5F5F5&amp;text_color=C9C9C9&amp;icon_color=9CA3AF&amp;border_color=303030&amp;ring_color=E5E5E5&amp;rank_icon=default&amp;hide_rank=false&amp;number_format=long"
+    src="https://github-stats-extended.vercel.app/api?username=AndreGraccia&amp;show_icons=true&amp;include_all_commits=true&amp;show=all_time_contribs&amp;hide=contribs&amp;theme=transparent&amp;bg_color=030303&amp;title_color=FFFFFF&amp;text_color=A0A0A0&amp;icon_color=FFFFFF&amp;border_color=FFFFFF&amp;ring_color=3B0099&amp;bg_color=050505&amp;rank_icon=default&amp;hide_rank=false&amp;number_format=long"
     alt="Estatísticas do GitHub: total de stars, commits, pull requests, issues, repositórios contribuídos e classificação"
     width="100%"
   />
