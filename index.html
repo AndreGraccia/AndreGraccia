@@ -223,6 +223,41 @@ nav{background:rgba(9,12,23,.82);border-color:rgba(157,174,226,.2)}
 @media(max-width:860px){#skills .card .icons{margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.orbit svg>circle{animation:none!important}.orbit svg{transition:none}}
 
+
+/* Scroll reveal — elementos entram conforme alcançam a área visível */
+.js .rv{
+  opacity:0;
+  translate:0 34px;
+  scale:.985;
+  filter:blur(5px);
+  transition:
+    opacity .85s cubic-bezier(.2,.75,.2,1),
+    translate .85s cubic-bezier(.2,.75,.2,1),
+    scale .85s cubic-bezier(.2,.75,.2,1),
+    filter .85s cubic-bezier(.2,.75,.2,1);
+  transition-delay:var(--reveal-delay,0ms);
+  will-change:opacity,translate,filter;
+}
+.js .rv.in{opacity:1;translate:0 0;scale:1;filter:blur(0)}
+.js .rv-child{
+  opacity:0;translate:0 18px;
+  transition:opacity .65s ease,translate .65s cubic-bezier(.2,.75,.2,1);
+  transition-delay:var(--child-delay,0ms)
+}
+.js .rv.in .rv-child{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){
+  .js .rv,.js .rv-child{opacity:1;translate:none;scale:1;filter:none;transition:none;will-change:auto}
+}
+
+
+/* Ícones do toolkit: alinhamento consistente e mesma família visual */
+#skills .card{display:flex;flex-direction:column;align-items:flex-start}
+#skills .card .icons{position:static;order:0;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:7px;margin:14px 0 10px;max-width:100%}
+#skills .card .k{order:-1}
+#skills .card h3{order:1}
+#skills .card ul{order:2}
+#skills .card .icons .ic{width:36px;height:36px;flex:0 0 36px}
+
 </style>
 </head>
 <body>
@@ -349,12 +384,32 @@ const nav=document.querySelector("nav"),ind=document.getElementById("ind");
 function place(){const a=nav.querySelector("a.l.on");if(!a||getComputedStyle(a).display==="none"){ind.style.opacity=0;return}
   const ar=a.getBoundingClientRect(),nr=nav.getBoundingClientRect();ind.style.opacity=1;ind.style.width=ar.width+"px";ind.style.transform="translateX("+(ar.left-nr.left)+"px)"}
 new MutationObserver(place).observe(nav,{attributes:true,subtree:true,attributeFilter:["class"]});addEventListener("resize",place);
-/* revelação em sequência */
-const rv=[...document.querySelectorAll(".hero .eyebrow,.hero h1,.hero .sub,.hero .meta,.hero .lead,.hero .cta,.hero .tags,.hero .orbit,section .eyebrow,section .head,section .cards > *,section .contact")];
-rv.forEach(e=>e.classList.add("rv"));
-const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const sib=[...e.target.parentElement.children].indexOf(e.target);
-  e.target.style.transitionDelay=(sib%3)*90+"ms";e.target.classList.add("in");ro.unobserve(e.target)}}),{threshold:.12,rootMargin:"0px 0px -4% 0px"});
-rv.forEach(e=>ro.observe(e));
+/* Revelação progressiva: hero, títulos, cards e conteúdo interno */
+const revealTargets=[
+  ...document.querySelectorAll(".hero .eyebrow,.hero h1,.hero .sub,.hero .meta,.hero .lead,.hero .cta,.hero .tags,.hero .orbit"),
+  ...document.querySelectorAll("section > .wrap > .eyebrow,section .head,section .cards > *,section .contact")
+];
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(!entry.isIntersecting)return;
+    entry.target.classList.add("in");
+    revealObserver.unobserve(entry.target);
+  });
+},{threshold:.08,rootMargin:"0px 0px -8% 0px"});
+revealTargets.forEach((el,index)=>{
+  el.classList.add("rv");
+  el.style.setProperty("--reveal-delay",Math.min(index%4,3)*85+"ms");
+  revealObserver.observe(el);
+});
+/* Conteúdo de cada card também aparece em sequência, sem esconder o card inteiro. */
+document.querySelectorAll("section .card").forEach(card=>{
+  const children=[...card.querySelectorAll(".k,.icons,h3,p,ul,.stack,.st")];
+  children.forEach((el,index)=>{
+    el.classList.add("rv-child");
+    el.style.setProperty("--child-delay",Math.min(index,6)*65+"ms");
+  });
+});
+
 if(fine&&!calm){
   /* Glow acompanha o ponteiro sem substituir, esconder ou capturar o cursor nativo. */
   const glow=document.getElementById("cursorGlow");
