@@ -13,10 +13,10 @@ def api(url,payload=None):
     with urllib.request.urlopen(req,timeout=30) as r: return json.loads(r.read())
 def collect():
     end=datetime.now(timezone.utc); start=end-timedelta(days=364)
-    query="""query($from:DateTime!,$to:DateTime!){viewer{login contributionsCollection(from:$from,to:$to){totalCommitContributions totalPullRequestContributions totalIssueContributions repositoriesContributedTo(first:1){totalCount}}}}"""
-    data=api("https://api.github.com/graphql",{"query":query,"variables":{"from":start.isoformat(),"to":end.isoformat()}})
+    query="""query($login:String!,$from:DateTime!,$to:DateTime!){user(login:$login){contributionsCollection(from:$from,to:$to){totalCommitContributions totalPullRequestContributions totalIssueContributions repositoriesContributedTo(first:1){totalCount}}}}"""
+    data=api("https://api.github.com/graphql",{"query":query,"variables":{"login":USER,"from":start.isoformat(),"to":end.isoformat()}})
     if data.get("errors"): raise RuntimeError(data["errors"])
-    c=data["data"]["viewer"]["contributionsCollection"]
+    c=data["data"]["user"]["contributionsCollection"]
     stars=0; page=1
     while True:
         repos=api(f"https://api.github.com/users/{USER}/repos?type=owner&per_page=100&page={page}")
