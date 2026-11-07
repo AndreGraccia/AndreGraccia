@@ -1,48 +1,65 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-editorial.svg" alt="André Graccia — Desenvolvedor backend Java. Software que não pode falhar." width="100%" />
+  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero-editorial.svg" alt="André Graccia — Desenvolvedor Backend Java. Software que não pode falhar." width="100%" />
 </div>
 
 <div align="center">
 
-[Email](mailto:andregraccia2105@gmail.com) &nbsp;·&nbsp; [LinkedIn](https://br.linkedin.com/in/andregraccia) &nbsp;·&nbsp; [Currículo](https://andre-graccia-curriculum-andre-de9d.vercel.app)
+[Email](mailto:andregraccia2105@gmail.com) &nbsp;·&nbsp; [LinkedIn](https://br.linkedin.com/in/andregraccia) &nbsp;·&nbsp; [Portfólio](https://andre-graccia-curriculum-andre-de9d.vercel.app) &nbsp;·&nbsp; [Currículo](https://andre-graccia-curriculum-andre-de9d.vercel.app)
 
 </div>
 
 ---
 
-## Sobre
+## Perfil
 
-Sou estudante de **Ciência da Computação** na Universidade Anhembi Morumbi e atuo profissionalmente na **Cielo**. Meu foco é desenvolvimento backend com Java, APIs e integração entre sistemas.
+Estudante de **Ciência da Computação** na Universidade Anhembi Morumbi e profissional da **Cielo**, com foco em desenvolvimento backend e construção de software confiável.
 
-Gosto de transformar regras de negócio em software confiável: entender o domínio, separar responsabilidades, validar cenários e construir soluções que possam evoluir sem perder clareza.
+Tenho interesse em APIs, integração entre sistemas, regras de negócio, persistência de dados e automação. Gosto de entender o problema antes de implementar: modelar o domínio, definir responsabilidades, validar cenários e entregar soluções que possam evoluir com clareza.
 
-## Stack
+**Foco profissional:** Backend Java · APIs REST · Integração de sistemas · Engenharia de software
 
-`java` &nbsp; `spring boot` &nbsp; `postgresql` &nbsp; `docker` &nbsp; `maven` &nbsp; `git`
+## Tecnologias & ferramentas
 
-`python` &nbsp; `aws` &nbsp; `n8n` &nbsp; `react` &nbsp; `typescript`
+**Backend e dados**
 
-## Projetos
+<div>
+  <img src="https://skillicons.dev/icons?i=java,spring,postgres,maven&theme=dark" alt="Java, Spring, PostgreSQL e Maven" />
+</div>
 
-### `~/andre/projetos/wall.ia`
+**Desenvolvimento e infraestrutura**
 
-# Wall.ia
+<div>
+  <img src="https://skillicons.dev/icons?i=git,github,docker,aws,python&theme=dark" alt="Git, GitHub, Docker, AWS e Python" />
+</div>
 
-Carteira digital que organiza compromissos financeiros e explica a origem dos valores. Open Finance em sandbox; não movimenta dinheiro real.
+**Frontend e automação**
 
-`react` &nbsp; `spring boot` &nbsp; `postgresql`
+<div>
+  <img src="https://skillicons.dev/icons?i=react,ts,vite&theme=dark" alt="React, TypeScript e Vite" />
+  <img src="https://cdn.simpleicons.org/n8n/EA4B71" height="48" alt="n8n" />
+</div>
 
-[Repositório →](https://github.com/AndreGraccia/Wall.ia)
+<sub>Stack principal: Java, Spring Boot, PostgreSQL e Maven. Também exploro ferramentas de frontend, infraestrutura e automação para construir soluções completas.</sub>
+
+## Projetos selecionados
+
+### Wall.ia
+**Carteira digital · Open Finance em sandbox**
+
+Organiza compromissos financeiros e ajuda a explicar a origem dos valores. Projeto de estudo; não movimenta dinheiro real.
+
+<sub>React · Spring Boot · PostgreSQL</sub>
+
+[Ver repositório →](https://github.com/AndreGraccia/Wall.ia)
 
 ---
 
-### `~/andre/projetos/calc-juros`
+### Calculadora de Juros
+**API de simulação financeira**
 
-# Calculadora de Juros
+API para simulações de juros simples e compostos, com espaço para evolução em integrações com séries e indicadores econômicos.
 
-API para simulações de juros simples e compostos. A integração com séries e indicadores do Banco Central está no roadmap.
-
-`java 25` &nbsp; `spring boot` &nbsp; `maven`
+<sub>Java 25 · Spring Boot · Maven</sub>
 
 ```bash
 git clone https://github.com/AndreGraccia/calc-juros.git
@@ -50,21 +67,22 @@ cd calc-juros
 ./mvnw test
 ```
 
-[Repositório →](https://github.com/AndreGraccia/calc-juros)
+[Ver repositório →](https://github.com/AndreGraccia/calc-juros)
 
 ---
 
-### `~/andre/projetos/orbit.ia`
+### Orbit.ia
+**Agente pessoal · Automação local**
 
-# Orbit.ia
+Agente pessoal com interface React/Vite e workflows orquestrados pelo n8n. Integrações externas dependem da configuração do ambiente.
 
-Agente pessoal com interface React/Vite e workflows orquestrados pelo n8n. Integrações externas dependem de configuração no ambiente.
+<sub>React · n8n · Docker · PostgreSQL</sub>
 
-`react` &nbsp; `n8n` &nbsp; `docker` &nbsp; `postgresql`
+[Ver repositório →](https://github.com/AndreGraccia/Orbit.ia)
 
-[Repositório →](https://github.com/AndreGraccia/Orbit.ia)
+---
 
-## GitHub activity
+## Atividade no GitHub
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/metrics.svg?v=3" alt="Resumo visual da atividade no GitHub" width="100%" />
@@ -79,8 +97,8 @@ Agente pessoal com interface React/Vite e workflows orquestrados pelo n8n. Integ
 
 <div align="center">
 
-**Vamos conversar.**
+**Aberto a oportunidades em desenvolvimento backend.**
 
-[LinkedIn](https://br.linkedin.com/in/andregraccia) &nbsp;·&nbsp; [Email](mailto:andregraccia2105@gmail.com) &nbsp;·&nbsp; [Currículo online](https://andre-graccia-curriculum-andre-de9d.vercel.app)
+[LinkedIn](https://br.linkedin.com/in/andregraccia) &nbsp;·&nbsp; [Email](mailto:andregraccia2105@gmail.com) &nbsp;·&nbsp; [Portfólio](https://andre-graccia-curriculum-andre-de9d.vercel.app)
 
 </div>
