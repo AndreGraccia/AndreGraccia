@@ -144,23 +144,11 @@ nav .btn{z-index:1}
 /* ===== ícones das ferramentas ===== */
 .icons{position:absolute;top:18px;right:18px;display:flex;gap:6px;z-index:2}
 .ic{position:relative;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);box-shadow:inset 0 1px 0 rgba(255,255,255,.4);transition:transform .3s cubic-bezier(.3,1.5,.5,1),background .2s}
-.ic img{width:20px;height:20px;display:block}.ic.inv img{filter:invert(1)}
+.ic img{width:20px;height:20px;display:block;object-fit:contain}.ic.fallback img{display:none}.ic.inv img{filter:invert(1)}
 .ic:hover,.ic.hl{transform:translateY(-4px) scale(1.15);background:rgba(255,255,255,.24)}
 .ic::after{content:attr(data-n);position:absolute;bottom:calc(100% + 8px);left:50%;translate:-50% 4px;opacity:0;pointer-events:none;white-space:nowrap;font:500 11px var(--mono);padding:4px 9px;border-radius:8px;background:rgba(10,14,60,.9);border:1px solid rgba(255,255,255,.2);transition:.2s}
 .ic:hover::after,.ic.hl::after{opacity:1;translate:-50% 0}
-/* ===== cursor que acompanha o mouse ===== */
-.fine,.fine *{cursor:none!important}
-.cur,.cur-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:100;opacity:0;transition:opacity .2s}
-.cur-dot{width:7px;height:7px;margin:-3.5px;border-radius:50%;background:#fff;box-shadow:0 0 12px rgba(160,190,255,.9)}
-.cur{width:42px;height:42px;margin:-21px;border-radius:50%;display:grid;place-items:center;font:600 11px var(--mono);letter-spacing:.06em;color:#fff;
-  border:1px solid rgba(255,255,255,.55);background:rgba(255,255,255,.07);-webkit-backdrop-filter:blur(3px) saturate(1.7);backdrop-filter:blur(3px) saturate(1.7);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.65),0 8px 24px -10px rgba(40,70,255,.8);
-  transition:opacity .2s,width .3s cubic-bezier(.3,1.4,.5,1),height .3s cubic-bezier(.3,1.4,.5,1),margin .3s cubic-bezier(.3,1.4,.5,1),background .25s}
-.cur.on,.cur-dot.on{opacity:1}
-.cur.link{width:64px;height:64px;margin:-32px;background:rgba(120,150,255,.25)}
-.cur.card{width:92px;height:92px;margin:-46px;background:rgba(150,170,255,.22)}
-.cur.down{scale:.82}
-.cur.hide{opacity:0}
+.ic.fallback::before{content:attr(data-fallback);font:700 10px var(--mono);color:#EAF0FF}
 </style>
 </head>
 <body>
@@ -222,11 +210,11 @@ nav .btn{z-index:1}
   <p class="eyebrow">Competências</p>
   <div class="head"><h2>Competências <em>e ferramentas</em></h2><p>Tecnologias, práticas e idiomas.</p></div>
   <div class="cards c3">
-    <article class="card"><span class="k">Build</span><div class="icons"><span class="ic" data-n="Java"><img src="https://cdn.simpleicons.org/openjdk" alt="Java" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="Spring Boot"><img src="https://cdn.simpleicons.org/spring" alt="Spring Boot" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="JavaScript"><img src="https://cdn.simpleicons.org/javascript" alt="JavaScript" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="TypeScript"><img src="https://cdn.simpleicons.org/typescript" alt="TypeScript" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="Python"><img src="https://cdn.simpleicons.org/python" alt="Python" loading="lazy" onerror="this.parentNode.style.display='none'"></span></div><h3>Desenvolvimento</h3><ul><li>Java 25</li><li>Spring Boot</li><li>JavaScript</li><li>TypeScript</li><li>Python</li></ul></article>
-    <article class="card"><span class="k">Data</span><div class="icons"><span class="ic" data-n="PostgreSQL"><img src="https://cdn.simpleicons.org/postgresql" alt="PostgreSQL" loading="lazy" onerror="this.parentNode.style.display='none'"></span></div><h3>Dados</h3><ul><li>PostgreSQL</li><li>Modelagem relacional</li><li>SQL</li></ul></article>
-    <article class="card"><span class="k">Delivery</span><div class="icons"><span class="ic" data-n="Git"><img src="https://cdn.simpleicons.org/git" alt="Git" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="GitHub"><img src="https://cdn.simpleicons.org/github/fff" alt="GitHub" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="Docker"><img src="https://cdn.simpleicons.org/docker" alt="Docker" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="Maven"><img src="https://cdn.simpleicons.org/apachemaven" alt="Maven" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic inv" data-n="AWS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" loading="lazy" onerror="this.parentNode.style.display='none'"></span></div><h3>Ferramentas</h3><ul><li>Git</li><li>GitHub</li><li>Docker</li><li>Maven</li><li>AWS</li></ul></article>
-    <article class="card"><span class="k">Interface</span><div class="icons"><span class="ic" data-n="React"><img src="https://cdn.simpleicons.org/react" alt="React" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="HTML5"><img src="https://cdn.simpleicons.org/html5" alt="HTML5" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="CSS3"><img src="https://cdn.simpleicons.org/css3" alt="CSS3" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="n8n"><img src="https://cdn.simpleicons.org/n8n" alt="n8n" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="OpenAI"><img src="https://cdn.simpleicons.org/openai/fff" alt="OpenAI" loading="lazy" onerror="this.parentNode.style.display='none'"></span></div><h3>Interface e automação</h3><ul><li>React</li><li>HTML e CSS</li><li>n8n</li><li>OpenAI</li></ul></article>
-    <article class="card"><span class="k">Practice</span><div class="icons"><span class="ic" data-n="Postman"><img src="https://cdn.simpleicons.org/postman" alt="Postman" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="JUnit"><img src="https://cdn.simpleicons.org/junit5/fff" alt="JUnit" loading="lazy" onerror="this.parentNode.style.display='none'"></span><span class="ic" data-n="GitHub Actions"><img src="https://cdn.simpleicons.org/githubactions" alt="GitHub Actions" loading="lazy" onerror="this.parentNode.style.display='none'"></span></div><h3>Práticas</h3><ul><li>APIs REST</li><li>Testes automatizados</li><li>CI com GitHub Actions</li></ul></article>
+    <article class="card"><span class="k">Build</span><div class="icons"><span class="ic" data-n="Java" data-skill="java" data-fallback="J" role="img" aria-label="Java" title="Java"><img src="https://cdn.simpleicons.org/openjdk" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="Spring Boot" data-skill="spring" data-fallback="SB" role="img" aria-label="Spring Boot" title="Spring Boot"><img src="https://cdn.simpleicons.org/spring" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="JavaScript" data-skill="javascript" data-fallback="JS" role="img" aria-label="JavaScript" title="JavaScript"><img src="https://cdn.simpleicons.org/javascript" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="TypeScript" data-skill="typescript" data-fallback="TS" role="img" aria-label="TypeScript" title="TypeScript"><img src="https://cdn.simpleicons.org/typescript" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="Python" data-skill="python" data-fallback="PY" role="img" aria-label="Python" title="Python"><img src="./assets/icons/python.svg" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Desenvolvimento</h3><ul><li data-skill="java">Java 25</li><li data-skill="spring">Spring Boot</li><li data-skill="javascript">JavaScript</li><li data-skill="typescript">TypeScript</li><li data-skill="python">Python</li></ul></article>
+    <article class="card"><span class="k">Data</span><div class="icons"><span class="ic" data-n="PostgreSQL" data-skill="postgresql" data-fallback="PG" role="img" aria-label="PostgreSQL" title="PostgreSQL"><img src="https://cdn.simpleicons.org/postgresql" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Dados</h3><ul><li data-skill="postgresql">PostgreSQL</li><li>Modelagem relacional</li><li>SQL</li></ul></article>
+    <article class="card"><span class="k">Delivery</span><div class="icons"><span class="ic" data-n="Git" data-skill="git" data-fallback="G" role="img" aria-label="Git" title="Git"><img src="https://cdn.simpleicons.org/git" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="GitHub" data-skill="github" data-fallback="GH" role="img" aria-label="GitHub" title="GitHub"><img src="https://cdn.simpleicons.org/github/fff" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="Docker" data-skill="docker" data-fallback="D" role="img" aria-label="Docker" title="Docker"><img src="https://cdn.simpleicons.org/docker" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="Maven" data-skill="maven" data-fallback="MV" role="img" aria-label="Maven" title="Maven"><img src="https://cdn.simpleicons.org/apachemaven" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic inv" data-n="AWS" data-skill="aws" data-fallback="AWS" role="img" aria-label="AWS" title="AWS"><img src="./assets/icons/aws.svg" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Ferramentas</h3><ul><li data-skill="git">Git</li><li data-skill="github">GitHub</li><li data-skill="docker">Docker</li><li data-skill="maven">Maven</li><li data-skill="aws">AWS</li></ul></article>
+    <article class="card"><span class="k">Interface</span><div class="icons"><span class="ic" data-n="React" data-skill="react" data-fallback="R" role="img" aria-label="React" title="React"><img src="https://cdn.simpleicons.org/react" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="HTML5" data-skill="html5" data-fallback="5" role="img" aria-label="HTML5" title="HTML5"><img src="https://cdn.simpleicons.org/html5" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="CSS3" data-skill="css3" data-fallback="3" role="img" aria-label="CSS3" title="CSS3"><img src="https://cdn.simpleicons.org/css3" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="n8n" data-skill="n8n" data-fallback="n8n" role="img" aria-label="n8n" title="n8n"><img src="./assets/icons/n8n.svg" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="OpenAI" data-skill="openai" data-fallback="AI" role="img" aria-label="OpenAI" title="OpenAI"><img src="./assets/icons/openai.svg" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Interface e automação</h3><ul><li data-skill="react">React</li><li data-skill="html5">HTML5</li><li data-skill="css3">CSS3</li><li data-skill="n8n">n8n</li><li data-skill="openai">OpenAI</li></ul></article>
+    <article class="card"><span class="k">Practice</span><div class="icons"><span class="ic" data-n="Postman" data-skill="postman" data-fallback="P" role="img" aria-label="Postman" title="Postman"><img src="https://cdn.simpleicons.org/postman" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="JUnit" data-skill="junit" data-fallback="J5" role="img" aria-label="JUnit" title="JUnit"><img src="https://cdn.simpleicons.org/junit5/fff" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="GitHub Actions" data-skill="github-actions" data-fallback="CI" role="img" aria-label="GitHub Actions" title="GitHub Actions"><img src="https://cdn.simpleicons.org/githubactions" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Práticas</h3><ul><li data-skill="postman">APIs REST</li><li data-skill="junit">Testes automatizados</li><li data-skill="github-actions">CI com GitHub Actions</li></ul></article>
     <article class="card"><span class="k">Language</span><h3>Idiomas</h3><ul><li>Português</li><li>Inglês · B1</li></ul></article>
   </div>
 </div></section>
@@ -284,7 +272,7 @@ addEventListener("scroll",()=>prog.style.setProperty("--p",scrollY/(document.doc
 /* indicador deslizante do menu */
 const nav=document.querySelector("nav"),ind=document.getElementById("ind");
 function place(){const a=nav.querySelector("a.l.on");if(!a||getComputedStyle(a).display==="none"){ind.style.opacity=0;return}
-  ind.style.opacity=1;ind.style.width=a.offsetWidth+"px";ind.style.transform="translateX("+a.offsetLeft+"px)"}
+  const ar=a.getBoundingClientRect(),nr=nav.getBoundingClientRect();ind.style.opacity=1;ind.style.width=ar.width+"px";ind.style.transform="translateX("+(ar.left-nr.left)+"px)"}
 new MutationObserver(place).observe(nav,{attributes:true,subtree:true,attributeFilter:["class"]});addEventListener("resize",place);
 /* revelação em sequência */
 const rv=[...document.querySelectorAll(".head,.card,.contact")];
@@ -293,22 +281,28 @@ const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const 
   e.target.style.transitionDelay=(sib%3)*90+"ms";e.target.classList.add("in");ro.unobserve(e.target)}}),{threshold:.15});
 rv.forEach(e=>ro.observe(e));
 if(fine&&!calm){
-  /* luz que segue o cursor + inclinação 3D nos cards */
+  /* Spotlight restrito ao card: overlay decorativo e transparente a eventos. */
   document.querySelectorAll(".card").forEach(c=>{
-    c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-      c.style.setProperty("--mx",x*100+"%");c.style.setProperty("--my",y*100+"%");
-      if(c.classList.contains("proj")){c.style.setProperty("--ry",(x-.5)*7+"deg");c.style.setProperty("--rx",(.5-y)*7+"deg")}});
-    c.addEventListener("pointerleave",()=>{c.style.setProperty("--rx","0deg");c.style.setProperty("--ry","0deg")});
+    c.addEventListener("pointermove",e=>{
+      const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      c.style.setProperty("--mx",x*100+"%");
+      c.style.setProperty("--my",y*100+"%");
+      if(c.classList.contains("proj")){
+        c.style.setProperty("--ry",(x-.5)*3+"deg");
+        c.style.setProperty("--rx",(.5-y)*3+"deg");
+      }
+    },{passive:true});
+    c.addEventListener("pointerleave",()=>{
+      c.style.setProperty("--rx","0deg");
+      c.style.setProperty("--ry","0deg");
+    });
   });
-  /* botões magnéticos */
-  document.querySelectorAll(".btn").forEach(b=>{
-    b.addEventListener("pointermove",e=>{const r=b.getBoundingClientRect();
-      b.style.setProperty("--tx",(e.clientX-r.left-r.width/2)*.12+"px");b.style.setProperty("--ty",(e.clientY-r.top-r.height/2)*.18+"px")});
-    b.addEventListener("pointerleave",()=>{b.style.setProperty("--tx","0px");b.style.setProperty("--ty","0px")});
-  });
-  /* paralaxe do hero */
+  /* Parallax discreto no elemento decorativo do hero. */
   const o=document.querySelector(".orbit");
-  addEventListener("pointermove",e=>{o.style.setProperty("--px",(e.clientX/innerWidth-.5)*2);o.style.setProperty("--py",(e.clientY/innerHeight-.5)*2)});
+  addEventListener("pointermove",e=>{
+    o.style.setProperty("--px",(e.clientX/innerWidth-.5)*2);
+    o.style.setProperty("--py",(e.clientY/innerHeight-.5)*2);
+  },{passive:true});
 }
 /* feedback no botão de copiar */
 const cp=document.getElementById("copy");
@@ -317,28 +311,17 @@ setTimeout(place,300);
 
 /* ===== ícones: destaque ao passar sobre a lista ===== */
 document.querySelectorAll("#skills .card").forEach(c=>{
-  const ics=[...c.querySelectorAll(".ic")],lis=[...c.querySelectorAll("li")];
-  if(ics.length!==lis.length)return;
-  lis.forEach((li,i)=>{li.addEventListener("pointerenter",()=>ics[i].classList.add("hl"));li.addEventListener("pointerleave",()=>ics[i].classList.remove("hl"))});
+  const icons=[...c.querySelectorAll(".ic[data-skill]")];
+  const items=[...c.querySelectorAll("li[data-skill]")];
+  items.forEach(li=>{
+    const icon=icons.find(node=>node.dataset.skill===li.dataset.skill);
+    if(!icon)return;
+    li.addEventListener("pointerenter",()=>icon.classList.add("hl"));
+    li.addEventListener("pointerleave",()=>icon.classList.remove("hl"));
+    li.addEventListener("focusin",()=>icon.classList.add("hl"));
+    li.addEventListener("focusout",()=>icon.classList.remove("hl"));
+  });
 });
-/* ===== cursor ===== */
-if(fine){
-  document.documentElement.classList.add("fine");
-  const ring=document.createElement("div"),dot=document.createElement("div");
-  ring.className="cur";dot.className="cur-dot";document.body.append(ring,dot);
-  let x=innerWidth/2,y=innerHeight/2,rx=x,ry=y;const k=calm?1:.16;
-  addEventListener("pointermove",e=>{x=e.clientX;y=e.clientY;ring.classList.add("on");dot.classList.add("on");
-    dot.style.transform=`translate(${x}px,${y}px)`;
-    const t=e.target.closest("[data-cur],.proj,a,button,.ic");
-    ring.className="cur on"+(t?(t.matches(".proj")?" card":" link"):"");
-    ring.textContent=t?(t.dataset.cur||(t.matches(".proj")?"abrir ↗":"")):"";
-    dot.style.opacity=t&&t.matches(".proj")?0:1;
-  },{passive:true});
-  (function loop(){rx+=(x-rx)*k;ry+=(y-ry)*k;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(loop)})();
-  addEventListener("pointerdown",()=>ring.classList.add("down"));addEventListener("pointerup",()=>ring.classList.remove("down"));
-  document.documentElement.addEventListener("pointerleave",()=>{ring.classList.remove("on");dot.classList.remove("on")});
-  document.getElementById("copy").dataset.cur="copiar";
-}
 </script>
 </body>
 </html>
