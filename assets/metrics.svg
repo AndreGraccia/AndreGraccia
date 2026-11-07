@@ -1,11 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="210" viewBox="0 0 1600 210" role="img" aria-labelledby="title desc">
-<title id="title">GitHub activity</title><desc id="desc">Cabeçalho em vidro escuro com acentos azul e violeta para a área de atividade do GitHub.</desc>
-<defs><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#141728"/><stop offset="1" stop-color="#090A13"/></linearGradient><linearGradient id="line" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#7F8FFF" stop-opacity=".15"/><stop offset=".5" stop-color="#A58BFF" stop-opacity=".8"/><stop offset="1" stop-color="#68D5FF" stop-opacity=".18"/></linearGradient></defs>
-<rect x="2" y="2" width="1596" height="206" rx="22" fill="url(#glass)" stroke="#7D8BFF" stroke-opacity=".32" stroke-width="2"/>
-<text x="58" y="54" fill="#A99BFF" font-family="JetBrains Mono,SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="2">05 / GITHUB ACTIVITY</text>
-<text x="58" y="119" fill="#FFFFFF" font-family="Inter,Helvetica Neue,Arial,sans-serif" font-size="46" font-weight="720" letter-spacing="-1.8">Consistência em construção.</text>
-<text x="60" y="159" fill="#B4B6D0" font-family="Inter,Helvetica Neue,Arial,sans-serif" font-size="18">Contribuições, repositórios e evolução contínua.</text>
-<path d="M1120 148L1170 128L1215 137L1260 92L1304 112L1352 72L1394 86L1440 42L1495 58" fill="none" stroke="url(#line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M1120 166H1500" stroke="#AEBBFF" stroke-opacity=".15"/>
-<circle cx="1495" cy="58" r="5" fill="#B5A5FF"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="190" viewBox="0 0 1280 190" role="img" aria-labelledby="t d">
+<title id="t">GitHub activity</title><desc id="d">Seção de atividade e evolução técnica no GitHub.</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#171126"/><stop offset="1" stop-color="#0B0A12"/></linearGradient><linearGradient id="s" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8C78FF"/><stop offset="1" stop-color="#78CFFF"/></linearGradient><radialGradient id="r"><stop stop-color="#8C78FF" stop-opacity=".24"/><stop offset="1" stop-color="#8C78FF" stop-opacity="0"/></radialGradient></defs>
+<rect x="1" y="1" width="1278" height="188" rx="20" fill="url(#g)" stroke="#8C78FF" stroke-opacity=".3"/>
+<ellipse cx="1110" cy="90" rx="250" ry="130" fill="url(#r)"/>
+<text x="44" y="48" fill="#A99BFF" font-family="SFMono-Regular,Consolas,monospace" font-size="12" letter-spacing="2">04 / OPEN SOURCE & CONSISTENCY</text>
+<text x="44" y="112" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="43" font-weight="700" letter-spacing="-1.8">Construindo, testando, evoluindo.</text>
+<text x="46" y="148" fill="#AAA5B8" font-family="Inter,Arial,sans-serif" font-size="17">Um registro visual do trabalho em andamento.</text>
+<g transform="translate(1000 38)" fill="none" stroke="url(#s)"><path d="M0 90L34 73L68 82L102 42L136 57L170 18L204 31L238 0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 108H238" stroke-opacity=".25"/><circle cx="238" cy="0" r="4" fill="#78CFFF" stroke="none"/></g>
 </svg>
