@@ -149,9 +149,29 @@ nav .btn{z-index:1}
 .ic::after{content:attr(data-n);position:absolute;bottom:calc(100% + 8px);left:50%;translate:-50% 4px;opacity:0;pointer-events:none;white-space:nowrap;font:500 11px var(--mono);padding:4px 9px;border-radius:8px;background:rgba(10,14,60,.9);border:1px solid rgba(255,255,255,.2);transition:.2s}
 .ic:hover::after,.ic.hl::after{opacity:1;translate:-50% 0}
 .ic.fallback::before{content:attr(data-fallback);font:700 10px var(--mono);color:#EAF0FF}
+
+/* ===== cursor glow + spotlight interativo ===== */
+.cursor-glow{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:0;
+  background:radial-gradient(360px circle at var(--cx,50%) var(--cy,50%),rgba(120,145,255,.13),rgba(156,139,255,.055) 38%,transparent 72%);
+  transition:opacity .35s ease;mix-blend-mode:screen}
+@media(hover:hover) and (pointer:fine){.cursor-glow.active{opacity:1}}
+.card{isolation:isolate}
+.card::before{z-index:0}
+.card::after{z-index:1}
+.card>*{position:relative;z-index:2}
+.btn::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;opacity:0;
+  background:radial-gradient(150px circle at var(--bx,50%) var(--by,50%),rgba(255,255,255,.95),rgba(120,207,255,.55) 35%,transparent 75%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;transition:opacity .2s}
+.btn:hover::before,.btn:focus-visible::before{opacity:1}
+nav a.l:focus-visible{background:rgba(120,207,255,.18)}
+.card:focus-within{border-color:rgba(120,207,255,.9);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 0 1px rgba(120,207,255,.16),0 24px 60px -26px rgba(8,18,120,.95)}
+@media(hover:none){.cursor-glow{display:none}}
+@media(prefers-reduced-motion:reduce){.cursor-glow{display:none}.btn::before{display:none}}
+
 </style>
 </head>
 <body>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div><div class="prog" id="prog"></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="lg" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".008 .012" numOctaves="2" seed="3" result="n"/><feGaussianBlur in="n" stdDeviation="2" result="b"/><feDisplacementMap in="SourceGraphic" in2="b" scale="26" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
 <nav aria-label="Principal"><span class="ind" id="ind"></span>
@@ -275,12 +295,34 @@ function place(){const a=nav.querySelector("a.l.on");if(!a||getComputedStyle(a).
   const ar=a.getBoundingClientRect(),nr=nav.getBoundingClientRect();ind.style.opacity=1;ind.style.width=ar.width+"px";ind.style.transform="translateX("+(ar.left-nr.left)+"px)"}
 new MutationObserver(place).observe(nav,{attributes:true,subtree:true,attributeFilter:["class"]});addEventListener("resize",place);
 /* revelação em sequência */
-const rv=[...document.querySelectorAll(".head,.card,.contact")];
+const rv=[...document.querySelectorAll("section .eyebrow,section .head,section .cards > *,section .contact")];
 rv.forEach(e=>e.classList.add("rv"));
 const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const sib=[...e.target.parentElement.children].indexOf(e.target);
   e.target.style.transitionDelay=(sib%3)*90+"ms";e.target.classList.add("in");ro.unobserve(e.target)}}),{threshold:.15});
 rv.forEach(e=>ro.observe(e));
 if(fine&&!calm){
+  /* Glow acompanha o ponteiro sem substituir, esconder ou capturar o cursor nativo. */
+  const glow=document.getElementById("cursorGlow");
+  let glowFrame=0,lastX=0,lastY=0;
+  addEventListener("pointermove",e=>{
+    lastX=e.clientX;lastY=e.clientY;
+    if(glowFrame)return;
+    glowFrame=requestAnimationFrame(()=>{
+      glow.style.setProperty("--cx",lastX+"px");
+      glow.style.setProperty("--cy",lastY+"px");
+      glow.classList.add("active");glowFrame=0;
+    });
+  },{passive:true});
+  addEventListener("pointerleave",()=>glow.classList.remove("active"));
+  addEventListener("blur",()=>glow.classList.remove("active"));
+  /* Spotlight border acompanha o ponto de interação nos controles acionáveis. */
+  document.querySelectorAll(".btn,nav a.l,.ic").forEach(el=>{
+    el.addEventListener("pointermove",e=>{
+      const r=el.getBoundingClientRect();
+      el.style.setProperty("--bx",((e.clientX-r.left)/r.width*100)+"%");
+      el.style.setProperty("--by",((e.clientY-r.top)/r.height*100)+"%");
+    },{passive:true});
+  });
   /* Spotlight restrito ao card: overlay decorativo e transparente a eventos. */
   document.querySelectorAll(".card").forEach(c=>{
     c.addEventListener("pointermove",e=>{
