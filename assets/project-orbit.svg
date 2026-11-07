@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="260" viewBox="0 0 760 260" fill="none">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#120B25"/><stop offset="1" stop-color="#08070D"/></linearGradient><radialGradient id="glow"><stop stop-color="#8C78FF" stop-opacity=".26"/><stop offset="1" stop-color="#8C78FF" stop-opacity="0"/></radialGradient></defs>
+<rect width="760" height="260" rx="18" fill="url(#bg)"/><circle cx="640" cy="100" r="180" fill="url(#glow)"/><rect x="1" y="1" width="758" height="258" rx="17" stroke="#8C78FF" stroke-opacity=".28"/>
+<text x="34" y="38" fill="#A99BFF" font-family="monospace" font-size="12" letter-spacing="2">03 / PERSONAL AUTOMATION</text>
+<text x="34" y="103" fill="#FFF" font-family="Inter,Arial,sans-serif" font-size="48" font-weight="700" letter-spacing="-2">Orbit.ia</text>
+<text x="34" y="137" fill="#B8B4C4" font-family="Inter,Arial,sans-serif" font-size="17">Um agente pessoal, workflows conectados.</text>
+<text x="34" y="202" fill="#A99BFF" font-family="monospace" font-size="13">REACT   /   N8N   /   DOCKER</text>
+<rect x="500" y="63" width="222" height="146" rx="12" fill="#07060B" stroke="#8C78FF" stroke-opacity=".4"/><text x="518" y="88" fill="#A99BFF" font-family="monospace" font-size="11">ORBIT / WORKFLOW</text>
+<rect x="518" y="103" width="76" height="34" rx="6" fill="#211638" stroke="#8C78FF" stroke-opacity=".65"/><text x="556" y="124" text-anchor="middle" fill="#E8E1FF" font-family="monospace" font-size="10">WEBHOOK</text>
+<path d="M594 120H619" stroke="#8C78FF" stroke-width="1.5"/><path d="M614 115L620 120L614 125" stroke="#8C78FF" stroke-width="1.5"/>
+<rect x="620" y="103" width="84" height="34" rx="6" fill="#142536" stroke="#78CFFF" stroke-opacity=".7"/><text x="662" y="124" text-anchor="middle" fill="#DDF6FF" font-family="monospace" font-size="10">AI AGENT</text>
+<path d="M662 137V158H556V170" stroke="#78CFFF" stroke-opacity=".6" stroke-width="1.5"/><rect x="518" y="170" width="186" height="23" rx="5" fill="#171322" stroke="#8C78FF" stroke-opacity=".4"/><text x="611" y="185" text-anchor="middle" fill="#B8B4C4" font-family="monospace" font-size="10">RESPONSE / ORBIT UI</text>
+</svg>
