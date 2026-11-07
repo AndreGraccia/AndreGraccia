@@ -4,7 +4,7 @@
 
 **Backend development · Java · APIs · AI applied to software**
 
-[Portfolio](https://andre-graccia-curriculum-andre-de9d.vercel.app) ·
+[Portfolio](https://andre-graccia-curriculum.vercel.app) ·
 [LinkedIn](https://br.linkedin.com/in/andregraccia) ·
 [Email](mailto:andregraccia2105@gmail.com) ·
 [Currículo PDF](Curriculo_Andre_Graccia.pdf)
@@ -13,64 +13,95 @@
 
 ---
 
-## Profile
+## Perfil
 
-Computer Science student at **Universidade Anhembi Morumbi** and professional at **Cielo**, focused on backend development and software engineering.
+Estudante de **Ciência da Computação na Universidade Anhembi Morumbi** e profissional na **Cielo**, com foco em desenvolvimento backend e engenharia de software.
 
-I enjoy turning requirements into maintainable software: understanding the problem, modeling the domain, building APIs, integrating services and improving solutions through iteration.
+Gosto de transformar requisitos em software sustentável: compreender o problema, modelar o domínio, desenvolver APIs, integrar serviços e evoluir soluções por meio de iteração.
 
-Currently exploring **Java and Spring Boot**, relational databases, automation and practical AI integrations.
+Atualmente, estudo e desenvolvo projetos com **Java, Spring Boot, bancos relacionais, automação e integrações práticas com IA**.
 
-## Engineering toolkit
+## Stack & ferramentas
 
 <p align="center">
-  <img src="assets/tech-stack.svg" width="100%" alt="Technology stack: backend, AI and automation, cloud and frontend" />
+  <img src="assets/tech-stack.svg" width="100%" alt="Áreas de atuação: backend, IA e automação, cloud e frontend" />
 </p>
 
-| Focus | Tools and concepts |
+<p align="center">
+  <strong>Backend & linguagens</strong><br/>
+  <img src="https://cdn.simpleicons.org/openjdk" height="30" alt="Java" title="Java" />
+  <img src="https://cdn.simpleicons.org/spring" height="30" alt="Spring Boot" title="Spring Boot" />
+  <img src="https://cdn.simpleicons.org/javascript" height="30" alt="JavaScript" title="JavaScript" />
+  <img src="https://cdn.simpleicons.org/typescript" height="30" alt="TypeScript" title="TypeScript" />
+  <img src="assets/icons/python.svg" height="30" alt="Python" title="Python" />
+  <img src="https://cdn.simpleicons.org/postgresql" height="30" alt="PostgreSQL" title="PostgreSQL" />
+</p>
+
+<p align="center">
+  <strong>Ferramentas & cloud</strong><br/>
+  <img src="https://cdn.simpleicons.org/git" height="30" alt="Git" title="Git" />
+  <img src="https://cdn.simpleicons.org/github/ffffff" height="30" alt="GitHub" title="GitHub" />
+  <img src="https://cdn.simpleicons.org/docker" height="30" alt="Docker" title="Docker" />
+  <img src="https://cdn.simpleicons.org/apachemaven" height="30" alt="Maven" title="Maven" />
+  <img src="assets/icons/aws.svg" height="30" alt="AWS" title="AWS" />
+  <img src="https://cdn.simpleicons.org/githubactions" height="30" alt="GitHub Actions" title="GitHub Actions" />
+</p>
+
+<p align="center">
+  <strong>Frontend, automação & IA</strong><br/>
+  <img src="https://cdn.simpleicons.org/react" height="30" alt="React" title="React" />
+  <img src="https://cdn.simpleicons.org/html5" height="30" alt="HTML5" title="HTML5" />
+  <img src="https://cdn.simpleicons.org/css3" height="30" alt="CSS3" title="CSS3" />
+  <img src="assets/icons/n8n.svg" height="30" alt="n8n" title="n8n" />
+  <img src="assets/icons/openai.svg" height="30" alt="OpenAI" title="OpenAI" />
+  <img src="https://cdn.simpleicons.org/postman" height="30" alt="Postman" title="Postman" />
+  <img src="https://cdn.simpleicons.org/junit5/ffffff" height="30" alt="JUnit 5" title="JUnit 5" />
+</p>
+
+| Área | Tecnologias e conceitos |
 |:--|:--|
 | **Backend** | Java 25 · Spring Boot · REST APIs · Maven |
-| **Data** | PostgreSQL · SQL · Relational modeling |
-| **Automation & AI** | Python · n8n · OpenAI APIs · workflow integration |
-| **Delivery** | Git · GitHub Actions · Docker · AWS |
+| **Dados** | PostgreSQL · SQL · Modelagem relacional |
+| **IA & automação** | Python · n8n · OpenAI APIs · Integração de workflows |
+| **Entrega** | Git · GitHub Actions · Docker · AWS |
 | **Web** | JavaScript · TypeScript · React · HTML · CSS |
 
-## Selected work
+## Projetos selecionados
 
 <p align="center">
-  <img src="assets/projects.svg" width="100%" alt="Selected projects and their technologies" />
+  <img src="assets/projects.svg" width="100%" alt="Projetos selecionados e suas tecnologias" />
 </p>
 
-- **[Calculadora de Juros](https://github.com/AndreGraccia/calc-juros)** — backend project for simple and compound interest simulations, with domain rules and financial calculations.
-- **[Wall.ia](https://github.com/AndreGraccia/Wall.ia)** — digital wallet concept for organizing financial commitments. Portfolio project; it does not execute real financial transactions.
-- **[Orbit.ia](https://github.com/AndreGraccia/Orbit.ia)** — personal agent and automation experiments using a dedicated interface and n8n workflows.
+- **[Calculadora de Juros](https://github.com/AndreGraccia/calc-juros)** — projeto backend para simulação de juros simples e compostos, com regras de domínio e cálculos financeiros.
+- **[Wall.ia](https://github.com/AndreGraccia/Wall.ia)** — conceito de carteira digital para organização de compromissos financeiros. Projeto de portfólio; não executa transações financeiras reais.
+- **[Orbit.ia](https://github.com/AndreGraccia/Orbit.ia)** — agente pessoal e experimentos de automação com interface própria e workflows n8n.
 
-More experiments and source code are available in the [repositories tab](https://github.com/AndreGraccia?tab=repositories).
+Mais experimentos e código-fonte estão disponíveis na aba de [repositórios](https://github.com/AndreGraccia?tab=repositories).
 
-## GitHub activity
+## Atividade no GitHub
 
 <p align="center">
-  <img src="assets/metrics.svg" width="100%" alt="Automatically updated GitHub activity metrics" />
+  <img src="assets/metrics.svg" width="100%" alt="Métricas de atividade do GitHub atualizadas automaticamente" />
 </p>
 
-<sub>Metrics are refreshed by GitHub Actions. Contribution totals cover the last 12 months; stars count public repositories owned by this account.</sub>
+<sub>As métricas são atualizadas pelo GitHub Actions. As contribuições consideram os últimos 12 meses; estrelas contabilizam os repositórios públicos de propriedade desta conta.</sub>
 
-## Education & credentials
+## Formação & certificações
 
-- **B.Sc. in Computer Science** — Universidade Anhembi Morumbi · In progress
+- **Ciência da Computação** — Universidade Anhembi Morumbi · Em andamento
 - **Oracle Cloud Infrastructure 2025 Certified Foundations Associate**
 - **Google** — Inteligência Artificial e Produtividade
 - **SENAI** — Lógica de Programação
-- **Languages:** Portuguese (native) · English (B1)
+- **Idiomas:** Português (nativo) · Inglês (B1)
 
 ---
 
 <div align="center">
 
-**Interested in building useful, reliable and well-designed software.**
+**Interessado em construir software útil, confiável e bem projetado.**
 
-[Get in touch](mailto:andregraccia2105@gmail.com) ·
-[Portfolio](https://andre-graccia-curriculum-andre-de9d.vercel.app) ·
+[Entre em contato](mailto:andregraccia2105@gmail.com) ·
+[Portfólio](https://andre-graccia-curriculum.vercel.app) ·
 [LinkedIn](https://br.linkedin.com/in/andregraccia)
 
 <sub>ANDRÉ GRACCIA · SOFTWARE ENGINEERING · SÃO PAULO, BRAZIL</sub>
