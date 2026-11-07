@@ -1,74 +1,78 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/hero.svg" width="100%" alt="André Graccia — Backend, AI e Cloud Engineering" />
+<img src="assets/hero.svg" width="100%" alt="André Graccia — Software engineering" />
 
-<p>
-  <a href="mailto:andregraccia2105@gmail.com">Email</a> ·
-  <a href="https://br.linkedin.com/in/andregraccia">LinkedIn</a> ·
-  <a href="https://andre-graccia-curriculum-andre-de9d.vercel.app">Portfólio</a> ·
-  <a href="https://github.com/AndreGraccia/AndreGraccia/blob/main/Curriculo_Andre_Graccia.pdf">Currículo</a>
-</p>
+**Backend development · Java · APIs · AI applied to software**
+
+[Portfolio](https://andre-graccia-curriculum-andre-de9d.vercel.app) ·
+[LinkedIn](https://br.linkedin.com/in/andregraccia) ·
+[Email](mailto:andregraccia2105@gmail.com) ·
+[Currículo PDF](Curriculo_Andre_Graccia.pdf)
 
 </div>
 
 ---
 
-## Sobre
+## Profile
 
-Sou estudante de **Ciência da Computação na Universidade Anhembi Morumbi** e profissional da **Cielo**. Tenho foco em desenvolvimento backend com Java, construção de APIs e integração entre sistemas.
+Computer Science student at **Universidade Anhembi Morumbi** and professional at **Cielo**, focused on backend development and software engineering.
 
-Também exploro **IA aplicada**, automação de processos e infraestrutura em nuvem. Gosto de entender o problema, estruturar bem a solução e construir software que seja legível, testável e sustentável.
+I enjoy turning requirements into maintainable software: understanding the problem, modeling the domain, building APIs, integrating services and improving solutions through iteration.
 
-## Áreas de engenharia
+Currently exploring **Java and Spring Boot**, relational databases, automation and practical AI integrations.
 
-| Backend Engineering | AI Engineering | Cloud Engineering |
-|:--|:--|:--|
-| Java · Spring Boot | Python · n8n | AWS · Docker |
-| REST APIs · PostgreSQL | AI workflows · APIs | Git · CI/CD |
-| Maven · Modelagem | Automação · Integrações | Deploy · Infraestrutura |
-
-## Stack
+## Engineering toolkit
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/tech-stack.svg" width="100%" alt="Tecnologias agrupadas em backend, IA e automação, cloud e frontend" />
+  <img src="assets/tech-stack.svg" width="100%" alt="Technology stack: backend, AI and automation, cloud and frontend" />
 </p>
 
-## Projetos selecionados
+| Focus | Tools and concepts |
+|:--|:--|
+| **Backend** | Java 25 · Spring Boot · REST APIs · Maven |
+| **Data** | PostgreSQL · SQL · Relational modeling |
+| **Automation & AI** | Python · n8n · OpenAI APIs · workflow integration |
+| **Delivery** | Git · GitHub Actions · Docker · AWS |
+| **Web** | JavaScript · TypeScript · React · HTML · CSS |
+
+## Selected work
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/projects.svg" width="100%" alt="Wall.ia, Calculadora de Juros e Orbit.ia: projetos e suas tecnologias" />
+  <img src="assets/projects.svg" width="100%" alt="Selected projects and their technologies" />
 </p>
 
-- **[Wall.ia](https://github.com/AndreGraccia/Wall.ia)** — carteira digital para organização de compromissos financeiros. Projeto de estudo; não movimenta dinheiro real.
-- **[Calculadora de Juros](https://github.com/AndreGraccia/calc-juros)** — API para simulações de juros simples e compostos.
-- **[Orbit.ia](https://github.com/AndreGraccia/Orbit.ia)** — agente pessoal com interface própria e automações orquestradas pelo n8n.
+- **[Calculadora de Juros](https://github.com/AndreGraccia/calc-juros)** — backend project for simple and compound interest simulations, with domain rules and financial calculations.
+- **[Wall.ia](https://github.com/AndreGraccia/Wall.ia)** — digital wallet concept for organizing financial commitments. Portfolio project; it does not execute real financial transactions.
+- **[Orbit.ia](https://github.com/AndreGraccia/Orbit.ia)** — personal agent and automation experiments using a dedicated interface and n8n workflows.
 
-## Atividade no GitHub
+More experiments and source code are available in the [repositories tab](https://github.com/AndreGraccia?tab=repositories).
+
+## GitHub activity
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AndreGraccia/AndreGraccia/main/assets/metrics.svg" width="100%" alt="Estatísticas públicas do GitHub e contribuições dos últimos doze meses" />
+  <img src="assets/metrics.svg" width="100%" alt="Automatically updated GitHub activity metrics" />
 </p>
 
-<sub>As métricas são geradas pelo GitHub Actions. Commits, pull requests, issues e repositórios contribuídos refletem os últimos 12 meses; stars somam os repositórios públicos próprios.</sub>
+<sub>Metrics are refreshed by GitHub Actions. Contribution totals cover the last 12 months; stars count public repositories owned by this account.</sub>
 
-## Formação & certificações
+## Education & credentials
 
-- **Ciência da Computação** — Universidade Anhembi Morumbi (2025–2028)
+- **B.Sc. in Computer Science** — Universidade Anhembi Morumbi · In progress
 - **Oracle Cloud Infrastructure 2025 Certified Foundations Associate**
-- **Google — Inteligência Artificial e Produtividade**
-- **SENAI — Lógica de Programação**
-- **English: B1**
+- **Google** — Inteligência Artificial e Produtividade
+- **SENAI** — Lógica de Programação
+- **Languages:** Portuguese (native) · English (B1)
 
 ---
 
 <div align="center">
 
-**Interessado em construir software útil, confiável e bem projetado.**
+**Interested in building useful, reliable and well-designed software.**
 
-<a href="mailto:andregraccia2105@gmail.com">Entre em contato</a> ·
-<a href="https://br.linkedin.com/in/andregraccia">LinkedIn</a> ·
-<a href="https://andre-graccia-curriculum-andre-de9d.vercel.app">Portfólio</a>
+[Get in touch](mailto:andregraccia2105@gmail.com) ·
+[Portfolio](https://andre-graccia-curriculum-andre-de9d.vercel.app) ·
+[LinkedIn](https://br.linkedin.com/in/andregraccia)
 
-<sub>ANDRÉ GRACCIA · BACKEND / AI / CLOUD ENGINEERING · SÃO PAULO, BRASIL</sub>
+<sub>ANDRÉ GRACCIA · SOFTWARE ENGINEERING · SÃO PAULO, BRAZIL</sub>
 
 </div>
