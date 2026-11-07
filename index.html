@@ -206,6 +206,23 @@ nav{background:rgba(9,12,23,.82);border-color:rgba(157,174,226,.2)}
   .bg i{opacity:.12}
 }
 
+
+/* ===== alinhamento dos ícones + movimento ligado à rolagem ===== */
+#skills .card:has(.icons){display:flex;flex-direction:column;align-items:flex-start}
+#skills .card .icons{position:static;order:0;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:7px;margin:14px 0 8px;max-width:100%}
+#skills .card .k{order:-1}
+#skills .card h3{order:1;margin-top:4px}
+#skills .card ul{order:2}
+#skills .card .icons .ic{width:36px;height:36px}
+.orbit{perspective:900px}
+.orbit svg{transform:translate(calc(var(--px,0)*16px),calc(var(--py,0)*16px)) rotate(var(--scroll-rotate,0deg));transition:transform .18s ease-out;will-change:transform}
+.orbit .ring{transform-origin:200px 200px;animation:spin 34s linear infinite}
+.orbit svg>circle:nth-of-type(2){transform-origin:215px 205px;animation:orbit-pulse 5s ease-in-out infinite}
+.orbit svg>circle:nth-of-type(3){transform-origin:215px 205px;animation:orbit-pulse 5s ease-in-out -2.5s infinite}
+@keyframes orbit-pulse{0%,100%{opacity:.72;stroke-width:22}50%{opacity:1;stroke-width:30}}
+@media(max-width:860px){#skills .card .icons{margin-top:12px}}
+@media(prefers-reduced-motion:reduce){.orbit svg>circle{animation:none!important}.orbit svg{transition:none}}
+
 </style>
 </head>
 <body>
@@ -413,6 +430,25 @@ document.querySelectorAll("#skills .card").forEach(c=>{
     li.addEventListener("focusout",()=>icon.classList.remove("hl"));
   });
 });
+
+/* Movimento circular do hero sincronizado à rolagem, com atualização leve por frame. */
+if(!calm){
+  let scrollTick=false;
+  const syncScrollMotion=()=>{
+    const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);
+    const progress=Math.min(1,Math.max(0,scrollY/max));
+    document.documentElement.style.setProperty("--page-progress",progress);
+    const hero=document.querySelector(".hero");
+    const heroProgress=Math.min(1,Math.max(0,scrollY/Math.max(1,hero.offsetHeight)));
+    document.querySelector(".orbit")?.style.setProperty("--scroll-rotate",(heroProgress*110)+"deg");
+    scrollTick=false;
+  };
+  addEventListener("scroll",()=>{
+    if(!scrollTick){requestAnimationFrame(syncScrollMotion);scrollTick=true}
+  },{passive:true});
+  syncScrollMotion();
+}
+
 </script>
 </body>
 </html>
