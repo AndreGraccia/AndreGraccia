@@ -53,20 +53,20 @@ def pill(x, y, text, w):
 
 def hero():
     W, H = 1200, 380
-    tags = [("JAVA", 70), ("SPRING BOOT", 122), ("REST APIS", 100), ("POSTGRESQL", 116)]
+    tags = [("JAVA", 70), ("SPRING BOOT", 122), ("PYTHON", 90), ("AGENTES DE IA", 134)]
     x, pills = 64, []
     for t, w in tags:
         pills.append(pill(x, 296, t, w))
         x += w + 10
-    tiles = [("java", 0, 0), ("spring", 1, 0), ("postgresql", 2, 0), ("docker", 0, 1), ("aws", 1, 1), ("openai", 2, 1)]
+    tiles = [("java", 0, 0), ("spring", 1, 0), ("postgresql", 2, 0), ("python", 0, 1), ("docker", 1, 1), ("langchain", 2, 1)]
     ts = []
     for i, (n, c, r) in enumerate(tiles):
         tx, ty = 820 + c * 98, 112 + r * 98
         ts.append(f'<g class="fl" style="animation-delay:{-i*.9}s"><rect x="{tx}" y="{ty}" width="82" height="82" rx="22" fill="url(#glass)" stroke="url(#rim)"/>'
                   f'<image href="{icon(n)}" x="{tx+16}" y="{ty+16}" width="50" height="50"/></g>')
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t d">
-<title id="t">André Graccia — Backend e engenharia de software</title>
-<desc id="d">Banner com nome, especialidade em backend Java e ícones das principais tecnologias.</desc>
+<title id="t">André Graccia — Desenvolvedor Backend Java e Engenheiro de IA</title>
+<desc id="d">Banner com nome, função e ícones das principais tecnologias.</desc>
 {STYLE}{DEFS}
 <clipPath id="c"><rect width="{W}" height="{H}" rx="28"/></clipPath>
 <g clip-path="url(#c)">
@@ -76,11 +76,11 @@ def hero():
 <circle class="b1" cx="640" cy="400" r="130" fill="{SKY}" opacity=".22" filter="url(#blur)"/>
 {pane(792, 84, 320, 212, 30)}
 {''.join(ts)}
-<text x="64" y="86" class="m" font-size="12" fill="{SKY}">SOFTWARE ENGINEER · SÃO PAULO, BR</text>
+<text x="64" y="86" class="m" font-size="12" fill="{SKY}">ENGENHEIRO DE SOFTWARE NA CIELO · SÃO PAULO, BR</text>
 <rect x="64" y="104" width="52" height="3" rx="1.5" fill="url(#acc)"/>
 <text x="62" y="186" font-size="68" font-weight="800" letter-spacing="-2.5" fill="{INK}">André Graccia</text>
-<text x="64" y="232" font-size="24" font-weight="600" letter-spacing="-.4" fill="{INK}">Backend Java · APIs · IA aplicada a software</text>
-<text x="64" y="264" font-size="16" fill="{MUTED}">Transformo requisitos em software claro, confiável e sustentável.</text>
+<text x="64" y="232" font-size="24" font-weight="600" letter-spacing="-.4" fill="{INK}">Backend Java &amp; Engenheiro de Sistemas de IA</text>
+<text x="64" y="264" font-size="16" fill="{MUTED}">Spring Boot, automação de testes em Python e agentes de IA.</text>
 {''.join(pills)}
 </g>
 <rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="28" fill="none" stroke="url(#rim)"/>
@@ -89,9 +89,9 @@ def hero():
 
 
 PROJECTS = [
-    ("01", "Calculadora de Juros", "BACKEND · FINANCIAL API", ["API para simular juros simples e", "compostos, com regras de domínio explícitas."], ["java", "spring", "maven"], SKY),
-    ("02", "Wall.ia", "FINTECH · CONCEPT", ["Carteira digital que organiza compromissos", "financeiros e explica a composição dos valores."], ["react", "spring", "postgresql"], VIOLET),
-    ("03", "Orbit.ia", "AI · AUTOMATION", ["Agente pessoal com interface própria e", "workflows orquestrados pelo n8n."], ["react", "n8n", "docker"], "#E8A6FF"),
+    ("01", "Orbit.IA", "2026 · AGENTES DE IA", ["Orquestrador de agentes com React/Vite,", "n8n, LangChain e OpenRouter."], ["react", "n8n", "langchain"], "#E8A6FF"),
+    ("02", "wall.ia", "2025 · FULL-STACK", ["Gestão financeira em Java 17 e Spring Boot,", "com JWT e PostgreSQL em Docker."], ["java", "spring", "postgresql"], VIOLET),
+    ("03", "Calculadora de Juros", "2025 · APIS OFICIAIS", ["Serviço Java integrado às APIs do Banco", "Central: Selic, IPCA e CDI em tempo real."], ["java", "spring", "maven"], SKY),
 ]
 
 
