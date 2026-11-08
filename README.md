@@ -1,5 +1,7 @@
 <div align="center">
 
+🇧🇷 **Português** &nbsp;·&nbsp; [🇺🇸 English](./README.en.md)
+
 <img src="./assets/readme/header.svg" width="100%" alt="André Graccia, engenheiro de software backend em Java" />
 
 <br/>

@@ -33,7 +33,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add profile-3d-contrib assets/activity.svg assets/langs.svg
+          git add profile-3d-contrib assets/activity.svg assets/langs.svg assets/activity-en.svg assets/langs-en.svg
           if git commit -m "chore: atualiza skyline e estatísticas"; then
             git push
           fi

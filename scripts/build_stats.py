@@ -36,6 +36,13 @@ def api(url, body=None):
         return json.load(r)
 
 
+PT = dict(lang_sub="linguagens mais usadas nos repositórios públicos", lang_title="linguagens", lang_tag="por bytes de código", act_sub="contribuições por dia",
+          act_title="atividade", act_tag="últimos 30 dias", total="no total", mx="máximo em um dia", active="dias ativos", streak="dias seguidos", fmt="%d/%m")
+EN = dict(lang_sub="most used languages in public repositories", lang_title="languages", lang_tag="by bytes of code", act_sub="contributions per day",
+          act_title="activity", act_tag="last 30 days", total="total", mx="best single day", active="active days", streak="day streak", fmt="%m/%d")
+L = PT
+
+
 def window(w, h, title, tag, body):
     dots = "".join(f'<circle cx="{28 + i * 20}" cy="27" r="6" fill="{c}"/>' for i, c in enumerate(("#ff5f57", "#febc2e", "#28c840")))
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-label="{escape(title)}">{fonts()}'
@@ -78,9 +85,9 @@ def langs_svg():
                  f'<rect x="260" y="{y - 12}" width="0" height="8" rx="4" fill="url(#seg)"><animate attributeName="width" from="0" to="{max(pct / (top[0][1] / s * 100) * 600, 8):.0f}" {grow(0.5 + i * 0.12, 1)}/></rect>'
                  f'<text x="{X1}" y="{y}" text-anchor="end" font-family="{MONO}" font-size="14" fill="{MUTE}">{pct:.1f}%</text></g>')
     h = 148 + len(top) * 38 + 18
-    body = (f'<text x="{X0}" y="72" font-family="{SANS}" font-size="15" fill="{MUTE}" font-weight="500">linguagens mais usadas nos repositórios públicos</text>'
+    body = (f'<text x="{X0}" y="72" font-family="{SANS}" font-size="15" fill="{MUTE}" font-weight="500">{L["lang_sub"]}</text>'
             f'<clipPath id="r"><rect x="{X0}" y="82" width="{X1 - X0}" height="14" rx="7"/></clipPath><g clip-path="url(#r)">{seg}</g>{rows}')
-    return window(W, h, "linguagens", "por bytes de código", body)
+    return window(W, h, L["lang_title"], L["lang_tag"], body)
 
 
 def activity_data():
@@ -120,23 +127,24 @@ def activity_svg():
                  f'<animate attributeName="height" from="0" to="{hh:.1f}" {grow(0.3 + i * 0.04)}/>'
                  f'<animate attributeName="y" from="{BASE}" to="{BASE - hh:.1f}" {grow(0.3 + i * 0.04)}/></rect>')
     grid = "".join(f'<path d="M{X0} {y}H{X1}" stroke="#fff" stroke-opacity=".06"/>' for y in (TOP, (TOP + BASE) / 2, BASE))
-    labels = "".join(f'<text x="{X0 + i * step + bw / 2:.1f}" y="{BASE + 24}" text-anchor="middle" font-family="{MONO}" font-size="12" fill="{MUTE}">{start + timedelta(days=i):%d/%m}</text>' for i in (0, 7, 14, 21, 29))
+    labels = "".join(f'<text x="{X0 + i * step + bw / 2:.1f}" y="{BASE + 24}" text-anchor="middle" font-family="{MONO}" font-size="12" fill="{MUTE}">{(start + timedelta(days=i)).strftime(L['fmt'])}</text>' for i in (0, 7, 14, 21, 29))
 
     def stat(x, big, small):
         return (f'<text x="{x}" y="150" font-family="{SANS}" font-weight="500" font-size="52" letter-spacing="-2" fill="#f5f5f7">{big}</text>'
                 f'<text x="{x}" y="178" font-family="{MONO}" font-size="13" fill="{MUTE}">{small}</text>')
-    body = (f'<text x="{X0}" y="86" font-family="{SANS}" font-size="15" fill="{MUTE}" font-weight="500">contribuições por dia</text>'
-            + stat(X0, total, "no total")
-            + stat(X0 + 220, mx, "máximo em um dia")
-            + stat(X0 + 470, active, "dias ativos")
-            + stat(X0 + 680, streak, "dias seguidos")
+    body = (f'<text x="{X0}" y="86" font-family="{SANS}" font-size="15" fill="{MUTE}" font-weight="500">{L["act_sub"]}</text>'
+            + stat(X0, total, L["total"])
+            + stat(X0 + 220, mx, L["mx"])
+            + stat(X0 + 470, active, L["active"])
+            + stat(X0 + 680, streak, L["streak"])
             + grid + bars + labels)
-    return window(W, H, "atividade", "últimos 30 dias", body)
+    return window(W, H, L["act_title"], L["act_tag"], body)
 
 
 os.makedirs(OUT, exist_ok=True)
-open(os.path.join(OUT, "langs.svg"), "w", encoding="utf-8").write(langs_svg())
-if TOKEN or DEMO:
-    open(os.path.join(OUT, "activity.svg"), "w", encoding="utf-8").write(activity_svg())
-else:
-    print("sem GITHUB_TOKEN: activity.svg não gerado")
+for suf, L in (("", PT), ("-en", EN)):
+    open(os.path.join(OUT, f"langs{suf}.svg"), "w", encoding="utf-8").write(langs_svg())
+    if TOKEN or DEMO:
+        open(os.path.join(OUT, f"activity{suf}.svg"), "w", encoding="utf-8").write(activity_svg())
+    else:
+        print("sem GITHUB_TOKEN: activity não gerado")

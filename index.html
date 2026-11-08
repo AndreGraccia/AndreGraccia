@@ -210,6 +210,11 @@ body { background: var(--p-bg); }
 .contact__copy { margin: 16px 0 0; font-size: 13px; }
 .contact__copy button { background: none; border: 0; padding: 0; color: var(--p-accent); font: inherit; text-decoration: underline; cursor: pointer; }
 .closing__cv { margin: 18px 0 0; }
+/* seletor de idioma */
+.lang { display: inline-flex; padding: 3px; border-radius: 99px; border: 1px solid rgb(255 255 255 / .16); background: rgb(255 255 255 / .06); margin-right: 10px; }
+.lang button { padding: 6px 12px; border: 0; border-radius: 99px; background: none; color: var(--p-muted); font: 500 13px/1 var(--font-mono); cursor: pointer; transition: background .15s, color .15s; }
+.lang button:hover { color: #f5f5f7; }
+.lang button[aria-pressed="true"] { background: var(--p-action); color: #fff; }
 .pill { gap: 12px; }
 .pill:hover { transform: translateY(-2px); transition: transform .15s; }
 .closing__cta { margin-bottom: var(--s-8, 64px); }
@@ -232,6 +237,7 @@ html { scroll-padding-top: 72px; }
       <div class="nav__item"><a class="nav__link" href="#contato">Contato</a></div>
     </nav>
     <div class="nav__actions">
+      <div class="lang" role="group" aria-label="Idioma / Language"><button type="button" data-lang="pt" aria-pressed="true">PT</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
       <a class="btn btn--primary" href="mailto:andregraccia2105@gmail.com">Enviar e-mail</a>
     </div>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
@@ -453,6 +459,7 @@ html { scroll-padding-top: 72px; }
     <p class="contact__copy">Ou copie meu e-mail: <button type="button" data-copy>andregraccia2105@gmail.com</button></p>
   </form>
 </dialog>
+<script src="assets/i18n.js"></script>
 
 <script>
 /* e-mail: qualquer link mailto abre a caixa de contato; o envio monta a mensagem no Gmail, Outlook ou app de e-mail (sem servidor, nada é guardado) */
@@ -468,8 +475,8 @@ html { scroll-padding-top: 72px; }
   form.addEventListener('submit', e => {
     e.preventDefault();
     const d = new FormData(form), via = e.submitter && e.submitter.dataset.via || 'gmail';
-    const subject = d.get('assunto') || 'Contato pelo portfólio';
-    const body = `Olá, André!
+    const subject = d.get('assunto') || (document.documentElement.lang === 'en' ? 'Contact via portfolio' : 'Contato pelo portfólio');
+    const body = `${document.documentElement.lang === 'en' ? 'Hi André!' : 'Olá, André!'}
 
 ${d.get('msg')}
 
@@ -482,7 +489,7 @@ ${d.get('nome')}${d.get('email') ? ' (' + d.get('email') + ')' : ''}`;
     dlg.close();
   });
   dlg.querySelector('[data-copy]').addEventListener('click', ev => {
-    const b = ev.currentTarget; (navigator.clipboard ? navigator.clipboard.writeText(TO) : Promise.reject()).then(() => b.textContent = 'copiado!', () => b.textContent = TO);
+    const b = ev.currentTarget; (navigator.clipboard ? navigator.clipboard.writeText(TO) : Promise.reject()).then(() => b.textContent = document.documentElement.lang === 'en' ? 'copied!' : 'copiado!', () => b.textContent = TO);
   });
 })();
 </script>

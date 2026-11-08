@@ -47,7 +47,8 @@ DEFS = f"""<defs>
 </defs>"""
 
 # ---------------------------------------------------------------- cabeçalho: igual ao nome do site (surge da esquerda para a direita, sublinhado depois)
-header = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-label="André Graccia, engenheiro de software backend em Java">
+def header(t):
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-label="André Graccia, {t['role']}">
 {font_css("geist-500", "geist-mono-400", "instrument-serif-italic")}
 {DEFS}
 <rect width="1000" height="320" rx="22" fill="#0b0b0d"/>
@@ -61,8 +62,8 @@ header = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" v
 </g>
 <path d="M300 190H700" stroke="url(#ul)" stroke-width="2.5" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" begin="2.8s" dur="1.4s" fill="freeze"/></path>
 <g opacity="0">{fade(3.2, 1)}
-<text x="500" y="250" text-anchor="middle" font-family="{SANS}" font-size="30" font-weight="500" letter-spacing="-.6" fill="#f5f5f7">Engenheiro de software backend em <tspan fill="{BLUE}">Java</tspan></text>
-<text x="500" y="286" text-anchor="middle" font-family="{SANS}" font-size="16" fill="#a1a1a6">APIs em Java e Spring Boot · automação de testes em Python · agentes de IA</text></g>
+<text x="500" y="250" text-anchor="middle" font-family="{SANS}" font-size="30" font-weight="500" letter-spacing="-.6" fill="#f5f5f7">{t['h1']} <tspan fill="{BLUE}">Java</tspan></text>
+<text x="500" y="286" text-anchor="middle" font-family="{SANS}" font-size="16" fill="#a1a1a6">{t['sub']}</text></g>
 </svg>
 """
 
@@ -114,6 +115,25 @@ ORBIT = [
     ("~/orbit", "curl -X POST …/webhook/orbit-chat", "n8n", "o agente devolveu a resposta"),
 ]
 
+STACK_EN = [
+    ("~/calc-juros", "./mvnw spring-boot:run", "Spring Boot", "Java 25 · API up, simple and compound interest routes"),
+    ("~/wall.ia", "docker compose up -d postgres", "Docker", "database ready on port 5432"),
+    ("~/wall.ia", 'psql -c "\\dt"', "PostgreSQL", "wallet tables listed"),
+    ("~/qa/tests", "pytest -q", "Python", "26 tests passed in 1.6s"),
+    ("~/orbit", "docker compose up -d", "n8n · LangChain", "n8n up on port 5678, agent ready"),
+    ("~/orbit", "git push origin main", "Git · GitHub Actions", "build and tests running in the pipeline"),
+]
+WALL_EN = [
+    ("~/wall.ia", "docker compose up -d", "Docker", "database up"),
+    ("~/wall.ia", "./mvnw spring-boot:run", "Spring Boot", "API up with Spring Security and JWT"),
+    ("~/wall.ia", "./mvnw test", "JUnit", "tests passed"),
+]
+ORBIT_EN = [
+    ("~/orbit", "docker compose up -d", "n8n", "n8n and PostgreSQL up"),
+    ("~/orbit/frontend", "npm run dev", "React", "interface on localhost:5173"),
+    ("~/orbit", "curl -X POST …/webhook/orbit-chat", "n8n", "the agent returned the answer"),
+]
+
 # ---------------------------------------------------------------- janela de código: trecho real do JurosCalculator.java (recortado)
 CODE = [
     ("50", "BigDecimal periodicRate = ratePercent", False),
@@ -125,7 +145,7 @@ CODE = [
 ]
 
 
-def code():
+def code(hint, aria):
     h = 70 + len(CODE) * 30 + 64
     rows, t = "", 0.5
     for i, (n, line, mark) in enumerate(CODE):
@@ -136,28 +156,34 @@ def code():
                  f'<text x="64" y="{y}" font-family="{MONO}" font-size="15" fill="#f5f5f7" xml:space="preserve">{escape(line)}</text></g>')
         t += 0.45
     foot = 94 + len(CODE) * 30
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="{h}" viewBox="0 0 600 {h}" role="img" aria-label="Trecho do JurosCalculator.java: juros compostos com BigDecimal">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="{h}" viewBox="0 0 600 {h}" role="img" aria-label="{escape(aria)}">
 {font_css("geist-500", "geist-mono-400")}
 <rect width="600" height="{h}" rx="16" fill="#1d1d1f"/><rect x=".5" y=".5" width="599" height="{h - 1}" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity=".1"/>
 {dots(26, 26)}<rect x="96" y="12" width="190" height="28" rx="8" fill="#ffffff" fill-opacity=".08"/><text x="110" y="31" font-family="{MONO}" font-size="13" fill="#f5f5f7">J  JurosCalculator.java</text>
 <path d="M0 52H600" stroke="#ffffff" stroke-opacity=".08"/>
 {rows}
 <path d="M0 {foot - 4}H600" stroke="#ffffff" stroke-opacity=".08"/>
-<g opacity="0">{fade(t + 0.2, .6)}<circle cx="28" cy="{foot + 24}" r="4" fill="{BLUE}"/><text x="44" y="{foot + 29}" font-family="{SANS}" font-size="14" fill="#a1a1a6">Regra: A = P × (1 + i)^n, tudo em BigDecimal.</text></g>
+<g opacity="0">{fade(t + 0.2, .6)}<circle cx="28" cy="{foot + 24}" r="4" fill="{BLUE}"/><text x="44" y="{foot + 29}" font-family="{SANS}" font-size="14" fill="#a1a1a6">{escape(hint)}</text></g>
 </svg>
 """
 
 
-for name, svg in (
-    ("header.svg", header),
-    ("terminal.svg", terminal("como eu uso cada coisa", STACK)),
-    ("code.svg", code()),
-    ("wall.svg", terminal("wall.ia", WALL, 600, 14.5)),
-    ("orbit.svg", terminal("Orbit.IA", ORBIT, 600, 14.5)),
-):
-    with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
-        f.write(svg)
-    print("ok", name, len(svg) // 1024, "KB")
+LANGS = {
+    "": dict(role="engenheiro de software backend em Java", h1="Engenheiro de software backend em", sub="APIs em Java e Spring Boot · automação de testes em Python · agentes de IA",
+             stack=STACK, wall=WALL, orbit=ORBIT, title="como eu uso cada coisa", hint="Regra: A = P × (1 + i)^n, tudo em BigDecimal.",
+             aria="Trecho do JurosCalculator.java: juros compostos com BigDecimal",
+             links=(("portfolio", "Portfólio"), ("curriculo", "Currículo"), ("email", "E-mail"), ("linkedin", "LinkedIn"))),
+    "-en": dict(role="backend software engineer in Java", h1="Backend software engineer in", sub="Java and Spring Boot APIs · Python test automation · AI agents",
+                stack=STACK_EN, wall=WALL_EN, orbit=ORBIT_EN, title="how I use each thing", hint="Rule: A = P × (1 + i)^n, all in BigDecimal.",
+                aria="Excerpt of JurosCalculator.java: compound interest with BigDecimal",
+                links=(("portfolio", "Portfolio"), ("curriculo", "Resume"), ("email", "Email"), ("linkedin", "LinkedIn"))),
+}
+for suf, t in LANGS.items():
+    for name, svg in ((f"header{suf}.svg", header(t)), (f"terminal{suf}.svg", terminal(t["title"], t["stack"])), (f"code{suf}.svg", code(t["hint"], t["aria"])),
+                      (f"wall{suf}.svg", terminal("wall.ia", t["wall"], 600, 14.5)), (f"orbit{suf}.svg", terminal("Orbit.IA", t["orbit"], 600, 14.5))):
+        with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
+            f.write(svg)
+        print("ok", name, len(svg) // 1024, "KB")
 
 # ---------------------------------------------------------------- botões de link do README (ícone + rótulo; cada um vai dentro de um <a>)
 ICONS = {
@@ -176,7 +202,8 @@ def link_pill(icon, label):
             f'<text x="46" y="28" font-family="{SANS}" font-size="15" font-weight="500" fill="#f5f5f7">{escape(label)}</text></svg>\n')
 
 
-for icon, label in (("portfolio", "Portfólio"), ("curriculo", "Currículo"), ("email", "E-mail"), ("linkedin", "LinkedIn")):
-    with open(os.path.join(OUT, f"link-{icon}.svg"), "w", encoding="utf-8") as f:
-        f.write(link_pill(icon, label))
-    print("ok", f"link-{icon}.svg")
+for suf, t in LANGS.items():
+    for icon, label in t["links"]:
+        with open(os.path.join(OUT, f"link-{icon}{suf}.svg"), "w", encoding="utf-8") as f:
+            f.write(link_pill(icon, label))
+        print("ok", f"link-{icon}{suf}.svg")
