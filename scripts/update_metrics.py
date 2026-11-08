@@ -25,18 +25,24 @@ def collect():
         page+=1
     return [stars,int(c["totalCommitContributions"]),int(c["totalPullRequestContributions"]),int(c["totalIssueContributions"]),int(c["repositoriesContributedTo"]["totalCount"])]
 def render(v):
-    labels=[("STARS","public repos"),("COMMITS","last 12 months"),("PULL REQUESTS","last 12 months"),("ISSUES","last 12 months"),("REPOSITORIES","contributed to")]
+    from build_visuals import STYLE, DEFS, pane, INK, MUTED, DIM, SKY
+    labels=[("ESTRELAS","repos públicos"),("COMMITS","últimos 12 meses"),("PULL REQUESTS","últimos 12 meses"),("ISSUES","últimos 12 meses"),("REPOSITÓRIOS","contribuídos")]
+    W,H,cw,gap=1200,200,216,18
     parts=[]
     for i,((label,hint),value) in enumerate(zip(labels,v)):
-        x=18+i*221
-        parts.append(f'<g transform="translate({x} 72)"><rect width="205" height="118" rx="15" fill="#111522" stroke="#8C78FF" stroke-opacity=".25"/><text x="16" y="28" fill="#A6A9B8" font-family="monospace" font-size="10" letter-spacing="1">{label}</text><text x="16" y="72" fill="#F5F5FA" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="700">{value:,}</text><text x="16" y="96" fill="#858B9D" font-family="Inter,Arial,sans-serif" font-size="10">{hint}</text></g>')
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1123" height="220" viewBox="0 0 1123 220" role="img" aria-labelledby="t d">
-<title id="t">GitHub activity metrics</title><desc id="d">Stars públicos e contribuições dos últimos doze meses, atualizados automaticamente.</desc>
-<defs><linearGradient id="a"><stop stop-color="#8C78FF"/><stop offset="1" stop-color="#78CFFF"/></linearGradient></defs>
-<rect x="1" y="1" width="1121" height="218" rx="20" fill="#090B13" stroke="#A6A9B8" stroke-opacity=".16"/>
-<text x="20" y="36" fill="#9B8BFF" font-family="monospace" font-size="11" letter-spacing="2">GITHUB / ENGINEERING ACTIVITY</text>
-<text x="1100" y="36" text-anchor="end" fill="#858B9D" font-family="Inter,Arial,sans-serif" font-size="10">AUTO-UPDATED · {datetime.now(timezone.utc).strftime("%Y-%m-%d")} UTC</text>
-{''.join(parts)}</svg>'''
+        x=24+i*(cw+gap)
+        parts.append(f'{pane(x,24,cw,152,22)}<text x="{x+22}" y="58" class="m" font-size="10" fill="{SKY}">{label}</text><text x="{x+22}" y="110" font-size="42" font-weight="800" letter-spacing="-1.5" fill="{INK}">{value:,}</text><text x="{x+22}" y="142" font-size="12" fill="{MUTED}">{hint}</text>')
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t d">
+<title id="t">Atividade no GitHub</title><desc id="d">Estrelas, commits, pull requests, issues e repositórios, atualizados automaticamente.</desc>
+{STYLE}{DEFS}
+<clipPath id="c"><rect width="{W}" height="{H}" rx="28"/></clipPath>
+<g clip-path="url(#c)"><rect width="{W}" height="{H}" fill="url(#bg)"/>
+<circle class="b1" cx="140" cy="200" r="130" fill="#4F6BFF" opacity=".32" filter="url(#blur)"/>
+<circle class="b2" cx="1060" cy="0" r="140" fill="#9C8BFF" opacity=".3" filter="url(#blur)"/>
+{''.join(parts)}
+<text x="{W-24}" y="{H-8}" text-anchor="end" font-size="10" fill="{DIM}">atualizado em {datetime.now(timezone.utc).strftime("%Y-%m-%d")} UTC</text></g>
+<rect x=".5" y=".5" width="{W-1}" height="{H-1}" rx="28" fill="none" stroke="url(#rim)"/>
+</svg>'''
 if __name__=="__main__":
     Path("assets").mkdir(exist_ok=True)
     Path("assets/metrics.svg").write_text(render(collect()),encoding="utf-8")
