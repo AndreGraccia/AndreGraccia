@@ -30,8 +30,9 @@ def render(v):
     W,H,cw,gap=1200,200,216,18
     parts=[]
     for i,((label,hint),value) in enumerate(zip(labels,v)):
+        shown=f"{value:,}" if isinstance(value,int) else value
         x=24+i*(cw+gap)
-        parts.append(f'{pane(x,24,cw,152,22)}<text x="{x+22}" y="58" class="m" font-size="10" fill="{SKY}">{label}</text><text x="{x+22}" y="110" font-size="42" font-weight="800" letter-spacing="-1.5" fill="{INK}">{value:,}</text><text x="{x+22}" y="142" font-size="12" fill="{MUTED}">{hint}</text>')
+        parts.append(f'{pane(x,24,cw,152,22)}<text x="{x+22}" y="58" class="m" font-size="10" fill="{SKY}">{label}</text><text x="{x+22}" y="110" font-size="42" font-weight="800" letter-spacing="-1.5" fill="{INK}">{shown}</text><text x="{x+22}" y="142" font-size="12" fill="{MUTED}">{hint}</text>')
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="t d">
 <title id="t">Atividade no GitHub</title><desc id="d">Estrelas, commits, pull requests, issues e repositórios, atualizados automaticamente.</desc>
 {STYLE}{DEFS}
