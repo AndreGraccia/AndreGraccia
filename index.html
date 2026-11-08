@@ -83,7 +83,7 @@ body { background: var(--p-bg); }
 .chips li { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px 8px 10px; border-radius: 99px; background: var(--p-surface); font-weight: 500; font-size: 16px; transition: transform .15s; }
 .chips li:hover { transform: translateY(-2px); }
 .chips .ic { height: 24px; width: auto; }
-.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 64px 0 0; padding-top: 32px; border-top: 1px solid rgb(0 0 0 / .12); }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 48px 0 0; }
 .facts dd { margin: 4px 0 0; font: 500 var(--t-stat)/1.1 var(--font-display); letter-spacing: var(--display-tracking); }
 .facts dt { margin: 0; }
 /* logos escuros ganham uma base clara para não sumir no vidro */
@@ -111,13 +111,29 @@ body { background: var(--p-bg); }
     #contato .closing__cta { animation: sp-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
   }
 }
+/* bolinhas estilo macOS em todas as janelas */
+.cw__dots i, .ui-dots i { width: 12px; height: 12px; border-radius: 50%; }
+.cw__dots i:nth-child(1), .ui-dots i:nth-child(1) { background: #ff5f57; }
+.cw__dots i:nth-child(2), .ui-dots i:nth-child(2) { background: #febc2e; }
+.cw__dots i:nth-child(3), .ui-dots i:nth-child(3) { background: #28c840; }
+.ui-code__tabs .ui-dots { margin-right: 10px; display: inline-flex; gap: 6px; }
+/* espaçamento: painéis dos projetos com altura própria, "Sobre" centrado na tela, fatos junto das linhas */
+#projetos .card > .panel:not([data-fx], .panel--device) { --p-h: 380px; height: 380px; }
+#projetos .grid { align-items: start; }
+.statement .wrap { min-height: calc(100svh - 240px); display: grid; align-content: center; }
+.facts { margin-top: 40px; }
+/* interação com o mouse: o vidro ganha um foco de luz que segue o cursor, o brilho azul do herói acompanha o ponteiro e as linhas da janela acendem */
+.cw, .gl, .chips li, .pill, #projetos .card > .panel:not([data-fx], .panel--device), #stack .panel:not([data-fx]) {
+  background-image: radial-gradient(240px circle at var(--mx, -400px) var(--my, -400px), rgb(255 255 255 / .14), transparent 70%), var(--glass-bg, none); }
+#projetos .card > .panel:not([data-fx], .panel--device), #stack .panel:not([data-fx]) { background-image: radial-gradient(320px circle at var(--mx, -400px) var(--my, -400px), rgb(41 151 255 / .16), transparent 70%); }
+.hero::before { background: radial-gradient(60% 55% at var(--gx, 50%) 0%, rgb(41 151 255 / .38), transparent 70%), radial-gradient(40% 40% at 85% 30%, rgb(0 113 227 / .25), transparent 70%); }
+.cw__row:not(.is-head) { transition: background .15s; } .cw__row:not(.is-head):hover { background: rgb(255 255 255 / .07); }
 /* stack e experiência */
 .stack-lists { display: grid; gap: 24px; align-content: center; }
 .stack-lists p:not(.t-label) { font-size: 20px; line-height: 1.4; }
 .stack-lists .t-label { margin: 0 0 4px; }
 .gl { background: #1d1d1f; color: #f5f5f7; border-radius: 14px; font: 400 14px/1.6 var(--font-mono); overflow: hidden; }
 .gl__bar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid rgb(255 255 255 / .1); color: #a1a1a2; font-size: 13px; }
-.gl__bar .cw__dots i { background: #48484a; }
 .gl__body { padding: 16px; display: grid; gap: 4px; }
 .gl__body p { margin: 0; } .gl__body b { color: #2997ff; font-weight: 500; } .gl__body em { color: #a1a1a2; font-style: normal; }
 .gl__caret { display: inline-block; width: 8px; height: 16px; margin-left: 4px; vertical-align: -3px; background: #f5f5f7; animation: gl-blink 1.1s steps(1) infinite; }
@@ -186,6 +202,7 @@ body { background: var(--p-bg); }
             <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:400px;--ax:max(24px, 50% - 200px);--ay:32px;--ay-sm:16px" data-ui-loop>
               <div class="ui ui-panel ui-code" data-ui="code">
                 <div class="ui-code__tabs">
+                  <span class="ui-dots" aria-hidden="true"><i></i><i></i><i></i></span>
                   <span class="ui-code__tab is-on"><i class="ui-code__lang">J</i>Conciliador.java</span>
                   <span class="ui-spacer"></span>
                   <span class="ui-chip ui-chip--plain ui-code__chip" data-code-chip>1 regra</span>
@@ -287,7 +304,7 @@ body { background: var(--p-bg); }
   <section class="section ground-inverse" id="experiencia" data-moment="line-carries-colour" data-moment-opts='{"from": "base"}' style="--hm: 2" aria-labelledby="exp-h">
     <div class="wrap">
       <div class="section-head"><h2 id="exp-h">Experiência, formação e certificados.</h2></div>
-      <div class="grid fill">
+      <div class="grid" style="align-items:start">
         <ul class="rows span-7">
           <li><span class="rows__name">Cielo<small class="muted"> · Engenheiro de Software</small></span><p>Automações em Python, testes automatizados, análise de falhas e validação de sistemas, em equipes multidisciplinares.</p><span class="rows__value">jul 2026 – atual</span></li>
           <li><span class="rows__name">Anhembi Morumbi<small class="muted"> · Ciência da Computação</small></span><p>Bacharelado em andamento, com formatura prevista para dezembro de 2028.</p><span class="rows__value">2025 – 2028</span></li>
@@ -332,6 +349,17 @@ body { background: var(--p-bg); }
   </div>
 </footer>
 
+<script>
+/* foco de luz que segue o mouse (só com ponteiro fino e sem preferência por menos movimento) */
+if (matchMedia('(hover: hover) and (pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const hero = document.querySelector('.hero');
+  document.addEventListener('pointermove', e => {
+    const t = e.target.closest && e.target.closest('.cw, .gl, .chips li, .pill, .panel');
+    if (t) { const r = t.getBoundingClientRect(); t.style.setProperty('--mx', (e.clientX - r.left) + 'px'); t.style.setProperty('--my', (e.clientY - r.top) + 'px'); }
+    if (hero) hero.style.setProperty('--gx', (e.clientX / innerWidth * 100) + '%');
+  }, { passive: true });
+}
+</script>
 <script type="module" src="assets/system.js"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
