@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- type: software. deal: hero centred (janela com o Conciliador), nav centre, close type, footer columns, rhythm dark-band->surface (tokens Apple, apple.md), buttons tonal, mark dots.
+<!-- type: software. deal: hero centred (janela com a Calculadora de Juros), nav centre, close type, footer columns, rhythm dark-band->surface (tokens Apple, apple.md), buttons tonal, mark dots.
      moments: word-highlight (statement). palette: Apple (client's own via start.mjs brand), type: Geist.
      Os dados dentro das janelas (vendas, testes, orçamento) são exemplos ilustrativos de interface, não números reais. -->
 <html lang="pt-BR" data-type="software" data-radius="soft" data-buttons="tonal" data-motion>
@@ -18,7 +18,7 @@
 <meta name="page-type" content="software">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/system.css">
 <link rel="stylesheet" href="assets/ui/cards.css">
 <link rel="stylesheet" href="assets/motion/motion.css">
@@ -60,7 +60,7 @@ body { background: var(--p-bg); }
 .hero::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 760px; z-index: -1; pointer-events: none;
   background: radial-gradient(60% 55% at 50% 0%, rgb(41 151 255 / .38), transparent 70%), radial-gradient(40% 40% at 85% 30%, rgb(0 113 227 / .25), transparent 70%); }
 .hero .hero__window { --ground-bg: radial-gradient(70% 100% at 25% 0%, #0b4fa8 0, transparent 70%), radial-gradient(55% 90% at 85% 15%, #0071e3 0, transparent 68%), #0c1118; }
-/* a janela do hero: o Conciliador cruzando vendas e extrato */
+/* a janela do hero: a Calculadora de Juros comparando juros simples e compostos */
 .hero__window { background: var(--p-surface); }
 .cw { color: var(--p-ink); border-radius: 18px; font: 400 14px/1.4 var(--font-text); overflow: hidden; background: var(--glass-bg); backdrop-filter: blur(26px) saturate(180%); -webkit-backdrop-filter: blur(26px) saturate(180%); border: 1px solid var(--glass-line); box-shadow: inset 0 1px 0 rgb(255 255 255 / .3), 0 24px 60px rgb(0 0 0 / .5); }
 .cw__bar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--glass-line); }
@@ -92,7 +92,11 @@ body { background: var(--p-bg); }
    Só onde o navegador suporta animation-timeline e sem preferência por menos movimento; fora disso tudo fica visível e parado. */
 .scroll-progress { position: fixed; z-index: 30; inset: 0 0 auto 0; height: 3px; background: var(--p-accent); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; }
 @supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
+  /* controladas só pela rolagem (o movimento acompanha o dedo ou a roda, nada toca sozinho) */
+  @media all {
+    @keyframes sp-line { from { opacity: 0; transform: translateX(-16px); } to { opacity: 1; transform: none; } }
+    @keyframes sp-window { to { transform: translateY(-36px) scale(.96); opacity: .55; } }
+    @keyframes sp-row { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
     @keyframes sp-grow { to { transform: scaleX(1); } }
     @keyframes sp-rise { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
     @keyframes sp-lift { to { opacity: .15; transform: translateY(-48px); } }
@@ -109,6 +113,10 @@ body { background: var(--p-bg); }
     .chips li:nth-child(3) { animation-range: entry 30% entry 90%; }
     .chips li:nth-child(4) { animation-range: entry 40% entry 100%; }
     #contato .closing__cta { animation: sp-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
+    .hero__window { animation: sp-window linear both; animation-timeline: scroll(root); animation-range: 0 90vh; }
+    .stk { animation: sp-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 55%; }
+    .stk__ln { animation: sp-line linear both; animation-timeline: view(); animation-range: entry 15% entry 75%; }
+    #experiencia .section-head, #experiencia .rows li, #experiencia .gl, #contato .closing__links { animation: sp-row linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
   }
 }
 /* bolinhas estilo macOS em todas as janelas */
@@ -140,10 +148,56 @@ body { background: var(--p-bg); }
 @keyframes gl-blink { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .gl__caret { animation: none; } }
 
-#projetos .card > .panel:not([data-fx], .panel--device), #stack .panel:not([data-fx]) { --p-h: 300px; background: var(--p-surface); background-image: none; }
+#projetos .card > .panel:not([data-fx], .panel--device), #stack .panel:not([data-fx]) { --p-h: 300px; background-color: var(--p-surface); }
 #projetos .card > .panel::before, #projetos .card > .panel::after { display: none; }
 #projetos .grid + .grid .at-rise { --ay: 96px; }
 @media (max-width: 639px) { #projetos .panel { --p-h: 220px; } }
+/* seções nunca sobrepõem a seguinte: altura mínima de N telas (não fixa), em qualquer largura e altura de janela */
+@media (min-width: 640px) {
+  main > :is(section, .section):not(.hero), footer.closing { height: auto; min-height: calc(var(--h, 1) * 100vh); min-height: calc(var(--h, 1) * 100svh); display: flex; flex-direction: column; }
+  main > :is(section, .section):not(.hero) > :is(.wrap, .container), footer.closing > .wrap { flex: 1 0 auto; height: auto; min-height: 0; }
+  main > .hero { height: auto; min-height: 100vh; min-height: 100svh; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: 1fr; }
+  main > .hero > .wrap { height: auto; }
+  main > :is(section, .section) > .wrap > .fill, main > :is(section, .section) > .wrap > .group > .fill { flex: 1 0 auto; min-height: auto; }
+}
+/* espaçamento: seções compactas, sem blocos soltos longe uns dos outros */
+@media (min-width: 640px) {
+  main > :is(section, .section):not(.hero, .statement), footer.closing { min-height: 0; padding-block: clamp(72px, 11vh, 120px); }
+  main > :is(section, .section).g2 > .wrap { grid-template-rows: auto auto; row-gap: clamp(48px, 8vh, 80px); }
+  main > :is(section, .section) > .wrap > .fill { margin-top: clamp(24px, 4vh, 40px); }
+  #stack .grid { gap: 32px; align-items: center; }
+  .stack-lists { gap: 20px; }
+  .closing__cta { margin-bottom: clamp(40px, 7vh, 64px); }
+  main > :is(section, .section).statement { min-height: 0; padding-block: clamp(24px, 6vh, 56px); }
+  .statement .wrap { min-height: 0; padding-block: clamp(24px, 6vh, 64px); }
+}
+/* terminal da stack */
+.stk { background: #161618; color: #f5f5f7; border: 1px solid rgb(255 255 255 / .1); border-radius: 18px; overflow: hidden; box-shadow: 0 24px 60px rgb(0 0 0 / .45); font: 400 14px/1.6 var(--font-mono); }
+.stk__bar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid rgb(255 255 255 / .08); color: var(--p-muted); font-size: 13px; }
+.stk__bar .ui-dots { display: inline-flex; gap: 6px; } .stk__shell { margin-left: auto; }
+.stk__body { padding: 18px 20px 22px; display: grid; gap: 4px; }
+.stk__ln { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; }
+.stk__cwd { color: #6cb6ff; } .stk__sig { color: var(--p-muted); } .stk__cmd { color: #f5f5f7; }
+.stk__out { color: var(--p-muted); padding-left: 16px; margin-bottom: 10px; }
+.stk__out::before { content: "→"; margin-right: 8px; color: #28c840; }
+.stk__tag { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; padding: 2px 10px; border-radius: 99px; font-size: 12px; background: rgb(255 255 255 / .08); border: 1px solid rgb(255 255 255 / .12); }
+.stk__cmd + .stk__tag { margin-left: auto; } .stk__tag + .stk__tag { margin-left: 0; }
+.stk__tag img { width: 16px; height: 16px; padding: 2px; box-sizing: content-box; background: #f5f5f7; border-radius: 5px; }
+@media (max-width: 639px) { .stk__tag { margin-left: 0 !important; } }
+/* nome no menu: sobrenome em serifa itálica desenhada (Instrument Serif), entra uma vez com foco + sublinhado que se desenha */
+.nav__name { display: inline-block; -webkit-mask-image: linear-gradient(90deg, #000 45%, transparent 55%); mask-image: linear-gradient(90deg, #000 45%, transparent 55%); -webkit-mask-size: 250% 100%; mask-size: 250% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; animation: name-wipe 2.4s linear .4s both; }
+@media (prefers-reduced-motion: reduce) { .nav__name { animation-duration: 2.4s !important; } .nav__sur::after { animation-duration: 1.4s !important; } }
+@keyframes name-wipe { from { -webkit-mask-position: 100% 0; mask-position: 100% 0; } to { -webkit-mask-position: 0 0; mask-position: 0 0; } }
+.nav__sur { position: relative; display: inline-block; font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-weight: 400; font-size: 1.22em; letter-spacing: -.01em;
+  background: linear-gradient(100deg, #8ec9ff 0%, #2997ff 55%, #7aa7ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .06em; }
+.nav__sur::after { content: ""; position: absolute; left: 0; right: .06em; bottom: -.04em; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #2997ff, transparent); transform-origin: 0 50%; animation: name-line 1.4s linear 2.8s both; }
+@keyframes name-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.pill { gap: 12px; }
+.pill:hover { transform: translateY(-2px); transition: transform .15s; }
+.closing__cta { margin-bottom: var(--s-8, 64px); }
+html { scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+:focus-visible { outline: 2px solid var(--p-accent); outline-offset: 3px; border-radius: 6px; }
 </style>
 </head>
 <body>
@@ -152,7 +206,7 @@ body { background: var(--p-bg); }
 <header class="nav nav--centre">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Ir para o conteúdo</a>
-    <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>André Graccia</a>
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span><span class="nav__name">André <span class="nav__sur">Graccia</span></span></a>
     <nav class="nav__links" aria-label="Principal">
       <div class="nav__item"><a class="nav__link" href="#projetos">Projetos</a></div>
       <div class="nav__item"><a class="nav__link" href="#stack">Stack</a></div>
@@ -172,17 +226,17 @@ body { background: var(--p-bg); }
       <div class="hero__c">
         <a class="pill" href="#projetos"><span>Java · Python · Spring Boot</span><span class="muted">Ver projetos</span></a>
         <h1 id="hero-h">Engenheiro de software backend em <span class="hl">Java</span></h1>
-        <p class="hero__lead">Construo APIs em Java 21 e Spring Boot e automatizo testes em Python. Foco em sistemas que lidam com dinheiro e precisam estar certos.</p>
+        <p class="hero__lead">Construo APIs em Java e Spring Boot e automatizo testes em Python. Foco em sistemas que lidam com dinheiro e precisam estar certos.</p>
         <div class="btn-row"><a class="btn btn--primary" href="#projetos">Ver projetos</a><a class="btn btn--secondary" href="#contato">Falar comigo</a></div>
       </div>
-      <div class="hero__window" role="img" aria-label="Conciliador cruzando vendas e extrato e apontando o motivo de cada divergência">
+      <div class="hero__window" role="img" aria-label="Calculadora de Juros comparando juros simples e compostos de R$ 1.000 a 2,5% ao mês em 3, 6 e 12 meses">
         <div class="ly-piece cw" aria-hidden="true">
-          <div class="cw__bar"><span class="cw__dots"><i></i><i></i><i></i></span><span><b>Conciliador</b> · vendas × extrato</span><span>3 lançamentos</span></div>
+          <div class="cw__bar"><span class="cw__dots"><i></i><i></i><i></i></span><span><b>Calculadora de Juros</b> · R$ 1.000 a 2,5% ao mês</span><span>3 prazos</span></div>
           <div data-ly-steps="900">
-            <div class="cw__row is-head"><span>Venda</span><span>Resultado</span><span>Vendas</span><span>Extrato</span></div>
-            <div class="cw__row" data-step><span>#1042</span><span><span class="cw__tag">Conciliada</span></span><span>R$ 189,90</span><span>R$ 189,90</span></div>
-            <div class="cw__row" data-step><span>#1043</span><span><span class="cw__tag is-bad">Divergência</span> <span class="cw__why">não consta no extrato</span></span><span>R$ 74,00</span><span>—</span></div>
-            <div class="cw__row" data-step><span>#1044</span><span><span class="cw__tag is-bad">Divergência</span> <span class="cw__why">taxa de R$ 9,60</span></span><span>R$ 320,00</span><span>R$ 310,40</span></div>
+            <div class="cw__row is-head"><span>Prazo</span><span>Diferença</span><span>Simples</span><span>Composto</span></div>
+            <div class="cw__row" data-step><span>3 meses</span><span><span class="cw__tag">+ R$ 1,89</span> <span class="cw__why">a mais nos compostos</span></span><span>R$ 1.075,00</span><span>R$ 1.076,89</span></div>
+            <div class="cw__row" data-step><span>6 meses</span><span><span class="cw__tag is-bad">+ R$ 9,69</span> <span class="cw__why">a mais nos compostos</span></span><span>R$ 1.150,00</span><span>R$ 1.159,69</span></div>
+            <div class="cw__row" data-step><span>12 meses</span><span><span class="cw__tag is-bad">+ R$ 44,89</span> <span class="cw__why">a mais nos compostos</span></span><span>R$ 1.300,00</span><span>R$ 1.344,89</span></div>
           </div>
         </div>
       </div>
@@ -197,24 +251,23 @@ body { background: var(--p-bg); }
         </div>
         <div class="grid">
           <article class="card card--row card--open span-6">
-            <h3>Conciliador</h3>
-            <p>API em Java 21 e Spring Boot que aponta cada divergência com o motivo.</p>
+            <h3>Calculadora de Juros</h3>
+            <p>API em Java 25 e Spring Boot que calcula juros simples e compostos com BigDecimal. <a class="link" href="https://github.com/AndreGraccia/calc-juros" target="_blank" rel="noopener">Código no GitHub</a></p>
             <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:400px;--ax:max(24px, 50% - 200px);--ay:32px;--ay-sm:16px" data-ui-loop>
               <div class="ui ui-panel ui-code" data-ui="code">
                 <div class="ui-code__tabs">
                   <span class="ui-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <span class="ui-code__tab is-on"><i class="ui-code__lang">J</i>Conciliador.java</span>
+                  <span class="ui-code__tab is-on"><i class="ui-code__lang">J</i>JurosCalculator.java</span>
                   <span class="ui-spacer"></span>
                   <span class="ui-chip ui-chip--plain ui-code__chip" data-code-chip>1 regra</span>
                 </div>
-                <pre class="ui-code__pre"><code><span class="ui-code__ln" data-n="21"><span class="k">for</span> (Venda v : vendas) {</span>
-<span class="ui-code__ln" data-n="22">  var l = extrato.<span class="f">busca</span>(v.id());</span>
-<span class="ui-code__ln" data-n="23" data-note="Venda sem lançamento no extrato.">  <span class="k">if</span> (l == <span class="k">null</span>) <span class="k">continue</span>;</span>
-<span class="ui-code__ln is-mark" data-n="24">  <span class="k">var</span> d = v.<span class="f">diferenca</span>(l);</span>
-<span class="ui-code__ln" data-n="25">  <span class="c">// a diferença vira o motivo</span></span>
-<span class="ui-code__ln" data-n="26" data-note="Diferença registrada como taxa.">  <span class="k">if</span> (d.<span class="f">signum</span>() != <span class="n">0</span>) <span class="f">aponta</span>(v, d);</span>
-<span class="ui-code__ln" data-n="27">}</span></code></pre>
-                <div class="ui-code__hint" data-code-hint><span class="ui-dot"></span><span data-code-text>Regra: compara o valor da venda com o do extrato.</span></div>
+                <pre class="ui-code__pre"><code><span class="ui-code__ln" data-n="50" data-note="Taxa em porcentagem vira fração.">BigDecimal periodicRate = ratePercent</span>
+<span class="ui-code__ln" data-n="51">    .<span class="f">divide</span>(ONE_HUNDRED, CTX);</span>
+<span class="ui-code__ln is-mark" data-n="52">BigDecimal factor = ONE.<span class="f">add</span>(periodicRate);</span>
+<span class="ui-code__ln" data-n="53">BigDecimal acc = factor.<span class="f">pow</span>(periods, CTX);</span>
+<span class="ui-code__ln" data-n="54" data-note="Valor monetário com 2 casas, HALF_UP.">return principal.<span class="f">multiply</span>(acc, CTX)</span>
+<span class="ui-code__ln" data-n="55">    .<span class="f">setScale</span>(<span class="n">2</span>, HALF_UP);</span></code></pre>
+                <div class="ui-code__hint" data-code-hint><span class="ui-dot"></span><span data-code-text>Regra: A = P × (1 + i)^n, tudo em BigDecimal.</span></div>
               </div>
             </div></div></div>
           </article>
@@ -285,7 +338,23 @@ body { background: var(--p-bg); }
         <h2 id="stack-h">Stack de backend, dados e automação. <span class="muted">Java no centro, Python na automação.</span></h2>
       </div>
       <div class="grid fill" style="align-items:start">
-        <div class="panel span-7" style="--p-h:460px"><div class="dg" data-diagram><script type="application/json">{"layout":"ring","alt":"Python, Spring, PostgreSQL, Docker, Git, LangChain e n8n em volta do Java.","center":{"label":"Java","icon":"java"},"ring":[{"label":"Python","icon":"python"},{"label":"Spring","icon":"spring"},{"label":"PostgreSQL","icon":"postgres"},{"label":"Docker","icon":"docker"},{"label":"Git","icon":"git"},{"label":"LangChain","icon":"langchain"},{"label":"n8n","icon":"n8n"}]}</script></div></div>
+        <div class="stk span-7" role="img" aria-label="Terminal mostrando como cada tecnologia entra no meu dia a dia: Spring Boot, Docker, PostgreSQL, Python, n8n, LangChain, Git e GitHub Actions.">
+  <div class="stk__bar"><span class="ui-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="stk__title">como eu uso cada coisa</span><span class="stk__shell">zsh</span></div>
+  <div class="stk__body" aria-hidden="true">
+<div class="stk__ln"><span class="stk__cwd">~/calc-juros</span><span class="stk__sig">$</span><span class="stk__cmd">./mvnw spring-boot:run</span><span class="stk__tag">Spring Boot</span></div>
+<div class="stk__ln stk__out">Java 25 · API no ar, rotas de juros simples e compostos</div>
+<div class="stk__ln"><span class="stk__cwd">~/wall.ia</span><span class="stk__sig">$</span><span class="stk__cmd">docker compose up -d postgres</span><span class="stk__tag">Docker</span></div>
+<div class="stk__ln stk__out">banco pronto na porta 5432</div>
+<div class="stk__ln"><span class="stk__cwd">~/wall.ia</span><span class="stk__sig">$</span><span class="stk__cmd">psql -c &quot;\dt&quot;</span><span class="stk__tag">PostgreSQL</span></div>
+<div class="stk__ln stk__out">tabelas da carteira listadas</div>
+<div class="stk__ln"><span class="stk__cwd">~/qa/testes</span><span class="stk__sig">$</span><span class="stk__cmd">pytest -q</span><span class="stk__tag">Python</span></div>
+<div class="stk__ln stk__out">26 testes passaram em 1,6s</div>
+<div class="stk__ln"><span class="stk__cwd">~/orbit</span><span class="stk__sig">$</span><span class="stk__cmd">n8n start &amp;&amp; python agente.py</span><span class="stk__tag">n8n</span><span class="stk__tag">LangChain</span></div>
+<div class="stk__ln stk__out">workflows ativos, agente chamando as ferramentas</div>
+<div class="stk__ln"><span class="stk__cwd">~/orbit</span><span class="stk__sig">$</span><span class="stk__cmd">git push origin main</span><span class="stk__tag">Git</span><span class="stk__tag">GitHub Actions</span></div>
+<div class="stk__ln stk__out">build e testes rodando na pipeline</div>
+  </div>
+</div>
         <div class="span-5 start-8 stack-lists">
           <div><p class="t-label muted">Linguagens</p><ul class="chips"><li><img class="ic ic-40 ic-tall" src="assets/icons/java.svg" alt="" width="30" height="40">Java</li><li><img class="ic ic-40" src="assets/icons/python.svg" alt="" width="40" height="40">Python</li></ul></div><div><p class="t-label muted">Backend</p><ul class="chips"><li><img class="ic ic-40" src="assets/icons/spring.svg" alt="" width="40" height="40">Spring Boot</li><li><img class="ic ic-40 ic-land" src="assets/icons/docker.svg" alt="" width="40" height="29">Docker</li></ul></div><div><p class="t-label muted">Dados</p><ul class="chips"><li><img class="ic ic-40" src="assets/icons/postgres.svg" alt="" width="39" height="40">PostgreSQL</li><li><img class="ic ic-40" src="assets/icons/mysql.svg" alt="" width="40" height="39">MySQL</li></ul></div><div><p class="t-label muted">Automação e IA</p><ul class="chips"><li><img class="ic ic-40 ic-ink" src="assets/icons/langchain.svg" alt="" width="40" height="40">LangChain</li><li><img class="ic ic-40 ic-wide" src="assets/icons/n8n.svg" alt="" width="40" height="21">n8n</li><li><img class="ic ic-40" src="assets/icons/git.svg" alt="" width="40" height="40">Git</li><li><img class="ic ic-40" src="assets/icons/github-actions.svg" alt="" width="40" height="40">GitHub Actions</li></ul></div>
           <p class="t-small muted">Também: SQL, SQL Server, JPA, REST, JWT e JUnit.</p>
@@ -310,12 +379,12 @@ body { background: var(--p-bg); }
           <li><span class="rows__name">Anhembi Morumbi<small class="muted"> · Ciência da Computação</small></span><p>Bacharelado em andamento, com formatura prevista para dezembro de 2028.</p><span class="rows__value">2025 – 2028</span></li>
           <li><span class="rows__name">Idiomas e certificados<small class="muted"> · Inglês profissional</small></span><p>Inteligência Artificial e Produtividade, Lógica de Programação e Cloud Infrastructure Foundations.</p><span class="rows__value">Certificados</span></li>
         </ul>
-        <div class="span-5 start-8"><div class="gl" role="img" aria-label="Histórico de carreira em formato de git log: engenharia de software, Orbit.IA, Conciliador e o primeiro commit">
+        <div class="span-5 start-8"><div class="gl" role="img" aria-label="Histórico de carreira em formato de git log: engenharia de software, Orbit.IA, Calculadora de Juros e o primeiro commit">
           <div class="gl__bar"><span class="cw__dots"><i></i><i></i><i></i></span><span>git log --oneline</span></div>
           <div class="gl__body" aria-hidden="true">
             <p><b>a41f9c2</b> <em>(HEAD)</em> Engenheiro de Software: automação e testes</p>
             <p><b>7d03be8</b> Orbit.IA: agentes de IA com n8n e LangChain</p>
-            <p><b>2c9e1a5</b> Conciliador: API que cruza vendas e extrato</p>
+            <p><b>2c9e1a5</b> Calculadora de Juros: API em Java com BigDecimal</p>
             <p><b>0000001</b> Primeiro commit: Java e curiosidade<i class="gl__caret"></i></p>
           </div>
         </div></div>
@@ -350,8 +419,8 @@ body { background: var(--p-bg); }
 </footer>
 
 <script>
-/* foco de luz que segue o mouse (só com ponteiro fino e sem preferência por menos movimento) */
-if (matchMedia('(hover: hover) and (pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+/* foco de luz que segue o mouse (só com ponteiro fino; só muda a cor, não move nada, então vale também com "menos movimento") */
+if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
   const hero = document.querySelector('.hero');
   document.addEventListener('pointermove', e => {
     const t = e.target.closest && e.target.closest('.cw, .gl, .chips li, .pill, .panel');
