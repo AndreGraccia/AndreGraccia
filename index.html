@@ -4,304 +4,62 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>André Graccia — Software Engineer</title>
-<meta name="description" content="André Graccia, desenvolvedor backend Java em São Paulo. Spring Boot, APIs REST e PostgreSQL.">
-<meta name="theme-color" content="#090B13">
+<meta name="description" content="André Graccia, desenvolvedor backend Java em São Paulo. Spring Boot, APIs REST, PostgreSQL e IA aplicada a software.">
+<meta name="theme-color" content="#05060B">
+<link rel="canonical" href="https://andre-graccia-curriculum.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="André Graccia — Software Engineer">
+<meta property="og:description" content="Backend Java, APIs e IA aplicada a software. Portfólio, projetos e currículo.">
+<meta property="og:url" content="https://andre-graccia-curriculum.vercel.app/">
+<meta property="og:image" content="https://andre-graccia-curriculum.vercel.app/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.35' cy='.3'%3E%3Cstop offset='0' stop-color='%23b4c2ff'/%3E%3Cstop offset='.6' stop-color='%233347e8'/%3E%3Cstop offset='1' stop-color='%231a1f8f'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23g)'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#090B13; --ink:#F3F5FF; --muted:#B4B6D0; --line:#20243A;
-  --blue:#4F6BFF; --sky:#78CFFF; --violet:#9C8BFF; --pink:#E8A6FF;
-  --card:linear-gradient(160deg,rgba(40,62,190,.55),rgba(20,30,110,.55));
-  --sans:"Inter","Segoe UI",system-ui,sans-serif;
-  --serif:"Instrument Serif","Times New Roman",Georgia,serif;
-  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
-  --top:env(safe-area-inset-top,0px);
-}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
-body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;
-  background-image:radial-gradient(900px 500px at 15% -10%,rgba(60,80,230,.35),transparent 60%),radial-gradient(700px 500px at 100% 40%,rgba(156,139,255,.18),transparent 60%)}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--sky);outline-offset:3px;border-radius:8px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-section{padding:88px 0 24px}
-.mono{font-family:var(--mono)}
-.eyebrow{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--sky);display:flex;gap:12px;align-items:center}
-.eyebrow::before{content:"";width:36px;height:2px;background:var(--blue)}
-h1{font-size:clamp(64px,12vw,128px);line-height:.92;letter-spacing:-.04em;font-weight:800}
-h1 em,h2 em{font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-.02em;color:#C9D0FF}
-h2{font-size:clamp(34px,5vw,52px);line-height:1.05;letter-spacing:-.03em;font-weight:700}
-h2 em{font-size:1.12em}
-.lead{max-width:60ch;color:#DDE0F5;font-size:19px}
-/* nav */
-nav{position:fixed;top:calc(14px + var(--top));left:50%;transform:translateX(-50%);width:min(1060px,calc(100% - 24px));z-index:20;
-  display:flex;align-items:center;gap:6px;padding:8px 10px 8px 18px;border-radius:999px;
-  background:rgba(32,48,160,.55);border:1px solid rgba(120,150,255,.4);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;margin-right:auto}
-.orb{width:26px;height:26px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#9db0ff,#3347e8 60%,#1a1f8f)}
-nav a.l{padding:7px 14px;border-radius:999px;font-size:14.5px;font-weight:500;text-decoration:none;color:#DCE1FF}
-nav a.l:hover,nav a.l.on{background:rgba(120,150,255,.28)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:14px;font:600 15px var(--sans);text-decoration:none;cursor:pointer;
-  color:#fff;background:rgba(79,107,255,.25);border:1px solid rgba(140,165,255,.5)}
-.btn:hover{background:rgba(79,107,255,.45)}
-.btn.pri{background:linear-gradient(180deg,#5A74FF,#3752F0);border-color:#7F95FF}
-nav .btn{padding:9px 18px;border-radius:999px}
-/* hero */
-.hero{min-height:100svh;display:grid;align-items:center;padding:120px 0 60px}
-.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
-.sub{font-size:clamp(22px,3vw,30px);font-weight:600;letter-spacing:-.02em;margin:26px 0 14px}
-.meta{display:flex;flex-wrap:wrap;gap:6px 22px;font:400 14px var(--mono);margin-bottom:22px}
-.meta a{text-decoration:underline;text-underline-offset:4px}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
-.tags{display:flex;flex-wrap:wrap;gap:10px}
-.tag{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;border-radius:999px;background:rgba(79,107,255,.18);border:1px solid rgba(140,165,255,.4)}
-.tag::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sky);margin-right:8px}
-.orbit{position:relative;aspect-ratio:1;max-width:460px;margin-inline:auto;width:100%}
-.orbit svg{width:100%;height:100%;overflow:visible}
-.ring{animation:spin 40s linear infinite;transform-origin:50% 50%}
-@keyframes spin{to{transform:rotate(360deg)}}
-.chip{position:absolute;padding:14px 18px;border-radius:16px;background:rgba(50,75,215,.6);border:1px solid rgba(140,165,255,.55);backdrop-filter:blur(10px)}
-.chip small{display:block;font:400 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#C3CCFF}
-.chip b{font-size:17px}
-.chip.a{top:2%;right:-4%}.chip.b{bottom:4%;left:-2%}
-/* cards */
-.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin:14px 0 34px}
-.head p{color:#CAD0F5;font-size:15px}
-.cards{display:grid;gap:20px}
-.c2{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:repeat(3,1fr)}
-.card{position:relative;padding:26px;border-radius:22px;background:var(--card);border:1px solid rgba(120,150,255,.45);box-shadow:0 24px 60px -30px rgba(40,60,220,.8)}
-.card .k{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#BCC6FF}
-.card h3{font-size:25px;letter-spacing:-.02em;margin:10px 0 6px}
-.card p{color:#DDE2FF;font-size:16px}
-.card ul{list-style:none;padding:0;margin-top:16px;display:grid;gap:9px}
-.card li{display:flex;gap:10px;align-items:center;font-weight:500}
-.card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sky);flex:none}
-.card .st{display:flex;align-items:center;gap:8px;margin-top:20px;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#DDE2FF}
-.card .st::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sky)}
-.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.stack span{font:500 12.5px var(--mono);padding:5px 11px;border-radius:8px;background:rgba(9,11,19,.35);border:1px solid rgba(160,180,255,.3)}
-a.card{text-decoration:none;transition:transform .2s,border-color .2s}
-a.card:hover{transform:translateY(-3px);border-color:var(--sky)}
-a.card .go{position:absolute;top:22px;right:22px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(79,107,255,.35);border:1px solid rgba(160,180,255,.5)}
-.proj{min-height:260px;display:flex;flex-direction:column}
-.proj .stack{margin-top:auto;padding-top:18px}
-.proj .st{margin-top:14px}
-/* contact */
-.contact{margin-top:20px;padding:44px;border-radius:28px;background:var(--card);border:1px solid rgba(120,150,255,.5);display:flex;gap:28px;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.contact p{color:#DDE2FF;margin-top:10px;max-width:46ch}
-footer{padding:48px 0 60px;color:var(--muted);font-size:15px}
-#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);opacity:0;pointer-events:none;padding:12px 20px;border-radius:12px;background:#2A3BC8;border:1px solid #7F95FF;transition:.25s}
-#toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:860px){
-  .hero .grid,.c2,.c3{grid-template-columns:1fr}
-  nav a.l{display:none}nav{padding-left:14px}
-  .orbit{max-width:340px}.chip.a{right:0}.chip.b{left:0}
-  section{padding-top:64px}.contact{padding:30px}
-}
-@media(prefers-reduced-motion:reduce){.ring{animation:none}html{scroll-behavior:auto}a.card{transition:none}}
-
-/* ===== Liquid glass + interações ===== */
-.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
-.bg i{position:absolute;border-radius:50%;filter:blur(80px);opacity:.7;will-change:transform}
-.bg i:nth-child(1){width:46vmax;height:46vmax;left:-12vmax;top:-10vmax;background:#2f45ff;animation:f1 24s ease-in-out infinite alternate}
-.bg i:nth-child(2){width:38vmax;height:38vmax;right:-10vmax;top:28%;background:#8f6bff;animation:f2 28s ease-in-out infinite alternate}
-.bg i:nth-child(3){width:34vmax;height:34vmax;left:28%;bottom:-16vmax;background:#1fb6ff;animation:f1 32s ease-in-out infinite alternate-reverse}
-@keyframes f1{to{transform:translate(9vmax,6vmax) scale(1.15)}}
-@keyframes f2{to{transform:translate(-8vmax,-7vmax) scale(.9)}}
-.prog{position:fixed;top:0;left:0;width:100%;height:3px;z-index:40;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--sky),var(--violet),var(--pink))}
-nav,.card,.chip,.contact,.tag{
-  background:linear-gradient(135deg,rgba(255,255,255,.17),rgba(255,255,255,.04) 45%,rgba(110,135,255,.12));
-  -webkit-backdrop-filter:blur(22px) saturate(1.8);backdrop-filter:blur(22px) saturate(1.8);
-  border:1px solid rgba(255,255,255,.2);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.5),inset 0 -1px 0 rgba(255,255,255,.06),inset 0 0 24px rgba(255,255,255,.05),0 24px 60px -26px rgba(8,18,120,.95)}
-nav,.chip{backdrop-filter:url(#lg) blur(14px) saturate(1.9)}
-.card::before,.card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s}
-.card::before{background:radial-gradient(280px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.2),transparent 62%)}
-.card::after{padding:1px;background:radial-gradient(220px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.95),transparent 70%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
-.card:hover::before,.card:hover::after{opacity:1}
-.card{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease,border-color .2s}
-a.card:hover{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-4px)}
-.btn{position:relative;overflow:hidden;transform:translate(var(--tx,0),var(--ty,0));transition:transform .2s,background .2s,box-shadow .2s;
-  background:linear-gradient(180deg,rgba(255,255,255,.2),rgba(255,255,255,.05));border-color:rgba(255,255,255,.3);box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
-.btn.pri{background:linear-gradient(180deg,rgba(120,145,255,.95),rgba(55,82,240,.95))}
-.btn::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;transform:skewX(-20deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);transition:left .6s}
-.btn:hover::after{left:130%}.btn:active{scale:.96}
-nav a.l{position:relative;z-index:1;transition:color .2s}nav a.l:hover,nav a.l.on{background:transparent;color:#fff}
-.ind{position:absolute;top:8px;bottom:8px;left:0;width:0;opacity:0;border-radius:999px;background:rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 6px 18px -8px rgba(0,0,0,.5);transition:transform .45s cubic-bezier(.3,1.35,.5,1),width .45s cubic-bezier(.3,1.35,.5,1),opacity .3s}
-nav .btn{z-index:1}
-.orbit svg{transform:translate(calc(var(--px,0)*16px),calc(var(--py,0)*16px));transition:transform .2s}
-.chip.a{transform:translate(calc(var(--px,0)*-26px),calc(var(--py,0)*-20px));transition:transform .2s}
-.chip.b{transform:translate(calc(var(--px,0)*-18px),calc(var(--py,0)*22px));transition:transform .2s}
-.js .rv{opacity:0;translate:0 22px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),translate .8s cubic-bezier(.2,.7,.2,1),transform .25s ease}
-.js .rv.in{opacity:1;translate:0 0}
-.card li{transition:transform .2s}.card li:hover{transform:translateX(4px)}
-@media(hover:none){.card{transform:none!important}}
-@media(prefers-reduced-motion:reduce){.bg i{animation:none}.js .rv{opacity:1;translate:none;transition:none}.btn::after{display:none}}
-
-/* ===== ícones das ferramentas ===== */
-.icons{position:absolute;top:18px;right:18px;display:flex;gap:6px;z-index:2}
-.ic{position:relative;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);box-shadow:inset 0 1px 0 rgba(255,255,255,.4);transition:transform .3s cubic-bezier(.3,1.5,.5,1),background .2s}
-.ic img{width:20px;height:20px;display:block;object-fit:contain}.ic.fallback img{display:none}.ic.inv img{filter:invert(1)}
-.ic:hover,.ic.hl{transform:translateY(-4px) scale(1.15);background:rgba(255,255,255,.24)}
-.ic::after{content:attr(data-n);position:absolute;bottom:calc(100% + 8px);left:50%;translate:-50% 4px;opacity:0;pointer-events:none;white-space:nowrap;font:500 11px var(--mono);padding:4px 9px;border-radius:8px;background:rgba(10,14,60,.9);border:1px solid rgba(255,255,255,.2);transition:.2s}
-.ic:hover::after,.ic.hl::after{opacity:1;translate:-50% 0}
-.ic.fallback::before{content:attr(data-fallback);font:700 10px var(--mono);color:#EAF0FF}
-
-/* ===== cursor glow + spotlight interativo ===== */
-.cursor-glow{position:fixed;inset:0;z-index:5;pointer-events:none;opacity:0;
-  background:radial-gradient(360px circle at var(--cx,50%) var(--cy,50%),rgba(120,145,255,.13),rgba(156,139,255,.055) 38%,transparent 72%);
-  transition:opacity .35s ease;mix-blend-mode:screen}
-@media(hover:hover) and (pointer:fine){.cursor-glow.active{opacity:1}}
-.card{isolation:isolate}
-.card::before{z-index:0}
-.card::after{z-index:1}
-.card>*{position:relative;z-index:2}
-.btn::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;opacity:0;
-  background:radial-gradient(150px circle at var(--bx,50%) var(--by,50%),rgba(255,255,255,.95),rgba(120,207,255,.55) 35%,transparent 75%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;transition:opacity .2s}
-.btn:hover::before,.btn:focus-visible::before{opacity:1}
-nav a.l:focus-visible{background:rgba(120,207,255,.18)}
-.card:focus-within{border-color:rgba(120,207,255,.9);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 0 0 1px rgba(120,207,255,.16),0 24px 60px -26px rgba(8,18,120,.95)}
-@media(hover:none){.cursor-glow{display:none}}
-@media(prefers-reduced-motion:reduce){.cursor-glow{display:none}.btn::before{display:none}}
-
-
-/* ===== acabamento: fundo profundo + microinterações ===== */
-:root{--bg:#05060B;--line:rgba(153,166,220,.14)}
-html,body{background-color:#05060B}
-body{
-  background-image:
-    radial-gradient(780px 440px at 12% -12%,rgba(49,61,132,.17),transparent 66%),
-    radial-gradient(650px 460px at 100% 42%,rgba(76,55,130,.10),transparent 68%),
-    linear-gradient(180deg,#05060B 0%,#080A12 52%,#05060B 100%);
-}
-.bg i{opacity:.24;filter:blur(105px)}
-.bg i:nth-child(1){background:#26358F}
-.bg i:nth-child(2){background:#514080}
-.bg i:nth-child(3){background:#174C68}
-nav,.card,.chip,.contact,.tag{
-  background:linear-gradient(140deg,rgba(17,21,38,.88),rgba(10,13,25,.78) 55%,rgba(22,24,48,.72));
-  border-color:rgba(157,174,226,.17);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.09),inset 0 -1px 0 rgba(255,255,255,.025),0 22px 60px -34px rgba(0,0,0,.95);
-}
-nav{background:rgba(9,12,23,.82);border-color:rgba(157,174,226,.2)}
-.card{box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 24px 65px -38px rgba(0,0,0,.95)}
-.chip{background:rgba(14,18,34,.82)}
-.tag{background:rgba(17,22,42,.76)}
-.contact{background:linear-gradient(135deg,rgba(18,22,40,.94),rgba(10,13,25,.9))}
-.cursor-glow{background:radial-gradient(320px circle at var(--cx,50%) var(--cy,50%),rgba(120,145,255,.105),rgba(156,139,255,.035) 42%,transparent 74%)}
-.btn{box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 8px 24px -18px rgba(90,110,255,.7)}
-.btn.pri{box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 10px 30px -18px rgba(90,110,255,.9)}
-.card:hover{border-color:rgba(120,207,255,.42)}
-/* Botões com atração magnética discreta e retorno suave */
-.btn{will-change:transform}
-@media(hover:hover) and (pointer:fine){
-  .btn:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 12px 34px -18px rgba(120,145,255,.55)}
-}
-@media(prefers-reduced-motion:reduce){
-  .btn{transform:none!important;will-change:auto}
-  .bg i{opacity:.12}
-}
-
-
-/* ===== alinhamento dos ícones + movimento ligado à rolagem ===== */
-#skills .card:has(.icons){display:flex;flex-direction:column;align-items:flex-start}
-#skills .card .icons{position:static;order:0;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:7px;margin:14px 0 8px;max-width:100%}
-#skills .card .k{order:-1}
-#skills .card h3{order:1;margin-top:4px}
-#skills .card ul{order:2}
-#skills .card .icons .ic{width:36px;height:36px}
-.orbit{perspective:900px}
-.orbit svg{transform:translate(calc(var(--px,0)*16px),calc(var(--py,0)*16px)) rotate(var(--scroll-rotate,0deg));transition:transform .18s ease-out;will-change:transform}
-.orbit .ring{transform-origin:200px 200px;animation:spin 34s linear infinite}
-.orbit svg>circle:nth-of-type(2){transform-origin:215px 205px;animation:orbit-pulse 5s ease-in-out infinite}
-.orbit svg>circle:nth-of-type(3){transform-origin:215px 205px;animation:orbit-pulse 5s ease-in-out -2.5s infinite}
-@keyframes orbit-pulse{0%,100%{opacity:.72;stroke-width:22}50%{opacity:1;stroke-width:30}}
-@media(max-width:860px){#skills .card .icons{margin-top:12px}}
-@media(prefers-reduced-motion:reduce){.orbit svg>circle{animation:none!important}.orbit svg{transition:none}}
-
-
-/* Scroll reveal — elementos entram conforme alcançam a área visível */
-.js .rv{
-  opacity:0;
-  translate:0 34px;
-  scale:.985;
-  filter:blur(5px);
-  transition:
-    opacity .85s cubic-bezier(.2,.75,.2,1),
-    translate .85s cubic-bezier(.2,.75,.2,1),
-    scale .85s cubic-bezier(.2,.75,.2,1),
-    filter .85s cubic-bezier(.2,.75,.2,1);
-  transition-delay:var(--reveal-delay,0ms);
-  will-change:opacity,translate,filter;
-}
-.js .rv.in{opacity:1;translate:0 0;scale:1;filter:blur(0)}
-.js .rv-child{
-  opacity:0;translate:0 18px;
-  transition:opacity .65s ease,translate .65s cubic-bezier(.2,.75,.2,1);
-  transition-delay:var(--child-delay,0ms)
-}
-.js .rv.in .rv-child{opacity:1;translate:0 0}
-@media(prefers-reduced-motion:reduce){
-  .js .rv,.js .rv-child{opacity:1;translate:none;scale:1;filter:none;transition:none;will-change:auto}
-}
-
-
-/* Ícones do toolkit: alinhamento consistente e mesma família visual */
-#skills .card{display:flex;flex-direction:column;align-items:flex-start}
-#skills .card .icons{position:static;order:0;display:flex;flex-wrap:wrap;justify-content:flex-start;gap:7px;margin:14px 0 10px;max-width:100%}
-#skills .card .k{order:-1}
-#skills .card h3{order:1}
-#skills .card ul{order:2}
-#skills .card .icons .ic{width:36px;height:36px;flex:0 0 36px}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div><div class="prog" id="prog"></div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="lg" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".008 .012" numOctaves="2" seed="3" result="n"/><feGaussianBlur in="n" stdDeviation="2" result="b"/><feDisplacementMap in="SourceGraphic" in2="b" scale="26" xChannelSelector="R" yChannelSelector="G"/></filter></svg>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="progress" id="prog"></div>
+
 <nav aria-label="Principal"><span class="ind" id="ind"></span>
   <a class="brand" href="#perfil"><span class="orb"></span>André Graccia</a>
-  <a class="l" href="#resumo">Resumo</a><a class="l" href="#experiencia">Experiência</a>
-  <a class="l" href="#skills">Skills</a><a class="l" href="#projetos">Projetos</a><a class="l" href="#contato">Contato</a>
-  <a class="btn pri" href="./Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener">Currículo ↗</a>
+  <a class="l" href="#experiencia">Experiência</a>
+  <a class="l" href="#skills">Skills</a>
+  <a class="l" href="#projetos">Projetos</a>
+  <a class="l" href="#contato">Contato</a>
+  <a class="btn pri" href="Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener">Currículo ↗</a>
 </nav>
 
 <main>
 <header class="hero" id="perfil"><div class="wrap grid">
   <div>
-    <p class="eyebrow">Software developer · São Paulo, BR</p>
+    <p class="eyebrow">Software engineer · São Paulo, BR</p>
     <h1 style="margin-top:22px">André <em>Graccia.</em></h1>
-    <p class="sub">Backend Java · Engenharia de software</p>
+    <p class="sub">Backend Java · APIs · IA aplicada a software</p>
     <div class="meta">
       <a href="mailto:andregraccia2105@gmail.com">andregraccia2105@gmail.com</a>
-      <span>São Paulo, BR</span>
       <a href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noopener">linkedin.com/in/andregraccia</a>
       <a href="https://github.com/AndreGraccia" target="_blank" rel="noopener">github.com/AndreGraccia</a>
     </div>
-    <p class="lead" id="resumo">Desenvolvedor em formação, com foco em construir sistemas claros, confiáveis e bem estruturados. Interesso-me por backend, APIs e integração de serviços — da compreensão do problema à implementação.</p>
+    <p class="lead">Estudante de Ciência da Computação e profissional na Cielo. Construo sistemas claros, confiáveis e bem estruturados — da compreensão do problema à implementação, com foco em backend, APIs e integração de serviços.</p>
     <div class="cta">
-      <a class="btn pri" href="./Curriculo_Andre_Graccia.pdf" download>⬇ Currículo em PDF</a>
+      <a class="btn pri" href="Curriculo_Andre_Graccia.pdf" download>⬇ Currículo em PDF</a>
       <a class="btn" href="https://github.com/AndreGraccia" target="_blank" rel="noopener">GitHub ↗</a>
       <a class="btn" href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
-    <div class="tags"><span class="tag">Java 25</span><span class="tag">Spring Boot</span><span class="tag">REST APIs</span><span class="tag">PostgreSQL</span><span class="tag">English · B1</span></div>
+    <div class="tags"><span class="tag">Java 25</span><span class="tag">Spring Boot</span><span class="tag">REST APIs</span><span class="tag">PostgreSQL</span><span class="tag">Inglês · B1</span></div>
   </div>
-  <div class="orbit" aria-hidden="true">
-    <svg viewBox="0 0 400 400">
-      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#78CFFF"/><stop offset=".55" stop-color="#7C86FF"/><stop offset="1" stop-color="#E8A6FF"/></linearGradient></defs>
-      <g class="ring"><circle cx="200" cy="200" r="190" fill="none" stroke="#8FA2FF" stroke-opacity=".7" stroke-width="6" stroke-dasharray="1 15"/></g>
-      <circle cx="215" cy="205" r="110" fill="none" stroke="url(#g)" stroke-width="26"/>
-      <circle cx="215" cy="205" r="82" fill="none" stroke="#9db0ff" stroke-opacity=".5"/>
-      <circle cx="130" cy="262" r="62" fill="rgba(110,130,255,.3)" stroke="#9db0ff" stroke-opacity=".5"/>
-      <circle cx="356" cy="318" r="19" fill="#6677F0"/>
-    </svg>
-    <div class="chip a"><small>Focus / 01</small><b>Backend engineering</b></div>
-    <div class="chip b"><small>Build / Iterate</small><b>Learning through projects</b></div>
+  <div class="showcase glass" aria-hidden="true">
+    <div class="tile" style="--i:0"><img src="assets/icons/java.svg" alt=""></div>
+    <div class="tile" style="--i:1"><img src="assets/icons/spring.svg" alt=""></div>
+    <div class="tile" style="--i:2"><img src="assets/icons/postgresql.svg" alt=""></div>
+    <div class="tile" style="--i:3"><img src="assets/icons/docker.svg" alt=""></div>
+    <div class="tile" style="--i:4"><img src="assets/icons/aws.svg" alt=""></div>
+    <div class="tile" style="--i:5"><img src="assets/icons/openai.svg" alt=""></div>
+    <div class="chip a"><small>Foco</small><b>Backend engineering</b></div>
+    <div class="chip b"><small>Método</small><b>Aprender construindo</b></div>
   </div>
 </div></header>
 
@@ -309,10 +67,10 @@ nav{background:rgba(9,12,23,.82);border-color:rgba(157,174,226,.2)}
   <p class="eyebrow">Experiência</p>
   <div class="head"><h2>Experiência <em>e formação</em></h2><p>Atuação profissional e formação acadêmica.</p></div>
   <div class="cards c2">
-    <article class="card"><span class="k">Experiência profissional</span><h3>Cielo</h3><p style="font-size:15px">Atuação em ambiente corporativo</p>
-      <p style="margin-top:14px">Experiência profissional na Cielo. Para cargo, período e atribuições detalhadas, consulte o <a href="./Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener" style="text-decoration:underline">currículo em PDF</a>.</p></article>
-    <article class="card"><span class="k">Formação acadêmica</span><h3>Universidade Anhembi Morumbi</h3><p style="font-size:15px">Ciência da Computação · Em andamento</p>
-      <p style="margin-top:14px">Formação em computação com estudos em programação, fundamentos de software e desenvolvimento de sistemas.</p></article>
+    <article class="card"><span class="k">Experiência profissional</span><h3>Cielo</h3><p class="sm">Atuação em ambiente corporativo</p>
+      <p class="body">Experiência profissional na Cielo. Para cargo, período e atribuições detalhadas, consulte o <a href="Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener">currículo em PDF</a>.</p></article>
+    <article class="card"><span class="k">Formação acadêmica</span><h3>Universidade Anhembi Morumbi</h3><p class="sm">Ciência da Computação · Em andamento</p>
+      <p class="body">Estudos em programação, fundamentos de software e desenvolvimento de sistemas. Certificação Oracle Cloud Infrastructure 2025 Foundations Associate.</p></article>
   </div>
 </div></section>
 
@@ -320,190 +78,69 @@ nav{background:rgba(9,12,23,.82);border-color:rgba(157,174,226,.2)}
   <p class="eyebrow">Competências</p>
   <div class="head"><h2>Competências <em>e ferramentas</em></h2><p>Tecnologias, práticas e idiomas.</p></div>
   <div class="cards c3">
-    <article class="card"><span class="k">Build</span><div class="icons"><span class="ic" data-n="Java" data-skill="java" data-fallback="J" role="img" aria-label="Java" title="Java"><img src="https://cdn.simpleicons.org/openjdk" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="Spring Boot" data-skill="spring" data-fallback="SB" role="img" aria-label="Spring Boot" title="Spring Boot"><img src="https://cdn.simpleicons.org/spring" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="JavaScript" data-skill="javascript" data-fallback="JS" role="img" aria-label="JavaScript" title="JavaScript"><img src="https://cdn.simpleicons.org/javascript" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="TypeScript" data-skill="typescript" data-fallback="TS" role="img" aria-label="TypeScript" title="TypeScript"><img src="https://cdn.simpleicons.org/typescript" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="Python" data-skill="python" data-fallback="PY" role="img" aria-label="Python" title="Python"><img src="./assets/icons/python.svg" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Desenvolvimento</h3><ul><li data-skill="java">Java 25</li><li data-skill="spring">Spring Boot</li><li data-skill="javascript">JavaScript</li><li data-skill="typescript">TypeScript</li><li data-skill="python">Python</li></ul></article>
-    <article class="card"><span class="k">Data</span><div class="icons"><span class="ic" data-n="PostgreSQL" data-skill="postgresql" data-fallback="PG" role="img" aria-label="PostgreSQL" title="PostgreSQL"><img src="https://cdn.simpleicons.org/postgresql" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Dados</h3><ul><li data-skill="postgresql">PostgreSQL</li><li>Modelagem relacional</li><li>SQL</li></ul></article>
-    <article class="card"><span class="k">Delivery</span><div class="icons"><span class="ic" data-n="Git" data-skill="git" data-fallback="G" role="img" aria-label="Git" title="Git"><img src="https://cdn.simpleicons.org/git" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="GitHub" data-skill="github" data-fallback="GH" role="img" aria-label="GitHub" title="GitHub"><img src="https://cdn.simpleicons.org/github/fff" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="Docker" data-skill="docker" data-fallback="D" role="img" aria-label="Docker" title="Docker"><img src="https://cdn.simpleicons.org/docker" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="Maven" data-skill="maven" data-fallback="MV" role="img" aria-label="Maven" title="Maven"><img src="https://cdn.simpleicons.org/apachemaven" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic inv" data-n="AWS" data-skill="aws" data-fallback="AWS" role="img" aria-label="AWS" title="AWS"><img src="./assets/icons/aws.svg" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Ferramentas</h3><ul><li data-skill="git">Git</li><li data-skill="github">GitHub</li><li data-skill="docker">Docker</li><li data-skill="maven">Maven</li><li data-skill="aws">AWS</li></ul></article>
-    <article class="card"><span class="k">Interface</span><div class="icons"><span class="ic" data-n="React" data-skill="react" data-fallback="R" role="img" aria-label="React" title="React"><img src="https://cdn.simpleicons.org/react" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="HTML5" data-skill="html5" data-fallback="5" role="img" aria-label="HTML5" title="HTML5"><img src="https://cdn.simpleicons.org/html5" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="CSS3" data-skill="css3" data-fallback="3" role="img" aria-label="CSS3" title="CSS3"><img src="https://cdn.simpleicons.org/css3" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="n8n" data-skill="n8n" data-fallback="n8n" role="img" aria-label="n8n" title="n8n"><img src="./assets/icons/n8n.svg" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="OpenAI" data-skill="openai" data-fallback="AI" role="img" aria-label="OpenAI" title="OpenAI"><img src="./assets/icons/openai.svg" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Interface e automação</h3><ul><li data-skill="react">React</li><li data-skill="html5">HTML5</li><li data-skill="css3">CSS3</li><li data-skill="n8n">n8n</li><li data-skill="openai">OpenAI</li></ul></article>
-    <article class="card"><span class="k">Practice</span><div class="icons"><span class="ic" data-n="Postman" data-skill="postman" data-fallback="P" role="img" aria-label="Postman" title="Postman"><img src="https://cdn.simpleicons.org/postman" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="JUnit" data-skill="junit" data-fallback="J5" role="img" aria-label="JUnit" title="JUnit"><img src="https://cdn.simpleicons.org/junit5/fff" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span><span class="ic" data-n="GitHub Actions" data-skill="github-actions" data-fallback="CI" role="img" aria-label="GitHub Actions" title="GitHub Actions"><img src="https://cdn.simpleicons.org/githubactions" alt="" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add('fallback')"></span></div><h3>Práticas</h3><ul><li data-skill="postman">APIs REST</li><li data-skill="junit">Testes automatizados</li><li data-skill="github-actions">CI com GitHub Actions</li></ul></article>
-    <article class="card"><span class="k">Language</span><h3>Idiomas</h3><ul><li>Português</li><li>Inglês · B1</li></ul></article>
+    <article class="card"><span class="k">Desenvolvimento</span><h3>Linguagens e frameworks</h3><div class="skills">
+      <span class="skill"><img src="assets/icons/java.svg" alt="" width="28" height="28" loading="lazy">Java 25</span>
+      <span class="skill"><img src="assets/icons/spring.svg" alt="" width="28" height="28" loading="lazy">Spring Boot</span>
+      <span class="skill"><img src="assets/icons/javascript.svg" alt="" width="28" height="28" loading="lazy">JavaScript</span>
+      <span class="skill"><img src="assets/icons/typescript.svg" alt="" width="28" height="28" loading="lazy">TypeScript</span>
+      <span class="skill"><img src="assets/icons/python.svg" alt="" width="28" height="28" loading="lazy">Python</span></div></article>
+    <article class="card"><span class="k">Dados</span><h3>Persistência</h3><div class="skills">
+      <span class="skill"><img src="assets/icons/postgresql.svg" alt="" width="28" height="28" loading="lazy">PostgreSQL</span></div>
+      <ul class="plain"><li>SQL</li><li>Modelagem relacional</li></ul></article>
+    <article class="card"><span class="k">Entrega</span><h3>Ferramentas e cloud</h3><div class="skills">
+      <span class="skill"><img src="assets/icons/git.svg" alt="" width="28" height="28" loading="lazy">Git</span>
+      <span class="skill"><img src="assets/icons/github.svg" alt="" width="28" height="28" loading="lazy">GitHub</span>
+      <span class="skill"><img src="assets/icons/docker.svg" alt="" width="28" height="28" loading="lazy">Docker</span>
+      <span class="skill"><img src="assets/icons/maven.svg" alt="" width="28" height="28" loading="lazy">Maven</span>
+      <span class="skill"><img src="assets/icons/aws.svg" alt="" width="28" height="28" loading="lazy">AWS</span>
+      <span class="skill"><img src="assets/icons/vercel.svg" alt="" width="28" height="28" loading="lazy">Vercel</span></div></article>
+    <article class="card"><span class="k">Interface</span><h3>Web, automação e IA</h3><div class="skills">
+      <span class="skill"><img src="assets/icons/react.svg" alt="" width="28" height="28" loading="lazy">React</span>
+      <span class="skill"><img src="assets/icons/html5.svg" alt="" width="28" height="28" loading="lazy">HTML5</span>
+      <span class="skill"><img src="assets/icons/css3.svg" alt="" width="28" height="28" loading="lazy">CSS3</span>
+      <span class="skill"><img src="assets/icons/n8n.svg" alt="" width="28" height="28" loading="lazy">n8n</span>
+      <span class="skill"><img src="assets/icons/openai.svg" alt="" width="28" height="28" loading="lazy">OpenAI</span></div></article>
+    <article class="card"><span class="k">Práticas</span><h3>Qualidade</h3><div class="skills">
+      <span class="skill"><img src="assets/icons/postman.svg" alt="" width="28" height="28" loading="lazy">APIs REST</span>
+      <span class="skill"><img src="assets/icons/junit.svg" alt="" width="28" height="28" loading="lazy">Testes (JUnit)</span>
+      <span class="skill"><img src="assets/icons/github-actions.svg" alt="" width="28" height="28" loading="lazy">GitHub Actions</span></div></article>
+    <article class="card"><span class="k">Idiomas</span><h3>Comunicação</h3>
+      <ul class="plain"><li>Português · nativo</li><li>Inglês · B1</li></ul></article>
   </div>
 </div></section>
 
 <section id="projetos"><div class="wrap">
   <p class="eyebrow">Projetos</p>
   <div class="head"><h2>Projetos <em>selecionados</em></h2><p>Código, decisões e evolução.</p></div>
-  <div class="cards c2">
-    <a class="card proj" href="https://github.com/AndreGraccia/calc-juros" target="_blank" rel="noopener"><span class="go">↗</span>
-      <span class="k">Financial logic</span><h3>Calculadora de Juros</h3>
-      <p>API para simular juros simples e compostos. Um projeto para praticar modelagem de domínio, regras financeiras e organização de uma aplicação backend. Integração com indicadores do Banco Central está no roadmap.</p>
-      <div class="stack"><span>Java 25</span><span>Spring Boot</span><span>Maven</span></div><span class="st">Em evolução</span></a>
-    <a class="card proj" href="https://github.com/AndreGraccia/Wall.ia" target="_blank" rel="noopener"><span class="go">↗</span>
-      <span class="k">Fintech concept</span><h3>Wall.ia</h3>
-      <p>Conceito de carteira digital que organiza compromissos financeiros e explica a composição dos valores. Integração Open Finance em sandbox; não realiza movimentações financeiras reais.</p>
-      <div class="stack"><span>React</span><span>Spring Boot</span><span>PostgreSQL</span></div><span class="st">Projeto de portfólio</span></a>
-    <a class="card proj" href="https://github.com/AndreGraccia/Orbit.ia" target="_blank" rel="noopener"><span class="go">↗</span>
-      <span class="k">AI agent</span><h3>Orbit.ia</h3>
+  <div class="cards c3">
+    <a class="card proj" href="https://github.com/AndreGraccia/calc-juros" target="_blank" rel="noopener"><span class="go" aria-hidden="true">↗</span>
+      <span class="k">Backend · API financeira</span><h3>Calculadora de Juros</h3>
+      <p>API para simular juros simples e compostos, com modelagem de domínio e regras financeiras explícitas. Integração com indicadores do Banco Central está no roadmap.</p>
+      <div class="skills"><span class="skill"><img src="assets/icons/java.svg" alt="" loading="lazy">Java</span><span class="skill"><img src="assets/icons/spring.svg" alt="" loading="lazy">Spring</span><span class="skill"><img src="assets/icons/maven.svg" alt="" loading="lazy">Maven</span></div><span class="st">Em evolução</span></a>
+    <a class="card proj" href="https://github.com/AndreGraccia/Wall.ia" target="_blank" rel="noopener"><span class="go" aria-hidden="true">↗</span>
+      <span class="k">Conceito · Fintech</span><h3>Wall.ia</h3>
+      <p>Carteira digital que organiza compromissos financeiros e explica a composição dos valores. Integração Open Finance em sandbox; não realiza movimentações reais.</p>
+      <div class="skills"><span class="skill"><img src="assets/icons/react.svg" alt="" loading="lazy">React</span><span class="skill"><img src="assets/icons/spring.svg" alt="" loading="lazy">Spring</span><span class="skill"><img src="assets/icons/postgresql.svg" alt="" loading="lazy">Postgres</span></div><span class="st">Projeto de portfólio</span></a>
+    <a class="card proj" href="https://github.com/AndreGraccia/Orbit.ia" target="_blank" rel="noopener"><span class="go" aria-hidden="true">↗</span>
+      <span class="k">IA · Automação</span><h3>Orbit.ia</h3>
       <p>Agente pessoal com interface React/Vite e workflows orquestrados pelo n8n. Integrações externas exigem configuração e validação no ambiente.</p>
-      <div class="stack"><span>React</span><span>n8n</span><span>Docker</span><span>PostgreSQL</span></div><span class="st">Em evolução</span></a>
+      <div class="skills"><span class="skill"><img src="assets/icons/react.svg" alt="" loading="lazy">React</span><span class="skill"><img src="assets/icons/n8n.svg" alt="" loading="lazy">n8n</span><span class="skill"><img src="assets/icons/docker.svg" alt="" loading="lazy">Docker</span></div><span class="st">Em evolução</span></a>
   </div>
 </div></section>
 
 <section id="contato"><div class="wrap">
   <div class="contact">
     <div><h2>Vamos construir algo <em>relevante.</em></h2><p>Aberto a conversas sobre engenharia de software, projetos e oportunidades profissionais.</p></div>
-    <div class="cta" style="margin:0">
+    <div class="cta">
       <a class="btn pri" href="mailto:andregraccia2105@gmail.com">Fale comigo ↗</a>
-      <button class="btn" id="copy" type="button">⧉ Copiar e-mail</button>
+      <button class="btn" id="copy" type="button" data-mail="andregraccia2105@gmail.com">⧉ Copiar e-mail</button>
     </div>
   </div>
 </div></section>
 </main>
-<footer><div class="wrap">© 2026 André Graccia</div></footer>
-<div id="toast" role="status" aria-live="polite">E-mail copiado</div>
 
-<script>
-const mail="andregraccia2105@gmail.com",t=document.getElementById("toast");
-document.getElementById("copy").addEventListener("click",async()=>{
-  try{await navigator.clipboard.writeText(mail);t.textContent="E-mail copiado"}
-  catch(e){t.textContent=mail}
-  t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200);
-});
-const links=[...document.querySelectorAll("nav a.l")];
-const io=new IntersectionObserver(es=>es.forEach(e=>{
-  if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id));
-}),{rootMargin:"-45% 0px -50% 0px"});
-["experiencia","skills","projetos","contato"].forEach(id=>io.observe(document.getElementById(id)));
-
-document.documentElement.classList.add("js");
-const fine=matchMedia("(hover:hover) and (pointer:fine)").matches,calm=matchMedia("(prefers-reduced-motion:reduce)").matches;
-/* progresso de rolagem */
-const prog=document.getElementById("prog");
-addEventListener("scroll",()=>prog.style.setProperty("--p",scrollY/(document.documentElement.scrollHeight-innerHeight||1)),{passive:true});
-/* indicador deslizante do menu */
-const nav=document.querySelector("nav"),ind=document.getElementById("ind");
-function place(){const a=nav.querySelector("a.l.on");if(!a||getComputedStyle(a).display==="none"){ind.style.opacity=0;return}
-  const ar=a.getBoundingClientRect(),nr=nav.getBoundingClientRect();ind.style.opacity=1;ind.style.width=ar.width+"px";ind.style.transform="translateX("+(ar.left-nr.left)+"px)"}
-new MutationObserver(place).observe(nav,{attributes:true,subtree:true,attributeFilter:["class"]});addEventListener("resize",place);
-/* Revelação progressiva: hero, títulos, cards e conteúdo interno */
-const revealTargets=[
-  ...document.querySelectorAll(".hero .eyebrow,.hero h1,.hero .sub,.hero .meta,.hero .lead,.hero .cta,.hero .tags,.hero .orbit"),
-  ...document.querySelectorAll("section > .wrap > .eyebrow,section .head,section .cards > *,section .contact")
-];
-const revealObserver=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(!entry.isIntersecting)return;
-    entry.target.classList.add("in");
-    revealObserver.unobserve(entry.target);
-  });
-},{threshold:.08,rootMargin:"0px 0px -8% 0px"});
-revealTargets.forEach((el,index)=>{
-  el.classList.add("rv");
-  el.style.setProperty("--reveal-delay",Math.min(index%4,3)*85+"ms");
-  revealObserver.observe(el);
-});
-/* Conteúdo de cada card também aparece em sequência, sem esconder o card inteiro. */
-document.querySelectorAll("section .card").forEach(card=>{
-  const children=[...card.querySelectorAll(".k,.icons,h3,p,ul,.stack,.st")];
-  children.forEach((el,index)=>{
-    el.classList.add("rv-child");
-    el.style.setProperty("--child-delay",Math.min(index,6)*65+"ms");
-  });
-});
-
-if(fine&&!calm){
-  /* Glow acompanha o ponteiro sem substituir, esconder ou capturar o cursor nativo. */
-  const glow=document.getElementById("cursorGlow");
-  let glowFrame=0,lastX=0,lastY=0;
-  addEventListener("pointermove",e=>{
-    lastX=e.clientX;lastY=e.clientY;
-    if(glowFrame)return;
-    glowFrame=requestAnimationFrame(()=>{
-      glow.style.setProperty("--cx",lastX+"px");
-      glow.style.setProperty("--cy",lastY+"px");
-      glow.classList.add("active");glowFrame=0;
-    });
-  },{passive:true});
-  addEventListener("pointerleave",()=>glow.classList.remove("active"));
-  addEventListener("blur",()=>glow.classList.remove("active"));
-  /* Spotlight border acompanha o ponto de interação nos controles acionáveis. */
-  document.querySelectorAll(".btn").forEach(el=>{
-    el.addEventListener("pointermove",e=>{
-      const r=el.getBoundingClientRect();
-      const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-      el.style.setProperty("--tx",(x*5)+"px");
-      el.style.setProperty("--ty",(y*4)+"px");
-    },{passive:true});
-    el.addEventListener("pointerleave",()=>{
-      el.style.setProperty("--tx","0px");el.style.setProperty("--ty","0px");
-    });
-  });
-  document.querySelectorAll(".btn,nav a.l,.ic").forEach(el=>{
-    el.addEventListener("pointermove",e=>{
-      const r=el.getBoundingClientRect();
-      el.style.setProperty("--bx",((e.clientX-r.left)/r.width*100)+"%");
-      el.style.setProperty("--by",((e.clientY-r.top)/r.height*100)+"%");
-    },{passive:true});
-  });
-  /* Spotlight restrito ao card: overlay decorativo e transparente a eventos. */
-  document.querySelectorAll(".card").forEach(c=>{
-    c.addEventListener("pointermove",e=>{
-      const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-      c.style.setProperty("--mx",x*100+"%");
-      c.style.setProperty("--my",y*100+"%");
-      if(c.classList.contains("proj")){
-        c.style.setProperty("--ry",(x-.5)*3+"deg");
-        c.style.setProperty("--rx",(.5-y)*3+"deg");
-      }
-    },{passive:true});
-    c.addEventListener("pointerleave",()=>{
-      c.style.setProperty("--rx","0deg");
-      c.style.setProperty("--ry","0deg");
-    });
-  });
-  /* Parallax discreto no elemento decorativo do hero. */
-  const o=document.querySelector(".orbit");
-  addEventListener("pointermove",e=>{
-    o.style.setProperty("--px",(e.clientX/innerWidth-.5)*2);
-    o.style.setProperty("--py",(e.clientY/innerHeight-.5)*2);
-  },{passive:true});
-}
-/* feedback no botão de copiar */
-const cp=document.getElementById("copy");
-cp.addEventListener("click",()=>{const t0="⧉ Copiar e-mail";cp.textContent="✓ Copiado";setTimeout(()=>cp.textContent=t0,2000)});
-setTimeout(place,300);
-
-/* ===== ícones: destaque ao passar sobre a lista ===== */
-document.querySelectorAll("#skills .card").forEach(c=>{
-  const icons=[...c.querySelectorAll(".ic[data-skill]")];
-  const items=[...c.querySelectorAll("li[data-skill]")];
-  items.forEach(li=>{
-    const icon=icons.find(node=>node.dataset.skill===li.dataset.skill);
-    if(!icon)return;
-    li.addEventListener("pointerenter",()=>icon.classList.add("hl"));
-    li.addEventListener("pointerleave",()=>icon.classList.remove("hl"));
-    li.addEventListener("focusin",()=>icon.classList.add("hl"));
-    li.addEventListener("focusout",()=>icon.classList.remove("hl"));
-  });
-});
-
-/* Movimento circular do hero sincronizado à rolagem, com atualização leve por frame. */
-if(!calm){
-  let scrollTick=false;
-  const syncScrollMotion=()=>{
-    const max=Math.max(1,document.documentElement.scrollHeight-innerHeight);
-    const progress=Math.min(1,Math.max(0,scrollY/max));
-    document.documentElement.style.setProperty("--page-progress",progress);
-    const hero=document.querySelector(".hero");
-    const heroProgress=Math.min(1,Math.max(0,scrollY/Math.max(1,hero.offsetHeight)));
-    document.querySelector(".orbit")?.style.setProperty("--scroll-rotate",(heroProgress*110)+"deg");
-    scrollTick=false;
-  };
-  addEventListener("scroll",()=>{
-    if(!scrollTick){requestAnimationFrame(syncScrollMotion);scrollTick=true}
-  },{passive:true});
-  syncScrollMotion();
-}
-
-</script>
+<footer><div class="wrap">© 2026 André Graccia · São Paulo, Brasil</div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js" defer></script>
 </body>
 </html>
