@@ -23,20 +23,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - name: Gerar SVGs (hero, projetos, métricas, skyline)
+      - name: Gerar SVGs (hero, projetos e estatísticas)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_LOGIN: ${{ github.repository_owner }}
           GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
         run: |
           python3 scripts/build_visuals.py
-          python3 scripts/update_metrics.py
-          node scripts/generate-skyline.js
+          python3 scripts/build_stats.py
 
       - name: Validar SVGs
         run: |

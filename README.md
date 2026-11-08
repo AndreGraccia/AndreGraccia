@@ -85,11 +85,9 @@ Foco em **backend Java com Spring Boot**, **automação de testes em Python** e 
 
 ## Atividade
 
-<img src="assets/metrics.svg" width="100%" alt="Métricas de atividade do GitHub" />
+<img src="assets/stats.svg" width="100%" alt="Atividade no GitHub: repositórios, contribuições dos últimos 12 meses, heatmap e linguagens" />
 
-<img src="assets/skyline.svg" width="100%" alt="Skyline das contribuições dos últimos 365 dias" />
-
-<sub>Métricas e skyline atualizados diariamente por GitHub Actions (últimos 12 meses).</sub>
+<sub>Gerado diariamente por GitHub Actions a partir de dados públicos do perfil.</sub>
 
 ## Formação e certificações
 
@@ -106,7 +104,7 @@ index.html · styles.css · app.js   site do portfólio (Vercel)
 resume/curriculo.html              fonte do currículo ATS → Curriculo_Andre_Graccia.pdf
 assets/                            imagens do README, ícones e og.png
 scripts/                           geradores de SVG e ícones
-.github/workflows/profile.yml      atualização diária de métricas e skyline
+.github/workflows/profile.yml      atualização diária das estatísticas e SVGs
 ```
 
 <div align="center">
