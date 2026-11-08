@@ -1,0 +1,59 @@
+name: Profile assets
+
+on:
+  push:
+    branches: [main]
+    paths: ["scripts/**", ".github/workflows/profile.yml"]
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Um único job, uma única execução por vez: evita commits concorrentes dos bots.
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Gerar SVGs (hero, projetos, métricas, skyline)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_LOGIN: ${{ github.repository_owner }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: |
+          python3 scripts/build_visuals.py
+          python3 scripts/update_metrics.py
+          node scripts/generate-skyline.js
+
+      - name: Validar SVGs
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+          for p in sorted(Path("assets").rglob("*.svg")):
+              ET.parse(p)
+          print("SVGs válidos")
+          PY
+
+      - name: Commitar mudanças
+        run: |
+          git add assets
+          git diff --cached --quiet && { echo "Sem mudanças."; exit 0; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: atualiza assets do perfil [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
