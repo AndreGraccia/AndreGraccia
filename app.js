@@ -26,7 +26,7 @@ addEventListener("resize", place);
 setTimeout(place, 300);
 
 /* ---------- revelação progressiva ---------- */
-const targets = $$(".hero .status, .hero h1 .rv-line, .hero .role, .hero .lead, .hero .rotator, .hero .cta, section .eyebrow, section h2, .card:not(.proj), .proj, .contact p, .contact .cta");
+const targets = $$(".hero .status, .hero h1 .rv-line, .hero .role, .hero .lead, .hero .rotator, .hero .cta, section .eyebrow, .card:not(.proj), .proj, .contact p, .contact .cta");
 const reveal = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add("in"); reveal.unobserve(e.target); }
 }), { threshold: .1, rootMargin: "0px 0px -6% 0px" });
@@ -153,3 +153,133 @@ addEventListener("keydown", e => {
   const typing = /INPUT|TEXTAREA/.test(document.activeElement.tagName);
   if ((e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey)) || (e.key === "/" && !typing)) { e.preventDefault(); pal.open ? pal.close() : openPal(); }
 });
+
+/* ==========================================================================
+   FX: títulos por palavra, direção alternada, parallax, trilho, tilt, magnético,
+   ticker sensível à rolagem, destaque stack ↔ projetos
+   ========================================================================== */
+(() => {
+  const base = img => img.getAttribute("src").split("/").pop().replace(".svg", "");
+
+  /* destaque stack -> projetos (funciona também com movimento reduzido) */
+  const projs = $$(".proj");
+  $$("#stack .skill").forEach(sk => {
+    const img = $("img", sk); if (!img) return;
+    const tech = base(img);
+    const on = () => {
+      let hit = false;
+      projs.forEach(p => {
+        const m = $$(".chips img", p).filter(i => base(i) === tech);
+        m.forEach(i => i.classList.add("hl")); if (m.length) hit = true;
+        p.dataset.m = m.length ? "1" : "";
+      });
+      if (hit) { projs.forEach(p => p.classList.toggle("dim", !p.dataset.m)); sk.classList.add("hl"); }
+    };
+    const off = () => { projs.forEach(p => p.classList.remove("dim")); $$(".chips img.hl").forEach(i => i.classList.remove("hl")); sk.classList.remove("hl"); };
+    sk.addEventListener("pointerenter", on); sk.addEventListener("pointerleave", off);
+  });
+
+  /* trilho lateral de seções */
+  const rail = document.createElement("nav");
+  rail.className = "rail"; rail.setAttribute("aria-label", "Seções");
+  [["topo", "Início"], ["sobre", "Sobre"], ["experiencia", "Experiência"], ["stack", "Stack"], ["projetos", "Projetos"], ["contato", "Contato"]].forEach(([id, t]) => {
+    const a = document.createElement("a"); a.href = "#" + id; a.setAttribute("aria-label", t); a.innerHTML = `<span>${t}</span>`; rail.append(a);
+  });
+  document.body.append(rail);
+  const railLinks = $$("a", rail);
+  new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) railLinks.forEach(a => a.classList.toggle("on", a.hash === "#" + e.target.id));
+  }), { rootMargin: "-45% 0px -50% 0px" }).observe($("#topo"));
+  $$("main section").forEach(s => new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) railLinks.forEach(a => a.classList.toggle("on", a.hash === "#" + e.target.id));
+  }), { rootMargin: "-45% 0px -50% 0px" }).observe(s));
+
+  if (calm) return;
+
+  /* títulos: palavra por palavra ao entrar na tela */
+  const split = el => {
+    let i = 0;
+    const walk = n => [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3) {
+        const f = document.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(t => {
+          if (!t.trim()) { f.append(t); return; }
+          const w = document.createElement("span"), s = document.createElement("span");
+          w.className = "w"; s.textContent = t; s.style.setProperty("--i", i++); w.append(s); f.append(w);
+        });
+        c.replaceWith(f);
+      } else if (c.nodeType === 1) walk(c);
+    });
+    walk(el); el.classList.add("split");
+  };
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .3 });
+  $$("section h2").forEach(h => { split(h); io.observe(h); });
+
+  /* direção alternada na entrada dos cards */
+  $$(".card").forEach(c => {
+    const sibs = [...c.parentElement.children], i = sibs.indexOf(c);
+    c.style.setProperty("--x", (i % 2 ? 30 : -30) + "px");
+  });
+
+  /* parallax + velocidade do ticker pela rolagem */
+  const root = document.documentElement, hero = $(".hero");
+  const anim = () => $("#track")?.getAnimations()[0];
+  let last = scrollY, vel = 0, tick = false, raf2 = 0;
+  const frame = () => {
+    root.style.setProperty("--sy", scrollY);
+    root.style.setProperty("--hs", Math.min(1, scrollY / Math.max(1, hero.offsetHeight * .8)));
+    tick = false;
+  };
+  const spin = () => {
+    const a = anim(); if (!a) return;
+    a.playbackRate = 1 + vel;
+    vel *= .9; if (Math.abs(vel) < .02) { vel = 0; a.playbackRate = 1; raf2 = 0; return; }
+    raf2 = requestAnimationFrame(spin);
+  };
+  addEventListener("scroll", () => {
+    const d = scrollY - last; last = scrollY;
+    vel = Math.max(-14, Math.min(14, vel + d * .12));
+    if (!tick) { tick = true; requestAnimationFrame(frame); }
+    if (!raf2) raf2 = requestAnimationFrame(spin);
+  }, { passive: true });
+  frame();
+
+  /* botões magnéticos + tilt nos cards (ponteiro fino) */
+  if (fine) {
+    $$(".btn").forEach(b => {
+      b.addEventListener("pointermove", e => {
+        const r = b.getBoundingClientRect();
+        b.style.setProperty("--tx", ((e.clientX - r.left) / r.width - .5) * 8 + "px");
+        b.style.setProperty("--ty", ((e.clientY - r.top) / r.height - .5) * 6 + "px");
+      }, { passive: true });
+      b.addEventListener("pointerleave", () => { b.style.setProperty("--tx", "0px"); b.style.setProperty("--ty", "0px"); });
+    });
+    $$(".card").forEach(c => {
+      c.addEventListener("pointermove", e => {
+        const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        c.style.setProperty("--ry", x * 5 + "deg"); c.style.setProperty("--rx", -y * 5 + "deg");
+      }, { passive: true });
+      c.addEventListener("pointerleave", () => { c.style.setProperty("--rx", "0deg"); c.style.setProperty("--ry", "0deg"); });
+    });
+  }
+})();
+
+/* manifesto scrub: as palavras acendem conforme a rolagem */
+(() => {
+  const st = $("#statement"); if (!st) return;
+  const label = st.textContent.trim();
+  st.setAttribute("aria-label", label);
+  st.innerHTML = label.split(/\s+/).map(w => `<span class="w" aria-hidden="true">${w}</span>`).join(" ");
+  const words = $$(".w", st);
+  if (calm) { words.forEach(w => w.classList.add("lit")); return; }
+  let t = false;
+  const update = () => {
+    t = false;
+    const r = st.getBoundingClientRect(), vh = innerHeight;
+    const p = Math.min(1, Math.max(0, (vh * .88 - r.top) / (r.height + vh * .3)));
+    const n = Math.round(p * words.length * 1.1);
+    words.forEach((w, i) => w.classList.toggle("lit", i < n));
+  };
+  addEventListener("scroll", () => { if (!t) { t = true; requestAnimationFrame(update); } }, { passive: true });
+  update();
+})();

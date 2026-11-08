@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>André Graccia — Desenvolvedor Backend Java & Engenheiro de IA</title>
 <meta name="description" content="André Graccia — Engenheiro de Software na Cielo. Backend Java (Spring Boot), automação de testes em Python e agentes de IA. São Paulo, Brasil.">
-<meta name="theme-color" content="#070914">
+<meta name="theme-color" content="#000000">
 <link rel="canonical" href="https://andre-graccia-curriculum.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="André Graccia — Backend Java & Engenheiro de IA">
@@ -13,10 +13,10 @@
 <meta property="og:url" content="https://andre-graccia-curriculum.vercel.app/">
 <meta property="og:image" content="https://andre-graccia-curriculum.vercel.app/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.35' cy='.3'%3E%3Cstop offset='0' stop-color='%23d4dcff'/%3E%3Cstop offset='.6' stop-color='%234f6bff'/%3E%3Cstop offset='1' stop-color='%231a1f8f'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.35' cy='.3'%3E%3Cstop offset='0' stop-color='%23e5deff'/%3E%3Cstop offset='.6' stop-color='%237c4dff'/%3E%3Cstop offset='1' stop-color='%232c0d74'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23g)'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"André Graccia","jobTitle":"Engenheiro de Software","worksFor":{"@type":"Organization","name":"Cielo"},"alumniOf":"Universidade Anhembi Morumbi","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressCountry":"BR"},"email":"mailto:andregraccia2105@gmail.com","url":"https://andre-graccia-curriculum.vercel.app/","sameAs":["https://www.linkedin.com/in/andregraccia/","https://github.com/AndreGraccia"]}
@@ -42,7 +42,7 @@
 <div class="progress" id="prog"></div>
 
 <nav class="glass" aria-label="Principal"><span class="ind" id="ind"></span>
-  <a class="brand" href="#topo"><span class="orb"></span>André Graccia</a>
+  <a class="brand" href="#topo" aria-label="André Graccia, início">andré graccia<i class="blk sm" aria-hidden="true"></i></a>
   <a class="l" href="#sobre">Sobre</a>
   <a class="l" href="#experiencia">Experiência</a>
   <a class="l" href="#stack">Stack</a>
@@ -57,11 +57,11 @@
   <div class="lens" id="lens" aria-hidden="true"></div>
   <div class="wrap">
     <p class="status glass"><span class="dot"></span>Engenheiro de Software na Cielo · desde jul/2026</p>
-    <h1><span class="rv-line">André</span> <em class="rv-line">Graccia</em></h1>
+    <h1 aria-label="André Graccia"><span class="rv-line" aria-hidden="true">andré</span> <span class="rv-line" aria-hidden="true">graccia<i class="blk"></i></span></h1>
     <div class="hero-grid">
       <div class="hero-copy">
-        <p class="role">Desenvolvedor Backend Java <span>&amp;</span> Engenheiro de Sistemas de IA</p>
-        <p class="lead">Construo backends em Java e Spring Boot, automatizo testes com Python e oriento agentes de IA. Estudante de Ciência da Computação em São Paulo.</p>
+        <p class="role">Desenvolvedor backend Java. <span>Software que não pode falhar.</span></p>
+        <p class="lead">Engenheiro de Software na Cielo. Construo backends em Java e Spring Boot, automatizo testes com Python e oriento agentes de IA. Cursando Ciência da Computação, em São Paulo.</p>
         <p class="rotator" aria-hidden="true"><span class="p">$</span> <span id="rot">java --version</span><i class="caret"></i></p>
         <div class="cta">
           <a class="btn pri" href="Curriculo_Andre_Graccia.pdf" download>⬇ Baixar currículo (PDF)</a>
@@ -103,6 +103,12 @@
   </div>
 </div>
 
+
+<section id="manifesto" class="manifesto"><div class="wrap">
+  <p class="eyebrow">~/andre/manifesto.md</p>
+  <p class="statement" id="statement">Backend é a parte que ninguém vê.</p>
+  <p class="statement-sub">É a que eu mais gosto de construir.</p>
+</div></section>
 
 <section id="sobre"><div class="wrap">
   <p class="eyebrow">01 · Sobre</p>
@@ -202,6 +208,22 @@
   <p class="eyebrow">04 · Projetos</p>
   <h2>Código que <em>você pode ler.</em></h2>
   <div class="projects">
+    <article class="card proj feature">
+      <div class="tbar"><i></i><i></i><i></i><span>~/andre/projetos/conciliador</span></div>
+      <div class="pbody feature-body">
+        <div class="f-copy">
+          <span class="k">Backend · Conciliação financeira</span>
+          <h3>conciliador<b class="pt">.</b></h3>
+          <p class="sm">Sua venda e seu extrato, finalmente de acordo.</p>
+          <p class="mono-stack">java 21 &nbsp;spring boot &nbsp;postgresql</p>
+          <div class="chips"><img src="assets/icons/java.svg" alt="Java 21" title="Java 21" width="36" height="36"><img src="assets/icons/spring.svg" alt="Spring Boot" title="Spring Boot" width="36" height="36"><img src="assets/icons/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" width="36" height="36"></div>
+        </div>
+        <div class="contract" role="img" aria-label="Exemplo de contrato da API: GET /conciliacoes/2026-09-28 retorna 200 OK com 5 divergentes por TAXA_ACIMA_DO_CONTRATO">
+          <div class="c-head">contrato</div>
+          <div class="c-body"><span class="kw">GET</span> /conciliacoes/2026-09-28<br><span class="kw">200 OK</span><br>{ <span class="s">"divergentes"</span>: <span class="n">5</span>,<br>&nbsp;&nbsp;<span class="s">"motivo"</span>: <span class="s">"TAXA_ACIMA_DO_CONTRATO"</span> }</div>
+        </div>
+      </div>
+    </article>
     <article class="card proj">
       <div class="tbar"><i></i><i></i><i></i><span>~/projetos/orbit-ia — zsh</span></div>
       <div class="pbody"><span class="go" aria-hidden="true">↗</span><span class="k">2026 · Agentes de IA</span>
