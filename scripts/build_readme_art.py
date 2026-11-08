@@ -158,3 +158,25 @@ for name, svg in (
     with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
         f.write(svg)
     print("ok", name, len(svg) // 1024, "KB")
+
+# ---------------------------------------------------------------- botões de link do README (ícone + rótulo; cada um vai dentro de um <a>)
+ICONS = {
+    "email": '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+    "portfolio": '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/>',
+    "curriculo": '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+    "linkedin": '<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6m0 3c0-2 1.2-3 3-3s2 1.2 2 3v3"/>',
+}
+
+
+def link_pill(icon, label):
+    w = int(58 + len(label) * 9.4)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="44" viewBox="0 0 {w} 44" role="img" aria-label="{escape(label)}">{font_css("geist-500")}'
+            f'<rect x=".5" y=".5" width="{w - 1}" height="43" rx="21.5" fill="#161618" stroke="#ffffff" stroke-opacity=".16"/>'
+            f'<g transform="translate(16 10)" fill="none" stroke="{BLUE}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">{ICONS[icon]}</g>'
+            f'<text x="46" y="28" font-family="{SANS}" font-size="15" font-weight="500" fill="#f5f5f7">{escape(label)}</text></svg>\n')
+
+
+for icon, label in (("portfolio", "Portfólio"), ("curriculo", "Currículo"), ("email", "E-mail"), ("linkedin", "LinkedIn")):
+    with open(os.path.join(OUT, f"link-{icon}.svg"), "w", encoding="utf-8") as f:
+        f.write(link_pill(icon, label))
+    print("ok", f"link-{icon}.svg")
