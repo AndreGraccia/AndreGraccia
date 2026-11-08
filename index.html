@@ -86,6 +86,31 @@ body { background: var(--p-bg); }
 .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 64px 0 0; padding-top: 32px; border-top: 1px solid rgb(0 0 0 / .12); }
 .facts dd { margin: 4px 0 0; font: 500 var(--t-stat)/1.1 var(--font-display); letter-spacing: var(--display-tracking); }
 .facts dt { margin: 0; }
+/* logos escuros ganham uma base clara para não sumir no vidro */
+.chips .ic { background: #f5f5f7; border-radius: 7px; padding: 3px; box-sizing: content-box; height: 22px; width: auto; }
+/* animações ao rolar (CSS scroll-driven, sem JS): barra de progresso, o herói que sobe e se apaga, blocos que entram com a rolagem.
+   Só onde o navegador suporta animation-timeline e sem preferência por menos movimento; fora disso tudo fica visível e parado. */
+.scroll-progress { position: fixed; z-index: 30; inset: 0 0 auto 0; height: 3px; background: var(--p-accent); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes sp-grow { to { transform: scaleX(1); } }
+    @keyframes sp-rise { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+    @keyframes sp-lift { to { opacity: .15; transform: translateY(-48px); } }
+    @keyframes sp-drift { to { transform: translateY(180px); opacity: .25; } }
+    @keyframes sp-pop { from { opacity: 0; transform: translateY(16px) scale(.92); } to { opacity: 1; transform: none; } }
+    @keyframes sp-slide { from { opacity: 0; transform: translateX(48px); } to { opacity: 1; transform: none; } }
+    .scroll-progress { animation: sp-grow linear both; animation-timeline: scroll(root); }
+    .hero::before { animation: sp-drift linear both; animation-timeline: scroll(root); animation-range: 0 100vh; }
+    .hero__c { animation: sp-lift linear both; animation-timeline: scroll(root); animation-range: 0 70vh; }
+    #projetos .section-head, #stack .section-head, #projetos .card { animation: sp-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 55%; }
+    #stack .panel { animation: sp-slide linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
+    .chips li { animation: sp-pop linear both; animation-timeline: view(); animation-range: entry 10% entry 70%; }
+    .chips li:nth-child(2) { animation-range: entry 20% entry 80%; }
+    .chips li:nth-child(3) { animation-range: entry 30% entry 90%; }
+    .chips li:nth-child(4) { animation-range: entry 40% entry 100%; }
+    #contato .closing__cta { animation: sp-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
+  }
+}
 /* stack e experiência */
 .stack-lists { display: grid; gap: 24px; align-content: center; }
 .stack-lists p:not(.t-label) { font-size: 20px; line-height: 1.4; }
@@ -99,13 +124,14 @@ body { background: var(--p-bg); }
 @keyframes gl-blink { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .gl__caret { animation: none; } }
 
-#projetos .card > .panel:not([data-fx], .panel--device) { --p-h: 300px; background: var(--p-surface); background-image: none; }
+#projetos .card > .panel:not([data-fx], .panel--device), #stack .panel:not([data-fx]) { --p-h: 300px; background: var(--p-surface); background-image: none; }
 #projetos .card > .panel::before, #projetos .card > .panel::after { display: none; }
 #projetos .grid + .grid .at-rise { --ay: 96px; }
 @media (max-width: 639px) { #projetos .panel { --p-h: 220px; } }
 </style>
 </head>
 <body>
+<div class="scroll-progress" aria-hidden="true"></div>
 
 <header class="nav nav--centre">
   <div class="wrap nav__bar">
