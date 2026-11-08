@@ -3,143 +3,193 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>André Graccia — Software Engineer</title>
-<meta name="description" content="André Graccia, desenvolvedor backend Java em São Paulo. Spring Boot, APIs REST, PostgreSQL e IA aplicada a software.">
-<meta name="theme-color" content="#05060B">
+<title>André Graccia — Desenvolvedor Backend Java & Engenheiro de IA</title>
+<meta name="description" content="André Graccia — Engenheiro de Software na Cielo. Backend Java (Spring Boot), automação de testes em Python e agentes de IA. São Paulo, Brasil.">
+<meta name="theme-color" content="#070914">
 <link rel="canonical" href="https://andre-graccia-curriculum.vercel.app/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="André Graccia — Software Engineer">
-<meta property="og:description" content="Backend Java, APIs e IA aplicada a software. Portfólio, projetos e currículo.">
+<meta property="og:title" content="André Graccia — Backend Java & Engenheiro de IA">
+<meta property="og:description" content="Engenheiro de Software na Cielo. Java, Spring Boot, Python e agentes de IA. Portfólio, projetos e currículo.">
 <meta property="og:url" content="https://andre-graccia-curriculum.vercel.app/">
 <meta property="og:image" content="https://andre-graccia-curriculum.vercel.app/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.35' cy='.3'%3E%3Cstop offset='0' stop-color='%23b4c2ff'/%3E%3Cstop offset='.6' stop-color='%233347e8'/%3E%3Cstop offset='1' stop-color='%231a1f8f'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.35' cy='.3'%3E%3Cstop offset='0' stop-color='%23d4dcff'/%3E%3Cstop offset='.6' stop-color='%234f6bff'/%3E%3Cstop offset='1' stop-color='%231a1f8f'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23g)'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"André Graccia","jobTitle":"Engenheiro de Software","worksFor":{"@type":"Organization","name":"Cielo"},"alumniOf":"Universidade Anhembi Morumbi","address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressCountry":"BR"},"email":"mailto:andregraccia2105@gmail.com","url":"https://andre-graccia-curriculum.vercel.app/","sameAs":["https://www.linkedin.com/in/andregraccia/","https://github.com/AndreGraccia"]}
+</script>
 </head>
 <body>
-<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- Refração: deslocamento do que está atrás do vidro (Chromium); demais navegadores usam só blur. -->
+  <filter id="refract" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency=".011 .016" numOctaves="2" seed="7" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="3" result="b"/>
+    <feDisplacementMap in="SourceGraphic" in2="b" scale="34" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="lens" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency=".006" numOctaves="1" seed="2" result="n"/>
+    <feGaussianBlur in="n" stdDeviation="6" result="b"/>
+    <feDisplacementMap in="SourceGraphic" in2="b" scale="90" xChannelSelector="R" yChannelSelector="B"/>
+  </filter>
+</svg>
+
+<div class="mesh" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="grain" aria-hidden="true"></div>
 <div class="progress" id="prog"></div>
 
-<nav aria-label="Principal"><span class="ind" id="ind"></span>
-  <a class="brand" href="#perfil"><span class="orb"></span>André Graccia</a>
+<nav class="glass" aria-label="Principal"><span class="ind" id="ind"></span>
+  <a class="brand" href="#topo"><span class="orb"></span>André Graccia</a>
+  <a class="l" href="#sobre">Sobre</a>
   <a class="l" href="#experiencia">Experiência</a>
-  <a class="l" href="#skills">Skills</a>
+  <a class="l" href="#stack">Stack</a>
   <a class="l" href="#projetos">Projetos</a>
   <a class="l" href="#contato">Contato</a>
   <a class="btn pri" href="Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener">Currículo ↗</a>
 </nav>
 
 <main>
-<header class="hero" id="perfil"><div class="wrap grid">
-  <div>
-    <p class="eyebrow">Software engineer · São Paulo, BR</p>
-    <h1 style="margin-top:22px">André <em>Graccia.</em></h1>
-    <p class="sub">Backend Java · APIs · IA aplicada a software</p>
-    <div class="meta">
-      <a href="mailto:andregraccia2105@gmail.com">andregraccia2105@gmail.com</a>
-      <a href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noopener">linkedin.com/in/andregraccia</a>
-      <a href="https://github.com/AndreGraccia" target="_blank" rel="noopener">github.com/AndreGraccia</a>
-    </div>
-    <p class="lead">Estudante de Ciência da Computação e profissional na Cielo. Construo sistemas claros, confiáveis e bem estruturados — da compreensão do problema à implementação, com foco em backend, APIs e integração de serviços.</p>
+<header class="hero" id="topo">
+  <div class="lens" id="lens" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="status glass"><span class="dot"></span>Engenheiro de Software na Cielo · desde jul/2026</p>
+    <h1><span class="rv-line">André</span> <em class="rv-line">Graccia</em></h1>
+    <p class="role">Desenvolvedor Backend Java <span>&amp;</span> Engenheiro de Sistemas de IA</p>
+    <p class="lead">Construo backends em Java e Spring Boot, automatizo testes com Python e oriento agentes de IA. Estudante de Ciência da Computação em São Paulo.</p>
     <div class="cta">
-      <a class="btn pri" href="Curriculo_Andre_Graccia.pdf" download>⬇ Currículo em PDF</a>
+      <a class="btn pri" href="Curriculo_Andre_Graccia.pdf" download>⬇ Baixar currículo (PDF)</a>
+      <a class="btn" href="https://www.linkedin.com/in/andregraccia/" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="btn" href="https://github.com/AndreGraccia" target="_blank" rel="noopener">GitHub ↗</a>
-      <a class="btn" href="https://br.linkedin.com/in/andregraccia" target="_blank" rel="noopener">LinkedIn ↗</a>
     </div>
-    <div class="tags"><span class="tag">Java 25</span><span class="tag">Spring Boot</span><span class="tag">REST APIs</span><span class="tag">PostgreSQL</span><span class="tag">Inglês · B1</span></div>
+    <ul class="hero-icons" aria-label="Tecnologias principais">
+      <li><img src="assets/icons/java.svg" alt="Java" width="44" height="44"></li>
+      <li><img src="assets/icons/spring.svg" alt="Spring Boot" width="44" height="44"></li>
+      <li><img src="assets/icons/python.svg" alt="Python" width="44" height="44"></li>
+      <li><img src="assets/icons/postgresql.svg" alt="PostgreSQL" width="44" height="44"></li>
+      <li><img src="assets/icons/docker.svg" alt="Docker" width="44" height="44"></li>
+      <li><img src="assets/icons/langchain.svg" alt="LangChain" width="44" height="44"></li>
+      <li><img src="assets/icons/n8n.svg" alt="n8n" width="44" height="44"></li>
+    </ul>
   </div>
-  <div class="showcase glass" aria-hidden="true">
-    <div class="tile" style="--i:0"><img src="assets/icons/java.svg" alt=""></div>
-    <div class="tile" style="--i:1"><img src="assets/icons/spring.svg" alt=""></div>
-    <div class="tile" style="--i:2"><img src="assets/icons/postgresql.svg" alt=""></div>
-    <div class="tile" style="--i:3"><img src="assets/icons/docker.svg" alt=""></div>
-    <div class="tile" style="--i:4"><img src="assets/icons/aws.svg" alt=""></div>
-    <div class="tile" style="--i:5"><img src="assets/icons/openai.svg" alt=""></div>
-    <div class="chip a"><small>Foco</small><b>Backend engineering</b></div>
-    <div class="chip b"><small>Método</small><b>Aprender construindo</b></div>
-  </div>
-</div></header>
+</header>
 
-<section id="experiencia"><div class="wrap">
-  <p class="eyebrow">Experiência</p>
-  <div class="head"><h2>Experiência <em>e formação</em></h2><p>Atuação profissional e formação acadêmica.</p></div>
-  <div class="cards c2">
-    <article class="card"><span class="k">Experiência profissional</span><h3>Cielo</h3><p class="sm">Atuação em ambiente corporativo</p>
-      <p class="body">Experiência profissional na Cielo. Para cargo, período e atribuições detalhadas, consulte o <a href="Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener">currículo em PDF</a>.</p></article>
-    <article class="card"><span class="k">Formação acadêmica</span><h3>Universidade Anhembi Morumbi</h3><p class="sm">Ciência da Computação · Em andamento</p>
-      <p class="body">Estudos em programação, fundamentos de software e desenvolvimento de sistemas. Certificação Oracle Cloud Infrastructure 2025 Foundations Associate.</p></article>
+<section id="sobre"><div class="wrap">
+  <p class="eyebrow">01 · Sobre</p>
+  <h2>Software claro, <em>testado</em> e confiável.</h2>
+  <div class="bento">
+    <article class="card span-7"><span class="k">Resumo</span>
+      <p class="big">Estudante de Ciência da Computação e Engenheiro de Software na Cielo, com foco em backend Java (Spring Boot), automação de processos em Python e arquitetura de agentes de IA.</p>
+      <p>Experiência em integração de APIs RESTful, bancos relacionais e Docker, com histórico em suítes de testes automatizados, otimização de consultas SQL e orquestração de workflows autônomos de IA.</p></article>
+    <article class="card span-5"><span class="k">Agora</span>
+      <h3>Cielo</h3><p class="sm">Engenheiro de Software (Aprendiz) · Barueri, SP</p>
+      <p>Automação de testes em Python, diagnóstico de falhas e IA aplicada à qualidade de serviços corporativos.</p></article>
+    <article class="card span-4"><span class="k">Formação</span>
+      <h3>Ciência da Computação</h3><p class="sm">Universidade Anhembi Morumbi</p>
+      <p>Fev/2025 – Dez/2028 (previsão)</p></article>
+    <article class="card span-4"><span class="k">Certificações</span>
+      <ul class="plain"><li>Google / Santander — IA e Produtividade <small>2026</small></li>
+      <li>SENAI — Lógica e Estruturas de Dados <small>2025</small></li>
+      <li>Oracle Academy — OCI Foundations <small>2025</small></li></ul></article>
+    <article class="card span-4"><span class="k">Idiomas</span>
+      <ul class="plain"><li>Português <small>nativo</small></li><li>Inglês <small>B1 · leitura técnica e documentação</small></li></ul></article>
   </div>
 </div></section>
 
-<section id="skills"><div class="wrap">
-  <p class="eyebrow">Competências</p>
-  <div class="head"><h2>Competências <em>e ferramentas</em></h2><p>Tecnologias, práticas e idiomas.</p></div>
-  <div class="cards c3">
-    <article class="card"><span class="k">Desenvolvimento</span><h3>Linguagens e frameworks</h3><div class="skills">
-      <span class="skill"><img src="assets/icons/java.svg" alt="" width="28" height="28" loading="lazy">Java 25</span>
+<section id="experiencia"><div class="wrap">
+  <p class="eyebrow">02 · Experiência</p>
+  <h2>Qualidade e IA em <em>escala corporativa.</em></h2>
+  <article class="card job">
+    <div class="job-head"><div><span class="k">Julho de 2026 — Presente</span><h3>Cielo</h3><p class="sm">Engenheiro de Software (Aprendiz) · Barueri, SP</p></div>
+      <div class="chips"><img src="assets/icons/python.svg" alt="Python" title="Python" width="40" height="40"><img src="assets/icons/postgresql.svg" alt="SQL" title="SQL" width="40" height="40"><img src="assets/icons/openai.svg" alt="IA generativa" title="IA generativa" width="40" height="40"></div></div>
+    <div class="job-grid">
+      <div><b>Automação de testes em Python</b><p>Scripts para testes funcionais e regressivos, reduzindo o tempo de validação e otimizando a esteira de entregas.</p></div>
+      <div><b>Análise de falhas e qualidade</b><p>Diagnósticos automatizados em ambiente de testes, identificando gargalos e garantindo confiabilidade nos serviços.</p></div>
+      <div><b>Dados relacionais</b><p>Consultas e validações otimizadas em SQL Server e DB2, assegurando consistência transacional.</p></div>
+      <div><b>Suporte operacional com IA</b><p>IA generativa para triagem de logs, diagnóstico de falhas e geração automatizada de cenários de teste.</p></div>
+    </div>
+  </article>
+</div></section>
+
+<section id="stack"><div class="wrap">
+  <p class="eyebrow">03 · Stack</p>
+  <h2>Ferramentas do <em>dia a dia.</em></h2>
+  <div class="bento">
+    <article class="card span-6"><span class="k">Linguagens</span><div class="skills">
+      <span class="skill"><img src="assets/icons/java.svg" alt="" width="28" height="28" loading="lazy">Java 17+</span>
+      <span class="skill"><img src="assets/icons/python.svg" alt="" width="28" height="28" loading="lazy">Python</span>
+      <span class="skill"><img src="assets/icons/postgresql.svg" alt="" width="28" height="28" loading="lazy">SQL</span>
+      <span class="skill"><img src="assets/icons/javascript.svg" alt="" width="28" height="28" loading="lazy">JavaScript ES6+</span>
+      <span class="skill"><img src="assets/icons/html5.svg" alt="" width="28" height="28" loading="lazy">HTML5</span>
+      <span class="skill"><img src="assets/icons/css3.svg" alt="" width="28" height="28" loading="lazy">CSS3</span></div></article>
+    <article class="card span-6"><span class="k">Backend e frameworks</span><div class="skills">
       <span class="skill"><img src="assets/icons/spring.svg" alt="" width="28" height="28" loading="lazy">Spring Boot</span>
-      <span class="skill"><img src="assets/icons/javascript.svg" alt="" width="28" height="28" loading="lazy">JavaScript</span>
-      <span class="skill"><img src="assets/icons/typescript.svg" alt="" width="28" height="28" loading="lazy">TypeScript</span>
-      <span class="skill"><img src="assets/icons/python.svg" alt="" width="28" height="28" loading="lazy">Python</span></div></article>
-    <article class="card"><span class="k">Dados</span><h3>Persistência</h3><div class="skills">
-      <span class="skill"><img src="assets/icons/postgresql.svg" alt="" width="28" height="28" loading="lazy">PostgreSQL</span></div>
-      <ul class="plain"><li>SQL</li><li>Modelagem relacional</li></ul></article>
-    <article class="card"><span class="k">Entrega</span><h3>Ferramentas e cloud</h3><div class="skills">
+      <span class="skill"><img src="assets/icons/spring-security.svg" alt="" width="28" height="28" loading="lazy">Spring Security</span>
+      <span class="skill"><img src="assets/icons/hibernate.svg" alt="" width="28" height="28" loading="lazy">Spring Data JPA · Hibernate</span>
+      <span class="skill"><img src="assets/icons/postman.svg" alt="" width="28" height="28" loading="lazy">APIs RESTful</span>
+      <span class="skill"><img src="assets/icons/express.svg" alt="" width="28" height="28" loading="lazy">Express</span>
+      <span class="skill"><img src="assets/icons/docker.svg" alt="" width="28" height="28" loading="lazy">Microservices</span></div></article>
+    <article class="card span-4"><span class="k">Agentes de IA</span><div class="skills">
+      <span class="skill"><img src="assets/icons/langchain.svg" alt="" width="28" height="28" loading="lazy">LangChain</span>
+      <span class="skill"><img src="assets/icons/n8n.svg" alt="" width="28" height="28" loading="lazy">n8n</span>
+      <span class="skill"><img src="assets/icons/openai.svg" alt="" width="28" height="28" loading="lazy">OpenRouter API</span>
+      <span class="skill txt">Agentic workflows</span></div></article>
+    <article class="card span-4"><span class="k">Bancos de dados</span><div class="skills">
+      <span class="skill"><img src="assets/icons/postgresql.svg" alt="" width="28" height="28" loading="lazy">PostgreSQL</span>
+      <span class="skill"><img src="assets/icons/mysql.svg" alt="" width="28" height="28" loading="lazy">MySQL</span>
+      <span class="skill txt">SQL Server</span><span class="skill txt">DB2</span></div></article>
+    <article class="card span-4"><span class="k">DevOps e ferramentas</span><div class="skills">
+      <span class="skill"><img src="assets/icons/docker.svg" alt="" width="28" height="28" loading="lazy">Docker</span>
       <span class="skill"><img src="assets/icons/git.svg" alt="" width="28" height="28" loading="lazy">Git</span>
       <span class="skill"><img src="assets/icons/github.svg" alt="" width="28" height="28" loading="lazy">GitHub</span>
-      <span class="skill"><img src="assets/icons/docker.svg" alt="" width="28" height="28" loading="lazy">Docker</span>
       <span class="skill"><img src="assets/icons/maven.svg" alt="" width="28" height="28" loading="lazy">Maven</span>
-      <span class="skill"><img src="assets/icons/aws.svg" alt="" width="28" height="28" loading="lazy">AWS</span>
-      <span class="skill"><img src="assets/icons/vercel.svg" alt="" width="28" height="28" loading="lazy">Vercel</span></div></article>
-    <article class="card"><span class="k">Interface</span><h3>Web, automação e IA</h3><div class="skills">
-      <span class="skill"><img src="assets/icons/react.svg" alt="" width="28" height="28" loading="lazy">React</span>
-      <span class="skill"><img src="assets/icons/html5.svg" alt="" width="28" height="28" loading="lazy">HTML5</span>
-      <span class="skill"><img src="assets/icons/css3.svg" alt="" width="28" height="28" loading="lazy">CSS3</span>
-      <span class="skill"><img src="assets/icons/n8n.svg" alt="" width="28" height="28" loading="lazy">n8n</span>
-      <span class="skill"><img src="assets/icons/openai.svg" alt="" width="28" height="28" loading="lazy">OpenAI</span></div></article>
-    <article class="card"><span class="k">Práticas</span><h3>Qualidade</h3><div class="skills">
-      <span class="skill"><img src="assets/icons/postman.svg" alt="" width="28" height="28" loading="lazy">APIs REST</span>
-      <span class="skill"><img src="assets/icons/junit.svg" alt="" width="28" height="28" loading="lazy">Testes (JUnit)</span>
-      <span class="skill"><img src="assets/icons/github-actions.svg" alt="" width="28" height="28" loading="lazy">GitHub Actions</span></div></article>
-    <article class="card"><span class="k">Idiomas</span><h3>Comunicação</h3>
-      <ul class="plain"><li>Português · nativo</li><li>Inglês · B1</li></ul></article>
+      <span class="skill"><img src="assets/icons/linux.svg" alt="" width="28" height="28" loading="lazy">Linux</span>
+      <span class="skill"><img src="assets/icons/junit.svg" alt="" width="28" height="28" loading="lazy">JUnit · Mockito</span></div></article>
+    <article class="card span-12"><span class="k">Engenharia</span><div class="skills">
+      <span class="skill txt">Automação de testes</span><span class="skill txt">Teste de software</span><span class="skill txt">TDD</span><span class="skill txt">Clean Architecture</span><span class="skill txt">Scrum</span><span class="skill txt">Kanban</span></div></article>
   </div>
 </div></section>
 
 <section id="projetos"><div class="wrap">
-  <p class="eyebrow">Projetos</p>
-  <div class="head"><h2>Projetos <em>selecionados</em></h2><p>Código, decisões e evolução.</p></div>
-  <div class="cards c3">
-    <a class="card proj" href="https://github.com/AndreGraccia/calc-juros" target="_blank" rel="noopener"><span class="go" aria-hidden="true">↗</span>
-      <span class="k">Backend · API financeira</span><h3>Calculadora de Juros</h3>
-      <p>API para simular juros simples e compostos, com modelagem de domínio e regras financeiras explícitas. Integração com indicadores do Banco Central está no roadmap.</p>
-      <div class="skills"><span class="skill"><img src="assets/icons/java.svg" alt="" loading="lazy">Java</span><span class="skill"><img src="assets/icons/spring.svg" alt="" loading="lazy">Spring</span><span class="skill"><img src="assets/icons/maven.svg" alt="" loading="lazy">Maven</span></div><span class="st">Em evolução</span></a>
-    <a class="card proj" href="https://github.com/AndreGraccia/Wall.ia" target="_blank" rel="noopener"><span class="go" aria-hidden="true">↗</span>
-      <span class="k">Conceito · Fintech</span><h3>Wall.ia</h3>
-      <p>Carteira digital que organiza compromissos financeiros e explica a composição dos valores. Integração Open Finance em sandbox; não realiza movimentações reais.</p>
-      <div class="skills"><span class="skill"><img src="assets/icons/react.svg" alt="" loading="lazy">React</span><span class="skill"><img src="assets/icons/spring.svg" alt="" loading="lazy">Spring</span><span class="skill"><img src="assets/icons/postgresql.svg" alt="" loading="lazy">Postgres</span></div><span class="st">Projeto de portfólio</span></a>
-    <a class="card proj" href="https://github.com/AndreGraccia/Orbit.ia" target="_blank" rel="noopener"><span class="go" aria-hidden="true">↗</span>
-      <span class="k">IA · Automação</span><h3>Orbit.ia</h3>
-      <p>Agente pessoal com interface React/Vite e workflows orquestrados pelo n8n. Integrações externas exigem configuração e validação no ambiente.</p>
-      <div class="skills"><span class="skill"><img src="assets/icons/react.svg" alt="" loading="lazy">React</span><span class="skill"><img src="assets/icons/n8n.svg" alt="" loading="lazy">n8n</span><span class="skill"><img src="assets/icons/docker.svg" alt="" loading="lazy">Docker</span></div><span class="st">Em evolução</span></a>
+  <p class="eyebrow">04 · Projetos</p>
+  <h2>Código que <em>você pode ler.</em></h2>
+  <div class="projects">
+    <a class="card proj" href="https://github.com/AndreGraccia/Orbit.IA" target="_blank" rel="noopener">
+      <span class="go" aria-hidden="true">↗</span><span class="k">2026 · Agentes de IA</span>
+      <h3>Orbit.IA</h3><p class="sm">Workspace local e orquestrador de agentes</p>
+      <ul class="plain"><li>Orquestrador central que delega tarefas a sub-agentes de código e produtividade.</li><li>React/Vite com backend de orquestração via n8n, LangChain e OpenRouter.</li><li>Integra Google Workspace (Docs, Drive, Gmail) e comandos do GitHub.</li></ul>
+      <div class="chips"><img src="assets/icons/react.svg" alt="React" title="React" width="36" height="36"><img src="assets/icons/vite.svg" alt="Vite" title="Vite" width="36" height="36"><img src="assets/icons/n8n.svg" alt="n8n" title="n8n" width="36" height="36"><img src="assets/icons/langchain.svg" alt="LangChain" title="LangChain" width="36" height="36"><img src="assets/icons/gmail.svg" alt="Gmail" title="Gmail" width="36" height="36"></div></a>
+    <a class="card proj" href="https://github.com/AndreGraccia/wall.ia" target="_blank" rel="noopener">
+      <span class="go" aria-hidden="true">↗</span><span class="k">2025 · Full-stack</span>
+      <h3>wall.ia</h3><p class="sm">Gestão financeira</p>
+      <ul class="plain"><li>Backend escalável em Java 17 e Spring Boot para controle de movimentações.</li><li>Autenticação com Spring Security e JWT.</li><li>PostgreSQL isolado em contêineres Docker.</li></ul>
+      <div class="chips"><img src="assets/icons/java.svg" alt="Java" title="Java" width="36" height="36"><img src="assets/icons/spring.svg" alt="Spring Boot" title="Spring Boot" width="36" height="36"><img src="assets/icons/jwt.svg" alt="JWT" title="JWT" width="36" height="36"><img src="assets/icons/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" width="36" height="36"><img src="assets/icons/docker.svg" alt="Docker" title="Docker" width="36" height="36"></div></a>
+    <a class="card proj" href="https://github.com/AndreGraccia" target="_blank" rel="noopener">
+      <span class="go" aria-hidden="true">↗</span><span class="k">2025 · APIs oficiais</span>
+      <h3>Calculadora de Juros</h3><p class="sm">Indicadores financeiros</p>
+      <ul class="plain"><li>Serviço em Java integrado às APIs REST do Banco Central.</li><li>Consulta em tempo real de Selic, IPCA e CDI.</li></ul>
+      <div class="chips"><img src="assets/icons/java.svg" alt="Java" title="Java" width="36" height="36"><img src="assets/icons/spring.svg" alt="Spring Boot" title="Spring Boot" width="36" height="36"><img src="assets/icons/maven.svg" alt="Maven" title="Maven" width="36" height="36"></div></a>
   </div>
 </div></section>
 
 <section id="contato"><div class="wrap">
-  <div class="contact">
-    <div><h2>Vamos construir algo <em>relevante.</em></h2><p>Aberto a conversas sobre engenharia de software, projetos e oportunidades profissionais.</p></div>
+  <div class="contact glass">
+    <p class="eyebrow">05 · Contato</p>
+    <h2>Vamos conversar sobre <em>software.</em></h2>
+    <p>Aberto a oportunidades, projetos e trocas sobre backend, testes e IA aplicada.</p>
     <div class="cta">
-      <a class="btn pri" href="mailto:andregraccia2105@gmail.com">Fale comigo ↗</a>
+      <a class="btn pri" href="mailto:andregraccia2105@gmail.com">andregraccia2105@gmail.com ↗</a>
       <button class="btn" id="copy" type="button" data-mail="andregraccia2105@gmail.com">⧉ Copiar e-mail</button>
+      <a class="btn" href="https://www.linkedin.com/in/andregraccia/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener">Currículo ↗</a>
     </div>
   </div>
 </div></section>
 </main>
 
-<footer><div class="wrap">© 2026 André Graccia · São Paulo, Brasil</div></footer>
+<footer><div class="wrap"><span>© 2026 André Graccia · São Paulo, Brasil</span><span>Feito com HTML, CSS e um pouco de vidro.</span></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
 <script src="app.js" defer></script>
 </body>

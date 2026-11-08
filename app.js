@@ -23,26 +23,41 @@ $$("main section").forEach(s => spy.observe(s));
 addEventListener("resize", place);
 
 /* revelação progressiva */
-const targets = $$(".hero .eyebrow, .hero h1, .hero .sub, .hero .meta, .hero .lead, .hero .cta, .hero .tags, .hero .showcase, section > .wrap > .eyebrow, .head, .cards > *, .contact");
+const targets = $$(".hero .status, .hero h1 .rv-line, .hero .role, .hero .lead, .hero .cta, .hero-icons, section .eyebrow, section h2, .card, .contact p, .contact .cta");
 const reveal = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) { e.target.classList.add("in"); reveal.unobserve(e.target); }
-}), { threshold: .08, rootMargin: "0px 0px -8% 0px" });
-targets.forEach((el, i) => { el.classList.add("rv"); el.style.setProperty("--d", (i % 4) * 80 + "ms"); reveal.observe(el); });
+}), { threshold: .1, rootMargin: "0px 0px -6% 0px" });
+targets.forEach((el, i) => { el.classList.add("rv"); el.style.setProperty("--d", (i % 5) * 70 + "ms"); reveal.observe(el); });
 
-/* spotlight nos cards */
 if (fine && !calm) {
-  $$(".card").forEach(c => c.addEventListener("pointermove", e => {
+  /* aro de luz especular nos cards, no menu e no contato */
+  $$(".card, .contact, nav.glass").forEach(c => c.addEventListener("pointermove", e => {
     const r = c.getBoundingClientRect();
-    c.style.setProperty("--mx", (e.clientX - r.left) / r.width * 100 + "%");
-    c.style.setProperty("--my", (e.clientY - r.top) / r.height * 100 + "%");
+    c.style.setProperty("--mx", e.clientX - r.left + "px");
+    c.style.setProperty("--my", e.clientY - r.top + "px");
   }, { passive: true }));
+
+  /* lente de vidro no hero: segue o ponteiro com inércia */
+  const hero = $(".hero"), lens = $("#lens");
+  let tx = 0, ty = 0, x = 0, y = 0, raf = 0;
+  const loop = () => {
+    x += (tx - x) * .12; y += (ty - y) * .12;
+    lens.style.transform = `translate(${x - lens.offsetWidth / 2}px,${y - lens.offsetHeight / 2}px)`;
+    raf = Math.abs(tx - x) + Math.abs(ty - y) > .5 ? requestAnimationFrame(loop) : 0;
+  };
+  hero.addEventListener("pointermove", e => {
+    const r = hero.getBoundingClientRect();
+    tx = e.clientX - r.left; ty = e.clientY - r.top;
+    if (!lens.classList.contains("on")) { x = tx; y = ty; lens.classList.add("on"); }
+    if (!raf) raf = requestAnimationFrame(loop);
+  }, { passive: true });
+  hero.addEventListener("pointerleave", () => lens.classList.remove("on"));
 }
 
 /* copiar e-mail */
 const toast = $("#toast"), copy = $("#copy"), label = copy.textContent;
 copy.addEventListener("click", async () => {
-  const mail = copy.dataset.mail;
-  try { await navigator.clipboard.writeText(mail); toast.textContent = "E-mail copiado"; } catch { toast.textContent = mail; }
+  try { await navigator.clipboard.writeText(copy.dataset.mail); toast.textContent = "E-mail copiado"; } catch { toast.textContent = copy.dataset.mail; }
   toast.classList.add("show"); copy.textContent = "✓ Copiado";
   setTimeout(() => { toast.classList.remove("show"); copy.textContent = label; }, 2200);
 });
