@@ -1,0 +1,9 @@
+
+# dados pessoais
+Profile*.pdf
+
+# kit e verificações locais
+.claude/
+.agents/
+.taste-skill/
+shots/

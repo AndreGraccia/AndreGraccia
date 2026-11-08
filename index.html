@@ -1,0 +1,314 @@
+<!doctype html>
+<!-- type: software. deal: hero centred (janela com o Conciliador), nav centre, close type, footer columns, rhythm dark-band->surface (tokens Apple, apple.md), buttons tonal, mark dots.
+     moments: word-highlight (statement). palette: Apple (client's own via start.mjs brand), type: Geist.
+     Os dados dentro das janelas (vendas, testes, orçamento) são exemplos ilustrativos de interface, não números reais. -->
+<html lang="pt-BR" data-type="software" data-radius="soft" data-buttons="tonal" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>André Graccia: engenheiro de software backend em Java</title>
+<meta name="description" content="Engenheiro de software backend. APIs em Java e Spring Boot, automação de testes em Python e agentes de IA. Projetos no GitHub.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="André Graccia: engenheiro de software backend em Java">
+<meta property="og:description" content="APIs em Java e Spring Boot, automação de testes em Python e agentes de IA.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="site-kind" content="software">
+<meta name="page-type" content="software">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #0b0b0d; --p-surface: #1d1d1f; --p-ink: #f5f5f7; --p-muted: #a1a1a6;
+  --p-accent: #2997ff; --p-accent-ink: #000000; --p-action: #0071e3; --p-action-ink: #ffffff;
+  --p-inv-bg: #f5f5f7; --p-inv-surface: #ffffff; --p-inv-ink: #1d1d1f; --p-inv-muted: #515154;
+  --p-inv-accent: #0066cc; --p-inv-accent-ink: #ffffff; --p-inv-action: #0066cc; --p-inv-action-ink: #ffffff;
+  --font-display: "Geist", system-ui, sans-serif;
+  --font-text: "Geist", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 500;
+  --display-tracking: -0.035em;
+  --display-tracking-xl: -0.045em;
+}
+</style>
+<link rel="stylesheet" href="assets/ui/base.css">
+<link rel="stylesheet" href="assets/ui/code/fragment.css">
+<link rel="stylesheet" href="assets/ui/stat/fragment.css">
+<link rel="stylesheet" href="assets/ui/terminal-run/fragment.css">
+<link rel="stylesheet" href="assets/diagrams/diagram.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script src="assets/backgrounds/backgrounds.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
+<link rel="modulepreload" href="assets/moments/line-carries-colour/moment.js">
+<style>
+/* liquid glass: vidro fosco translúcido sobre o brilho azul; só no herói, na janela do git log, nas pílulas e nos chips */
+:root { --glass-bg: linear-gradient(135deg, rgb(255 255 255 / .12), rgb(255 255 255 / .04)); --glass-line: rgb(255 255 255 / .16); }
+.glass, .pill, .chips li { background: var(--glass-bg); backdrop-filter: blur(22px) saturate(180%); -webkit-backdrop-filter: blur(22px) saturate(180%); border: 1px solid var(--glass-line); box-shadow: inset 0 1px 0 rgb(255 255 255 / .28), 0 8px 32px rgb(0 0 0 / .35); }
+body { background: var(--p-bg); }
+.hero { position: relative; isolation: isolate; }
+.hero::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 760px; z-index: -1; pointer-events: none;
+  background: radial-gradient(60% 55% at 50% 0%, rgb(41 151 255 / .38), transparent 70%), radial-gradient(40% 40% at 85% 30%, rgb(0 113 227 / .25), transparent 70%); }
+.hero .hero__window { --ground-bg: radial-gradient(70% 100% at 25% 0%, #0b4fa8 0, transparent 70%), radial-gradient(55% 90% at 85% 15%, #0071e3 0, transparent 68%), #0c1118; }
+/* a janela do hero: o Conciliador cruzando vendas e extrato */
+.hero__window { background: var(--p-surface); }
+.cw { color: var(--p-ink); border-radius: 18px; font: 400 14px/1.4 var(--font-text); overflow: hidden; background: var(--glass-bg); backdrop-filter: blur(26px) saturate(180%); -webkit-backdrop-filter: blur(26px) saturate(180%); border: 1px solid var(--glass-line); box-shadow: inset 0 1px 0 rgb(255 255 255 / .3), 0 24px 60px rgb(0 0 0 / .5); }
+.cw__bar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--glass-line); }
+.cw__dots { display: flex; gap: 6px; } .cw__dots i { width: 10px; height: 10px; border-radius: 50%; background: rgb(255 255 255 / .28); }
+.cw__bar b { font-weight: 500; } .cw__bar span:last-child { margin-left: auto; color: var(--p-muted); }
+.cw__row { display: grid; grid-template-columns: 90px 1fr 110px 110px; gap: 12px; align-items: center; padding: 12px 16px; border-bottom: 1px solid rgb(255 255 255 / .08); font-variant-numeric: tabular-nums; }
+.cw__row:last-child { border-bottom: 0; }
+.cw__row.is-head { color: var(--p-muted); font-size: 13px; padding-block: 8px; }
+.cw__tag { display: inline-flex; width: fit-content; padding: 2px 10px; border-radius: 99px; font-size: 13px; font-weight: 500; background: rgb(255 255 255 / .12); color: var(--p-ink); }
+.cw__tag.is-bad { background: #0071e3; color: #fff; }
+.cw__why { color: var(--p-muted); }
+@media (max-width: 639px) { .cw__row { grid-template-columns: 1fr auto; } .cw__row > :nth-child(3), .cw__row > :nth-child(4) { display: none; } .cw__bar span:last-child { display: none; } }
+/* tipografia: Geist (títulos e texto, 500/400), Geist Mono (rótulos, datas, código). Destaque: uma palavra em azul no h1 e o resto do h2 em cinza */
+.hl { font-style: normal; color: var(--p-accent); }
+.t-label, .rows__value, .pill > span:first-child, .gl, .ui-code__pre, .ui-term__screen { font-family: var(--font-mono); letter-spacing: 0; }
+.t-label { text-transform: none; font-size: 13px; }
+.section-head h2 .muted { font-weight: 400; }
+.stack-lists p:not(.t-label) { font-weight: 500; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 0; padding: 0; list-style: none; }
+.chips li { display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px 8px 10px; border-radius: 99px; background: var(--p-surface); font-weight: 500; font-size: 16px; transition: transform .15s; }
+.chips li:hover { transform: translateY(-2px); }
+.chips .ic { height: 24px; width: auto; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 64px 0 0; padding-top: 32px; border-top: 1px solid rgb(0 0 0 / .12); }
+.facts dd { margin: 4px 0 0; font: 500 var(--t-stat)/1.1 var(--font-display); letter-spacing: var(--display-tracking); }
+.facts dt { margin: 0; }
+/* stack e experiência */
+.stack-lists { display: grid; gap: 24px; align-content: center; }
+.stack-lists p:not(.t-label) { font-size: 20px; line-height: 1.4; }
+.stack-lists .t-label { margin: 0 0 4px; }
+.gl { background: #1d1d1f; color: #f5f5f7; border-radius: 14px; font: 400 14px/1.6 var(--font-mono); overflow: hidden; }
+.gl__bar { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid rgb(255 255 255 / .1); color: #a1a1a2; font-size: 13px; }
+.gl__bar .cw__dots i { background: #48484a; }
+.gl__body { padding: 16px; display: grid; gap: 4px; }
+.gl__body p { margin: 0; } .gl__body b { color: #2997ff; font-weight: 500; } .gl__body em { color: #a1a1a2; font-style: normal; }
+.gl__caret { display: inline-block; width: 8px; height: 16px; margin-left: 4px; vertical-align: -3px; background: #f5f5f7; animation: gl-blink 1.1s steps(1) infinite; }
+@keyframes gl-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .gl__caret { animation: none; } }
+
+#projetos .card > .panel:not([data-fx], .panel--device) { --p-h: 300px; background: var(--p-surface); background-image: none; }
+#projetos .card > .panel::before, #projetos .card > .panel::after { display: none; }
+#projetos .grid + .grid .at-rise { --ay: 96px; }
+@media (max-width: 639px) { #projetos .panel { --p-h: 220px; } }
+</style>
+</head>
+<body>
+
+<header class="nav nav--centre">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Ir para o conteúdo</a>
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>André Graccia</a>
+    <nav class="nav__links" aria-label="Principal">
+      <div class="nav__item"><a class="nav__link" href="#projetos">Projetos</a></div>
+      <div class="nav__item"><a class="nav__link" href="#stack">Stack</a></div>
+      <div class="nav__item"><a class="nav__link" href="#experiencia">Experiência</a></div>
+      <div class="nav__item"><a class="nav__link" href="#contato">Contato</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="mailto:andregraccia2105@gmail.com">Enviar e-mail</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--centred" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text">
+      <div class="hero__c">
+        <a class="pill" href="#projetos"><span>Java · Python · Spring Boot</span><span class="muted">Ver projetos</span></a>
+        <h1 id="hero-h">Engenheiro de software backend em <span class="hl">Java</span></h1>
+        <p class="hero__lead">Construo APIs em Java 21 e Spring Boot e automatizo testes em Python. Foco em sistemas que lidam com dinheiro e precisam estar certos.</p>
+        <div class="btn-row"><a class="btn btn--primary" href="#projetos">Ver projetos</a><a class="btn btn--secondary" href="#contato">Falar comigo</a></div>
+      </div>
+      <div class="hero__window" role="img" aria-label="Conciliador cruzando vendas e extrato e apontando o motivo de cada divergência">
+        <div class="ly-piece cw" aria-hidden="true">
+          <div class="cw__bar"><span class="cw__dots"><i></i><i></i><i></i></span><span><b>Conciliador</b> · vendas × extrato</span><span>3 lançamentos</span></div>
+          <div data-ly-steps="900">
+            <div class="cw__row is-head"><span>Venda</span><span>Resultado</span><span>Vendas</span><span>Extrato</span></div>
+            <div class="cw__row" data-step><span>#1042</span><span><span class="cw__tag">Conciliada</span></span><span>R$ 189,90</span><span>R$ 189,90</span></div>
+            <div class="cw__row" data-step><span>#1043</span><span><span class="cw__tag is-bad">Divergência</span> <span class="cw__why">não consta no extrato</span></span><span>R$ 74,00</span><span>—</span></div>
+            <div class="cw__row" data-step><span>#1044</span><span><span class="cw__tag is-bad">Divergência</span> <span class="cw__why">taxa de R$ 9,60</span></span><span>R$ 320,00</span><span>R$ 310,40</span></div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section g2" id="projetos" style="--hm: 3" aria-labelledby="projetos-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="section-head">
+          <h2 id="projetos-h">Projetos em Java, Python e IA. <span class="muted">APIs que cruzam dinheiro, agentes que usam suas ferramentas.</span></h2>
+        </div>
+        <div class="grid">
+          <article class="card card--row card--open span-6">
+            <h3>Conciliador</h3>
+            <p>API em Java 21 e Spring Boot que aponta cada divergência com o motivo.</p>
+            <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:400px;--ax:max(24px, 50% - 200px);--ay:32px;--ay-sm:16px" data-ui-loop>
+              <div class="ui ui-panel ui-code" data-ui="code">
+                <div class="ui-code__tabs">
+                  <span class="ui-code__tab is-on"><i class="ui-code__lang">J</i>Conciliador.java</span>
+                  <span class="ui-spacer"></span>
+                  <span class="ui-chip ui-chip--plain ui-code__chip" data-code-chip>1 regra</span>
+                </div>
+                <pre class="ui-code__pre"><code><span class="ui-code__ln" data-n="21"><span class="k">for</span> (Venda v : vendas) {</span>
+<span class="ui-code__ln" data-n="22">  var l = extrato.<span class="f">busca</span>(v.id());</span>
+<span class="ui-code__ln" data-n="23" data-note="Venda sem lançamento no extrato.">  <span class="k">if</span> (l == <span class="k">null</span>) <span class="k">continue</span>;</span>
+<span class="ui-code__ln is-mark" data-n="24">  <span class="k">var</span> d = v.<span class="f">diferenca</span>(l);</span>
+<span class="ui-code__ln" data-n="25">  <span class="c">// a diferença vira o motivo</span></span>
+<span class="ui-code__ln" data-n="26" data-note="Diferença registrada como taxa.">  <span class="k">if</span> (d.<span class="f">signum</span>() != <span class="n">0</span>) <span class="f">aponta</span>(v, d);</span>
+<span class="ui-code__ln" data-n="27">}</span></code></pre>
+                <div class="ui-code__hint" data-code-hint><span class="ui-dot"></span><span data-code-text>Regra: compara o valor da venda com o do extrato.</span></div>
+              </div>
+            </div></div></div>
+          </article>
+          <article class="card card--row card--open span-6">
+            <h3>Orbit.IA</h3>
+            <p>Orquestrador de agentes com React, n8n e LangChain. <a class="link" href="https://github.com/AndreGraccia/Orbit.IA" target="_blank" rel="noopener">Código no GitHub</a></p>
+            <div class="panel"><div class="dg" data-diagram><script type="application/json">{"layout":"hub","alt":"O Orbit.IA conecta Gmail, Google Drive, Google Docs, GitHub e n8n.","center":{"label":"Orbit.IA","icon":"ui:bot"},"spokes":[{"label":"Gmail","icon":"gmail"},{"label":"Google Drive","icon":"google-drive"},{"label":"Google Docs","icon":"google-docs"},{"label":"GitHub","icon":"github"},{"label":"n8n","icon":"n8n"}]}</script></div></div>
+          </article>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card card--row card--open span-6">
+          <h3>wall.ia</h3>
+          <p>Gestão financeira full-stack com Spring Security e JWT. <a class="link" href="https://github.com/AndreGraccia/wall.ia" target="_blank" rel="noopener">Código no GitHub</a></p>
+          <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:400px;--ax:max(24px, 50% - 200px);--ay:32px;--ay-sm:16px">
+            <div class="ui ui-panel ui-stat" data-ui="stat" data-from="62" data-to="58" data-suffix="%">
+              <div class="ui-stat__head">
+                <div class="ui-stat__top"><span class="ui-stat__label">Orçamento usado</span><span class="ui-stat__range">Este mês</span></div>
+                <div class="ui-stat__line"><span class="ui-stat__num" data-stat-num>58%</span><span class="ui-chip ui-chip--plain ui-stat__delta">4 pts</span><span class="ui-stat__sub">abaixo do mês anterior</span></div>
+              </div>
+              <div class="ui-stat__chart">
+                <svg class="ui-stat__svg" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="ui-stat__grid" d="M0 30.5H400M0 60.5H400M0 90.5H400"/>
+                  <path class="ui-stat__cover" fill-rule="evenodd" d=""/>
+                  <g class="ui-stat__bars"><rect rx="3" x="0.00" y="49.04" width="21.14" height="70.96"/><rect rx="3" x="29.14" y="40.86" width="21.14" height="79.14"/><rect rx="3" x="58.29" y="44.95" width="21.14" height="75.05"/><rect rx="3" x="87.43" y="36.76" width="21.14" height="83.24"/><rect rx="3" x="116.57" y="42.22" width="21.14" height="77.78"/><rect rx="3" x="145.71" y="34.04" width="21.14" height="85.96"/><rect rx="3" x="174.86" y="38.13" width="21.14" height="81.87"/><rect rx="3" x="204.00" y="29.94" width="21.14" height="90.06"/><rect rx="3" x="233.14" y="35.40" width="21.14" height="84.60"/><rect rx="3" x="262.29" y="25.85" width="21.14" height="94.15"/><rect rx="3" x="291.43" y="31.31" width="21.14" height="88.69"/><rect rx="3" x="320.57" y="23.12" width="21.14" height="96.88"/><rect rx="3" x="349.71" y="27.21" width="21.14" height="92.79"/><rect rx="3" x="378.86" y="16.30" width="21.14" height="103.70"/></g>
+                </svg>
+                <div class="ui-stat__axis" aria-hidden="true"><span>1 nov</span><span>15 nov</span><span>Hoje</span></div>
+              </div>
+            </div>
+          </div></div></div>
+        </article>
+        <article class="card card--row card--open span-6">
+          <h3>Automação de testes em Python</h3>
+          <p>Testes automatizados que validam sistemas e ajudam a achar a causa das falhas.</p>
+          <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:440px;--ax:max(24px, 50% - 220px);--ay:32px;--ay-sm:16px">
+            <div class="ui ui-panel ui-term" data-ui="terminal-run">
+              <div class="ui-term__head">
+                <span class="ui-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="ui-term__title">automacao</span>
+                <span class="ui-meta">zsh</span>
+                <span class="ui-spacer"></span>
+                <span class="ui-chip ui-chip--plain ui-term__branch"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="3.5" r="1.5"/><circle cx="5" cy="12.5" r="1.5"/><circle cx="11" cy="5.5" r="1.5"/><path d="M5 5v6M11 7c0 2.6-6 1.8-6 4"/></svg>main</span>
+              </div>
+              <div class="ui-term__screen" data-term-screen>
+                <div class="ui-term__track" data-term-track>
+                  <div class="ui-term__ln ui-term__cmd"><span class="ui-term__cwd">~/<span class="ui-term__up">qa/</span>testes</span><span class="ui-term__sig">$</span><span class="ui-term__typed" data-term-cmd>pytest -q</span></div>
+                  <div class="ui-term__ln ui-term__meter" data-term-out data-term-meter><span class="ui-term__bar" style="--p:1"><i></i></span><span class="ui-term__count" data-term-count>3 de 3 arquivos</span></div>
+                  <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">test_login.py</span><span class="ui-term__n">8 testes</span><span class="ui-term__t">0,4s</span></div>
+                  <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">test_conciliacao.py</span><span class="ui-term__n">12 testes</span><span class="ui-term__t">0,9s</span></div>
+                  <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">test_extrato.py</span><span class="ui-term__n">6 testes</span><span class="ui-term__t">0,3s</span></div>
+                  <div class="ui-term__ln ui-term__gap" data-term-out aria-hidden="true"></div>
+                  <div class="ui-term__ln ui-term__sum" data-term-out><span class="ui-term__key">Arquivos</span><span class="ui-term__val">3 passaram</span><span class="ui-term__dim">(3)</span></div>
+                  <div class="ui-term__ln ui-term__sum" data-term-out><span class="ui-term__key">Testes</span><span class="ui-term__val">26 passaram</span><span class="ui-term__dim">(26)</span></div>
+                  <div class="ui-term__ln ui-term__done" data-term-out data-term-done><span class="ui-term__ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.3 2.4 2.4 4.6-5"/></svg></span><b>Pronto</b><span class="ui-term__dim">em 1,6s</span></div>
+                  <div class="ui-term__ln ui-term__cmd" data-term-next><span class="ui-term__cwd">~/<span class="ui-term__up">qa/</span>testes</span><span class="ui-term__sig">$</span><span class="ui-term__typed"></span><i class="ui-term__caret" aria-hidden="true"></i></div>
+                </div>
+              </div>
+            </div>
+          </div></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="stack" style="--hm: 2" aria-labelledby="stack-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="stack-h">Stack de backend, dados e automação. <span class="muted">Java no centro, Python na automação.</span></h2>
+      </div>
+      <div class="grid fill" style="align-items:start">
+        <div class="panel span-7" style="--p-h:460px"><div class="dg" data-diagram><script type="application/json">{"layout":"ring","alt":"Python, Spring, PostgreSQL, Docker, Git, LangChain e n8n em volta do Java.","center":{"label":"Java","icon":"java"},"ring":[{"label":"Python","icon":"python"},{"label":"Spring","icon":"spring"},{"label":"PostgreSQL","icon":"postgres"},{"label":"Docker","icon":"docker"},{"label":"Git","icon":"git"},{"label":"LangChain","icon":"langchain"},{"label":"n8n","icon":"n8n"}]}</script></div></div>
+        <div class="span-5 start-8 stack-lists">
+          <div><p class="t-label muted">Linguagens</p><ul class="chips"><li><img class="ic ic-40 ic-tall" src="assets/icons/java.svg" alt="" width="30" height="40">Java</li><li><img class="ic ic-40" src="assets/icons/python.svg" alt="" width="40" height="40">Python</li></ul></div><div><p class="t-label muted">Backend</p><ul class="chips"><li><img class="ic ic-40" src="assets/icons/spring.svg" alt="" width="40" height="40">Spring Boot</li><li><img class="ic ic-40 ic-land" src="assets/icons/docker.svg" alt="" width="40" height="29">Docker</li></ul></div><div><p class="t-label muted">Dados</p><ul class="chips"><li><img class="ic ic-40" src="assets/icons/postgres.svg" alt="" width="39" height="40">PostgreSQL</li><li><img class="ic ic-40" src="assets/icons/mysql.svg" alt="" width="40" height="39">MySQL</li></ul></div><div><p class="t-label muted">Automação e IA</p><ul class="chips"><li><img class="ic ic-40 ic-ink" src="assets/icons/langchain.svg" alt="" width="40" height="40">LangChain</li><li><img class="ic ic-40 ic-wide" src="assets/icons/n8n.svg" alt="" width="40" height="21">n8n</li><li><img class="ic ic-40" src="assets/icons/git.svg" alt="" width="40" height="40">Git</li><li><img class="ic ic-40" src="assets/icons/github-actions.svg" alt="" width="40" height="40">GitHub Actions</li></ul></div>
+          <p class="t-small muted">Também: SQL, SQL Server, JPA, REST, JWT e JUnit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section statement" id="sobre" data-moment="word-highlight" aria-label="Sobre">
+    <div class="wrap">
+      <p class="t-label">Sobre</p>
+      <p class="mo-wh__text">Gosto de backend: a parte que ninguém vê e da qual tudo depende. Escrevo APIs e testes pensando no sistema que <strong>continua de pé</strong> quando ninguém está olhando.</p>
+    </div>
+  </section>
+
+  <section class="section ground-inverse" id="experiencia" data-moment="line-carries-colour" data-moment-opts='{"from": "base"}' style="--hm: 2" aria-labelledby="exp-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="exp-h">Experiência, formação e certificados.</h2></div>
+      <div class="grid fill">
+        <ul class="rows span-7">
+          <li><span class="rows__name">Cielo<small class="muted"> · Engenheiro de Software</small></span><p>Automações em Python, testes automatizados, análise de falhas e validação de sistemas, em equipes multidisciplinares.</p><span class="rows__value">jul 2026 – atual</span></li>
+          <li><span class="rows__name">Anhembi Morumbi<small class="muted"> · Ciência da Computação</small></span><p>Bacharelado em andamento, com formatura prevista para dezembro de 2028.</p><span class="rows__value">2025 – 2028</span></li>
+          <li><span class="rows__name">Idiomas e certificados<small class="muted"> · Inglês profissional</small></span><p>Inteligência Artificial e Produtividade, Lógica de Programação e Cloud Infrastructure Foundations.</p><span class="rows__value">Certificados</span></li>
+        </ul>
+        <div class="span-5 start-8"><div class="gl" role="img" aria-label="Histórico de carreira em formato de git log: engenharia de software, Orbit.IA, Conciliador e o primeiro commit">
+          <div class="gl__bar"><span class="cw__dots"><i></i><i></i><i></i></span><span>git log --oneline</span></div>
+          <div class="gl__body" aria-hidden="true">
+            <p><b>a41f9c2</b> <em>(HEAD)</em> Engenheiro de Software: automação e testes</p>
+            <p><b>7d03be8</b> Orbit.IA: agentes de IA com n8n e LangChain</p>
+            <p><b>2c9e1a5</b> Conciliador: API que cruza vendas e extrato</p>
+            <p><b>0000001</b> Primeiro commit: Java e curiosidade<i class="gl__caret"></i></p>
+          </div>
+        </div></div>
+      </div>
+      <dl class="facts"><div><dt class="t-label muted">Projetos no GitHub</dt><dd>4</dd></div><div><dt class="t-label muted">Inglês</dt><dd>Profissional</dd></div><div><dt class="t-label muted">Formatura</dt><dd>2028</dd></div></dl>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing" id="contato" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Vamos conversar sobre backend.</h2>
+        <p>Vaga, projeto ou dúvida sobre algo que construí. Respondo por e-mail.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="mailto:andregraccia2105@gmail.com">Enviar e-mail<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>André Graccia</a>
+          <p class="footer__lede">Engenheiro de software backend. São Paulo, Brasil.</p>
+        </div>
+        <div class="span-2 start-7 footer__col"><h3>Site</h3><ul><li><a href="#projetos">Projetos</a></li><li><a href="#stack">Stack</a></li><li><a href="#experiencia">Experiência</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Perfis</h3><ul><li><a href="https://github.com/AndreGraccia">GitHub</a></li><li><a href="https://www.linkedin.com/in/andregraccia/">LinkedIn</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Contato</h3><ul><li><a href="mailto:andregraccia2105@gmail.com">E-mail</a></li></ul></div>
+      </div>
+      <div class="footer__legal"><span>&copy; 2026 André Graccia</span><span>Nomes e logos de produtos são marcas de seus donos.</span></div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script type="module" src="assets/diagrams/mount.js"></script>
+</body>
+</html>
