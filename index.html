@@ -48,6 +48,7 @@
   <a class="l" href="#stack">Stack</a>
   <a class="l" href="#projetos">Projetos</a>
   <a class="l" href="#contato">Contato</a>
+  <button class="kbd" id="palBtn" type="button" aria-label="Abrir paleta de comandos">⌘K</button>
   <a class="btn pri" href="Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener">Currículo ↗</a>
 </nav>
 
@@ -57,24 +58,51 @@
   <div class="wrap">
     <p class="status glass"><span class="dot"></span>Engenheiro de Software na Cielo · desde jul/2026</p>
     <h1><span class="rv-line">André</span> <em class="rv-line">Graccia</em></h1>
-    <p class="role">Desenvolvedor Backend Java <span>&amp;</span> Engenheiro de Sistemas de IA</p>
-    <p class="lead">Construo backends em Java e Spring Boot, automatizo testes com Python e oriento agentes de IA. Estudante de Ciência da Computação em São Paulo.</p>
-    <div class="cta">
-      <a class="btn pri" href="Curriculo_Andre_Graccia.pdf" download>⬇ Baixar currículo (PDF)</a>
-      <a class="btn" href="https://www.linkedin.com/in/andregraccia/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn" href="https://github.com/AndreGraccia" target="_blank" rel="noopener">GitHub ↗</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="role">Desenvolvedor Backend Java <span>&amp;</span> Engenheiro de Sistemas de IA</p>
+        <p class="lead">Construo backends em Java e Spring Boot, automatizo testes com Python e oriento agentes de IA. Estudante de Ciência da Computação em São Paulo.</p>
+        <p class="rotator" aria-hidden="true"><span class="p">$</span> <span id="rot">java --version</span><i class="caret"></i></p>
+        <div class="cta">
+          <a class="btn pri" href="Curriculo_Andre_Graccia.pdf" download>⬇ Baixar currículo (PDF)</a>
+          <a class="btn" href="https://www.linkedin.com/in/andregraccia/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/AndreGraccia" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="term hero-term" data-play role="img" aria-label="Terminal com o perfil de André Graccia em JSON">
+        <div class="tbar"><i></i><i></i><i></i><span>andre@graccia — zsh</span></div>
+        <div class="tbody">
+<div class="ln" data-cmd><span class="p">❯</span> <span class="d">~</span> <span class="cmd">whoami</span></div>
+<div class="ln">andre-graccia</div>
+<div class="ln" data-cmd><span class="p">❯</span> <span class="d">~</span> <span class="cmd">cat profile.json</span></div>
+<div class="ln">{</div>
+<div class="ln">  <span class="kw">"nome"</span>: <span class="s">"André Graccia"</span>,</div>
+<div class="ln">  <span class="kw">"funcao"</span>: <span class="s">"Backend Java &amp; Engenheiro de IA"</span>,</div>
+<div class="ln">  <span class="kw">"empresa"</span>: <span class="s">"Cielo"</span>,</div>
+<div class="ln">  <span class="kw">"stack"</span>: [<span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"Python"</span>, <span class="s">"LangChain"</span>],</div>
+<div class="ln">  <span class="kw">"local"</span>: <span class="s">"São Paulo, BR"</span>,</div>
+<div class="ln">  <span class="kw">"aberto_a_oportunidades"</span>: <span class="n">true</span></div>
+<div class="ln">}</div>
+<div class="ln" data-cmd><span class="p">❯</span> <span class="d">~</span> <span class="cmd">ls projetos/</span></div>
+<div class="ln"><span class="d">orbit-ia/</span>  <span class="d">wall-ia/</span>  <span class="d">calculadora-de-juros/</span></div>
+<div class="ln" data-cmd data-last><span class="p">❯</span> <span class="d">~</span> <span class="cmd"></span></div>
+        </div>
+      </div>
     </div>
-    <ul class="hero-icons" aria-label="Tecnologias principais">
-      <li><img src="assets/icons/java.svg" alt="Java" width="44" height="44"></li>
-      <li><img src="assets/icons/spring.svg" alt="Spring Boot" width="44" height="44"></li>
-      <li><img src="assets/icons/python.svg" alt="Python" width="44" height="44"></li>
-      <li><img src="assets/icons/postgresql.svg" alt="PostgreSQL" width="44" height="44"></li>
-      <li><img src="assets/icons/docker.svg" alt="Docker" width="44" height="44"></li>
-      <li><img src="assets/icons/langchain.svg" alt="LangChain" width="44" height="44"></li>
-      <li><img src="assets/icons/n8n.svg" alt="n8n" width="44" height="44"></li>
-    </ul>
   </div>
 </header>
+
+<div class="ticker" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<div class="wrap">
+  <div class="facts glass" aria-label="Resumo em 10 segundos">
+    <div class="fact"><small>Função</small><b>Backend Java</b><span>Spring Boot · APIs REST</span></div>
+    <div class="fact"><small>Hoje</small><b>Cielo</b><span>Eng. de Software · jul/2026</span></div>
+    <div class="fact"><small>Foco em IA</small><b>Agentes</b><span>n8n · LangChain · OpenRouter</span></div>
+    <div class="fact"><small>GitHub</small><b id="gh-repos" class="live-dot">AndreGraccia</b><span id="gh-sub">repositórios públicos</span></div>
+  </div>
+</div>
+
 
 <section id="sobre"><div class="wrap">
   <p class="eyebrow">01 · Sobre</p>
@@ -96,21 +124,39 @@
     <article class="card span-4"><span class="k">Idiomas</span>
       <ul class="plain"><li>Português <small>nativo</small></li><li>Inglês <small>B1 · leitura técnica e documentação</small></li></ul></article>
   </div>
+  <div class="term principles" data-play role="group" aria-label="Princípios de engenharia">
+    <div class="tbar"><i></i><i></i><i></i><span>~/andre — principios.md</span></div>
+    <div class="tbody">
+<div class="ln" data-cmd><span class="p">❯</span> <span class="d">~</span> <span class="cmd">cat principios.md</span></div>
+<div class="ln"><span class="kw">##</span> Como eu trabalho</div>
+<div class="ln"><span class="n">1.</span> <span class="s">Teste antes de confiar</span> — TDD, JUnit, Mockito e automação em Python.</div>
+<div class="ln"><span class="n">2.</span> <span class="s">Domínio explícito</span> — Clean Architecture e regras de negócio legíveis.</div>
+<div class="ln"><span class="n">3.</span> <span class="s">Dados com consistência</span> — SQL otimizado e integridade transacional.</div>
+<div class="ln"><span class="n">4.</span> <span class="s">Entrega iterativa</span> — Scrum, Kanban e código que outras pessoas conseguem manter.</div>
+<div class="ln" data-cmd data-last><span class="p">❯</span> <span class="d">~</span> <span class="cmd"></span></div>
+    </div>
+  </div>
 </div></section>
 
 <section id="experiencia"><div class="wrap">
   <p class="eyebrow">02 · Experiência</p>
   <h2>Qualidade e IA em <em>escala corporativa.</em></h2>
-  <article class="card job">
-    <div class="job-head"><div><span class="k">Julho de 2026 — Presente</span><h3>Cielo</h3><p class="sm">Engenheiro de Software (Aprendiz) · Barueri, SP</p></div>
-      <div class="chips"><img src="assets/icons/python.svg" alt="Python" title="Python" width="40" height="40"><img src="assets/icons/postgresql.svg" alt="SQL" title="SQL" width="40" height="40"><img src="assets/icons/openai.svg" alt="IA generativa" title="IA generativa" width="40" height="40"></div></div>
-    <div class="job-grid">
-      <div><b>Automação de testes em Python</b><p>Scripts para testes funcionais e regressivos, reduzindo o tempo de validação e otimizando a esteira de entregas.</p></div>
-      <div><b>Análise de falhas e qualidade</b><p>Diagnósticos automatizados em ambiente de testes, identificando gargalos e garantindo confiabilidade nos serviços.</p></div>
-      <div><b>Dados relacionais</b><p>Consultas e validações otimizadas em SQL Server e DB2, assegurando consistência transacional.</p></div>
-      <div><b>Suporte operacional com IA</b><p>IA generativa para triagem de logs, diagnóstico de falhas e geração automatizada de cenários de teste.</p></div>
+  <div class="term job-term" data-play style="margin-top:44px" role="group" aria-label="Experiência na Cielo, exibida como histórico git">
+    <div class="tbar"><i></i><i></i><i></i><span>~/cielo — git log</span></div>
+    <div class="tbody">
+<div class="ln c"># Engenheiro de Software (Aprendiz) · Cielo · Barueri, SP · jul/2026 → presente</div>
+<div class="ln" data-cmd><span class="p">❯</span> <span class="d">~/cielo</span> <span class="cmd">git log --oneline --decorate main</span></div>
+<div class="ln"><span class="n">a41f9c2</span> <span class="kw">feat(ia)</span>: suporte operacional com IA generativa</div>
+<div class="ln c">   Triagem de logs, diagnóstico de falhas e geração automatizada de cenários de teste.</div>
+<div class="ln"><span class="n">7be03d8</span> <span class="kw">perf(sql)</span>: persistência de dados relacionais</div>
+<div class="ln c">   Consultas e validações otimizadas em SQL Server e DB2, com consistência transacional.</div>
+<div class="ln"><span class="n">c92e15a</span> <span class="kw">feat(qa)</span>: análise de falhas e qualidade</div>
+<div class="ln c">   Diagnósticos automatizados em ambiente de testes: gargalos identificados, serviços confiáveis.</div>
+<div class="ln"><span class="n">1d4b7f0</span> <span class="kw">feat(test)</span>: automação de testes em Python</div>
+<div class="ln c">   Scripts de testes funcionais e regressivos que reduzem o tempo de validação da esteira.</div>
+<div class="ln" data-cmd data-last><span class="p">❯</span> <span class="d">~/cielo</span> <span class="cmd"></span></div>
     </div>
-  </article>
+  </div>
 </div></section>
 
 <section id="stack"><div class="wrap">
@@ -156,21 +202,33 @@
   <p class="eyebrow">04 · Projetos</p>
   <h2>Código que <em>você pode ler.</em></h2>
   <div class="projects">
-    <a class="card proj" href="https://github.com/AndreGraccia/Orbit.IA" target="_blank" rel="noopener">
-      <span class="go" aria-hidden="true">↗</span><span class="k">2026 · Agentes de IA</span>
-      <h3>Orbit.IA</h3><p class="sm">Workspace local e orquestrador de agentes</p>
-      <ul class="plain"><li>Orquestrador central que delega tarefas a sub-agentes de código e produtividade.</li><li>React/Vite com backend de orquestração via n8n, LangChain e OpenRouter.</li><li>Integra Google Workspace (Docs, Drive, Gmail) e comandos do GitHub.</li></ul>
-      <div class="chips"><img src="assets/icons/react.svg" alt="React" title="React" width="36" height="36"><img src="assets/icons/vite.svg" alt="Vite" title="Vite" width="36" height="36"><img src="assets/icons/n8n.svg" alt="n8n" title="n8n" width="36" height="36"><img src="assets/icons/langchain.svg" alt="LangChain" title="LangChain" width="36" height="36"><img src="assets/icons/gmail.svg" alt="Gmail" title="Gmail" width="36" height="36"></div></a>
-    <a class="card proj" href="https://github.com/AndreGraccia/wall.ia" target="_blank" rel="noopener">
-      <span class="go" aria-hidden="true">↗</span><span class="k">2025 · Full-stack</span>
-      <h3>wall.ia</h3><p class="sm">Gestão financeira</p>
-      <ul class="plain"><li>Backend escalável em Java 17 e Spring Boot para controle de movimentações.</li><li>Autenticação com Spring Security e JWT.</li><li>PostgreSQL isolado em contêineres Docker.</li></ul>
-      <div class="chips"><img src="assets/icons/java.svg" alt="Java" title="Java" width="36" height="36"><img src="assets/icons/spring.svg" alt="Spring Boot" title="Spring Boot" width="36" height="36"><img src="assets/icons/jwt.svg" alt="JWT" title="JWT" width="36" height="36"><img src="assets/icons/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" width="36" height="36"><img src="assets/icons/docker.svg" alt="Docker" title="Docker" width="36" height="36"></div></a>
-    <a class="card proj" href="https://github.com/AndreGraccia" target="_blank" rel="noopener">
-      <span class="go" aria-hidden="true">↗</span><span class="k">2025 · APIs oficiais</span>
-      <h3>Calculadora de Juros</h3><p class="sm">Indicadores financeiros</p>
-      <ul class="plain"><li>Serviço em Java integrado às APIs REST do Banco Central.</li><li>Consulta em tempo real de Selic, IPCA e CDI.</li></ul>
-      <div class="chips"><img src="assets/icons/java.svg" alt="Java" title="Java" width="36" height="36"><img src="assets/icons/spring.svg" alt="Spring Boot" title="Spring Boot" width="36" height="36"><img src="assets/icons/maven.svg" alt="Maven" title="Maven" width="36" height="36"></div></a>
+    <article class="card proj">
+      <div class="tbar"><i></i><i></i><i></i><span>~/projetos/orbit-ia — zsh</span></div>
+      <div class="pbody"><span class="go" aria-hidden="true">↗</span><span class="k">2026 · Agentes de IA</span>
+        <h3><a href="https://github.com/AndreGraccia/Orbit.IA" target="_blank" rel="noopener">Orbit.IA</a></h3><p class="sm">Workspace local e orquestrador de agentes</p>
+        <ul class="plain"><li>Orquestrador central que delega tarefas a sub-agentes de código e produtividade.</li><li>React/Vite com backend de orquestração via n8n, LangChain e OpenRouter.</li><li>Integra Google Workspace (Docs, Drive, Gmail) e comandos do GitHub.</li></ul>
+        <div class="chips"><img src="assets/icons/react.svg" alt="React" title="React" width="36" height="36"><img src="assets/icons/vite.svg" alt="Vite" title="Vite" width="36" height="36"><img src="assets/icons/n8n.svg" alt="n8n" title="n8n" width="36" height="36"><img src="assets/icons/langchain.svg" alt="LangChain" title="LangChain" width="36" height="36"><img src="assets/icons/gmail.svg" alt="Gmail" title="Gmail" width="36" height="36"></div>
+        <button class="clone" type="button" data-copy="git clone https://github.com/AndreGraccia/Orbit.IA.git"><span class="p">$</span> git clone …/Orbit.IA.git <em>copiar</em></button>
+      </div>
+    </article>
+    <article class="card proj">
+      <div class="tbar"><i></i><i></i><i></i><span>~/projetos/wall-ia — zsh</span></div>
+      <div class="pbody"><span class="go" aria-hidden="true">↗</span><span class="k">2025 · Full-stack</span>
+        <h3><a href="https://github.com/AndreGraccia/wall.ia" target="_blank" rel="noopener">wall.ia</a></h3><p class="sm">Gestão financeira</p>
+        <ul class="plain"><li>Backend escalável em Java 17 e Spring Boot para controle de movimentações.</li><li>Autenticação com Spring Security e JWT.</li><li>PostgreSQL isolado em contêineres Docker.</li></ul>
+        <div class="chips"><img src="assets/icons/java.svg" alt="Java" title="Java" width="36" height="36"><img src="assets/icons/spring.svg" alt="Spring Boot" title="Spring Boot" width="36" height="36"><img src="assets/icons/jwt.svg" alt="JWT" title="JWT" width="36" height="36"><img src="assets/icons/postgresql.svg" alt="PostgreSQL" title="PostgreSQL" width="36" height="36"><img src="assets/icons/docker.svg" alt="Docker" title="Docker" width="36" height="36"></div>
+        <button class="clone" type="button" data-copy="git clone https://github.com/AndreGraccia/wall.ia.git"><span class="p">$</span> git clone …/wall.ia.git <em>copiar</em></button>
+      </div>
+    </article>
+    <article class="card proj">
+      <div class="tbar"><i></i><i></i><i></i><span>~/projetos/calculadora-de-juros — zsh</span></div>
+      <div class="pbody"><span class="go" aria-hidden="true">↗</span><span class="k">2025 · APIs oficiais</span>
+        <h3><a href="https://github.com/AndreGraccia/calc-juros" target="_blank" rel="noopener">Calculadora de Juros</a></h3><p class="sm">Indicadores financeiros</p>
+        <ul class="plain"><li>Serviço em Java integrado às APIs REST do Banco Central.</li><li>Consulta em tempo real de Selic, IPCA e CDI.</li></ul>
+        <div class="chips"><img src="assets/icons/java.svg" alt="Java" title="Java" width="36" height="36"><img src="assets/icons/spring.svg" alt="Spring Boot" title="Spring Boot" width="36" height="36"><img src="assets/icons/maven.svg" alt="Maven" title="Maven" width="36" height="36"></div>
+        <button class="clone" type="button" data-copy="git clone https://github.com/AndreGraccia/calc-juros.git"><span class="p">$</span> git clone …/calc-juros.git <em>copiar</em></button>
+      </div>
+    </article>
   </div>
 </div></section>
 
@@ -179,17 +237,32 @@
     <p class="eyebrow">05 · Contato</p>
     <h2>Vamos conversar sobre <em>software.</em></h2>
     <p>Aberto a oportunidades, projetos e trocas sobre backend, testes e IA aplicada.</p>
+    <div class="term contact-term" data-play role="group" aria-label="Formas de contato">
+      <div class="tbar"><i></i><i></i><i></i><span>~/contato — zsh</span></div>
+      <div class="tbody">
+<div class="ln" data-cmd><span class="p">❯</span> <span class="d">~</span> <span class="cmd">./contato.sh</span></div>
+<div class="ln"><span class="ok">✓</span> <span class="kw">email    </span> <a href="mailto:andregraccia2105@gmail.com">andregraccia2105@gmail.com</a></div>
+<div class="ln"><span class="ok">✓</span> <span class="kw">linkedin </span> <a href="https://www.linkedin.com/in/andregraccia/" target="_blank" rel="noopener">/in/andregraccia</a></div>
+<div class="ln"><span class="ok">✓</span> <span class="kw">github   </span> <a href="https://github.com/AndreGraccia" target="_blank" rel="noopener">/AndreGraccia</a></div>
+<div class="ln"><span class="ok">✓</span> <span class="kw">currículo</span> <a href="Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener">Curriculo_Andre_Graccia.pdf</a></div>
+<div class="ln" data-cmd data-last><span class="p">❯</span> <span class="d">~</span> <span class="cmd"></span></div>
+      </div>
+    </div>
     <div class="cta">
-      <a class="btn pri" href="mailto:andregraccia2105@gmail.com">andregraccia2105@gmail.com ↗</a>
+      <a class="btn pri" href="mailto:andregraccia2105@gmail.com">Enviar e-mail ↗</a>
       <button class="btn" id="copy" type="button" data-mail="andregraccia2105@gmail.com">⧉ Copiar e-mail</button>
-      <a class="btn" href="https://www.linkedin.com/in/andregraccia/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn" href="Curriculo_Andre_Graccia.pdf" target="_blank" rel="noopener">Currículo ↗</a>
+      <a class="btn" href="Curriculo_Andre_Graccia.pdf" download>⬇ Currículo</a>
     </div>
   </div>
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© 2026 André Graccia · São Paulo, Brasil</span><span>Feito com HTML, CSS e um pouco de vidro.</span></div></footer>
+<footer><div class="wrap"><span>© 2026 André Graccia · São Paulo, Brasil</span><span>Dica: aperte <kbd>⌘K</kbd> ou <kbd>/</kbd> · feito com HTML, CSS e um pouco de vidro.</span></div></footer>
+<dialog class="pal" id="pal" aria-label="Paleta de comandos">
+  <div class="pal-in"><span class="p">❯</span><input id="pq" placeholder="digite um comando…" autocomplete="off" aria-label="Buscar comando"></div>
+  <ul id="pl" role="listbox"></ul>
+  <p class="pal-h"><kbd>↑</kbd><kbd>↓</kbd> navegar · <kbd>↵</kbd> executar · <kbd>esc</kbd> fechar</p>
+</dialog>
 <div id="toast" role="status" aria-live="polite"></div>
 <script src="app.js" defer></script>
 </body>
