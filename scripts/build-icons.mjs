@@ -9,6 +9,8 @@ const icons = {
   java: ["siOpenjdk", "#F89820"], spring: ["siSpring"], javascript: ["siJavascript"], typescript: ["siTypescript"],
   postgresql: ["siPostgresql"], git: ["siGit"], github: ["siGithub", light], docker: ["siDocker"], maven: ["siApachemaven"],
   react: ["siReact"], html5: ["siHtml5"], css3: ["siCss3"], postman: ["siPostman"], junit: ["siJunit5"],
+  mysql: ["siMysql"], langchain: ["siLangchain", "#7FE0C4"], express: ["siExpress", light], hibernate: ["siHibernate", "#A4B0C4"],
+  "spring-security": ["siSpringsecurity"], jwt: ["siJsonwebtokens", "#F2A0FF"], gmail: ["siGmail"], "google-drive": ["siGoogledrive"],
   "github-actions": ["siGithubactions"], vercel: ["siVercel", light], linux: ["siLinux"], vite: ["siVite"],
 };
 for (const [name, [key, color]] of Object.entries(icons)) {
