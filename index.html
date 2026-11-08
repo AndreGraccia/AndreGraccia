@@ -192,6 +192,24 @@ body { background: var(--p-bg); }
   background: linear-gradient(100deg, #8ec9ff 0%, #2997ff 55%, #7aa7ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .06em; }
 .nav__sur::after { content: ""; position: absolute; left: 0; right: .06em; bottom: -.04em; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #2997ff, transparent); transform-origin: 0 50%; animation: name-line 1.4s linear 2.8s both; }
 @keyframes name-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+/* caixa de contato: abre ao clicar em qualquer "e-mail" e monta a mensagem no Gmail, no Outlook ou no app de e-mail */
+.contact { color-scheme: dark; width: min(520px, calc(100vw - 32px)); max-height: calc(100svh - 32px); overflow: auto; padding: 28px; border: 1px solid rgb(255 255 255 / .16); border-radius: 20px; background: #161618; color: #f5f5f7; box-shadow: 0 30px 80px rgb(0 0 0 / .6); }
+.contact::backdrop { background: rgb(0 0 0 / .6); backdrop-filter: blur(6px); }
+.contact[open] { animation: ct-in .25s cubic-bezier(.2,.7,.2,1); }
+@keyframes ct-in { from { opacity: 0; transform: translateY(12px) scale(.98); } }
+.contact__head { display: flex; align-items: start; justify-content: space-between; gap: 16px; }
+.contact h2 { margin: 0; font: 500 28px/1.15 var(--font-display); letter-spacing: var(--display-tracking); }
+.contact p { margin: 8px 0 18px; color: var(--p-muted); font-size: 15px; line-height: 1.5; }
+.contact__x { flex: none; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgb(255 255 255 / .14); background: rgb(255 255 255 / .06); color: inherit; font-size: 20px; line-height: 1; cursor: pointer; }
+.contact__x:hover { background: rgb(255 255 255 / .12); }
+.contact label { display: grid; gap: 6px; margin-bottom: 14px; font-size: 13px; color: var(--p-muted); }
+.contact input, .contact textarea { width: 100%; padding: 11px 14px; border-radius: 12px; border: 1px solid rgb(255 255 255 / .14); background: #0b0b0d; color: #f5f5f7; font: 400 16px/1.4 var(--font-text); }
+.contact input:focus, .contact textarea:focus { outline: 2px solid var(--p-accent); outline-offset: 1px; border-color: transparent; }
+.contact textarea { resize: vertical; min-height: 110px; }
+.contact__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.contact__copy { margin: 16px 0 0; font-size: 13px; }
+.contact__copy button { background: none; border: 0; padding: 0; color: var(--p-accent); font: inherit; text-decoration: underline; cursor: pointer; }
+.closing__cv { margin: 18px 0 0; }
 .pill { gap: 12px; }
 .pill:hover { transform: translateY(-2px); transition: transform .15s; }
 .closing__cta { margin-bottom: var(--s-8, 64px); }
@@ -402,6 +420,7 @@ html { scroll-padding-top: 72px; }
         <p>Vaga, projeto ou dúvida sobre algo que construí. Respondo por e-mail.</p>
       </div>
       <a class="btn btn--primary btn--xl btn--wide" href="mailto:andregraccia2105@gmail.com">Enviar e-mail<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      <p class="closing__cv"><a class="link" href="curriculo-andre-graccia.pdf" download>Baixar currículo em PDF</a></p>
     </div>
     <div class="closing__links">
       <div class="grid">
@@ -411,12 +430,62 @@ html { scroll-padding-top: 72px; }
         </div>
         <div class="span-2 start-7 footer__col"><h3>Site</h3><ul><li><a href="#projetos">Projetos</a></li><li><a href="#stack">Stack</a></li><li><a href="#experiencia">Experiência</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Perfis</h3><ul><li><a href="https://github.com/AndreGraccia">GitHub</a></li><li><a href="https://www.linkedin.com/in/andregraccia/">LinkedIn</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Contato</h3><ul><li><a href="mailto:andregraccia2105@gmail.com">E-mail</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Contato</h3><ul><li><a href="mailto:andregraccia2105@gmail.com">E-mail</a></li><li><a href="curriculo-andre-graccia.pdf" download>Currículo (PDF)</a></li></ul></div>
       </div>
       <div class="footer__legal"><span>&copy; 2026 André Graccia</span><span>Nomes e logos de produtos são marcas de seus donos.</span></div>
     </div>
   </div>
 </footer>
+
+<dialog class="contact" id="contato-dialog" aria-labelledby="ct-h">
+  <form id="contact-form" method="dialog">
+    <div class="contact__head"><h2 id="ct-h">Vamos conversar?</h2><button class="contact__x" type="button" data-close aria-label="Fechar">&times;</button></div>
+    <p>Escreva sua mensagem e escolha onde enviar. Ela abre pronta no seu e-mail, é só apertar enviar.</p>
+    <label>Seu nome<input name="nome" required autocomplete="name"></label>
+    <label>Seu e-mail, para eu poder responder<input name="email" type="email" autocomplete="email"></label>
+    <label>Assunto<input name="assunto" value="Contato pelo portfólio"></label>
+    <label>Mensagem<textarea name="msg" rows="5" required></textarea></label>
+    <div class="contact__actions">
+      <button class="btn btn--primary" type="submit" data-via="gmail">Abrir no Gmail</button>
+      <button class="btn btn--secondary" type="submit" data-via="outlook">Outlook</button>
+      <button class="btn btn--secondary" type="submit" data-via="app">App de e-mail</button>
+    </div>
+    <p class="contact__copy">Ou copie meu e-mail: <button type="button" data-copy>andregraccia2105@gmail.com</button></p>
+  </form>
+</dialog>
+
+<script>
+/* e-mail: qualquer link mailto abre a caixa de contato; o envio monta a mensagem no Gmail, Outlook ou app de e-mail (sem servidor, nada é guardado) */
+(() => {
+  const TO = 'andregraccia2105@gmail.com', dlg = document.getElementById('contato-dialog'), form = document.getElementById('contact-form');
+  if (!dlg || !dlg.showModal) return;
+  document.addEventListener('click', e => {
+    const a = e.target.closest && e.target.closest('a[href^="mailto:"]');
+    if (!a || dlg.contains(a)) return;
+    e.preventDefault(); dlg.showModal(); form.nome.focus();
+  });
+  dlg.addEventListener('click', e => { if (e.target === dlg || e.target.closest('[data-close]')) dlg.close(); });
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const d = new FormData(form), via = e.submitter && e.submitter.dataset.via || 'gmail';
+    const subject = d.get('assunto') || 'Contato pelo portfólio';
+    const body = `Olá, André!
+
+${d.get('msg')}
+
+${d.get('nome')}${d.get('email') ? ' (' + d.get('email') + ')' : ''}`;
+    const q = (o) => Object.entries(o).map(([k, v]) => k + '=' + encodeURIComponent(v)).join('&');
+    const url = via === 'gmail' ? 'https://mail.google.com/mail/?' + q({ view: 'cm', fs: 1, to: TO, su: subject, body })
+      : via === 'outlook' ? 'https://outlook.live.com/mail/0/deeplink/compose?' + q({ to: TO, subject, body })
+      : 'mailto:' + TO + '?' + q({ subject, body });
+    if (via === 'app') location.href = url; else window.open(url, '_blank', 'noopener');
+    dlg.close();
+  });
+  dlg.querySelector('[data-copy]').addEventListener('click', ev => {
+    const b = ev.currentTarget; (navigator.clipboard ? navigator.clipboard.writeText(TO) : Promise.reject()).then(() => b.textContent = 'copiado!', () => b.textContent = TO);
+  });
+})();
+</script>
 
 <script>
 /* foco de luz que segue o mouse (só com ponteiro fino; só muda a cor, não move nada, então vale também com "menos movimento") */
