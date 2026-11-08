@@ -8,13 +8,6 @@
 [LinkedIn](https://www.linkedin.com/in/andregraccia/) &nbsp;·&nbsp;
 [E-mail](mailto:andregraccia2105@gmail.com)
 
-<br/>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg">
-  <img src="./profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Skyline 3D das minhas contribuições no GitHub" />
-</picture>
-
 </div>
 
 ## Sobre
@@ -27,7 +20,7 @@ Gosto de backend: a parte que ninguém vê e da qual tudo depende.
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="38%" valign="middle">
 
 ### [Calculadora de Juros](https://github.com/AndreGraccia/calc-juros)
 
@@ -35,10 +28,11 @@ API em Java 25 e Spring Boot que calcula juros simples e compostos com `BigDecim
 
 `Java` `Spring Boot` `Maven`
 
-<img src="./assets/readme/code.svg" width="100%" alt="Trecho do JurosCalculator.java: juros compostos com BigDecimal" />
-
 </td>
-<td width="50%" valign="top">
+<td width="62%"><img src="./assets/readme/code.svg" width="100%" alt="Trecho do JurosCalculator.java: juros compostos com BigDecimal" /></td>
+</tr>
+<tr>
+<td valign="middle">
 
 ### [wall.ia](https://github.com/AndreGraccia/wall.ia)
 
@@ -46,13 +40,20 @@ Gestão financeira full-stack com Spring Security e JWT.
 
 `React` `Spring Boot` `PostgreSQL` `Docker`
 
+</td>
+<td><img src="./assets/readme/wall.svg" width="100%" alt="Terminal do wall.ia: docker compose, Spring Boot e testes" /></td>
+</tr>
+<tr>
+<td valign="middle">
+
 ### [Orbit.IA](https://github.com/AndreGraccia/Orbit.IA)
 
-Orquestrador de agentes de IA com React, n8n e LangChain, integrado a Google Workspace e GitHub.
+Agente pessoal com interface React e orquestração pelo n8n, integrado a Google Workspace e GitHub.
 
-`React` `n8n` `LangChain`
+`React` `n8n` `LangChain` `Docker`
 
 </td>
+<td><img src="./assets/readme/orbit.svg" width="100%" alt="Terminal do Orbit.IA: docker compose, interface React e webhook do n8n" /></td>
 </tr>
 </table>
 
@@ -67,6 +68,10 @@ Orquestrador de agentes de IA com React, n8n e LangChain, integrado a Google Wor
 ## Atividade
 
 <div align="center">
+
+<img src="./profile-3d-contrib/profile-site.svg" width="100%" alt="Skyline 3D das minhas contribuições no GitHub" />
+
+<br/>
 
 <img src="./assets/activity.svg" width="100%" alt="Gráfico de contribuições nos últimos 30 dias" />
 

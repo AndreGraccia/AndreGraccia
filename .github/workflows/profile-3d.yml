@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - .github/workflows/profile-3d.yml
+      - .github/profile-3d-settings.json
       - scripts/build_stats.py
 
 permissions:
@@ -23,6 +24,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: ./.github/profile-3d-settings.json
       - name: Gráficos de atividade e linguagens
         run: python3 scripts/build_stats.py ${{ github.repository_owner }}
         env:

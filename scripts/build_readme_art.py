@@ -1,23 +1,32 @@
 """Gera as artes animadas do README em assets/readme/ (SVG com animação SMIL, que o GitHub renderiza em <img>).
-Mesmo visual do site: fundo escuro, azul #2997ff, nome com sobrenome em serifa itálica, janelas com bolinhas macOS.
+Mesmo visual do site: fundo escuro, azul #2997ff, "André" em Geist e "Graccia" em Instrument Serif itálico,
+janelas com bolinhas macOS. As fontes (scripts/fonts/*.woff2, latin, licença OFL) vão embutidas no SVG,
+porque o GitHub não carrega fontes externas dentro de imagens.
 Uso: python scripts/build_readme_art.py
 """
+import base64
 import os
 from html import escape
 
-OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "readme")
+HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(HERE, "..", "assets", "readme")
 os.makedirs(OUT, exist_ok=True)
-SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
-SERIF = "'Instrument Serif',Georgia,'Times New Roman',serif"
-MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,'Courier New',monospace"
 BLUE = "#2997ff"
+SANS, SERIF, MONO = "Geist,Helvetica,Arial,sans-serif", "'Instrument Serif',Georgia,serif", "'Geist Mono',ui-monospace,Menlo,Consolas,monospace"
 
-DEFS = f"""<defs>
-<radialGradient id="glow" cx="50%" cy="0%" r="75%"><stop offset="0" stop-color="{BLUE}" stop-opacity=".38"/><stop offset="1" stop-color="{BLUE}" stop-opacity="0"/></radialGradient>
-<radialGradient id="glow2" cx="88%" cy="30%" r="45%"><stop offset="0" stop-color="#0071e3" stop-opacity=".28"/><stop offset="1" stop-color="#0071e3" stop-opacity="0"/></radialGradient>
-<linearGradient id="sur" x1="0" x2="1"><stop offset="0" stop-color="#8ec9ff"/><stop offset=".55" stop-color="{BLUE}"/><stop offset="1" stop-color="#7aa7ff"/></linearGradient>
-<linearGradient id="ul" x1="0" x2="1"><stop offset="0" stop-color="{BLUE}"/><stop offset="1" stop-color="{BLUE}" stop-opacity="0"/></linearGradient>
-</defs>"""
+
+def font_css(*files):
+    faces = {
+        "geist-500": ("Geist", "normal", "500"),
+        "geist-mono-400": ("Geist Mono", "normal", "400"),
+        "instrument-serif-italic": ("Instrument Serif", "italic", "400"),
+    }
+    css = ""
+    for f in files:
+        fam, style, weight = faces[f]
+        b64 = base64.b64encode(open(os.path.join(HERE, "fonts", f + ".woff2"), "rb").read()).decode()
+        css += f"@font-face{{font-family:'{fam}';font-style:{style};font-weight:{weight};src:url(data:font/woff2;base64,{b64}) format('woff2')}}"
+    return f"<style>{css}</style>"
 
 
 def dots(x, y):
@@ -28,59 +37,82 @@ def fade(begin, dur=0.5):
     return f'<animate attributeName="opacity" from="0" to="1" begin="{begin}s" dur="{dur}s" fill="freeze"/>'
 
 
-# ---------------------------------------------------------------- cabeçalho: o nome surge da esquerda para a direita, depois o sublinhado
+DEFS = f"""<defs>
+<radialGradient id="glow" cx="50%" cy="0%" r="75%"><stop offset="0" stop-color="{BLUE}" stop-opacity=".38"/><stop offset="1" stop-color="{BLUE}" stop-opacity="0"/></radialGradient>
+<radialGradient id="glow2" cx="88%" cy="30%" r="45%"><stop offset="0" stop-color="#0071e3" stop-opacity=".28"/><stop offset="1" stop-color="#0071e3" stop-opacity="0"/></radialGradient>
+<linearGradient id="sur" x1="0" x2="1"><stop offset="0" stop-color="#8ec9ff"/><stop offset=".55" stop-color="{BLUE}"/><stop offset="1" stop-color="#7aa7ff"/></linearGradient>
+<linearGradient id="ul" x1="0" x2="1"><stop offset="0" stop-color="{BLUE}"/><stop offset="1" stop-color="{BLUE}" stop-opacity="0"/></linearGradient>
+<linearGradient id="wipe" x1="0" x2="1"><stop offset=".45" stop-color="#fff"/><stop offset=".55" stop-color="#000"/></linearGradient>
+<mask id="reveal" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="320"><rect x="-1250" y="0" width="2400" height="320" fill="url(#wipe)"><animateTransform attributeName="transform" type="translate" from="0 0" to="1300 0" begin="0.4s" dur="2.4s" fill="freeze" calcMode="linear"/></rect></mask>
+</defs>"""
+
+# ---------------------------------------------------------------- cabeçalho: igual ao nome do site (surge da esquerda para a direita, sublinhado depois)
 header = f"""<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320" role="img" aria-label="André Graccia, engenheiro de software backend em Java">
+{font_css("geist-500", "geist-mono-400", "instrument-serif-italic")}
 {DEFS}
-<clipPath id="reveal"><rect x="0" y="0" width="0" height="320"><animate attributeName="width" from="0" to="1000" begin="0.4s" dur="2.4s" fill="freeze"/></rect></clipPath>
 <rect width="1000" height="320" rx="22" fill="#0b0b0d"/>
 <rect width="1000" height="320" rx="22" fill="url(#glow)"/><rect width="1000" height="320" rx="22" fill="url(#glow2)"/>
 <rect x=".5" y=".5" width="999" height="319" rx="21.5" fill="none" stroke="#ffffff" stroke-opacity=".1"/>
 <g opacity="0">{fade(0, .8)}
 <rect x="338" y="36" width="324" height="34" rx="17" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".16"/>
 <text x="500" y="58" text-anchor="middle" font-family="{MONO}" font-size="14" fill="#f5f5f7">Java · Python · Spring Boot</text></g>
-<g clip-path="url(#reveal)">
-<text x="500" y="168" text-anchor="middle" font-size="92" letter-spacing="-3" font-family="{SANS}" font-weight="500" fill="#f5f5f7">André <tspan font-family="{SERIF}" font-style="italic" font-weight="400" font-size="108" letter-spacing="-1" fill="url(#sur)">Graccia</tspan></text>
+<g mask="url(#reveal)">
+<text x="500" y="168" text-anchor="middle" font-size="92" letter-spacing="-3.2" font-family="{SANS}" font-weight="500" fill="#f5f5f7">André <tspan font-family="{SERIF}" font-style="italic" font-weight="400" font-size="112" letter-spacing="-1" fill="url(#sur)">Graccia</tspan></text>
 </g>
 <path d="M300 190H700" stroke="url(#ul)" stroke-width="2.5" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" begin="2.8s" dur="1.4s" fill="freeze"/></path>
 <g opacity="0">{fade(3.2, 1)}
-<text x="500" y="250" text-anchor="middle" font-family="{SANS}" font-size="30" font-weight="500" fill="#f5f5f7">Engenheiro de software backend em <tspan fill="{BLUE}">Java</tspan></text>
+<text x="500" y="250" text-anchor="middle" font-family="{SANS}" font-size="30" font-weight="500" letter-spacing="-.6" fill="#f5f5f7">Engenheiro de software backend em <tspan fill="{BLUE}">Java</tspan></text>
 <text x="500" y="286" text-anchor="middle" font-family="{SANS}" font-size="16" fill="#a1a1a6">APIs em Java e Spring Boot · automação de testes em Python · agentes de IA</text></g>
 </svg>
 """
 
-# ---------------------------------------------------------------- terminal da stack: cada linha entra uma a uma
-LINES = [
-    ("~/calc-juros", "./mvnw spring-boot:run", "Spring Boot", "Java 25 · API no ar, rotas de juros simples e compostos"),
-    ("~/wall.ia", "docker compose up -d postgres", "Docker", "banco pronto na porta 5432"),
-    ("~/wall.ia", 'psql -c "\\dt"', "PostgreSQL", "tabelas da carteira listadas"),
-    ("~/qa/testes", "pytest -q", "Python", "26 testes passaram em 1,6s"),
-    ("~/orbit", "n8n start && python agente.py", "n8n · LangChain", "workflows ativos, agente chamando as ferramentas"),
-    ("~/orbit", "git push origin main", "Git · GitHub Actions", "build e testes rodando na pipeline"),
-]
 
-
-def terminal():
-    h = 96 + len(LINES) * 62 + 20
+# ---------------------------------------------------------------- terminais (stack e um por projeto): cada linha entra uma a uma
+def terminal(title, lines, width=1000, fs=16):
+    cw = fs * 0.6
+    step = fs * 3.9
+    h = int(90 + len(lines) * step)
     rows, t = "", 0.6
-    for cwd, cmd, tag, out in LINES:
-        y = 112 + LINES.index((cwd, cmd, tag, out)) * 62
-        tag_w = 14 + len(tag) * 8
+    for i, (cwd, cmd, tag, out) in enumerate(lines):
+        y = 106 + i * step
+        tag_w = 16 + len(tag) * (fs * 0.5)
+        x_cmd = 30 + len(cwd) * cw + 14 + cw * 2
         rows += (f'<g opacity="0">{fade(round(t, 2), .5)}'
-                 f'<text x="36" y="{y}" font-family="{MONO}" font-size="16" fill="#6cb6ff">{escape(cwd)}</text>'
-                 f'<text x="{36 + len(cwd) * 9.6 + 12}" y="{y}" font-family="{MONO}" font-size="16" fill="#a1a1a6">$</text>'
-                 f'<text x="{36 + len(cwd) * 9.6 + 32}" y="{y}" font-family="{MONO}" font-size="16" fill="#f5f5f7">{escape(cmd)}</text>'
-                 f'<rect x="{964 - tag_w}" y="{y - 17}" width="{tag_w}" height="24" rx="12" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".12"/>'
-                 f'<text x="{964 - tag_w / 2}" y="{y}" text-anchor="middle" font-family="{MONO}" font-size="12.5" fill="#f5f5f7">{escape(tag)}</text>'
-                 f'<text x="52" y="{y + 26}" font-family="{MONO}" font-size="14.5" fill="#a1a1a6"><tspan fill="#28c840">→</tspan> {escape(out)}</text></g>')
+                 f'<text x="30" y="{y}" font-family="{MONO}" font-size="{fs}" fill="#6cb6ff">{escape(cwd)}</text>'
+                 f'<text x="{30 + len(cwd) * cw + 14}" y="{y}" font-family="{MONO}" font-size="{fs}" fill="#a1a1a6">$</text>'
+                 f'<text x="{x_cmd}" y="{y}" font-family="{MONO}" font-size="{fs}" fill="#f5f5f7" xml:space="preserve">{escape(cmd)}</text>'
+                 f'<rect x="{width - 28 - tag_w}" y="{y - fs * 1.05}" width="{tag_w}" height="{fs * 1.5}" rx="{fs * .75}" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".12"/>'
+                 f'<text x="{width - 28 - tag_w / 2}" y="{y - 1}" text-anchor="middle" font-family="{MONO}" font-size="{fs * .78}" fill="#f5f5f7">{escape(tag)}</text>'
+                 f'<text x="46" y="{y + fs * 1.6}" font-family="{MONO}" font-size="{fs * .9}" fill="#a1a1a6"><tspan fill="#28c840">→</tspan> {escape(out)}</text></g>')
         t += 0.9
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="{h}" viewBox="0 0 1000 {h}" role="img" aria-label="Terminal mostrando como uso Spring Boot, Docker, PostgreSQL, Python, n8n, LangChain, Git e GitHub Actions">
-<rect width="1000" height="{h}" rx="18" fill="#161618"/><rect x=".5" y=".5" width="999" height="{h - 1}" rx="17.5" fill="none" stroke="#ffffff" stroke-opacity=".1"/>
-{dots(30, 28)}<text x="104" y="33" font-family="{MONO}" font-size="13" fill="#a1a1a6">como eu uso cada coisa</text><text x="966" y="33" text-anchor="end" font-family="{MONO}" font-size="13" fill="#a1a1a6">zsh</text>
-<path d="M0 54H1000" stroke="#ffffff" stroke-opacity=".08"/>
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{h}" viewBox="0 0 {width} {h}" role="img" aria-label="{escape(title)}: {escape('; '.join(c for _, c, _, _ in lines))}">
+{font_css("geist-mono-400")}
+<rect width="{width}" height="{h}" rx="18" fill="#161618"/><rect x=".5" y=".5" width="{width - 1}" height="{h - 1}" rx="17.5" fill="none" stroke="#ffffff" stroke-opacity=".1"/>
+{dots(28, 27)}<text x="100" y="32" font-family="{MONO}" font-size="13" fill="#a1a1a6">{escape(title)}</text><text x="{width - 28}" y="32" text-anchor="end" font-family="{MONO}" font-size="13" fill="#a1a1a6">zsh</text>
+<path d="M0 52H{width}" stroke="#ffffff" stroke-opacity=".08"/>
 {rows}
 </svg>
 """
 
+
+STACK = [
+    ("~/calc-juros", "./mvnw spring-boot:run", "Spring Boot", "Java 25 · API no ar, rotas de juros simples e compostos"),
+    ("~/wall.ia", "docker compose up -d postgres", "Docker", "banco pronto na porta 5432"),
+    ("~/wall.ia", 'psql -c "\\dt"', "PostgreSQL", "tabelas da carteira listadas"),
+    ("~/qa/testes", "pytest -q", "Python", "26 testes passaram em 1,6s"),
+    ("~/orbit", "docker compose up -d", "n8n · LangChain", "n8n no ar na porta 5678, agente pronto"),
+    ("~/orbit", "git push origin main", "Git · GitHub Actions", "build e testes rodando na pipeline"),
+]
+WALL = [
+    ("~/wall.ia", "docker compose up -d", "Docker", "banco no ar"),
+    ("~/wall.ia", "./mvnw spring-boot:run", "Spring Boot", "API no ar com Spring Security e JWT"),
+    ("~/wall.ia", "./mvnw test", "JUnit", "testes passaram"),
+]
+ORBIT = [
+    ("~/orbit", "docker compose up -d", "n8n", "n8n e PostgreSQL no ar"),
+    ("~/orbit/frontend", "npm run dev", "React", "interface em localhost:5173"),
+    ("~/orbit", "curl -X POST …/webhook/orbit-chat", "n8n", "o agente devolveu a resposta"),
+]
 
 # ---------------------------------------------------------------- janela de código: trecho real do JurosCalculator.java (recortado)
 CODE = [
@@ -105,6 +137,7 @@ def code():
         t += 0.45
     foot = 94 + len(CODE) * 30
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="600" height="{h}" viewBox="0 0 600 {h}" role="img" aria-label="Trecho do JurosCalculator.java: juros compostos com BigDecimal">
+{font_css("geist-500", "geist-mono-400")}
 <rect width="600" height="{h}" rx="16" fill="#1d1d1f"/><rect x=".5" y=".5" width="599" height="{h - 1}" rx="15.5" fill="none" stroke="#ffffff" stroke-opacity=".1"/>
 {dots(26, 26)}<rect x="96" y="12" width="190" height="28" rx="8" fill="#ffffff" fill-opacity=".08"/><text x="110" y="31" font-family="{MONO}" font-size="13" fill="#f5f5f7">J  JurosCalculator.java</text>
 <path d="M0 52H600" stroke="#ffffff" stroke-opacity=".08"/>
@@ -115,7 +148,13 @@ def code():
 """
 
 
-for name, svg in (("header.svg", header), ("terminal.svg", terminal()), ("code.svg", code())):
+for name, svg in (
+    ("header.svg", header),
+    ("terminal.svg", terminal("como eu uso cada coisa", STACK)),
+    ("code.svg", code()),
+    ("wall.svg", terminal("wall.ia", WALL, 600, 14.5)),
+    ("orbit.svg", terminal("Orbit.IA", ORBIT, 600, 14.5)),
+):
     with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
         f.write(svg)
-    print("ok", name)
+    print("ok", name, len(svg) // 1024, "KB")
