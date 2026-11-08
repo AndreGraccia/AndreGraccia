@@ -11,13 +11,13 @@ from html import unescape
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from build_visuals import DEFS, DIM, INK, MUTED, OUT, SKY, STYLE, VIOLET, pane  # noqa: E402
+from build_visuals import BLUE, DEFS, DIM, INK, MUTED, OUT, SKY, STYLE, VIOLET, pane  # noqa: E402
 
 USER = os.environ.get("GITHUB_REPOSITORY_OWNER", "AndreGraccia")
 TOKEN = os.environ.get("GITHUB_TOKEN")
 LANG_COLORS = {"Java": "#F89820", "HTML": "#E34F26", "CSS": "#1572B6", "Python": "#3776AB", "JavaScript": "#F7DF1E",
                "TypeScript": "#3178C6", "Shell": "#89E051", "Dockerfile": "#2496ED"}
-LEVELS = ["#ffffff", "#3d52e6", "#6a80ff", "#7ad3ff", "#f0a8ff"]  # nível 0 usa opacidade baixa
+LEVELS = ["#ffffff", "#2c0d74", "#5119d4", "#a88bf9", "#e0d6ff"]  # nível 0 usa opacidade baixa
 
 
 def get(url, api=False):
@@ -128,8 +128,8 @@ def render(user, repos, langs, days):
 {STYLE}{css}{DEFS}
 <clipPath id="cp"><rect width="{W}" height="{H}" rx="28"/></clipPath>
 <g clip-path="url(#cp)"><rect width="{W}" height="{H}" fill="url(#bg)"/>
-<circle class="b1" cx="120" cy="520" r="170" fill="#4F6BFF" opacity=".34" filter="url(#blur)"/>
-<circle class="b2" cx="1090" cy="40" r="180" fill="#9C8BFF" opacity=".32" filter="url(#blur)"/>
+<circle class="b1" cx="120" cy="520" r="170" fill="{BLUE}" opacity=".3" filter="url(#blur)"/>
+<circle class="b2" cx="1090" cy="40" r="180" fill="{VIOLET}" opacity=".26" filter="url(#blur)"/>
 <text x="26" y="44" class="m" font-size="12" fill="{SKY}">ATIVIDADE NO GITHUB · ÚLTIMOS 12 MESES</text>
 <text x="{W-26}" y="44" text-anchor="end" font-size="11" fill="{DIM}">@{USER} · atualizado em {now} UTC</text>
 {tl}

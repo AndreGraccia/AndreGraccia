@@ -75,10 +75,11 @@ Foco em **backend Java com Spring Boot**, **automação de testes em Python** e 
 
 ## Projetos
 
-<img src="assets/projects.svg" width="100%" alt="Projetos: Orbit.IA, wall.ia e Calculadora de Juros" />
+<img src="assets/projects.svg" width="100%" alt="Projetos: Conciliador, Orbit.IA, wall.ia e Calculadora de Juros" />
 
 | Projeto | O que faz | Stack |
 |:--|:--|:--|
+| **Conciliador** | API de conciliação: cruza vendas e extrato e aponta divergências com o motivo (ex.: taxa acima do contrato). | Java 21 · Spring Boot · PostgreSQL |
 | [**Orbit.IA**](https://github.com/AndreGraccia/Orbit.IA) | Orquestrador de agentes de IA que delega tarefas a sub-agentes especialistas e integra Google Workspace e GitHub. | React · Vite · n8n · LangChain · OpenRouter |
 | [**wall.ia**](https://github.com/AndreGraccia/wall.ia) | Gestão financeira full-stack: backend escalável, autenticação com JWT e banco isolado em Docker. | Java 17 · Spring Boot · Spring Security · PostgreSQL · Docker |
 | **Calculadora de Juros** | Serviço Java integrado às APIs REST do Banco Central (Selic, IPCA, CDI em tempo real). | Java · Spring Boot · Maven |
@@ -102,7 +103,7 @@ Foco em **backend Java com Spring Boot**, **automação de testes em Python** e 
 ```text
 index.html · styles.css · app.js   site do portfólio (Vercel)
 resume/curriculo.html              fonte do currículo ATS → Curriculo_Andre_Graccia.pdf
-assets/                            imagens do README, ícones e og.png
+assets/                            imagens do README, ícones, og.png e brand/ (artes da marca)
 scripts/                           geradores de SVG e ícones
 .github/workflows/profile.yml      atualização diária das estatísticas e SVGs
 ```
@@ -111,7 +112,7 @@ scripts/                           geradores de SVG e ícones
 
 <br/>
 
-**Software claro, testado e confiável.**
+**Backend é a parte que ninguém vê. É a que eu mais gosto de construir.**
 
 [Entre em contato](mailto:andregraccia2105@gmail.com) &nbsp;·&nbsp; [Portfólio](https://andre-graccia-curriculum.vercel.app) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/andregraccia/)
 
