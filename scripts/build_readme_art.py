@@ -169,11 +169,11 @@ def code(hint, aria):
 
 
 LANGS = {
-    "": dict(role="desenvolvedor full stack com Java", h1="Desenvolvedor full stack com", sub="APIs em Java e Spring Boot · interfaces em React · testes em Python · agentes de IA",
+    "": dict(role="engenheiro de software em formação com Java", h1="Engenheiro de software em formação com", sub="APIs em Java e Spring Boot · interfaces em React · testes em Python · agentes de IA",
              stack=STACK, wall=WALL, orbit=ORBIT, title="como eu uso cada coisa", hint="Regra: A = P × (1 + i)^n, tudo em BigDecimal.",
              aria="Trecho do JurosCalculator.java: juros compostos com BigDecimal",
              links=(("portfolio", "Portfólio"), ("curriculo", "Currículo"), ("email", "E-mail"), ("linkedin", "LinkedIn"))),
-    "-en": dict(role="full stack developer with Java", h1="Full stack developer with", sub="Java and Spring Boot APIs · React interfaces · Python tests · AI agents",
+    "-en": dict(role="software engineer in training with Java", h1="Software engineer in training with", sub="Java and Spring Boot APIs · React interfaces · Python tests · AI agents",
                 stack=STACK_EN, wall=WALL_EN, orbit=ORBIT_EN, title="how I use each thing", hint="Rule: A = P × (1 + i)^n, all in BigDecimal.",
                 aria="Excerpt of JurosCalculator.java: compound interest with BigDecimal",
                 links=(("portfolio", "Portfolio"), ("curriculo", "Resume"), ("email", "Email"), ("linkedin", "LinkedIn"))),

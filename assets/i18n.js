@@ -25,7 +25,7 @@
   add('Ir para o conteúdo', 'Skip to content');
   add('Projetos', 'Projects'); add('Experiência', 'Experience'); add('Contato', 'Contact');
   add('Enviar e-mail', 'Send email'); add('Ver projetos', 'View projects'); add('Falar comigo', 'Talk to me');
-  add('Desenvolvedor full stack com', 'Full stack developer with');
+  add('Engenheiro de software em formação com', 'Software engineer in training with');
   add('Do banco de dados à tela: APIs em Java e Spring Boot, interfaces responsivas em React e testes em Python. Foco em sistemas que lidam com dinheiro e precisam estar certos.', 'From the database to the screen: Java and Spring Boot APIs, responsive React interfaces and Python tests. I focus on systems that handle money and must be right.');
   // janela do hero
   add('R$ 1.000 a 2,5% ao mês', 'R$ 1,000 at 2.5% per month'); add('3 prazos', '3 terms');
@@ -63,7 +63,7 @@
   // sobre
   add('Sobre', 'About');
   add('Penso o sistema inteiro: como o back e o front se conectam, como a tela se adapta ao celular e o que acontece quando algo falha. Uso IA como engenheiro, não como atalho: eu defino a', 'I think about the whole system: how back end and front end connect, how the screen adapts to a phone and what happens when something fails. I use AI as an engineer, not as a shortcut: I define the');
-  add('estrutura e as regras', 'structure and the rules'); add('depois reviso e testo o que ela escreve. Estou em formação rumo à engenharia de software e busco estágio na área.', 'then I review and test what it writes. I am training to become a software engineer and I am looking for an internship in the field.');
+  add('estrutura e as regras', 'structure and the rules'); add('depois reviso e testo o que ela escreve. Estou em formação e evoluo a cada projeto, hoje também na prática, na Cielo.', 'then I review and test what it writes. I am in training and I grow with every project, now on the job too, at Cielo.');
   // experiência
   add('Experiência, formação e certificados.', 'Experience, education and certificates.');
   add('Aprendiz de Engenharia de Software', 'Software Engineering Apprentice');
@@ -80,9 +80,9 @@
   add('Projetos no GitHub', 'GitHub projects'); add('Inglês', 'English'); add('Formatura', 'Graduation');
   // fechamento, rodapé e caixa de contato
   add('Vamos conversar sobre software.', "Let's talk about software.");
-  add('Estágio, projeto ou dúvida sobre algo que construí. Respondo por e-mail.', 'An internship, a project or a question about something I built. I reply by email.');
+  add('Vaga, projeto ou dúvida sobre algo que construí. Respondo por e-mail.', 'A job, a project or a question about something I built. I reply by email.');
   add('Baixar currículo em PDF', 'Download resume (PDF)');
-  add('Desenvolvedor full stack em formação. São Paulo, Brasil.', 'Full stack developer in training. São Paulo, Brazil.');
+  add('Engenheiro de software em formação. São Paulo, Brasil.', 'Software engineer in training. São Paulo, Brazil.');
   add('Perfis', 'Profiles'); add('E-mail', 'Email'); add('Currículo (PDF)', 'Resume (PDF)');
   add('Nomes e logos de produtos são marcas de seus donos.', 'Product names and logos are trademarks of their owners.');
   add('Vamos conversar?', "Let's talk?");
@@ -109,8 +109,8 @@
     const v = e.getAttribute(a), t = v && tr(v); if (t) e.setAttribute(a, t); }));
   document.querySelectorAll('input[name=assunto]').forEach(i => { const t = tr(i.value); if (t) i.value = t; });
 
-  document.title = 'André Graccia: full stack developer with Java';
+  document.title = 'André Graccia: software engineer in training with Java';
   const md = document.querySelector('meta[name=description]');
-  if (md) md.content = 'Full stack developer. Java and Spring Boot APIs, responsive React interfaces, Python tests and AI agents. Projects on GitHub.';
+  if (md) md.content = 'Software engineer in training, full stack. Java and Spring Boot APIs, responsive React interfaces, Python tests and AI agents. Projects on GitHub.';
   document.querySelectorAll('a[href$="curriculo-andre-graccia.pdf"]').forEach(a => { a.href = 'resume-andre-graccia-en.pdf'; });
 })();

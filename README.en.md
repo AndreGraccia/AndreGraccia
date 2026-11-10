@@ -2,7 +2,7 @@
 
 [🇧🇷 Português](./README.md) &nbsp;·&nbsp; 🇺🇸 **English**
 
-<img src="./assets/readme/header-en.svg" width="100%" alt="André Graccia, full stack developer with Java" />
+<img src="./assets/readme/header-en.svg" width="100%" alt="André Graccia, software engineer in training with Java" />
 
 <br/>
 
@@ -15,11 +15,11 @@
 
 ## About
 
-Full stack developer and **Computer Science** student. I build **Java APIs with Spring Boot**, **responsive React interfaces** and automate tests in **Python**. I am currently a Software Engineering apprentice at **Cielo**, working on automation and software quality.
+Software engineer in training (full stack) and **Computer Science** student. I build **Java APIs with Spring Boot**, **responsive React interfaces** and automate tests in **Python**. I am currently a Software Engineering apprentice at **Cielo**, working on automation and software quality.
 
 Software that handles money has to be right, so I use `BigDecimal` in calculations and tests to prove it. I think about the whole system: how back end and front end connect, how the screen adapts to a phone and what happens when something fails. I use AI as an engineer, not as a shortcut: I define the structure and the rules, then I review and test what it writes.
 
-I am training to become a software engineer and I am looking for an internship in the field. I learn by building, getting it wrong, fixing it and measuring.
+I am in training and I grow with every project, now on the job too, at Cielo. I learn by building, getting it wrong, fixing it and measuring.
 
 ## Projects
 

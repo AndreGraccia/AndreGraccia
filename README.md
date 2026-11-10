@@ -2,7 +2,7 @@
 
 🇧🇷 **Português** &nbsp;·&nbsp; [🇺🇸 English](./README.en.md)
 
-<img src="./assets/readme/header.svg" width="100%" alt="André Graccia, desenvolvedor full stack com Java" />
+<img src="./assets/readme/header.svg" width="100%" alt="André Graccia, engenheiro de software em formação com Java" />
 
 <br/>
 
@@ -15,11 +15,11 @@
 
 ## Sobre
 
-Desenvolvedor full stack e estudante de **Ciência da Computação**. Construo **APIs em Java com Spring Boot**, **interfaces responsivas em React** e automatizo testes em **Python**. Hoje sou aprendiz de Engenharia de Software na **Cielo**, em automação e qualidade de software.
+Engenheiro de software em formação (full stack) e estudante de **Ciência da Computação**. Construo **APIs em Java com Spring Boot**, **interfaces responsivas em React** e automatizo testes em **Python**. Hoje sou aprendiz de Engenharia de Software na **Cielo**, em automação e qualidade de software.
 
 Software que lida com dinheiro precisa estar certo, então uso `BigDecimal` nos cálculos e testes para provar. Penso o sistema inteiro: como o back e o front se conectam, como a tela se adapta ao celular e o que acontece quando algo falha. Uso IA como engenheiro, não como atalho: defino a estrutura e as regras, depois reviso e testo o que ela escreve.
 
-Estou em formação rumo à engenharia de software e busco estágio na área. Aprendo construindo, errando, corrigindo e medindo.
+Estou em formação e evoluo a cada projeto, hoje também na prática, na Cielo. Aprendo construindo, errando, corrigindo e medindo.
 
 ## Projetos
 
