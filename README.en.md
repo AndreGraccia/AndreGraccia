@@ -2,7 +2,7 @@
 
 [🇧🇷 Português](./README.md) &nbsp;·&nbsp; 🇺🇸 **English**
 
-<img src="./assets/readme/header-en.svg" width="100%" alt="André Graccia, backend software engineer in Java" />
+<img src="./assets/readme/header-en.svg" width="100%" alt="André Graccia, full stack developer with Java" />
 
 <br/>
 
@@ -15,9 +15,11 @@
 
 ## About
 
-Software Engineer and **Computer Science** student. I build **Java APIs with Spring Boot**, automate tests in **Python** and study **AI agents**. I currently work at **Cielo**, on automation and software quality.
+Full stack developer and **Computer Science** student. I build **Java APIs with Spring Boot**, **responsive React interfaces** and automate tests in **Python**. I am currently a Software Engineering apprentice at **Cielo**, working on automation and software quality.
 
-I like backend: the part nobody sees and everything depends on.
+Software that handles money has to be right, so I use `BigDecimal` in calculations and tests to prove it. I think about the whole system: how back end and front end connect, how the screen adapts to a phone and what happens when something fails. I use AI as an engineer, not as a shortcut: I define the structure and the rules, then I review and test what it writes.
+
+I am training to become a software engineer and I am looking for an internship in the field. I learn by building, getting it wrong, fixing it and measuring.
 
 ## Projects
 

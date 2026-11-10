@@ -2,7 +2,7 @@
 
 🇧🇷 **Português** &nbsp;·&nbsp; [🇺🇸 English](./README.en.md)
 
-<img src="./assets/readme/header.svg" width="100%" alt="André Graccia, engenheiro de software backend em Java" />
+<img src="./assets/readme/header.svg" width="100%" alt="André Graccia, desenvolvedor full stack com Java" />
 
 <br/>
 
@@ -15,9 +15,11 @@
 
 ## Sobre
 
-Engenheiro de Software e estudante de **Ciência da Computação**. Construo **APIs em Java com Spring Boot**, automatizo testes em **Python** e estudo **agentes de IA**. Hoje atuo na **Cielo**, em automação e qualidade de software.
+Desenvolvedor full stack e estudante de **Ciência da Computação**. Construo **APIs em Java com Spring Boot**, **interfaces responsivas em React** e automatizo testes em **Python**. Hoje sou aprendiz de Engenharia de Software na **Cielo**, em automação e qualidade de software.
 
-Gosto de backend: a parte que ninguém vê e da qual tudo depende.
+Software que lida com dinheiro precisa estar certo, então uso `BigDecimal` nos cálculos e testes para provar. Penso o sistema inteiro: como o back e o front se conectam, como a tela se adapta ao celular e o que acontece quando algo falha. Uso IA como engenheiro, não como atalho: defino a estrutura e as regras, depois reviso e testo o que ela escreve.
+
+Estou em formação rumo à engenharia de software e busco estágio na área. Aprendo construindo, errando, corrigindo e medindo.
 
 ## Projetos
 

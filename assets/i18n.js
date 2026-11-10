@@ -25,8 +25,8 @@
   add('Ir para o conteúdo', 'Skip to content');
   add('Projetos', 'Projects'); add('Experiência', 'Experience'); add('Contato', 'Contact');
   add('Enviar e-mail', 'Send email'); add('Ver projetos', 'View projects'); add('Falar comigo', 'Talk to me');
-  add('Engenheiro de software backend em', 'Backend software engineer in');
-  add('Construo APIs em Java e Spring Boot e automatizo testes em Python. Foco em sistemas que lidam com dinheiro e precisam estar certos.', 'I build APIs in Java and Spring Boot and automate tests in Python. I focus on systems that handle money and have to be right.');
+  add('Desenvolvedor full stack com', 'Full stack developer with');
+  add('Do banco de dados à tela: APIs em Java e Spring Boot, interfaces responsivas em React e testes em Python. Foco em sistemas que lidam com dinheiro e precisam estar certos.', 'From the database to the screen: Java and Spring Boot APIs, responsive React interfaces and Python tests. I focus on systems that handle money and must be right.');
   // janela do hero
   add('R$ 1.000 a 2,5% ao mês', 'R$ 1,000 at 2.5% per month'); add('3 prazos', '3 terms');
   add('Prazo', 'Term'); add('Diferença', 'Difference'); add('Simples', 'Simple'); add('Composto', 'Compound');
@@ -37,13 +37,13 @@
   add('Projetos em Java, Python e IA.', 'Projects in Java, Python and AI.');
   add('APIs que cruzam dinheiro, agentes que usam suas ferramentas.', 'APIs that cross-check money, agents that use their tools.');
   add('Calculadora de Juros', 'Interest Calculator');
-  add('API em Java 25 e Spring Boot que calcula juros simples e compostos com BigDecimal.', 'Java 25 and Spring Boot API that calculates simple and compound interest with BigDecimal.');
+  add('API em Java 25 e Spring Boot que calcula juros simples e compostos com BigDecimal, para não perder centavos em arredondamento.', 'Java 25 and Spring Boot API that calculates simple and compound interest with BigDecimal, so no cents are lost to rounding.');
   add('Código no GitHub', 'Code on GitHub'); add('1 regra', '1 rule');
   add('Regra: A = P × (1 + i)^n, tudo em BigDecimal.', 'Rule: A = P × (1 + i)^n, all in BigDecimal.');
   add('Taxa em porcentagem vira fração.', 'Percentage rate becomes a fraction.');
   add('Valor monetário com 2 casas, HALF_UP.', 'Monetary value with 2 decimals, HALF_UP.');
   add('Orquestrador de agentes com React, n8n e LangChain.', 'Agent orchestrator with React, n8n and LangChain.');
-  add('Gestão financeira full-stack com Spring Security e JWT.', 'Full-stack financial management with Spring Security and JWT.');
+  add('Gestão financeira full-stack: API em Spring Boot com Spring Security e JWT, interface em React e dados em PostgreSQL.', 'Full-stack financial management: Spring Boot API with Spring Security and JWT, React interface and PostgreSQL data.');
   add('Orçamento usado', 'Budget used'); add('Este mês', 'This month'); add('abaixo do mês anterior', 'below last month');
   add('1 nov', 'Nov 1'); add('15 nov', 'Nov 15'); add('Hoje', 'Today');
   add('Automação de testes em Python', 'Test automation in Python');
@@ -62,27 +62,27 @@
   add('Também: SQL, SQL Server, JPA, REST, JWT e JUnit.', 'Also: SQL, SQL Server, JPA, REST, JWT and JUnit.');
   // sobre
   add('Sobre', 'About');
-  add('Gosto de backend: a parte que ninguém vê e da qual tudo depende. Escrevo APIs e testes pensando no sistema que', 'I like backend: the part nobody sees and everything depends on. I write APIs and tests thinking about the system that');
-  add('continua de pé', 'stays standing'); add('quando ninguém está olhando.', 'when nobody is looking.');
+  add('Penso o sistema inteiro: como o back e o front se conectam, como a tela se adapta ao celular e o que acontece quando algo falha. Uso IA como engenheiro, não como atalho: eu defino a', 'I think about the whole system: how back end and front end connect, how the screen adapts to a phone and what happens when something fails. I use AI as an engineer, not as a shortcut: I define the');
+  add('estrutura e as regras', 'structure and the rules'); add('depois reviso e testo o que ela escreve. Estou em formação rumo à engenharia de software e busco estágio na área.', 'then I review and test what it writes. I am training to become a software engineer and I am looking for an internship in the field.');
   // experiência
   add('Experiência, formação e certificados.', 'Experience, education and certificates.');
-  add('Engenheiro de Software', 'Software Engineer');
+  add('Aprendiz de Engenharia de Software', 'Software Engineering Apprentice');
   add('Automações em Python, testes automatizados, análise de falhas e validação de sistemas, em equipes multidisciplinares.', 'Python automation, automated testing, failure analysis and system validation, in cross-functional teams.');
   add('jul 2026 – atual', 'Jul 2026 – present'); add('Ciência da Computação', 'Computer Science');
   add('Bacharelado em andamento, com formatura prevista para dezembro de 2028.', "Bachelor's degree in progress, expected graduation in December 2028.");
   add('Idiomas e certificados', 'Languages and certificates'); add('Inglês B1', 'English B1');
   add('Inteligência Artificial e Produtividade, Lógica de Programação e Cloud Infrastructure Foundations.', 'Artificial Intelligence and Productivity, Programming Logic and Cloud Infrastructure Foundations.');
   add('Certificados', 'Certificates');
-  add('Engenheiro de Software: automação e testes', 'Software Engineer: automation and tests');
+  add('Aprendiz de Engenharia de Software: automação e testes', 'Software Engineering Apprentice: automation and tests');
   add('Orbit.IA: agentes de IA com n8n e LangChain', 'Orbit.IA: AI agents with n8n and LangChain');
   add('Calculadora de Juros: API em Java com BigDecimal', 'Interest Calculator: Java API with BigDecimal');
   add('Primeiro commit: Java e curiosidade', 'First commit: Java and curiosity');
   add('Projetos no GitHub', 'GitHub projects'); add('Inglês', 'English'); add('Formatura', 'Graduation');
   // fechamento, rodapé e caixa de contato
-  add('Vamos conversar sobre backend.', "Let's talk about backend.");
-  add('Vaga, projeto ou dúvida sobre algo que construí. Respondo por e-mail.', 'A job, a project or a question about something I built. I reply by email.');
+  add('Vamos conversar sobre software.', "Let's talk about software.");
+  add('Estágio, projeto ou dúvida sobre algo que construí. Respondo por e-mail.', 'An internship, a project or a question about something I built. I reply by email.');
   add('Baixar currículo em PDF', 'Download resume (PDF)');
-  add('Engenheiro de software backend. São Paulo, Brasil.', 'Backend software engineer. São Paulo, Brazil.');
+  add('Desenvolvedor full stack em formação. São Paulo, Brasil.', 'Full stack developer in training. São Paulo, Brazil.');
   add('Perfis', 'Profiles'); add('E-mail', 'Email'); add('Currículo (PDF)', 'Resume (PDF)');
   add('Nomes e logos de produtos são marcas de seus donos.', 'Product names and logos are trademarks of their owners.');
   add('Vamos conversar?', "Let's talk?");
@@ -109,8 +109,8 @@
     const v = e.getAttribute(a), t = v && tr(v); if (t) e.setAttribute(a, t); }));
   document.querySelectorAll('input[name=assunto]').forEach(i => { const t = tr(i.value); if (t) i.value = t; });
 
-  document.title = 'André Graccia: backend software engineer in Java';
+  document.title = 'André Graccia: full stack developer with Java';
   const md = document.querySelector('meta[name=description]');
-  if (md) md.content = 'Backend software engineer. Java and Spring Boot APIs, Python test automation and AI agents. Projects on GitHub.';
+  if (md) md.content = 'Full stack developer. Java and Spring Boot APIs, responsive React interfaces, Python tests and AI agents. Projects on GitHub.';
   document.querySelectorAll('a[href$="curriculo-andre-graccia.pdf"]').forEach(a => { a.href = 'resume-andre-graccia-en.pdf'; });
 })();

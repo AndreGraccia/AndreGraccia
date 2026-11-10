@@ -6,11 +6,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>André Graccia: engenheiro de software backend em Java</title>
-<meta name="description" content="Engenheiro de software backend. APIs em Java e Spring Boot, automação de testes em Python e agentes de IA. Projetos no GitHub.">
+<title>André Graccia: desenvolvedor full stack com Java</title>
+<meta name="description" content="Desenvolvedor full stack. APIs em Java e Spring Boot, interfaces responsivas em React, testes em Python e agentes de IA. Projetos no GitHub.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="André Graccia: engenheiro de software backend em Java">
-<meta property="og:description" content="APIs em Java e Spring Boot, automação de testes em Python e agentes de IA.">
+<meta property="og:title" content="André Graccia: desenvolvedor full stack com Java">
+<meta property="og:description" content="APIs em Java e Spring Boot, interfaces em React, testes em Python e agentes de IA.">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0b0b0d">
@@ -183,7 +183,10 @@ body { background: var(--p-bg); }
 .stk__tag { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; padding: 2px 10px; border-radius: 99px; font-size: 12px; background: rgb(255 255 255 / .08); border: 1px solid rgb(255 255 255 / .12); }
 .stk__cmd + .stk__tag { margin-left: auto; } .stk__tag + .stk__tag { margin-left: 0; }
 .stk__tag img { width: 16px; height: 16px; padding: 2px; box-sizing: content-box; background: #f5f5f7; border-radius: 5px; }
-@media (max-width: 639px) { .stk__tag { margin-left: 0 !important; } }
+@media (max-width: 639px) { .stk__tag { margin-left: 0 !important; }
+  .stk { font-size: 13px; } .stk__body { padding: 14px 14px 16px; } .stk__bar { padding: 10px 14px; }
+  .stk__out { display: block; padding-left: 0; margin-bottom: 8px; } /* a seta fica na mesma linha do texto */
+  #projetos .card > .panel:not([data-fx], .panel--device) { --p-h: 300px; height: 300px; } }
 /* nome no menu: sobrenome em serifa itálica desenhada (Instrument Serif), entra uma vez com foco + sublinhado que se desenha */
 .nav__name { display: inline-block; -webkit-mask-image: linear-gradient(90deg, #000 45%, transparent 55%); mask-image: linear-gradient(90deg, #000 45%, transparent 55%); -webkit-mask-size: 250% 100%; mask-size: 250% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; animation: name-wipe 2.4s linear .4s both; }
 @media (prefers-reduced-motion: reduce) { .nav__name { animation-duration: 2.4s !important; } .nav__sur::after { animation-duration: 1.4s !important; } }
@@ -249,8 +252,8 @@ html { scroll-padding-top: 72px; }
     <div class="wrap"><div class="hero-text">
       <div class="hero__c">
         <a class="pill" href="#projetos"><span>Java · Python · Spring Boot</span><span class="muted">Ver projetos</span></a>
-        <h1 id="hero-h">Engenheiro de software backend em <span class="hl">Java</span></h1>
-        <p class="hero__lead">Construo APIs em Java e Spring Boot e automatizo testes em Python. Foco em sistemas que lidam com dinheiro e precisam estar certos.</p>
+        <h1 id="hero-h">Desenvolvedor full stack com <span class="hl">Java</span></h1>
+        <p class="hero__lead">Do banco de dados à tela: APIs em Java e Spring Boot, interfaces responsivas em React e testes em Python. Foco em sistemas que lidam com dinheiro e precisam estar certos.</p>
         <div class="btn-row"><a class="btn btn--primary" href="#projetos">Ver projetos</a><a class="btn btn--secondary" href="#contato">Falar comigo</a></div>
       </div>
       <div class="hero__window" role="img" aria-label="Calculadora de Juros comparando juros simples e compostos de R$ 1.000 a 2,5% ao mês em 3, 6 e 12 meses">
@@ -276,7 +279,7 @@ html { scroll-padding-top: 72px; }
         <div class="grid">
           <article class="card card--row card--open span-6">
             <h3>Calculadora de Juros</h3>
-            <p>API em Java 25 e Spring Boot que calcula juros simples e compostos com BigDecimal. <a class="link" href="https://github.com/AndreGraccia/calc-juros" target="_blank" rel="noopener">Código no GitHub</a></p>
+            <p>API em Java 25 e Spring Boot que calcula juros simples e compostos com BigDecimal, para não perder centavos em arredondamento. <a class="link" href="https://github.com/AndreGraccia/calc-juros" target="_blank" rel="noopener">Código no GitHub</a></p>
             <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:400px;--ax:max(24px, 50% - 200px);--ay:32px;--ay-sm:16px" data-ui-loop>
               <div class="ui ui-panel ui-code" data-ui="code">
                 <div class="ui-code__tabs">
@@ -305,7 +308,7 @@ html { scroll-padding-top: 72px; }
       <div class="grid">
         <article class="card card--row card--open span-6">
           <h3>wall.ia</h3>
-          <p>Gestão financeira full-stack com Spring Security e JWT. <a class="link" href="https://github.com/AndreGraccia/wall.ia" target="_blank" rel="noopener">Código no GitHub</a></p>
+          <p>Gestão financeira full-stack: API em Spring Boot com Spring Security e JWT, interface em React e dados em PostgreSQL. <a class="link" href="https://github.com/AndreGraccia/wall.ia" target="_blank" rel="noopener">Código no GitHub</a></p>
           <div class="panel"><div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:400px;--ax:max(24px, 50% - 200px);--ay:32px;--ay-sm:16px">
             <div class="ui ui-panel ui-stat" data-ui="stat" data-from="62" data-to="58" data-suffix="%">
               <div class="ui-stat__head">
@@ -390,7 +393,7 @@ html { scroll-padding-top: 72px; }
   <section class="section statement" id="sobre" data-moment="word-highlight" aria-label="Sobre">
     <div class="wrap">
       <p class="t-label">Sobre</p>
-      <p class="mo-wh__text">Gosto de backend: a parte que ninguém vê e da qual tudo depende. Escrevo APIs e testes pensando no sistema que <strong>continua de pé</strong> quando ninguém está olhando.</p>
+      <p class="mo-wh__text">Penso o sistema inteiro: como o back e o front se conectam, como a tela se adapta ao celular e o que acontece quando algo falha. Uso IA como engenheiro, não como atalho: eu defino a <strong>estrutura e as regras</strong>, depois reviso e testo o que ela escreve. Estou em formação rumo à engenharia de software e busco estágio na área.</p>
     </div>
   </section>
 
@@ -399,14 +402,14 @@ html { scroll-padding-top: 72px; }
       <div class="section-head"><h2 id="exp-h">Experiência, formação e certificados.</h2></div>
       <div class="grid" style="align-items:start">
         <ul class="rows span-7">
-          <li><span class="rows__name">Cielo<small class="muted"> · Engenheiro de Software</small></span><p>Automações em Python, testes automatizados, análise de falhas e validação de sistemas, em equipes multidisciplinares.</p><span class="rows__value">jul 2026 – atual</span></li>
+          <li><span class="rows__name">Cielo<small class="muted"> · Aprendiz de Engenharia de Software</small></span><p>Automações em Python, testes automatizados, análise de falhas e validação de sistemas, em equipes multidisciplinares.</p><span class="rows__value">jul 2026 – atual</span></li>
           <li><span class="rows__name">Anhembi Morumbi<small class="muted"> · Ciência da Computação</small></span><p>Bacharelado em andamento, com formatura prevista para dezembro de 2028.</p><span class="rows__value">2025 – 2028</span></li>
           <li><span class="rows__name">Idiomas e certificados<small class="muted"> · Inglês B1</small></span><p>Inteligência Artificial e Produtividade, Lógica de Programação e Cloud Infrastructure Foundations.</p><span class="rows__value">Certificados</span></li>
         </ul>
         <div class="span-5 start-8"><div class="gl" role="img" aria-label="Histórico de carreira em formato de git log: engenharia de software, Orbit.IA, Calculadora de Juros e o primeiro commit">
           <div class="gl__bar"><span class="cw__dots"><i></i><i></i><i></i></span><span>git log --oneline</span></div>
           <div class="gl__body" aria-hidden="true">
-            <p><b>a41f9c2</b> <em>(HEAD)</em> Engenheiro de Software: automação e testes</p>
+            <p><b>a41f9c2</b> <em>(HEAD)</em> Aprendiz de Engenharia de Software: automação e testes</p>
             <p><b>7d03be8</b> Orbit.IA: agentes de IA com n8n e LangChain</p>
             <p><b>2c9e1a5</b> Calculadora de Juros: API em Java com BigDecimal</p>
             <p><b>0000001</b> Primeiro commit: Java e curiosidade<i class="gl__caret"></i></p>
@@ -422,8 +425,8 @@ html { scroll-padding-top: 72px; }
   <div class="wrap">
     <div class="closing__cta close--type">
       <div class="section-head">
-        <h2 id="close-h">Vamos conversar sobre backend.</h2>
-        <p>Vaga, projeto ou dúvida sobre algo que construí. Respondo por e-mail.</p>
+        <h2 id="close-h">Vamos conversar sobre software.</h2>
+        <p>Estágio, projeto ou dúvida sobre algo que construí. Respondo por e-mail.</p>
       </div>
       <a class="btn btn--primary btn--xl btn--wide" href="mailto:andregraccia2105@gmail.com">Enviar e-mail<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
       <p class="closing__cv"><a class="link" href="curriculo-andre-graccia.pdf" download>Baixar currículo em PDF</a></p>
@@ -432,7 +435,7 @@ html { scroll-padding-top: 72px; }
       <div class="grid">
         <div class="span-4 stack-4">
           <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>André Graccia</a>
-          <p class="footer__lede">Engenheiro de software backend. São Paulo, Brasil.</p>
+          <p class="footer__lede">Desenvolvedor full stack em formação. São Paulo, Brasil.</p>
         </div>
         <div class="span-2 start-7 footer__col"><h3>Site</h3><ul><li><a href="#projetos">Projetos</a></li><li><a href="#stack">Stack</a></li><li><a href="#experiencia">Experiência</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Perfis</h3><ul><li><a href="https://github.com/AndreGraccia">GitHub</a></li><li><a href="https://www.linkedin.com/in/andregraccia/">LinkedIn</a></li></ul></div>
