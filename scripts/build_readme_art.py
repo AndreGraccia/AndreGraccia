@@ -62,7 +62,7 @@ def header(t):
 </g>
 <path d="M300 190H700" stroke="url(#ul)" stroke-width="2.5" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"><animate attributeName="stroke-dashoffset" from="1" to="0" begin="2.8s" dur="1.4s" fill="freeze"/></path>
 <g opacity="0">{fade(3.2, 1)}
-<text x="500" y="250" text-anchor="middle" font-family="{SANS}" font-size="30" font-weight="500" letter-spacing="-.6" fill="#f5f5f7">{t['h1']} <tspan fill="{BLUE}">Java</tspan></text>
+<text x="500" y="250" text-anchor="middle" font-family="{SANS}" font-size="30" font-weight="500" letter-spacing="-.6" fill="#f5f5f7">{t['h1']} <tspan fill="{BLUE}">{t['hl']}</tspan></text>
 <text x="500" y="286" text-anchor="middle" font-family="{SANS}" font-size="16" fill="#a1a1a6">{t['sub']}</text></g>
 </svg>
 """
@@ -169,11 +169,11 @@ def code(hint, aria):
 
 
 LANGS = {
-    "": dict(role="engenheiro de software em formação com Java", h1="Engenheiro de software em formação com", sub="APIs em Java e Spring Boot · interfaces em React · testes em Python · agentes de IA",
+    "": dict(role="engenheiro de software Java em formação", h1="Engenheiro de software Java", hl="em formação", sub="APIs em Java e Spring Boot · interfaces em React · testes em Python · agentes de IA",
              stack=STACK, wall=WALL, orbit=ORBIT, title="como eu uso cada coisa", hint="Regra: A = P × (1 + i)^n, tudo em BigDecimal.",
              aria="Trecho do JurosCalculator.java: juros compostos com BigDecimal",
              links=(("portfolio", "Portfólio"), ("curriculo", "Currículo"), ("email", "E-mail"), ("linkedin", "LinkedIn"))),
-    "-en": dict(role="software engineer in training with Java", h1="Software engineer in training with", sub="Java and Spring Boot APIs · React interfaces · Python tests · AI agents",
+    "-en": dict(role="Java software engineer in training", h1="Java software engineer", hl="in training", sub="Java and Spring Boot APIs · React interfaces · Python tests · AI agents",
                 stack=STACK_EN, wall=WALL_EN, orbit=ORBIT_EN, title="how I use each thing", hint="Rule: A = P × (1 + i)^n, all in BigDecimal.",
                 aria="Excerpt of JurosCalculator.java: compound interest with BigDecimal",
                 links=(("portfolio", "Portfolio"), ("curriculo", "Resume"), ("email", "Email"), ("linkedin", "LinkedIn"))),

@@ -2,7 +2,7 @@
 
 🇧🇷 **Português** &nbsp;·&nbsp; [🇺🇸 English](./README.en.md)
 
-<img src="./assets/readme/header.svg" width="100%" alt="André Graccia, engenheiro de software em formação com Java" />
+<img src="./assets/readme/header.svg" width="100%" alt="André Graccia, engenheiro de software Java em formação" />
 
 <br/>
 
@@ -15,7 +15,7 @@
 
 ## Sobre
 
-Engenheiro de software em formação (full stack) e estudante de **Ciência da Computação**. Construo **APIs em Java com Spring Boot**, **interfaces responsivas em React** e automatizo testes em **Python**. Hoje sou aprendiz de Engenharia de Software na **Cielo**, em automação e qualidade de software.
+Engenheiro de software Java em formação (full stack) e estudante de **Ciência da Computação**. Construo **APIs em Java com Spring Boot**, **interfaces responsivas em React** e automatizo testes em **Python**. Hoje sou aprendiz de Engenharia de Software na **Cielo**, em automação e qualidade de software.
 
 Na Calculadora de Juros uso `BigDecimal` em vez de `double` e decido onde arredondar: só no resultado final, com 2 casas (HALF_UP). Penso o sistema inteiro: como o back e o front se conectam, como a tela se adapta ao celular e o que acontece quando algo falha. Uso IA como engenheiro, não como atalho: defino a estrutura e as regras, depois reviso e testo o que ela escreve.
 

@@ -2,7 +2,7 @@
 
 [🇧🇷 Português](./README.md) &nbsp;·&nbsp; 🇺🇸 **English**
 
-<img src="./assets/readme/header-en.svg" width="100%" alt="André Graccia, software engineer in training with Java" />
+<img src="./assets/readme/header-en.svg" width="100%" alt="André Graccia, Java software engineer in training" />
 
 <br/>
 
@@ -15,7 +15,7 @@
 
 ## About
 
-Software engineer in training (full stack) and **Computer Science** student. I build **Java APIs with Spring Boot**, **responsive React interfaces** and automate tests in **Python**. I am currently a Software Engineering apprentice at **Cielo**, working on automation and software quality.
+Java software engineer in training (full stack) and **Computer Science** student. I build **Java APIs with Spring Boot**, **responsive React interfaces** and automate tests in **Python**. I am currently a Software Engineering apprentice at **Cielo**, working on automation and software quality.
 
 In the Interest Calculator I use `BigDecimal` instead of `double` and decide where to round: only in the final result, with 2 decimals (HALF_UP). I think about the whole system: how back end and front end connect, how the screen adapts to a phone and what happens when something fails. I use AI as an engineer, not as a shortcut: I define the structure and the rules, then I review and test what it writes.
 

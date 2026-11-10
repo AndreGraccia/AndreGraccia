@@ -25,7 +25,7 @@
   add('Ir para o conteúdo', 'Skip to content');
   add('Projetos', 'Projects'); add('Experiência', 'Experience'); add('Contato', 'Contact');
   add('Enviar e-mail', 'Send email'); add('Ver projetos', 'View projects'); add('Falar comigo', 'Talk to me');
-  add('Engenheiro de software em formação com', 'Software engineer in training with');
+  add('Engenheiro de software Java', 'Java software engineer'); add('em formação', 'in training');
   add('Do banco de dados à tela: APIs em Java e Spring Boot, interfaces responsivas em React e testes em Python. Gosto de cálculos com dinheiro, onde precisão e arredondamento são decisões de projeto.', 'From the database to the screen: Java and Spring Boot APIs, responsive React interfaces and Python tests. I like money calculations, where precision and rounding are design decisions.');
   // janela do hero
   add('R$ 1.000 a 2,5% ao mês', 'R$ 1,000 at 2.5% per month'); add('3 prazos', '3 terms');
@@ -82,7 +82,7 @@
   add('Vamos conversar sobre software.', "Let's talk about software.");
   add('Vaga, projeto ou dúvida sobre algo que construí. Respondo por e-mail.', 'A job, a project or a question about something I built. I reply by email.');
   add('Baixar currículo em PDF', 'Download resume (PDF)');
-  add('Engenheiro de software em formação. São Paulo, Brasil.', 'Software engineer in training. São Paulo, Brazil.');
+  add('Engenheiro de software Java em formação. São Paulo, Brasil.', 'Java software engineer in training. São Paulo, Brazil.');
   add('Perfis', 'Profiles'); add('E-mail', 'Email'); add('Currículo (PDF)', 'Resume (PDF)');
   add('Nomes e logos de produtos são marcas de seus donos.', 'Product names and logos are trademarks of their owners.');
   add('Vamos conversar?', "Let's talk?");
@@ -109,8 +109,8 @@
     const v = e.getAttribute(a), t = v && tr(v); if (t) e.setAttribute(a, t); }));
   document.querySelectorAll('input[name=assunto]').forEach(i => { const t = tr(i.value); if (t) i.value = t; });
 
-  document.title = 'André Graccia: software engineer in training with Java';
+  document.title = 'André Graccia: Java software engineer in training';
   const md = document.querySelector('meta[name=description]');
-  if (md) md.content = 'Software engineer in training, full stack. Java and Spring Boot APIs, responsive React interfaces, Python tests and AI agents. Projects on GitHub.';
+  if (md) md.content = 'Java software engineer in training, full stack. Java and Spring Boot APIs, responsive React interfaces, Python tests and AI agents. Projects on GitHub.';
   document.querySelectorAll('a[href$="curriculo-andre-graccia.pdf"]').forEach(a => { a.href = 'resume-andre-graccia-en.pdf'; });
 })();
