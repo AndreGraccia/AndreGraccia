@@ -17,7 +17,7 @@
 
 Software engineer in training (full stack) and **Computer Science** student. I build **Java APIs with Spring Boot**, **responsive React interfaces** and automate tests in **Python**. I am currently a Software Engineering apprentice at **Cielo**, working on automation and software quality.
 
-Software that handles money has to be right, so I use `BigDecimal` in calculations and tests to prove it. I think about the whole system: how back end and front end connect, how the screen adapts to a phone and what happens when something fails. I use AI as an engineer, not as a shortcut: I define the structure and the rules, then I review and test what it writes.
+In the Interest Calculator I use `BigDecimal` instead of `double` and decide where to round: only in the final result, with 2 decimals (HALF_UP). I think about the whole system: how back end and front end connect, how the screen adapts to a phone and what happens when something fails. I use AI as an engineer, not as a shortcut: I define the structure and the rules, then I review and test what it writes.
 
 I am in training and I grow with every project, now on the job too, at Cielo. I learn by building, getting it wrong, fixing it and measuring.
 

@@ -26,7 +26,7 @@
   add('Projetos', 'Projects'); add('Experiência', 'Experience'); add('Contato', 'Contact');
   add('Enviar e-mail', 'Send email'); add('Ver projetos', 'View projects'); add('Falar comigo', 'Talk to me');
   add('Engenheiro de software em formação com', 'Software engineer in training with');
-  add('Do banco de dados à tela: APIs em Java e Spring Boot, interfaces responsivas em React e testes em Python. Foco em sistemas que lidam com dinheiro e precisam estar certos.', 'From the database to the screen: Java and Spring Boot APIs, responsive React interfaces and Python tests. I focus on systems that handle money and must be right.');
+  add('Do banco de dados à tela: APIs em Java e Spring Boot, interfaces responsivas em React e testes em Python. Gosto de cálculos com dinheiro, onde precisão e arredondamento são decisões de projeto.', 'From the database to the screen: Java and Spring Boot APIs, responsive React interfaces and Python tests. I like money calculations, where precision and rounding are design decisions.');
   // janela do hero
   add('R$ 1.000 a 2,5% ao mês', 'R$ 1,000 at 2.5% per month'); add('3 prazos', '3 terms');
   add('Prazo', 'Term'); add('Diferença', 'Difference'); add('Simples', 'Simple'); add('Composto', 'Compound');
@@ -37,7 +37,7 @@
   add('Projetos em Java, Python e IA.', 'Projects in Java, Python and AI.');
   add('APIs que cruzam dinheiro, agentes que usam suas ferramentas.', 'APIs that cross-check money, agents that use their tools.');
   add('Calculadora de Juros', 'Interest Calculator');
-  add('API em Java 25 e Spring Boot que calcula juros simples e compostos com BigDecimal, para não perder centavos em arredondamento.', 'Java 25 and Spring Boot API that calculates simple and compound interest with BigDecimal, so no cents are lost to rounding.');
+  add('API em Java 25 e Spring Boot que calcula juros simples e compostos com BigDecimal em vez de double, e arredonda só no resultado final.', 'Java 25 and Spring Boot API that calculates simple and compound interest with BigDecimal instead of double, rounding only the final result.');
   add('Código no GitHub', 'Code on GitHub'); add('1 regra', '1 rule');
   add('Regra: A = P × (1 + i)^n, tudo em BigDecimal.', 'Rule: A = P × (1 + i)^n, all in BigDecimal.');
   add('Taxa em porcentagem vira fração.', 'Percentage rate becomes a fraction.');
