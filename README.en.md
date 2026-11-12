@@ -6,8 +6,8 @@
 
 <br/>
 
-<a href="https://andre-graccia-curriculum.vercel.app"><img src="./assets/readme/link-portfolio-en.svg" height="44" alt="Portfolio" /></a>&nbsp;
-<a href="https://andre-graccia-curriculum.vercel.app/resume-andre-graccia-en.pdf"><img src="./assets/readme/link-curriculo-en.svg" height="44" alt="Resume (PDF)" /></a>&nbsp;
+<a href="https://andre-graccia.vercel.app"><img src="./assets/readme/link-portfolio-en.svg" height="44" alt="Portfolio" /></a>&nbsp;
+<a href="https://andre-graccia.vercel.app/resume-andre-graccia-en.pdf"><img src="./assets/readme/link-curriculo-en.svg" height="44" alt="Resume (PDF)" /></a>&nbsp;
 <a href="mailto:andregraccia2105@gmail.com"><img src="./assets/readme/link-email-en.svg" height="44" alt="Email" /></a>&nbsp;
 <a href="https://www.linkedin.com/in/andregraccia/"><img src="./assets/readme/link-linkedin-en.svg" height="44" alt="LinkedIn" /></a>
 
