@@ -101,7 +101,10 @@ export function unmountAll(root = document) {
 }
 
 html.classList.add('mo-js');
-setTimeout(() => html.classList.add('mo-safe'), 2500);
+// conta a partir do load (aparelho lento não perde a animação); teto de 6 s se o load nunca vier
+const safe = () => html.classList.add('mo-safe');
+setTimeout(safe, 6000);
+if (document.readyState === 'complete') setTimeout(safe, 2500); else addEventListener('load', () => setTimeout(safe, 2500), { once: true });
 const start = () => { if (!window.__momentsManual) mountAll(document); };
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
 else start();
