@@ -508,11 +508,22 @@ ${d.get('nome')}${d.get('email') ? ' (' + d.get('email') + ')' : ''}`;
 /* foco de luz que segue o mouse (só com ponteiro fino; só muda a cor, não move nada, então vale também com "menos movimento") */
 if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
   const hero = document.querySelector('.hero');
+  // uma escrita por quadro (rAF); o retângulo do alvo fica em cache até trocar de alvo, rolar ou redimensionar, para não forçar layout a cada movimento
+  let t = null, rect = null, x = 0, y = 0, gx = -1, raf = 0;
+  const frame = () => {
+    raf = 0;
+    if (t) { rect = rect || t.getBoundingClientRect(); t.style.setProperty('--mx', (x - rect.left) + 'px'); t.style.setProperty('--my', (y - rect.top) + 'px'); }
+    const g = Math.round(x / innerWidth * 200) / 2;
+    if (hero && g !== gx) { gx = g; hero.style.setProperty('--gx', g + '%'); }
+  };
   document.addEventListener('pointermove', e => {
-    const t = e.target.closest && e.target.closest('.cw, .gl, .chips li, .pill, .panel');
-    if (t) { const r = t.getBoundingClientRect(); t.style.setProperty('--mx', (e.clientX - r.left) + 'px'); t.style.setProperty('--my', (e.clientY - r.top) + 'px'); }
-    if (hero) hero.style.setProperty('--gx', (e.clientX / innerWidth * 100) + '%');
+    const n = e.target.closest ? e.target.closest('.cw, .gl, .chips li, .pill, .panel') : null;
+    if (n !== t) { t = n; rect = null; }
+    x = e.clientX; y = e.clientY;
+    if (!raf) raf = requestAnimationFrame(frame);
   }, { passive: true });
+  const drop = () => { rect = null; };
+  addEventListener('scroll', drop, { passive: true }); addEventListener('resize', drop);
 }
 </script>
 <script>
