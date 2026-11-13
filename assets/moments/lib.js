@@ -48,29 +48,47 @@ export const ease = {
   smooth: (a, b, x) => { const t = clamp((x - a) / (b - a)); return t * t * (3 - 2 * t); },
 };
 
+// one requestAnimationFrame for every scrubbed moment: first every rectangle is read, then every moment writes.
+// Two moments on one screen used to read and write in turn, which forced a fresh layout in the middle of each frame
+const live = new Set();
+let raf = 0, bound = false, docH = 0;
+function frame() {
+  raf = 0;
+  const vh = innerHeight;
+  docH = document.documentElement.scrollHeight;
+  const due = [];
+  for (const s of live) if (s.on || s.settle) { due.push([s, s.el.getBoundingClientRect()]); s.settle = false; }
+  for (const [s, r] of due) s.run(r, vh);
+}
+const request = () => { if (!raf) raf = requestAnimationFrame(frame); };
+// true when the page is scrolled to its foot (read in the same frame, no extra layout)
+export const atEnd = () => innerHeight + scrollY >= docH - 2;
+
 export function scrub(el, fn, { mode = 'hold', margin = '25% 0px' } = {}) {
-  // on from the start, with the scroll listener: an observer that never reports (a dead stub, a page it cannot reach) leaves the
-  // moment following the scroll instead of frozen at its first state; the observer turns it off when the target is far away
-  let on = true, raf = 0, last = -1;
-  const tick = () => {
-    raf = 0;
-    if (!on) return;
-    const r = el.getBoundingClientRect(), vh = innerHeight;
-    let p = mode === 'view' ? (vh - r.top) / (vh + r.height) : -r.top / Math.max(1, r.height - vh);
-    p = clamp(p);
-    if (p !== last) { last = p; fn(p, r); }
+  // on from the start: an observer that never reports leaves the moment following the scroll instead of frozen at
+  // its first state; the observer turns it off when the target is far away, after one last frame so a fast scroll
+  // never leaves it half way
+  const s = {
+    el, on: true, settle: false, last: -1,
+    run(r, vh) {
+      let p = mode === 'view' ? (vh - r.top) / (vh + r.height) : -r.top / Math.max(1, r.height - vh);
+      p = clamp(p);
+      if (p !== s.last) { s.last = p; fn(p, r); }
+    },
   };
-  const req = () => { if (!raf) raf = requestAnimationFrame(tick); };
+  live.add(s);
+  if (!bound) { bound = true; addEventListener('scroll', request, { passive: true }); addEventListener('resize', request); }
   const io = new IntersectionObserver(es => {
-    on = es[es.length - 1].isIntersecting;
-    removeEventListener('scroll', req); removeEventListener('resize', req);
-    if (on) { addEventListener('scroll', req, { passive: true }); addEventListener('resize', req); req(); }
+    const on = es[es.length - 1].isIntersecting;
+    if (!on && s.on) s.settle = true;
+    s.on = on;
+    request();
   }, { rootMargin: margin });
   io.observe(el);
-  addEventListener('scroll', req, { passive: true }); addEventListener('resize', req); req();
+  request();
   return {
-    update: () => { last = -1; req(); },
-    destroy() { io.disconnect(); removeEventListener('scroll', req); removeEventListener('resize', req); if (raf) cancelAnimationFrame(raf); },
+    update: () => { s.last = -1; s.settle = true; request(); },
+    destroy() { io.disconnect(); live.delete(s); },
   };
 }
 
@@ -183,7 +201,12 @@ export function blocks(root, skip = []) {
     }
   };
   measure();
-  const set = fn => { for (const b of list) { const o = fn(b); b.el.style.opacity = o >= 0.999 ? b.was : (o <= 0 ? '0' : o.toFixed(3)); } };
-  const release = () => { for (const b of list) b.el.style.opacity = b.was; };
+  const set = fn => {
+    for (const b of list) {
+      const o = fn(b), v = o >= 0.999 ? b.was : (o <= 0 ? '0' : o.toFixed(2));
+      if (v !== b.v) { b.v = v; b.el.style.opacity = v; }   // only what changed: no style work for blocks already settled
+    }
+  };
+  const release = () => { for (const b of list) { b.v = b.was; b.el.style.opacity = b.was; } };
   return { list, measure, set, release };
 }

@@ -116,6 +116,10 @@ body { background: var(--p-bg); }
     #experiencia .section-head, #experiencia .rows li, #experiencia .gl, #contato .closing__links { animation: sp-row linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
   }
 }
+/* o mesmo efeito onde o navegador não tem animation-timeline (Firefox, Safari antes do 26): o script no fim da página
+   marca os blocos que ainda estão abaixo da tela com .sp-io e eles entram uma vez quando aparecem (sem script, tudo visível) */
+.sp-io { opacity: 0; transform: translateY(24px); transition: opacity .6s cubic-bezier(.2,.8,.2,1), transform .6s cubic-bezier(.2,.8,.2,1); }
+.sp-io.is-in { opacity: 1; transform: none; }
 /* bolinhas estilo macOS em todas as janelas */
 .cw__dots i, .ui-dots i { width: 12px; height: 12px; border-radius: 50%; }
 .cw__dots i:nth-child(1), .ui-dots i:nth-child(1) { background: #ff5f57; }
@@ -562,6 +566,24 @@ if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
     });
   }
   document.querySelectorAll('.ui-term').forEach(t => t.addEventListener('click', () => t.__ui && t.__ui.restart && t.__ui.restart()));
+})();
+</script>
+<script>
+/* animações ao rolar sem animation-timeline (Firefox, Safari antes do 26): a barra de progresso acompanha a rolagem e os
+   mesmos blocos das animações CSS entram uma vez quando aparecem na tela. Onde o navegador suporta, o CSS faz tudo e isto não roda */
+(() => {
+  if ((window.CSS && CSS.supports && CSS.supports('animation-timeline: view()')) || !('IntersectionObserver' in window)) return;
+  const bar = document.querySelector('.scroll-progress');
+  if (bar) {
+    let raf = 0;
+    const set = () => { raf = 0; const max = document.documentElement.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, scrollY / max) : 0) + ')'; };
+    addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(set); }, { passive: true });
+    addEventListener('resize', set); set();
+  }
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('#projetos .section-head, #stack .section-head, #projetos .card, #stack .panel, .chips li, .stk, #experiencia .section-head, #experiencia .rows li, #experiencia .gl, #contato .closing__cta, #contato .closing__links')
+    .forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('sp-io'); io.observe(el); } });   // só o que ainda não apareceu: nada some da tela
 })();
 </script>
 <script type="module" src="assets/system.js"></script>

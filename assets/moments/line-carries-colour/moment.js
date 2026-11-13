@@ -37,7 +37,13 @@ export default function (root, opts, lib) {
   root.classList.add('is-live', `mo-lc--${from}`);
   // the section's words and pictures as whole blocks (lib.blocks): each stays invisible until the line is above all of it
   const bl = lib.blocks(root, [stage]);
-  const remeasure = () => { bl.measure(); s.update(); };
+  // the stage's place in the section, measured once and again on resize (not in every frame)
+  let gy = 0, h = 0;
+  const geo = () => { const sr = stage.getBoundingClientRect(), rr = root.getBoundingClientRect(); gy = sr.top - rr.top; h = sr.height; };
+  geo();
+  stage.style.setProperty('--mo-cut', `${h}px`);
+  stage.style.setProperty('--mo-k', '1');
+  const remeasure = () => { geo(); bl.measure(); s.update(); };
   const ro = typeof ResizeObserver === 'function' ? new ResizeObserver(remeasure) : null;
   if (ro) ro.observe(root);
   if (lib.fontsReady) lib.fontsReady(1500).then(remeasure);
@@ -46,10 +52,10 @@ export default function (root, opts, lib) {
     const vh = innerHeight;
     const rise = lib.clamp((vh * 0.98 - r.top) / (vh * 0.78));          // 0: the section's top at the screen's foot; 1: a fifth down
     const k = lib.ease.smooth(start, 1, rise);                          // the line's climb, 0 at its foot, 1 at the top
-    const sr = stage.getBoundingClientRect(), gy = sr.top - r.top, h = sr.height;
     const cut = (1 - k) * h;                                            // the line's place in the stage's own coordinates
-    root.style.setProperty('--mo-cut', `${cut.toFixed(1)}px`);
-    root.style.setProperty('--mo-below', `${(h - cut).toFixed(1)}px`);
+    // set on the stage, not the section: only the stage's two layers restyle, and both move by transform (no layout, no repaint)
+    stage.style.setProperty('--mo-cut', `${cut.toFixed(1)}px`);
+    stage.style.setProperty('--mo-k', h ? (cut / h).toFixed(4) : '0');
     const done = k >= 0.999;
     if (done !== open) { open = done; root.classList.toggle('is-open', done); if (done) bl.release(); }
     if (done) return;
