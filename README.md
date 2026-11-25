@@ -78,10 +78,6 @@ Agente pessoal com interface React e orquestração pelo n8n, integrado a Google
 
 <br/>
 
-<img src="./assets/activity.svg" width="100%" alt="Contribuições por dia nos últimos 30 dias" />
-
-<br/>
-
 <img src="./assets/langs.svg" width="100%" alt="Linguagens mais usadas nos repositórios públicos" />
 
 </div>
